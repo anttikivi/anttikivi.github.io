@@ -46,9 +46,14 @@ const createRootPages = async createPage => {
 
   files.forEach(f => {
     const fullpath = path.join(__dirname, "..", "..", "..", f);
+
+    console.log("Processing file", fullpath);
+
     let originalSitePath = path
       .relative(rootPagesDir, fullpath)
       .replace(/.js$/g, "");
+
+    console.log("The original path is", originalSitePath);
 
     // Remove the index files
     if (originalSitePath.endsWith("index")) {
