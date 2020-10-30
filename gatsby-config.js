@@ -49,13 +49,13 @@ module.exports = {
         path: path.join(__dirname, "src", "images")
       }
     },
-    "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: path.join(__dirname, "src", "content")
-      }
-    },
-    "gatsby-transformer-remark"
+    // "gatsby-plugin-sitemap",
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     path: path.join(__dirname, "src", "content")
+    //   }
+    // },
+    // "gatsby-transformer-remark"
   ]
 };
