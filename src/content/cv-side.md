@@ -16,7 +16,7 @@ Valmistuin syksyn 2018 Suomen parhaana ylioppilaana. Lue [Vantaan Sanomien juttu
 
 ### Helsingin yliopisto
 
-#### Valtiotieteiden kandidaatti, taloustiede
+#### Valtiotieteiden ylioppilas, taloustiede
 
 _2020 alkaen_
 

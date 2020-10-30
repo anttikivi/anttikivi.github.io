@@ -1,7 +1,7 @@
 {
   "name": "anttikivi.github.io",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Antti Kivi's website",
   "scripts": {
     "build": "gatsby clean && gatsby build",

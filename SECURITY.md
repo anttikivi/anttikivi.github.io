@@ -6,8 +6,8 @@ We currently support the following versions of the website with security updates
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.1.x   | :white_check_mark: |
-| < 0.1   | :x:                |
+| 0.2.x   | :white_check_mark: |
+| < 0.2   | :x:                |
 
 Please note that while the project is still in development, older versions aren’t supported for long.
 
