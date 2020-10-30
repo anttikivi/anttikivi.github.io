@@ -1,0 +1,25 @@
+// Copyright (c) 2020 Antti Kivi
+// Licensed under the MIT License
+
+a {
+  color: $color__link;
+
+  &:visited {
+    color: $color__link-visited;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__link-hover;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
