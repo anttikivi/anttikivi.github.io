@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - Workflow for automatically deploying the site to GitHub Pages.
 - Workflow for performing code scanning for security analysis.
 
+### Changed
+
+- Title of the current education in the curriculum vitae page.
+
 ## [0.1.0] - 2020-10-30
 
 ### Added
