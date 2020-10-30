@@ -1,3 +1,48 @@
 {
-  "name": "anttikivi.github.io"
+  "name": "anttikivi.github.io",
+  "private": true,
+  "version": "0.1.0-dev",
+  "description": "Antti Kivi's website",
+  "scripts": {
+    "build": "gatsby clean && gatsby build",
+    "check-all": "npm-run-all format --parallel lint:scss lint:js",
+    "ci-check": "npm-run-all nit --parallel lint:scss lint:js",
+    "dev": "gatsby develop",
+    "format": "prettier --config .prettierrc.json --write \"**/*.{js,json,md}\"",
+    "nit": "prettier --config .prettierrc.json --list-different \"**/*.{js,json,md}\"",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "lint:scss": "stylelint '**/*.scss'",
+    "lint:js": "eslint 'src/**/*.js'",
+    "start": "yarn dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anttikivi/anttikivi.github.io.git"
+  },
+  "author": "Antti Kivi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anttikivi/anttikivi.github.io/issues"
+  },
+  "homepage": "https://github.com/anttikivi/anttikivi.github.io#readme",
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "gatsby": "^2.24.91",
+    "gatsby-image": "^2.4.21",
+    "gatsby-plugin-google-analytics": "^2.3.19",
+    "gatsby-plugin-manifest": "^2.4.37",
+    "gatsby-plugin-postcss": "^3.0.4",
+    "gatsby-plugin-react-helmet": "^3.3.14",
+    "gatsby-plugin-sass": "^2.3.22",
+    "gatsby-plugin-sharp": "^2.6.43",
+    "gatsby-plugin-sitemap": "^2.4.17",
+    "gatsby-source-filesystem": "^2.3.37",
+    "gatsby-transformer-remark": "^2.8.47",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.1.4",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
+  }
 }
