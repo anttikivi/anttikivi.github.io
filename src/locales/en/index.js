@@ -2,11 +2,12 @@
 // Licensed under the MIT License
 
 export const indexMessages = {
-  pageTitle: "Home",
-  pageByline: "Entrepreneur from Helsinki, Finland",
+  indexTitle: "Home",
+  indexByline: "Entrepreneur from Helsinki, Finland",
   indexLede: `
-  <p>Verkkosivustoni on vielä hieman keskentekoinen</p>
-  <p>Löydät täältä kuitenkin jo esimerkiksi <cv>ansioluetteloni</cv></p>
-  <p>Valmistumista odottaessa voi esimerkiksi tutustua <visiosto>yritykseni verkkosivustoon</visiosto></p>
-  `
+  <p>My website is still work in progress</p>
+  <p>However, you can already see my <cv>curriculum vitae</cv> here</p>
+  <p>While waiting for the site to get ready, you can for example poke about my <visiosto>my company’s website</visiosto></p>
+  `,
+  indexPortfolio: "A Couple of Projects I’ve Worked on"
 };

@@ -48,7 +48,7 @@ module.exports = {
       options: {
         path: path.join(__dirname, "src", "images")
       }
-    },
+    }
     // "gatsby-plugin-sitemap",
     // {
     //   resolve: "gatsby-source-filesystem",

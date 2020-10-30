@@ -62,6 +62,7 @@ const createRootPages = async createPage => {
         originalSitePath.length - 5
       );
     }
+
     // If they have .fi then just drop that completely
     if (originalSitePath.endsWith(".fi")) {
       originalSitePath = originalSitePath.substring(
@@ -70,9 +71,22 @@ const createRootPages = async createPage => {
       );
     }
 
+    const pageSlugs = require("./src/data/page-slugs.json");
+
     langs.forEach(lang => {
       const prefix = lang === "fi" ? "/" : `/${lang}/`;
-      const sitePath = `${prefix}${originalSitePath}`;
+
+      let sitePath = `${prefix}${originalSitePath}`;
+
+      if (
+        originalSitePath in pageSlugs &&
+        lang in pageSlugs[originalSitePath]
+      ) {
+        sitePath = `${prefix}${pageSlugs[originalSitePath][lang]}`;
+      }
+
+      console.log("The new path for the page is", sitePath);
+
       const pageOpts = {
         path: sitePath,
         component: fullpath,

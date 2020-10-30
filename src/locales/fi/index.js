@@ -2,11 +2,12 @@
 // Licensed under the MIT License
 
 export const indexMessages = {
-  pageTitle: "Etusivu",
-  pageByline: "Helsinkiläinen viestintäalan yrittäjä",
+  indexTitle: "Etusivu",
+  indexByline: "Helsinkiläinen viestintäalan yrittäjä",
   indexLede: `
   <p>Verkkosivustoni on vielä hieman keskentekoinen</p>
   <p>Löydät täältä kuitenkin jo esimerkiksi <cv>ansioluetteloni</cv></p>
   <p>Valmistumista odottaessa voi esimerkiksi tutustua <visiosto>yritykseni verkkosivustoon</visiosto></p>
-  `
+  `,
+  indexPortfolio: "Muutama projekti, jossa näkyy kädenjälkeni"
 };

@@ -28,7 +28,7 @@ const Index = props => {
   const i = createIntl(useIntl());
 
   return (
-    <Layout title={i("pageTitle")} home>
+    <Layout title={i("indexTitle")} home>
       <div className={styles.contentMargin}>
         <figure className={`${styles.alignCenter} ${imageStyles.circleMask}`}>
           <img
@@ -38,7 +38,7 @@ const Index = props => {
         </figure>
 
         <p className={`${styles.alignCenter} ${indexStyles.ledeParagraph}`}>
-          {i("pageByline")}
+          {i("indexByline")}
         </p>
 
         <div>
@@ -63,7 +63,7 @@ const Index = props => {
         </div>
 
         <h2 className={`${indexStyles.homeTitle} ${styles.alignCenter}`}>
-          Muutama projekti, jossa näkyy kädenjälkeni
+          {i("indexPortfolio")}
         </h2>
 
         <MediaText image={referenceAatuItkonen}>
