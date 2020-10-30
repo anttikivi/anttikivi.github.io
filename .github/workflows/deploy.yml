@@ -20,13 +20,12 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: |
-          yarn build
-          cp -r public site
+        run: yarn build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: "site/production"
-          PUBLISH_DIR: ./site
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: site/production
+          cname: anttikivi.fi
+          allow_empty_commit: true
