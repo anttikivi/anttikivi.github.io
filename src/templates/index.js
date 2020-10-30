@@ -1,0 +1,155 @@
+// Copyright (c) 2020 Antti Kivi
+// Licensed under the MIT License
+
+import React from "react";
+import {Link, graphql} from "gatsby";
+import {useIntl} from "react-intl";
+
+import Intl from "../components/Intl";
+import Layout from "../components/Layout";
+import MediaText from "../components/MediaText";
+import SEO from "../components/SEO";
+
+import createIntl from "../utils/createIntl";
+
+import indexStyles from "./index.module.scss";
+
+import styles from "../components/Common.module.scss";
+import imageStyles from "../components/Image.module.scss";
+
+/* eslint-disable max-len */
+import frontPageProfile from "../images/front-page-profile-2.jpg";
+import referenceAatuItkonen from "../images/home/reference_aatuitkonen-1536x864.png";
+import referenceLukio from "../images/home/reference_lukio-1536x864.png";
+import referenceSofiaJulin from "../images/home/reference_sofiajulin-1536x864.png";
+import referenceOppilaskunta from "../images/home/reference_reserve_officer_school_student_body.png";
+/* eslint-enable max-len */
+
+const Index = props => {
+  const i = createIntl(useIntl());
+
+  return (
+    <Layout isHome={true} title="Etusivu">
+      <SEO title="Etusivu" />
+
+      <div className={styles.contentMargin}>
+        <figure className={`${styles.alignCenter} ${imageStyles.circleMask}`}>
+          <img
+            src={frontPageProfile}
+            className={`${indexStyles.frontPageImage} ${styles.alignCenter}`}
+          />
+        </figure>
+
+        <p className={`${styles.alignCenter} ${indexStyles.ledeParagraph}`}>
+          {i("pageByline")}
+        </p>
+
+        <div>
+          {i("indexLede", {
+            p: (...chunk) => <p>{chunk}</p>,
+            cv: (...chunk) => (
+              <Link key={1} to="/ansioluettelo">
+                {chunk}
+              </Link>
+            ),
+            visiosto: (...chunk) => (
+              <a
+                key={2}
+                rel="noreferrer noopener"
+                href="https://visiosto.fi"
+                target="_blank"
+              >
+                {chunk}
+              </a>
+            )
+          })}
+        </div>
+
+        <h2 className={`${indexStyles.homeTitle} ${styles.alignCenter}`}>
+          Muutama projekti, jossa näkyy kädenjälkeni
+        </h2>
+
+        <MediaText image={referenceAatuItkonen}>
+          <h3>Aatu Itkonen &ndash; Taikuri, juontaja &amp; esiintyjä</h3>
+          <p>
+            Teimme yritykseni kanssa nuorelle kouvolalaislähtöiselle
+            esiintyjälle Aatu Itkoselle uudet kotisivut. Sivustoon voit tutustua
+            osoitteessa{" "}
+            <a
+              rel="noreferrer noopener"
+              href="https://aatuitkonen.fi"
+              target="_blank"
+            >
+              aatuitkonen.fi
+            </a>
+            .
+          </p>
+        </MediaText>
+
+        <MediaText image={referenceLukio}>
+          <h3>Suomen Lukiolaisten Liitto</h3>
+          <p>
+            Olin mukana liiton varapuheenjohtajana tiimissä, joka osallistui
+            liiton verkkosivuston suunnitteluun ja ostoon. Sivuston löydät
+            osoitteesta{" "}
+            <a
+              rel="noreferrer noopener"
+              href="https://lukio.fi"
+              target="_blank"
+            >
+              lukio.fi
+            </a>
+            .
+          </p>
+        </MediaText>
+
+        <MediaText image={referenceSofiaJulin}>
+          <h3>Sofia Julin</h3>
+          <p>
+            Tein nuorelle poliitikolle ja kansanedustajan eduskunta-avustajalle
+            Sofia Julinille verkkosivuston. Voit käydä katsomassa sivustoa
+            osoitteessa{" "}
+            <a
+              rel="noreferrer noopener"
+              href="https://sofiajulin.fi"
+              target="_blank"
+            >
+              sofiajulin.fi
+            </a>
+            .
+          </p>
+        </MediaText>
+
+        <MediaText image={referenceOppilaskunta}>
+          <h3>Reserviupseerikoulun oppilaskunta</h3>
+          <p>
+            Uudistin pro bono&nbsp;-työnä Reserviupseerikoulun oppilaskunnan
+            verkkosivuston ilmeen. Reserviupseerikoulu on Suomen suurin
+            johtajakoulu, joka kouluttaa vuodessa yli tuhat varusmiesjohtajaa.
+            Reserviupseerikoulun oppilaskunnan sivuston näet osoitteessa{" "}
+            <a
+              rel="noreferrer noopener"
+              href="https://oppilaskunta.net"
+              target="_blank"
+            >
+              oppilaskunta.net
+            </a>
+            .
+          </p>
+        </MediaText>
+      </div>
+    </Layout>
+  );
+};
+
+export default props => (
+  <Intl locale={props.pageContext.lang}>
+    <Index {...props} />
+  </Intl>
+);
+
+export const query = graphql`
+  query indexPage {
+    ...allSitePage
+  }
+`;
