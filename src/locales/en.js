@@ -3,9 +3,11 @@
 
 import {defineMessages} from "react-intl";
 
+import {headerMessages} from "./en/header";
 import {indexMessages} from "./en/index";
 
 export const messages = {
+  ...headerMessages,
   ...indexMessages
 };
 

@@ -8,7 +8,6 @@ import {useIntl} from "react-intl";
 import Intl from "../components/Intl";
 import Layout from "../components/Layout";
 import MediaText from "../components/MediaText";
-import SEO from "../components/SEO";
 
 import {createIntl} from "../utils/createIntl";
 
@@ -29,9 +28,7 @@ const Index = props => {
   const i = createIntl(useIntl());
 
   return (
-    <Layout isHome={true} title="Etusivu">
-      <SEO title="Etusivu" />
-
+    <Layout title={i("pageTitle")} home>
       <div className={styles.contentMargin}>
         <figure className={`${styles.alignCenter} ${imageStyles.circleMask}`}>
           <img

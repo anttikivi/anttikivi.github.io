@@ -8,25 +8,25 @@ import mainStyles from "./Main.module.scss";
 
 import styles from "./Common.module.scss";
 
-const Main = ({children, isHome, isNotFound, title}) => {
+const Main = props => {
   const pageTitle = (() => {
-    if (isHome) {
+    if (props.home) {
       return (
         <h1 className={`${styles.alignCenter} ${mainStyles.frontPageTitle}`}>
-          {title}
+          {props.title}
         </h1>
       );
-    } else if (isNotFound) {
+    } else if (props.notFound) {
       return (
         <h1 className={`${styles.alignCenter} ${mainStyles.notFoundPageTitle}`}>
-          {title}
+          {props.title}
         </h1>
       );
     }
 
     return (
       <h1 className={`${styles.alignCenter} ${mainStyles.pageTitle}`}>
-        {title}
+        {props.title}
       </h1>
     );
   })();
@@ -35,21 +35,21 @@ const Main = ({children, isHome, isNotFound, title}) => {
     <main id="primary" className={mainStyles.siteMain}>
       <article>
         <header>{pageTitle}</header>
-        {children}
+        {props.children}
       </article>
     </main>
   );
 };
 
 Main.defaultProps = {
-  isHome: false,
-  isNotFound: false
+  home: false,
+  notFound: false
 };
 
 Main.propTypes = {
   children: PropTypes.node,
-  isHome: PropTypes.bool,
-  isNotFound: PropTypes.bool,
+  home: PropTypes.bool,
+  notFound: PropTypes.bool,
   title: PropTypes.string.isRequired
 };
 
