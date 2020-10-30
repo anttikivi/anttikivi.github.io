@@ -2,6 +2,8 @@
 
 This is the source code and production code of [Antti Kivi’s](https://github.com/anttikivi) website.
 
+The site is deployed to [GitHub Pages](https://pages.github.com) from the [`site/production`](https://github.com/anttikivi/anttikivi.github.io/tree/site/production) branch.
+
 ## Install
 
 The released versions of the website are available on the [Releases page](https://github.com/anttikivi/anttikivi.github.io/releases). The latest release is naturally running as the live website at [anttikivi.fi](https://anttikivi.fi).
