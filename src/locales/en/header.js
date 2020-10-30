@@ -2,5 +2,7 @@
 // Licensed under the MIT License
 
 export const headerMessages = {
-  headerByline: "Entrepreneur from Finland"
+  /* eslint-disable camelcase */
+  header_byline: "Entrepreneur from Finland"
+  /* eslint-enable camelcase */
 };

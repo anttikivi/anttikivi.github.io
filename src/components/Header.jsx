@@ -3,8 +3,10 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import {useStaticQuery, graphql, Link} from "gatsby";
+import {useStaticQuery, graphql} from "gatsby";
 import {useIntl} from "react-intl";
+
+import createLink from "./createLink";
 
 import Navigation from "./Navigation";
 
@@ -19,8 +21,6 @@ const Header = props => {
         site {
           siteMetadata {
             title
-            description
-            author
           }
         }
       }
@@ -28,6 +28,7 @@ const Header = props => {
   );
 
   const i = createIntl(useIntl());
+  const Link = createLink(props.lang);
 
   const siteTitle = props.home ? (
     <h1 className={headerStyles.siteTitle}>
@@ -43,15 +44,15 @@ const Header = props => {
     <header className={headerStyles.siteHeader}>
       <div className={headerStyles.siteBranding}>
         {siteTitle}
-        <p className={headerStyles.siteDescription}>{i("headerByline")}</p>
+        <p className={headerStyles.siteDescription}>{i("header_byline")}</p>
       </div>
-      <Navigation />
+      <Navigation lang={props.lang} />
     </header>
   );
 };
 
 Header.defaultProps = {home: false};
 
-Header.propTypes = {home: PropTypes.bool};
+Header.propTypes = {home: PropTypes.bool, lang: PropTypes.string.isRequired};
 
 export default Header;

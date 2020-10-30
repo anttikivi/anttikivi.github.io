@@ -2,12 +2,26 @@
 // Licensed under the MIT License
 
 export const indexMessages = {
-  indexTitle: "Etusivu",
-  indexByline: "Helsinkiläinen viestintäalan yrittäjä",
-  indexLede: `
+  /* eslint-disable camelcase max-len */
+  index_title: "Etusivu",
+  index_byline: "Helsinkiläinen viestintäalan yrittäjä",
+  index_lede: `
   <p>Verkkosivustoni on vielä hieman keskentekoinen</p>
   <p>Löydät täältä kuitenkin jo esimerkiksi <cv>ansioluetteloni</cv></p>
   <p>Valmistumista odottaessa voi esimerkiksi tutustua <visiosto>yritykseni verkkosivustoon</visiosto></p>
   `,
-  indexPortfolio: "Muutama projekti, jossa näkyy kädenjälkeni"
+  index_portfolio_title: "Muutama projekti, jossa näkyy kädenjälkeni",
+  index_aatu_itkonen_title: "Aatu Itkonen – Taikuri, juontaja & esiintyjä",
+  index_aatu_itkonen:
+    "Teimme yritykseni kanssa nuorelle kouvolalaislähtöiselle esiintyjälle Aatu Itkoselle uudet kotisivut. Sivustoon voit tutustua osoitteessa <aatu>aatuitkonen.fi</aatu>.",
+  index_lukio_title: "Suomen Lukiolaisten Liitto",
+  index_lukio:
+    "Olin mukana liiton varapuheenjohtajana tiimissä, joka osallistui liiton verkkosivuston suunnitteluun ja ostoon. Sivuston löydät osoitteesta <lukio>lukio.fi</lukio>.",
+  index_sofia_julin_title: "Sofia Julin",
+  index_sofia_julin:
+    "Tein nuorelle poliitikolle ja kansanedustajan eduskunta-avustajalle Sofia Julinille verkkosivuston. Voit käydä katsomassa sivustoa osoitteessa <sofia>sofiajulin.fi</sofia>.",
+  index_oppilaskunta_title: "Reserviupseerikoulun oppilaskunta",
+  index_oppilaskunta:
+    "Uudistin pro bono -työnä Reserviupseerikoulun oppilaskunnan verkkosivuston ilmeen. Reserviupseerikoulu on Suomen suurin johtajakoulu, joka kouluttaa vuodessa yli tuhat varusmiesjohtajaa. Reserviupseerikoulun oppilaskunnan sivuston näet osoitteessa <ruk>oppilaskunta.net</ruk>."
+  /* eslint-enable camelcase max-len */
 };

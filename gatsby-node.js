@@ -4,6 +4,26 @@
 const fs = require("fs");
 const path = require("path");
 
+const paths = [];
+const addPathToSite = path => paths.push(path);
+
+const writeAllPathsToFile = () => {
+  const generated = path.join(__dirname, "src", "__generated__");
+
+  if (!fs.existsSync(generated)) {
+    fs.mkdirSync(generated);
+  }
+
+  const allPagesPath = path.join(generated, "all-pages.js");
+  fs.writeFileSync(
+    allPagesPath,
+    `// Generated during bootstrapping via gatsby-node.js
+
+export const allFiles = ["${paths.join('", "')}"]
+`
+  );
+};
+
 const recursiveReadDirSync = folderPath => {
   if (!fs.existsSync(folderPath)) {
     return [];
@@ -95,10 +115,15 @@ const createRootPages = async createPage => {
         }
       };
 
+      addPathToSite(sitePath);
       createPage(pageOpts);
     });
   });
 };
+
+exports.onCreatePage = p => addPathToSite(p.page.path);
+
+exports.onPostBootstrap = () => writeAllPathsToFile();
 
 exports.createPages = async ({actions}) => {
   const {createPage} = actions;

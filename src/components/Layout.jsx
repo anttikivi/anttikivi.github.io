@@ -15,10 +15,8 @@ const Layout = props => (
   <>
     <SEO title={props.title} />
     <div className={layoutStyles.site}>
-      <Header home={props.isHome} />
-      <Main home={props.home} notFound={props.notFound} title={props.title}>
-        {props.children}
-      </Main>
+      <Header {...props} />
+      <Main {...props}>{props.children}</Main>
       <Footer />
     </div>
   </>
@@ -31,6 +29,7 @@ Layout.defaultProps = {
 
 Layout.propTypes = {
   children: PropTypes.node,
+  lang: PropTypes.string.isRequired,
   home: PropTypes.bool,
   notFound: PropTypes.bool,
   title: PropTypes.string.isRequired

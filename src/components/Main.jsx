@@ -48,6 +48,7 @@ Main.defaultProps = {
 
 Main.propTypes = {
   children: PropTypes.node,
+  lang: PropTypes.string.isRequired,
   home: PropTypes.bool,
   notFound: PropTypes.bool,
   title: PropTypes.string.isRequired

@@ -1,8 +1,9 @@
 // Copyright (c) 2020 Antti Kivi
 // Licensed under the MIT License
 
-export const headerMessages = {
+export const navigationMessages = {
   /* eslint-disable camelcase */
-  header_byline: "Helsinkiläinen yrittäjä"
+  navigation_home: "Etusivu",
+  navigation_curriculum_vitae: "Ansioluettelo"
   /* eslint-enable camelcase */
 };

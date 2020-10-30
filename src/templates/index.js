@@ -2,8 +2,10 @@
 // Licensed under the MIT License
 
 import React from "react";
-import {Link, graphql} from "gatsby";
+import {graphql} from "gatsby";
 import {useIntl} from "react-intl";
+
+import createLink from "../components/createLink";
 
 import Intl from "../components/Intl";
 import Layout from "../components/Layout";
@@ -26,9 +28,10 @@ import referenceOppilaskunta from "../images/home/reference_reserve_officer_scho
 
 const Index = props => {
   const i = createIntl(useIntl());
+  const Link = createLink(props.lang);
 
   return (
-    <Layout title={i("indexTitle")} home>
+    <Layout title={i("index_title")} home lang={props.pageContext.lang}>
       <div className={styles.contentMargin}>
         <figure className={`${styles.alignCenter} ${imageStyles.circleMask}`}>
           <img
@@ -38,14 +41,14 @@ const Index = props => {
         </figure>
 
         <p className={`${styles.alignCenter} ${indexStyles.ledeParagraph}`}>
-          {i("indexByline")}
+          {i("index_byline")}
         </p>
 
         <div>
-          {i("indexLede", {
+          {i("index_lede", {
             p: (...chunk) => <p className={styles.alignCenter}>{chunk}</p>,
             cv: (...chunk) => (
-              <Link key={1} to="/ansioluettelo">
+              <Link key={1} to="/curriculum-vitae">
                 {chunk}
               </Link>
             ),
@@ -63,75 +66,78 @@ const Index = props => {
         </div>
 
         <h2 className={`${indexStyles.homeTitle} ${styles.alignCenter}`}>
-          {i("indexPortfolio")}
+          {i("index_portfolio_title")}
         </h2>
 
         <MediaText image={referenceAatuItkonen}>
-          <h3>Aatu Itkonen &ndash; Taikuri, juontaja &amp; esiintyjä</h3>
+          <h3>{i("index_aatu_itkonen_title")}</h3>
           <p>
-            Teimme yritykseni kanssa nuorelle kouvolalaislähtöiselle
-            esiintyjälle Aatu Itkoselle uudet kotisivut. Sivustoon voit tutustua
-            osoitteessa{" "}
-            <a
-              rel="noreferrer noopener"
-              href="https://aatuitkonen.fi"
-              target="_blank"
-            >
-              aatuitkonen.fi
-            </a>
-            .
+            {i("index_aatu_itkonen", {
+              aatu: (...chunk) => (
+                <a
+                  key={1}
+                  rel="noreferrer noopener"
+                  href="https://aatuitkonen.fi"
+                  target="_blank"
+                >
+                  {chunk}
+                </a>
+              )
+            })}
           </p>
         </MediaText>
 
         <MediaText image={referenceLukio}>
-          <h3>Suomen Lukiolaisten Liitto</h3>
+          <h3>{i("index_lukio_title")}</h3>
           <p>
-            Olin mukana liiton varapuheenjohtajana tiimissä, joka osallistui
-            liiton verkkosivuston suunnitteluun ja ostoon. Sivuston löydät
-            osoitteesta{" "}
-            <a
-              rel="noreferrer noopener"
-              href="https://lukio.fi"
-              target="_blank"
-            >
-              lukio.fi
-            </a>
-            .
+            {i("index_lukio", {
+              lukio: (...chunk) => (
+                <a
+                  key={1}
+                  rel="noreferrer noopener"
+                  href="https://lukio.fi"
+                  target="_blank"
+                >
+                  {chunk}
+                </a>
+              )
+            })}
           </p>
         </MediaText>
 
         <MediaText image={referenceSofiaJulin}>
-          <h3>Sofia Julin</h3>
+          <h3>{i("index_sofia_julin_title")}</h3>
           <p>
-            Tein nuorelle poliitikolle ja kansanedustajan eduskunta-avustajalle
-            Sofia Julinille verkkosivuston. Voit käydä katsomassa sivustoa
-            osoitteessa{" "}
-            <a
-              rel="noreferrer noopener"
-              href="https://sofiajulin.fi"
-              target="_blank"
-            >
-              sofiajulin.fi
-            </a>
-            .
+            {i("index_sofia_julin", {
+              sofia: (...chunk) => (
+                <a
+                  key={1}
+                  rel="noreferrer noopener"
+                  href="https://sofiajulin.fi"
+                  target="_blank"
+                >
+                  {chunk}
+                </a>
+              )
+            })}
           </p>
         </MediaText>
 
         <MediaText image={referenceOppilaskunta}>
-          <h3>Reserviupseerikoulun oppilaskunta</h3>
+          <h3>{i("index_oppilaskunta_title")}</h3>
           <p>
-            Uudistin pro bono&nbsp;-työnä Reserviupseerikoulun oppilaskunnan
-            verkkosivuston ilmeen. Reserviupseerikoulu on Suomen suurin
-            johtajakoulu, joka kouluttaa vuodessa yli tuhat varusmiesjohtajaa.
-            Reserviupseerikoulun oppilaskunnan sivuston näet osoitteessa{" "}
-            <a
-              rel="noreferrer noopener"
-              href="https://oppilaskunta.net"
-              target="_blank"
-            >
-              oppilaskunta.net
-            </a>
-            .
+            {i("index_oppilaskunta", {
+              ruk: (...chunk) => (
+                <a
+                  key={1}
+                  rel="noreferrer noopener"
+                  href="https://oppilaskunta.net"
+                  target="_blank"
+                >
+                  {chunk}
+                </a>
+              )
+            })}
           </p>
         </MediaText>
       </div>
