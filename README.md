@@ -1,5 +1,7 @@
 # Antti Kivi’s website
 
+![Main workflow](https://github.com/anttikivi/anttikivi.github.io/workflows/Main%20workflow/badge.svg)
+
 This is the source code and production code of [Antti Kivi’s](https://github.com/anttikivi) website.
 
 The site is deployed to [GitHub Pages](https://pages.github.com) from the [`site/production`](https://github.com/anttikivi/anttikivi.github.io/tree/site/production) branch.
