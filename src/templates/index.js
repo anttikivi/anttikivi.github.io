@@ -10,7 +10,7 @@ import Layout from "../components/Layout";
 import MediaText from "../components/MediaText";
 import SEO from "../components/SEO";
 
-import createIntl from "../utils/createIntl";
+import {createIntl} from "../utils/createIntl";
 
 import indexStyles from "./index.module.scss";
 
@@ -46,7 +46,7 @@ const Index = props => {
 
         <div>
           {i("indexLede", {
-            p: (...chunk) => <p>{chunk}</p>,
+            p: (...chunk) => <p className={styles.alignCenter}>{chunk}</p>,
             cv: (...chunk) => (
               <Link key={1} to="/ansioluettelo">
                 {chunk}
@@ -149,7 +149,13 @@ export default props => (
 );
 
 export const query = graphql`
-  query indexPage {
-    ...allSitePage
+  query IndexPage {
+    allSitePage {
+      edges {
+        node {
+          id
+        }
+      }
+    }
   }
 `;

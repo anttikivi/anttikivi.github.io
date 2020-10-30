@@ -1,5 +1,6 @@
 // Copyright (c) 2020 Antti Kivi
 // Licensed under the MIT License
 
-export const createIntl = intlUseEffect => (k, obj) =>
-  intlUseEffect.formatMessage({id: k}, obj);
+export function createIntl(intlUseEffect) {
+  return (k, obj) => intlUseEffect.formatMessage({id: k}, obj);
+}
