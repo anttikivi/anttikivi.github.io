@@ -18,6 +18,13 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "fi",
+        useLangKeyLayout: true
+      }
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Antti Kivi",
