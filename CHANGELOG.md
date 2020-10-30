@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 ### Added
 
 - Workflow for automatically deploying the site to GitHub Pages.
+- Workflow for performing code scanning for security analysis.
 
 ## [0.1.0] - 2020-10-30
 
