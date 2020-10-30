@@ -4,7 +4,7 @@
 
 This is the source code and production code of [Antti Kivi’s](https://github.com/anttikivi) website.
 
-The site is deployed to [GitHub Pages](https://pages.github.com) from the [`site/production`](https://github.com/anttikivi/anttikivi.github.io/tree/site/production) branch.
+The site is deployed to [GitHub Pages](https://pages.github.com) from the [`site/production`](https://github.com/anttikivi/anttikivi.github.io/tree/site/production) branch. The website is available at [anttikivi.fi](https://anttikivi.fi).
 
 ## Install
 
