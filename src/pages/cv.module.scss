@@ -1,0 +1,71 @@
+// Copyright (c) 2020 Antti Kivi
+// Licensed under the MIT License
+
+@import "../styles/variables";
+
+%subHeading {
+  font-family: $font__main;
+  font-weight: 700;
+}
+
+.content {
+  h3 {
+    @extend %subHeading;
+  }
+  h4 {
+    @extend %subHeading;
+  }
+}
+
+.nameLine {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cvImage {
+  height: auto;
+  width: 200px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $breakpoint__tablet) {
+    flex-wrap: nowrap;
+  }
+}
+
+%column {
+  flex-grow: 1;
+  flex-basis: 100%;
+  min-width: 0;
+  word-break: break-word; // For backwards compatibility
+  overflow-wrap: break-word; // New standard
+
+  @media screen and (min-width: $breakpoint__tablet) {
+    flex-grow: 0;
+
+    &:not(:first-child) {
+			margin-left: 2em;
+		}
+  }
+}
+
+.mainColumn {
+
+  @extend %column;
+
+  @media screen and (min-width: $breakpoint__tablet) {
+    flex-basis: 66.66%;
+  }
+}
+
+.sideColumn {
+
+  @extend %column;
+
+  @media screen and (min-width: $breakpoint__tablet) {
+    flex-basis: 33.33%;
+  }
+}

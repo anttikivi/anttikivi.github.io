@@ -1,0 +1,55 @@
+// Copyright (c) 2020 Antti Kivi
+// Licensed under the MIT License
+
+@import "../styles/variables";
+
+.siteHeader {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  background-color: $color__background-header;
+}
+
+.siteBranding {
+  margin: 1em auto;
+}
+
+.siteTitle {
+  margin: 1em auto 0;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: $font__title;
+
+  a {
+    text-decoration: none;
+    color: $color__text-main;
+
+    &:visited {
+      color: $color__text-main;
+    }
+
+    &:hover {
+
+      @if $shared-sonnet-enable-alternative-theme {
+        color: $color__accent-primary;
+      } @else {
+        color: $color__accent-primary-additional;
+
+        @if $shared-sonnet-enable-dark-mode {
+          /* stylelint-disable media-feature-name-no-unknown */
+          @media screen and (prefers-color-scheme: dark) {
+            color: $color__accent-primary;
+          }
+          /* stylelint-enable media-feature-name-no-unknown */
+        }
+      }
+    }
+  }
+}
+
+.siteDescription {
+  margin: 0 auto;
+  text-align: center;
+}

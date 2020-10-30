@@ -1,0 +1,11 @@
+// Copyright (c) 2020 Antti Kivi
+// Licensed under the MIT License
+
+$shared-sonnet-enable-dark-mode: true;
+$shared-sonnet-enable-alternative-theme: "{ALTERNATIVE}";
+$shared-sonnet-enable-menu-extra-margin: false;
+
+@import "variables/colors";
+@import "variables/typography";
+@import "variables/structure";
+@import "variables/columns";
