@@ -16,7 +16,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ### Changed
 
-
 - Location of the search engine optimization component from each page to the layout component.
 
 ## [0.2.1] - 2020-10-31
