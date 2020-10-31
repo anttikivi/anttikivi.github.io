@@ -2,9 +2,9 @@ name: Main workflow
 
 on:
   push:
-    branches: [ develop, feature/* ]
+    branches: [ develop ]
   pull_request:
-    branches: [ develop, feature/* ]
+    branches: [ develop ]
 
 jobs:
   build:
