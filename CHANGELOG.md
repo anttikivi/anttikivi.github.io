@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [Unreleased]
+
+### Added
+
+- Support for translating contents of page by using page templates.
+- Support for translating the paths of pages.
+- Function creating link components that direct to the correct translated paths.
+- Translations for components and the index and curriculum vitae pages.
+- Wrapper component that provides context for internationalization.
+
+### Changed
+
+
+- Location of the search engine optimization component from each page to the layout component.
+
 ## [0.2.1] - 2020-10-31
 
 ### Changed
