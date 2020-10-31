@@ -4,8 +4,13 @@
 import React from "react";
 
 import Intl from "../components/Intl";
+import Layout from "../components/Layout";
 
-const CurriculumVitae = props => <div></div>;
+import cvStyles from "./curriculum-vitae.module.scss";
+
+const CurriculumVitae = props => (
+  <Layout title={i("cv_title")} lang={props.pageContext.lang}></Layout>
+);
 
 export default props => (
   <Intl locale={props.pageContext.lang}>
