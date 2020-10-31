@@ -93,23 +93,25 @@ const Index = () => (
           .
         </p>
       </MediaText>
-      <MediaText image={referenceOppilaskunta}>
-        <h3>Reserviupseerikoulun oppilaskunta</h3>
-        <p>
-          Uudistin pro bono&nbsp;-työnä Reserviupseerikoulun oppilaskunnan
-          verkkosivuston ilmeen. Reserviupseerikoulu on Suomen suurin
-          johtajakoulu, joka kouluttaa vuodessa yli tuhat varusmiesjohtajaa.
-          Reserviupseerikoulun oppilaskunnan sivuston näet osoitteessa{" "}
-          <a
-            rel="noreferrer noopener"
-            href="https://oppilaskunta.net"
-            target="_blank"
-          >
-            oppilaskunta.net
-          </a>
-          .
-        </p>
-      </MediaText>
+      <div className={styles.hidden}>
+        <MediaText image={referenceOppilaskunta}>
+          <h3>Reserviupseerikoulun oppilaskunta</h3>
+          <p>
+            Uudistin pro bono&nbsp;-työnä Reserviupseerikoulun oppilaskunnan
+            verkkosivuston ilmeen. Reserviupseerikoulu on Suomen suurin
+            johtajakoulu, joka kouluttaa vuodessa yli tuhat varusmiesjohtajaa.
+            Reserviupseerikoulun oppilaskunnan sivuston näet osoitteessa{" "}
+            <a
+              rel="noreferrer noopener"
+              href="https://oppilaskunta.net"
+              target="_blank"
+            >
+              oppilaskunta.net
+            </a>
+            .
+          </p>
+        </MediaText>
+      </div>
     </div>
   </Layout>
 );
