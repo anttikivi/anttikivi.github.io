@@ -123,23 +123,25 @@ const Index = props => {
           </p>
         </MediaText>
 
-        <MediaText image={referenceOppilaskunta}>
-          <h3>{i("index_oppilaskunta_title")}</h3>
-          <p>
-            {i("index_oppilaskunta", {
-              ruk: (...chunk) => (
-                <a
-                  key={1}
-                  rel="noreferrer noopener"
-                  href="https://oppilaskunta.net"
-                  target="_blank"
-                >
-                  {chunk}
-                </a>
-              )
-            })}
-          </p>
-        </MediaText>
+        <div className={styles.hidden}>
+          <MediaText image={referenceOppilaskunta}>
+            <h3>{i("index_oppilaskunta_title")}</h3>
+            <p>
+              {i("index_oppilaskunta", {
+                ruk: (...chunk) => (
+                  <a
+                    key={1}
+                    rel="noreferrer noopener"
+                    href="https://oppilaskunta.net"
+                    target="_blank"
+                  >
+                    {chunk}
+                  </a>
+                )
+              })}
+            </p>
+          </MediaText>
+        </div>
       </div>
     </Layout>
   );
