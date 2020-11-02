@@ -221,6 +221,16 @@ export const curriculumVitaeMessages = {
   cv_education_university_of_helsinki_open_aytkt10002_name:
     "Open uni: Basics of Programming",
   cv_education_university_of_helsinki_open_aytkt10002_time: "2019",
-  cv_education_university_of_helsinki_open_aytkt10002_mark: "5 credits, mark: 5"
+  cv_education_university_of_helsinki_open_aytkt10002_mark: "5 credits, mark: 5",
+
+  cv_languages_title: "Languages",
+  cv_languages_list: `
+  <li>Finnish: native</li>
+  <li>English: excellent</li>
+  <li>Swedish: good</li>
+  <li>Russian: basic</li>
+  <li>French: basic</li>
+  <li>Latin: good</li>
+  `,
   /* eslint-enable camelcase max-len */
 };
