@@ -84,6 +84,33 @@ export const curriculumVitaeMessages = {
     took part in many occasions regarding the new national core curriculum for
     general upper secondary education.
   </p>
-  `
+  `,
+  cv_work_experience_frank_title: "Oy Frank Students Ab",
+  cv_work_experience_frank_job: "Community Assistant",
+  cv_work_experience_frank_time: "autumn 2018",
+  cv_work_experience_frank: `
+  <p>
+    I worked as a community assistant in the customer service of Frank, a
+    company that provides Finnish students with the student card and discounts.
+    I was hired to help during the most busy time of the year when new students
+    had just begun their studies. I helped the customers with problems relating
+    to Frank App and the digital student card included in the app.
+  </p>
+  `,
+  cv_work_experience_lidl_title: "Lidl Finland",
+  cv_work_experience_lidl_job: "Salesperson",
+  cv_work_experience_lidl_time: "summer 2018",
+  cv_work_experience_lidl: `
+  <p>
+    I worked for one summer in Lidl in Ala-Tikkurila, Helsinki. Besides more
+    traditional tasks on the cash desk, I got to do many different everyday
+    tasks in the store, including receiving and sorting shipments, serving
+    customers, and cleaning up the store.
+  </p>
+  `,
+  cv_work_experience_palloliitto_title:
+    "Football Association of Findland, Helsinki District",
+  cv_work_experience_palloliitto_job: "Referee",
+  cv_work_experience_palloliitto_time: "2015–2018"
   /* eslint-enable camelcase max-len */
 };
