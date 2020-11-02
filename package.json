@@ -4,7 +4,7 @@
   "version": "0.3.0-dev",
   "description": "Antti Kivi's website",
   "scripts": {
-    "build": "gatsby clean && rm -rf src/__generated__ && gatsby build",
+    "build": "yarn clean && gatsby build",
     "check-all": "npm-run-all format --parallel lint:scss lint:js",
     "ci-check": "npm-run-all nit --parallel lint:scss lint:js",
     "dev": "gatsby develop",
@@ -13,6 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "lint:scss": "stylelint '**/*.scss'",
     "lint:js": "eslint 'src/**/*.js'",
+    "clean": "gatsby clean && rm -rf src/__generated__",
     "start": "yarn dev"
   },
   "repository": {
