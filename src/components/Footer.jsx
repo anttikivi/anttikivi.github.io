@@ -5,7 +5,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import {useIntl} from "react-intl";
 
-import createLanguageLink from "./createLanguageLink";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 import footerStyles from "./Footer.module.scss";
 
@@ -17,13 +17,11 @@ import iconTwitter from "../images/footer/twitter_footer.png";
 
 const Footer = props => {
   const i = createIntl(useIntl());
-  const LanguageLink = createLanguageLink(props.pageKey);
 
   return (
     <footer id="colophon" className={footerStyles.siteFooter}>
       <div className={footerStyles.languages}>
-        <LanguageLink to="fi">Suomeksi</LanguageLink>
-        <LanguageLink to="en">In English</LanguageLink>
+        <LanguageSwitcher {...props} />
       </div>
       <div className={footerStyles.socialMediaInfo}>
         <a
