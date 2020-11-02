@@ -20,9 +20,15 @@ const Footer = props => {
 
   return (
     <footer id="colophon" className={footerStyles.siteFooter}>
-      <div className={footerStyles.languages}>
-        <LanguageSwitcher {...props} />
-      </div>
+      {(() => {
+        if (!props.notFound) {
+          return (
+            <div className={footerStyles.languages}>
+              <LanguageSwitcher {...props} />
+            </div>
+          );
+        }
+      })()}
       <div className={footerStyles.socialMediaInfo}>
         <a
           rel="noopener noreferrer"
@@ -93,9 +99,14 @@ const Footer = props => {
   );
 };
 
+Footer.defaultProps = {
+  notFound: false
+};
+
 Footer.propTypes = {
   lang: PropTypes.string.isRequired,
-  pageKey: PropTypes.string.isRequired
+  pageKey: PropTypes.string.isRequired,
+  notFound: PropTypes.bool
 };
 
 export default Footer;

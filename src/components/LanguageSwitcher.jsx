@@ -13,29 +13,25 @@ const LanguageSwitcher = props => {
 
   return (
     <>
-    {(() => {
-      if (props.lang === "fi") {
-        return <></>
-      } else {
-        return (
-          <>
-          <LanguageLink to="fi">Suomeksi</LanguageLink>
-          <br className={languageSwitcherStyles.lineBreak} />
-          </>
-        )
-      }
-    })()}
-    {(() => {
-      if (props.lang === "en") {
-        return <></>
-      } else {
-        return (
-          <>
-          <LanguageLink to="en">In English</LanguageLink>
-          </>
-        )
-      }
-    })()}
+      {(() => {
+        if (props.lang !== "fi") {
+          return (
+            <>
+              <LanguageLink to="fi">Suomeksi</LanguageLink>
+              <br className={languageSwitcherStyles.lineBreak} />
+            </>
+          );
+        }
+      })()}
+      {(() => {
+        if (props.lang !== "en") {
+          return (
+            <>
+              <LanguageLink to="en">In English</LanguageLink>
+            </>
+          );
+        }
+      })()}
     </>
   );
 };
