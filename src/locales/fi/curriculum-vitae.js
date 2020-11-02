@@ -262,6 +262,7 @@ export const curriculumVitaeMessages = {
     käytöstä.
   </p>
   `,
+
   cv_other_title: "Muu keskeinen osaaminen",
   cv_other: `
   <p>

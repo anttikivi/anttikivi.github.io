@@ -232,5 +232,30 @@ export const curriculumVitaeMessages = {
   <li>French: basic</li>
   <li>Latin: good</li>
   `,
+
+  cv_ict_title: "Information Technology",
+  cv_ict_computer_sciences_title: "Computer Sciences",
+  cv_ict_computer_sciences: `
+  <p>
+    I’ve got basic knowledge in computer sciences and I know many different
+    programming languages, including C++, Python, PHP, HTML, CSS, JavaScript,
+    and Java.
+  </p>
+  `,
+  cv_ict_software_title: "Software",
+  cv_ict_software: `
+  <p>
+    I know many essential software, like Microsoft 365, Visma Netvisor, and
+    Adobe Photoshop.
+  </p>
+  `,
+  cv_ict_social_media_title: "Social Media",
+  cv_ict_social_media: `
+  <p>
+    I can fluently deal in the essential social media platforms and optimize
+    content for them. I’ve also got a lot of experience in versatile use of each
+    platform.
+  </p>
+  `
   /* eslint-enable camelcase max-len */
 };
