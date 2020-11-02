@@ -111,6 +111,92 @@ export const curriculumVitaeMessages = {
   cv_work_experience_palloliitto_title:
     "Football Association of Findland, Helsinki District",
   cv_work_experience_palloliitto_job: "Referee",
-  cv_work_experience_palloliitto_time: "2015–2018"
+  cv_work_experience_palloliitto_time: "2015–2018",
+
+  cv_positions_of_trust_title: "Position of Trust",
+  cv_positions_of_trust_reserve_officer_school_title: "Reserve Officer School",
+  cv_positions_of_trust_reserve_officer_school_job:
+    "President of the Board of the Student Body in the 256th Reserve Officer Course",
+  cv_positions_of_trust_reserve_officer_school_time: "2020",
+  cv_positions_of_trust_kokoomusnuoret_helsinki_title:
+    "Youth of the National Coalition Party in Helsinki",
+  cv_positions_of_trust_kokoomusnuoret_helsinki_job: "Member of the Board",
+  cv_positions_of_trust_kokoomusnuoret_helsinki_time: "2020",
+  cv_positions_of_trust_lukiolaiset_title:
+    "Union of Upper Secondary School Students in Finland",
+  cv_positions_of_trust_lukiolaiset_board_job: "Member of the Board",
+  cv_positions_of_trust_lukiolaiset_board_time: "2018–2019",
+  cv_positions_of_trust_lukiolaiset_board: `
+  <p>
+    As a member of the board I took part in the strategic governance the union.
+    The board also put together and carry out educations in multiple of the
+    union’s national events. Additionally I represented the union in different
+    occurrence organized by national decision makers, especially relating to the
+    new Act on upper secondary schools. In 2019, I was part of the board as the
+    vice president of the union.
+  </p>
+  `,
+  cv_positions_of_trust_lukiolaiset_districts_job:
+    "Representative of the Districts in the Board",
+  cv_positions_of_trust_lukiolaiset_districts_time: "2017",
+  cv_positions_of_trust_lukiolaiset_districts: `
+  <p>
+    As the representative of the districts in the board I acted as the president
+    of the so-called district council of Union of Upper Secondary School
+    Students. The coucil consists of the presidents and vice presidents of
+    every district organization of the union. Its function is to develop the
+    activities in and of the union together with the board of the union. It also
+    brings the districts’ point of view to the board’s decision-making. I, as
+    the president, represented the council and therefore all of the districts in
+    the board’s meetings.
+  </p>
+  `,
+  cv_positions_of_trust_uudenmaan_lukiolaiset_title:
+    "Uusimaa District of Union of Upper Secondary School Students",
+  cv_positions_of_trust_uudenmaan_lukiolaiset_vp_job: "Vice President",
+  cv_positions_of_trust_uudenmaan_lukiolaiset_vp_time: "2017",
+  cv_positions_of_trust_uudenmaan_lukiolaiset_vp: `
+  <p>
+    I was the vice president of the largest district in Union of Upper Secondary
+    School Students, Uusimaa district. As vice president I led the board of the
+    district and coordinated the whole district together with the president as
+    an equal pair. The post included a lot of leading volunteers.
+  </p>
+  `,
+  cv_positions_of_trust_uudenmaan_lukiolaiset_board_job: "Member of the Board",
+  cv_positions_of_trust_uudenmaan_lukiolaiset_board_time: "2016–2017",
+  cv_positions_of_trust_uudenmaan_lukiolaiset_board: `
+  <p>
+    As a member of the board I took part in coordinating and organizing the
+    activities of the largest district of Union of Upper Secondary School
+    Students. I lobbied local and national decision makers for students’ rights.
+    In 2017, I was part of the board as the vice president of the district.
+  </p>
+  `,
+  cv_positions_of_trust_vantaa_title: "City of Vantaa",
+  cv_positions_of_trust_vantaa_youth_council_job: "Member of Youth Council",
+  cv_positions_of_trust_vantaa_youth_council_time: "2016–2017",
+  cv_positions_of_trust_vantaa_youth_council: `
+  <p>
+    As a member of the youth council I took part in the activities and meetings
+    of the youth council of city of Vantaa. The youth council’s main function is
+    to be the youth’s voice in the city’s decision-making. I also took part in
+    the city council’s meetings many times and for instance represented the
+    youth when the city approved its budget and new strategy.
+  </p>
+  `,
+  cv_positions_of_trust_lukio_title: "Student Body of Tikkurilan lukio",
+  cv_positions_of_trust_lukio_job: "Member of the Board",
+  cv_positions_of_trust_lukio_time: "2015–2018",
+  cv_positions_of_trust_lukio: `
+  <p>
+    I was a part of the board through my whole time in upper secondary school.
+    The board of the student body acts as the voice for the students in
+    Tikkurilan lukio and organizes various events in the school.
+  </p>
+  `,
+  cv_positions_of_trust_jef_helsinki_title: "JEF Helsinki",
+  cv_positions_of_trust_jef_helsinki_job: "Member of the Board",
+  cv_positions_of_trust_jef_helsinki_time: "2017"
   /* eslint-enable camelcase max-len */
 };
