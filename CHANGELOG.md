@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - Function creating link components that direct to the correct translated paths.
 - Translations for components and the index and curriculum vitae pages.
 - Wrapper component that provides context for internationalization.
+- Component for links that change the current language.
 
 ### Changed
 

@@ -17,6 +17,20 @@
   }
 }
 
+.languages {
+  clear: both;
+  margin: 0 $size__site-margin-phone;
+  text-align: center;
+
+  @media screen and (min-width: $breakpoint__phone) {
+    margin: 0 $size__site-margin-tablet;
+  }
+
+  @media screen and (min-width: $breakpoint__tablet) {
+    margin: 0 $size__site-margin;
+  }
+}
+
 .socialMediaInfo {
   display: flex;
   align-items: center;

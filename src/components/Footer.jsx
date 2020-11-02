@@ -5,6 +5,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import {useIntl} from "react-intl";
 
+import createLanguageLink from "./createLanguageLink";
+
 import footerStyles from "./Footer.module.scss";
 
 import {createIntl} from "../utils/createIntl";
@@ -15,9 +17,14 @@ import iconTwitter from "../images/footer/twitter_footer.png";
 
 const Footer = props => {
   const i = createIntl(useIntl());
+  const LanguageLink = createLanguageLink(props.pageKey);
 
   return (
     <footer id="colophon" className={footerStyles.siteFooter}>
+      <div className={footerStyles.languages}>
+        <LanguageLink to="fi">Suomeksi</LanguageLink>
+        <LanguageLink to="en">In English</LanguageLink>
+      </div>
       <div className={footerStyles.socialMediaInfo}>
         <a
           rel="noopener noreferrer"
@@ -88,6 +95,9 @@ const Footer = props => {
   );
 };
 
-Footer.propTypes = {lang: PropTypes.string.isRequired};
+Footer.propTypes = {
+  lang: PropTypes.string.isRequired,
+  pageKey: PropTypes.string.isRequired
+};
 
 export default Footer;
