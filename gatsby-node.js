@@ -131,7 +131,21 @@ const createRootPages = async createPage => {
   });
 };
 
-exports.onCreatePage = p => addPathToSite(p.page.path);
+exports.onCreatePage = ({page, actions}) => {
+  const {createPage, deletePage} = actions;
+  if (page.path === "/404/") {
+    const oldPage = Object.assign({}, page);
+
+    page.path = "/404";
+
+    if (page.path !== oldPage.path) {
+      deletePage(oldPage);
+      createPage(page);
+    }
+  }
+
+  addPathToSite(page.path);
+};
 
 exports.onPostBootstrap = () => writeAllPathsToFile();
 
