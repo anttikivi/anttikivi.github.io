@@ -197,6 +197,30 @@ export const curriculumVitaeMessages = {
   `,
   cv_positions_of_trust_jef_helsinki_title: "JEF Helsinki",
   cv_positions_of_trust_jef_helsinki_job: "Member of the Board",
-  cv_positions_of_trust_jef_helsinki_time: "2017"
+  cv_positions_of_trust_jef_helsinki_time: "2017",
+
+  cv_education_title: "Education",
+  cv_education_tikkurilan_lukio_title: "Tikkurilan lukio",
+  cv_education_tikkurilan_lukio_degree: "Matriculation Examination",
+  cv_education_tikkurilan_lukio_time: "2015–2018",
+  cv_education_tikkurilan_lukio_mark: "Marks: LLLLLLEEEM",
+  cv_education_tikkurilan_lukio: `
+  <p>
+    I graduated as Finland’s best student in autumn 2018. Read <vs>an article
+    about it in Vantaa Sanomat</vs>.
+  </p>
+  `,
+  cv_education_university_of_helsinki_title: "University of Helsinki",
+  cv_education_university_of_helsinki_social_sciences_degree:
+    "Social Sciences Student, Economics",
+  cv_education_university_of_helsinki_social_sciences_time: "since 202",
+  cv_education_university_of_helsinki_open_ayoik_101_name:
+    "Open uni: Introduction to Law",
+  cv_education_university_of_helsinki_open_ayoik_101_time: "2019",
+  cv_education_university_of_helsinki_open_ayoik_101_mark: "5 credits",
+  cv_education_university_of_helsinki_open_aytkt10002_name:
+    "Open uni: Basics of Programming",
+  cv_education_university_of_helsinki_open_aytkt10002_time: "2019",
+  cv_education_university_of_helsinki_open_aytkt10002_mark: "5 credits, mark: 5"
   /* eslint-enable camelcase max-len */
 };
