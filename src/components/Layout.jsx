@@ -17,7 +17,7 @@ const Layout = props => (
     <div className={layoutStyles.site}>
       <Header {...props} />
       <Main {...props}>{props.children}</Main>
-      <Footer />
+      <Footer {...props} />
     </div>
   </>
 );
@@ -30,6 +30,7 @@ Layout.defaultProps = {
 Layout.propTypes = {
   children: PropTypes.node,
   lang: PropTypes.string.isRequired,
+  pageKey: PropTypes.string.isRequired,
   home: PropTypes.bool,
   notFound: PropTypes.bool,
   title: PropTypes.string.isRequired

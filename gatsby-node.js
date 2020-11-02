@@ -64,6 +64,8 @@ const createRootPages = async createPage => {
     .filter(f => !f.startsWith("."))
     .filter(f => !f.includes(".scss"));
 
+  console.log("The languages found are", langs);
+
   files.forEach(f => {
     const fullpath = path.join(__dirname, "..", "..", "..", f);
 
@@ -94,16 +96,23 @@ const createRootPages = async createPage => {
     const pageSlugs = require("./src/data/page-slugs.json");
 
     langs.forEach(lang => {
-      const prefix = lang === "fi" ? "/" : `/${lang}/`;
-
-      let sitePath = `${prefix}${originalSitePath}`;
-
-      if (
-        originalSitePath in pageSlugs &&
-        lang in pageSlugs[originalSitePath]
-      ) {
-        sitePath = `${prefix}${pageSlugs[originalSitePath][lang]}`;
-      }
+      const sitePath = (() => {
+        if (originalSitePath === "") {
+          return lang === "fi" ? "/" : `/${lang}`;
+        } else {
+          if (
+            originalSitePath in pageSlugs &&
+            lang in pageSlugs[originalSitePath]
+          ) {
+            const slug = pageSlugs[originalSitePath][lang];
+            return lang === "fi" ? `/${slug}` : `/${lang}/${slug}`;
+          } else {
+            return lang === "fi"
+              ? `/${originalSitePath}`
+              : `/${lang}/${originalSitePath}`;
+          }
+        }
+      })();
 
       console.log("The new path for the page is", sitePath);
 
@@ -111,7 +120,8 @@ const createRootPages = async createPage => {
         path: sitePath,
         component: fullpath,
         context: {
-          lang: lang === "" ? "fi" : lang
+          lang: lang,
+          key: originalSitePath
         }
       };
 

@@ -20,7 +20,11 @@ const CurriculumVitae = props => {
   const i = createIntl(useIntl());
 
   return (
-    <Layout title={i("cv_title")} lang={props.pageContext.lang}>
+    <Layout
+      title={i("cv_title")}
+      lang={props.pageContext.lang}
+      pageKey={props.pageContext.key}
+    >
       <div className={`${styles.contentMargin} ${cvStyles.content}`}>
         <p className={`${styles.alignCenter} ${cvStyles.nameLine}`}>
           Antti Kivi

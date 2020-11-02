@@ -28,10 +28,15 @@ import referenceOppilaskunta from "../images/home/reference_reserve_officer_scho
 
 const Index = props => {
   const i = createIntl(useIntl());
-  const Link = createLink(props.lang);
+  const Link = createLink(props.pageContext.lang);
 
   return (
-    <Layout title={i("index_title")} home lang={props.pageContext.lang}>
+    <Layout
+      title={i("index_title")}
+      home
+      lang={props.pageContext.lang}
+      pageKey={props.pageContext.key}
+    >
       <div className={styles.contentMargin}>
         <figure className={`${styles.alignCenter} ${imageStyles.circleMask}`}>
           <img
