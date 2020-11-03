@@ -18,6 +18,13 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "fi",
+        useLangKeyLayout: true
+      }
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Antti Kivi",
@@ -41,14 +48,14 @@ module.exports = {
       options: {
         path: path.join(__dirname, "src", "images")
       }
-    },
-    "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: path.join(__dirname, "src", "content")
-      }
-    },
-    "gatsby-transformer-remark"
+    }
+    // "gatsby-plugin-sitemap",
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     path: path.join(__dirname, "src", "content")
+    //   }
+    // },
+    // "gatsby-transformer-remark"
   ]
 };

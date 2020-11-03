@@ -1404,6 +1404,61 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@formatjs/ecma402-abstract@npm:^1.2.6":
+  version: 1.2.6
+  resolution: "@formatjs/ecma402-abstract@npm:1.2.6"
+  dependencies:
+    tslib: ^2.0.1
+  checksum: 6751ee1e1775b6c7ae527c38e27c38741fc16c4aad3a35dc87e3e3934c7f2f22e610a0ddae484cc21cd313d5bfc92394e5a4a9ad6a388e606fd80f930dde46c8
+  languageName: node
+  linkType: hard
+
+"@formatjs/intl-displaynames@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "@formatjs/intl-displaynames@npm:3.4.1"
+  dependencies:
+    "@formatjs/ecma402-abstract": ^1.2.6
+    tslib: ^2.0.1
+  checksum: 906040114fa4db497c63e7487d7eeb28d9c543cacb95db4155a501d443554757260d6e050057bc24c5e24389b592dae307d9826c1bdd3d08e36d45d60700f94e
+  languageName: node
+  linkType: hard
+
+"@formatjs/intl-listformat@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "@formatjs/intl-listformat@npm:4.3.1"
+  dependencies:
+    "@formatjs/ecma402-abstract": ^1.2.6
+    tslib: ^2.0.1
+  checksum: 5636aeb88f4d224ef56f03df081e359d8cc45045385832b0dd2d5bb4271418b0a393adbfe3ad09c2883e33f9f3c5eeb5cf2ab7a93f1706023e9ba657310ae3ad
+  languageName: node
+  linkType: hard
+
+"@formatjs/intl-relativetimeformat@npm:^7.3.1":
+  version: 7.3.1
+  resolution: "@formatjs/intl-relativetimeformat@npm:7.3.1"
+  dependencies:
+    "@formatjs/ecma402-abstract": ^1.2.6
+    tslib: ^2.0.1
+  checksum: 0f0944289d4a74e550ccea8ce8ef4298dd1548ed7d987b01f35e4466d5c7cf9adf64393b2078bb8863b00cd1a3a251bc943ffab86241fe0f54ba5cd808ce6ced
+  languageName: node
+  linkType: hard
+
+"@formatjs/intl@npm:^1.3.8":
+  version: 1.3.8
+  resolution: "@formatjs/intl@npm:1.3.8"
+  dependencies:
+    "@formatjs/ecma402-abstract": ^1.2.6
+    "@formatjs/intl-displaynames": ^3.4.1
+    "@formatjs/intl-listformat": ^4.3.1
+    "@formatjs/intl-relativetimeformat": ^7.3.1
+    fast-memoize: ^2.5.2
+    intl-messageformat: ^9.3.12
+    intl-messageformat-parser: ^6.0.11
+    tslib: ^2.0.1
+  checksum: 62341a98ff5ecc6f0c2b045e3a66ccc713f1e8def8e7592ea05cdb6c75eb6ea1f5ea65a8e9e49573e872e360a7f5499b5f91d9c7c2b9f2e4834a4d689a3f80d2
+  languageName: node
+  linkType: hard
+
 "@graphql-tools/batch-execute@npm:^7.0.0":
   version: 7.0.0
   resolution: "@graphql-tools/batch-execute@npm:7.0.0"
@@ -1943,6 +1998,16 @@ __metadata:
   version: 4.7.8
   resolution: "@types/history@npm:4.7.8"
   checksum: 54020371a412e949d0a329cc325253f16daf5b33e2e485135d39d3b30d3f9a8e323b00ce1162da82387c8ecf0397a8da49ad36ab309f06284326c064092879c7
+  languageName: node
+  linkType: hard
+
+"@types/hoist-non-react-statics@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "@types/hoist-non-react-statics@npm:3.3.1"
+  dependencies:
+    "@types/react": "*"
+    hoist-non-react-statics: ^3.3.0
+  checksum: 16ab4c45d4920fa378c8be76554b10061247fc04d2c8af11bdb7d520b3967e9c06d7ad5efd9b0f1657fbc4d095f62c6e1325f03b9141eb1ef2c8095b96fd42f8
   languageName: node
   linkType: hard
 
@@ -2686,6 +2751,7 @@ __metadata:
     gatsby: ^2.24.91
     gatsby-image: ^2.4.21
     gatsby-plugin-google-analytics: ^2.3.19
+    gatsby-plugin-i18n: ^1.0.1
     gatsby-plugin-manifest: ^2.4.37
     gatsby-plugin-postcss: ^3.0.4
     gatsby-plugin-react-helmet: ^3.3.14
@@ -2701,6 +2767,7 @@ __metadata:
     react: ^17.0.1
     react-dom: ^17.0.1
     react-helmet: ^6.1.0
+    react-intl: ^5.8.8
     stylelint: ^13.7.2
     stylelint-config-recommended-scss: ^4.2.0
     stylelint-scss: ^3.18.0
@@ -6798,6 +6865,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-memoize@npm:^2.5.2":
+  version: 2.5.2
+  resolution: "fast-memoize@npm:2.5.2"
+  checksum: 88bd91488039c0e04131d5382b8ea084268f144ce14ab36c360dd04f7792ac0c419e125b0fe6e6f41e77f03d1f703b31697475b2e95889ca86510623e2f0d904
+  languageName: node
+  linkType: hard
+
 "fastest-levenshtein@npm:^1.0.12":
   version: 1.0.12
   resolution: "fastest-levenshtein@npm:1.0.12"
@@ -7045,6 +7119,13 @@ __metadata:
     inherits: ^2.0.3
     readable-stream: ^2.3.6
   checksum: b8fa1fbfadd5c4b6df3cf2c34b3c408fe508a2899c536bafa339f679de545689997e907bd4ff61dd292942f8044fb2f293a5956dd8b601f6a5601617842d0dda
+  languageName: node
+  linkType: hard
+
+"folktale@npm:^2.0.1":
+  version: 2.3.2
+  resolution: "folktale@npm:2.3.2"
+  checksum: 12e166d6a177bf04794163471482e923497e37c720057ed9fba1855b21961cb1f276d8eee77dca362fb1dfcd7f56495d3b26d46e1d185f418153bf1b28f0883e
   languageName: node
   linkType: hard
 
@@ -7395,6 +7476,17 @@ fsevents@~2.1.2:
     react: ^16.4.2
     react-dom: ^16.4.2
   checksum: 295cf8e4ab2a61a135728b93945dfec4da3bc84b8c6f348f22cdef88f1a108baf70fa8a1a56f732a3d8f214d153af905a24d4ba306c77948c5fd9f5029d82977
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-i18n@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "gatsby-plugin-i18n@npm:1.0.1"
+  dependencies:
+    folktale: ^2.0.1
+    graphql: ^0.11.7
+    ptz-i18n: ^1.0.0
+  checksum: e178fa8cb7a6d655451d2b1d149f0657a2281abd7eb5a96a49f0cb43d9d543525546e66cc82d8a94ff0b447e771adcf826c94c6bb966a176eaa5a92bd8fe14fa
   languageName: node
   linkType: hard
 
@@ -8272,6 +8364,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"graphql@npm:^0.11.7":
+  version: 0.11.7
+  resolution: "graphql@npm:0.11.7"
+  dependencies:
+    iterall: 1.1.3
+  checksum: afbc3729dae9c8117bddefa3c53117b8b21374b6a0db4ea73a291eb7d1f33ffa388e4ef157b57f773a5c23d18d92c256fbbd31959d1062f18c6ea50ca82a80a2
+  languageName: node
+  linkType: hard
+
 "graphql@npm:^14.6.0, graphql@npm:^14.7.0":
   version: 14.7.0
   resolution: "graphql@npm:14.7.0"
@@ -8639,7 +8740,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.3.0":
+"hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.2":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -9161,6 +9262,27 @@ fsevents@~2.1.2:
     has: ^1.0.3
     side-channel: ^1.0.2
   checksum: 02b2bcc612fbbaa5de71acec354a7bb50d8b3b2d2df775b6df61ea41419f92b69e0562f80125d7fa3667c9fb485cc88726f8a181fb544d880c79564f0f7d7d1e
+  languageName: node
+  linkType: hard
+
+"intl-messageformat-parser@npm:^6.0.11":
+  version: 6.0.11
+  resolution: "intl-messageformat-parser@npm:6.0.11"
+  dependencies:
+    "@formatjs/ecma402-abstract": ^1.2.6
+    tslib: ^2.0.1
+  checksum: c1255d99348d9618389aeb18cf9ab864add88ad590c7dc4d5b28cbc465b94d7fe22f99b5c1cca56f4b605c5c5a73748707bb533a8f503077b410d476d356a78a
+  languageName: node
+  linkType: hard
+
+"intl-messageformat@npm:^9.3.12":
+  version: 9.3.12
+  resolution: "intl-messageformat@npm:9.3.12"
+  dependencies:
+    fast-memoize: ^2.5.2
+    intl-messageformat-parser: ^6.0.11
+    tslib: ^2.0.1
+  checksum: 70ba31d799401a5002144883915cb61b0e70e63571cac689dad85cb6d5a3e062d5accb626b7f729427ba9fd6e1b5a4b638d9dafcb6eabc2f7eacb75c71adf4aa
   languageName: node
   linkType: hard
 
@@ -9896,6 +10018,13 @@ fsevents@~2.1.2:
     has-to-string-tag-x: ^1.2.0
     is-object: ^1.0.1
   checksum: 2c63877b4e0cbd7af36502ac08cb7814393e11871324967117f43dda57cbeab8a192f3bfca8bfa088f3c9886a93518f9d77136043ef2c65054b541eb6bd9a7c6
+  languageName: node
+  linkType: hard
+
+"iterall@npm:1.1.3":
+  version: 1.1.3
+  resolution: "iterall@npm:1.1.3"
+  checksum: b7d3acb8c4e1993bd0707d10e2c9544284d99656ed0c48433edb20720f1f1f76ffea6019858bbda74e11be77ac14da29509a6304ec2617b4f2b16fee5827766a
   languageName: node
   linkType: hard
 
@@ -13520,6 +13649,16 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"ptz-i18n@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "ptz-i18n@npm:1.0.0"
+  dependencies:
+    folktale: ^2.0.1
+    ramda: ^0.24.1
+  checksum: 2ed866a671d010373eaea0a1318a19d99e098d6b290451b4f6653841099db031dd9139323678eb1689df6f96aa2dffde076253ff6ae501aa97c993d8e951eb84
+  languageName: node
+  linkType: hard
+
 "public-encrypt@npm:^4.0.0":
   version: 4.0.3
   resolution: "public-encrypt@npm:4.0.3"
@@ -13673,6 +13812,13 @@ fsevents@~2.1.2:
   version: 4.0.1
   resolution: "quick-lru@npm:4.0.1"
   checksum: 91847e4b07453655f73513b96a3b49e3bb8bf37de1ce2075d44e5dddb2f08050c5dc858d97884d61618bb44487945880b4b481fe93e94a3622b43036f8b94e11
+  languageName: node
+  linkType: hard
+
+"ramda@npm:^0.24.1":
+  version: 0.24.1
+  resolution: "ramda@npm:0.24.1"
+  checksum: 29e4997164cb43973d67a02a91c902f0d62d7500e61252a88cf132466259b7f3dfa977cf971d288e2566c3bae2413e354c5890b5db574440fe081cb6c52c8af6
   languageName: node
   linkType: hard
 
@@ -13841,6 +13987,29 @@ fsevents@~2.1.2:
     "@types/react":
       optional: true
   checksum: f1df03e93206b379b605f3da983f700d5c8a16e3ebedf25ca1311067f4dc95cf968206af44d0b734a5505619958f2da5efe9df4bf749ed6a4989e1f6ea5d2915
+  languageName: node
+  linkType: hard
+
+"react-intl@npm:^5.8.8":
+  version: 5.8.8
+  resolution: "react-intl@npm:5.8.8"
+  dependencies:
+    "@formatjs/ecma402-abstract": ^1.2.6
+    "@formatjs/intl": ^1.3.8
+    "@formatjs/intl-displaynames": ^3.4.1
+    "@formatjs/intl-listformat": ^4.3.1
+    "@formatjs/intl-relativetimeformat": ^7.3.1
+    "@types/hoist-non-react-statics": ^3.3.1
+    fast-memoize: ^2.5.2
+    hoist-non-react-statics: ^3.3.2
+    intl-messageformat: ^9.3.12
+    intl-messageformat-parser: ^6.0.11
+    shallow-equal: ^1.2.1
+    tslib: ^2.0.1
+  peerDependencies:
+    react: ^16.3.0
+    typescript: 3.8 || 4
+  checksum: e1f1e82dad2d4f6bf2bedec151f8c83ac46e4294d85978465f618542ca963da4814a8edcb5e58eec69dd4804d4e29f537412418b5feae8bf7b037ad31cb25fff
   languageName: node
   linkType: hard
 
@@ -15051,6 +15220,13 @@ fsevents@~2.1.2:
   version: 1.2.2
   resolution: "shallow-compare@npm:1.2.2"
   checksum: 40709b58510a9fb5177c216a51f1a6c91a9679254ee0549476d6817dc28707e3fe8ce27456cfebc8f05c87ed88ae71923731493c7d7df816b01ef4477b417bfe
+  languageName: node
+  linkType: hard
+
+"shallow-equal@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "shallow-equal@npm:1.2.1"
+  checksum: 5002ac4a3639e35782d3cb21073d48e1e4f85321cc54608f48b2331f6db6d54e4f4b44ed81ec4d75385ebe893e8286752b1e29595381e6adad72dd836f001b7f
   languageName: node
   linkType: hard
 
@@ -16640,7 +16816,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.0, tslib@npm:~2.0.1":
+"tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:~2.0.1":
   version: 2.0.3
   resolution: "tslib@npm:2.0.3"
   checksum: 447bfca5deaa157806c3f77eaba74d05dd0b38b014e47ce79d98b5c77ce7d91b00a687ba13ca1b5a74d35ca1098ac7a072c0a97fad06f0266612f2a03a6c8e8f

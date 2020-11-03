@@ -1,0 +1,18 @@
+// Copyright (c) 2020 Antti Kivi
+// Licensed under the MIT License
+
+@import "../styles/variables";
+
+.languageLink {
+  clear: both;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+.lineBreak {
+  display: block;
+
+  @media screen and (min-width: $breakpoint__tablet) {
+    display: none;
+  }
+}

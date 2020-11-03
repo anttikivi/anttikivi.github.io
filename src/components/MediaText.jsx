@@ -6,14 +6,14 @@ import PropTypes from "prop-types";
 
 import mediaTextStyles from "./MediaText.module.scss";
 
-const MediaText = ({children, image}) => (
+const MediaText = props => (
   <div
     className={`${mediaTextStyles.container} ${mediaTextStyles.mediaOnRight}`}
   >
     <figure className={mediaTextStyles.media}>
-      <img src={image} />
+      <img src={props.image} />
     </figure>
-    <div className={mediaTextStyles.content}>{children}</div>
+    <div className={mediaTextStyles.content}>{props.children}</div>
   </div>
 );
 
