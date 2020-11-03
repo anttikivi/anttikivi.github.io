@@ -15,10 +15,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - Wrapper component that provides context for internationalization.
 - Component for links that change the current language.
 - Ability to change the langauge of the current page.
+- Configuration to hide chosen references from the home page.
 
 ### Changed
 
 - Location of the search engine optimization component from each page to the layout component.
+- Reference to Union of Upper Secondary School Students to be hidden.
 
 ## [0.2.1] - 2020-10-31
 
