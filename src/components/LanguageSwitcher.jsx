@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 import createLanguageLink from "./createLanguageLink";
 
-import languageSwitcherStyles from "./Footer.module.scss";
+import languageSwitcherStyles from "./LanguageSwitcher.module.scss";
 
 const LanguageSwitcher = props => {
   const LanguageLink = createLanguageLink(props.pageKey);
@@ -17,7 +17,12 @@ const LanguageSwitcher = props => {
         if (props.lang !== "fi") {
           return (
             <>
-              <LanguageLink to="fi">Suomeksi</LanguageLink>
+              <LanguageLink
+                className={languageSwitcherStyles.languageLink}
+                to="fi"
+              >
+                Suomeksi
+              </LanguageLink>
               <br className={languageSwitcherStyles.lineBreak} />
             </>
           );
@@ -27,7 +32,12 @@ const LanguageSwitcher = props => {
         if (props.lang !== "en") {
           return (
             <>
-              <LanguageLink to="en">In English</LanguageLink>
+              <LanguageLink
+                className={languageSwitcherStyles.languageLink}
+                to="en"
+              >
+                In English
+              </LanguageLink>
             </>
           );
         }
