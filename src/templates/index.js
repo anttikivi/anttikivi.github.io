@@ -11,6 +11,13 @@ import Intl from "../components/Intl";
 import Layout from "../components/Layout";
 import MediaText from "../components/MediaText";
 
+import {
+  DISPLAY_INDEX_AATU_ITKONEN,
+  DISPLAY_INDEX_UNION_OF_UPPER_SECONDARY_SCHOOL_STUDENTS,
+  DISPLAY_INDEX_SOFIA_JULIN,
+  DISPLAY_INDEX_RESERVE_OFFICER_SCHOOL_STUDENT_BODY
+} from "../site-constants";
+
 import {createIntl} from "../utils/createIntl";
 
 import indexStyles from "./index.module.scss";
@@ -74,79 +81,101 @@ const Index = props => {
           {i("index_portfolio_title")}
         </h2>
 
-        <MediaText image={referenceAatuItkonen}>
-          <h3>{i("index_aatu_itkonen_title")}</h3>
-          <p>
-            {i("index_aatu_itkonen", {
-              aatu: (...chunk) => (
-                <a
-                  key={1}
-                  rel="noreferrer noopener"
-                  href="https://aatuitkonen.fi"
-                  target="_blank"
-                >
-                  {chunk}
-                </a>
-              )
-            })}
-          </p>
-        </MediaText>
+        {(() => {
+          if (DISPLAY_INDEX_AATU_ITKONEN) {
+            return (
+              <MediaText image={referenceAatuItkonen}>
+                <h3>{i("index_aatu_itkonen_title")}</h3>
+                <p>
+                  {i("index_aatu_itkonen", {
+                    aatu: (...chunk) => (
+                      <a
+                        key={1}
+                        rel="noreferrer noopener"
+                        href="https://aatuitkonen.fi"
+                        target="_blank"
+                      >
+                        {chunk}
+                      </a>
+                    )
+                  })}
+                </p>
+              </MediaText>
+            );
+          }
+        })()}
 
-        <MediaText image={referenceLukio}>
-          <h3>{i("index_lukio_title")}</h3>
-          <p>
-            {i("index_lukio", {
-              lukio: (...chunk) => (
-                <a
-                  key={1}
-                  rel="noreferrer noopener"
-                  href="https://lukio.fi"
-                  target="_blank"
-                >
-                  {chunk}
-                </a>
-              )
-            })}
-          </p>
-        </MediaText>
+        {(() => {
+          if (DISPLAY_INDEX_UNION_OF_UPPER_SECONDARY_SCHOOL_STUDENTS) {
+            return (
+              <MediaText image={referenceLukio}>
+                <h3>{i("index_lukio_title")}</h3>
+                <p>
+                  {i("index_lukio", {
+                    lukio: (...chunk) => (
+                      <a
+                        key={1}
+                        rel="noreferrer noopener"
+                        href="https://lukio.fi"
+                        target="_blank"
+                      >
+                        {chunk}
+                      </a>
+                    )
+                  })}
+                </p>
+              </MediaText>
+            );
+          }
+        })()}
 
-        <MediaText image={referenceSofiaJulin}>
-          <h3>{i("index_sofia_julin_title")}</h3>
-          <p>
-            {i("index_sofia_julin", {
-              sofia: (...chunk) => (
-                <a
-                  key={1}
-                  rel="noreferrer noopener"
-                  href="https://sofiajulin.fi"
-                  target="_blank"
-                >
-                  {chunk}
-                </a>
-              )
-            })}
-          </p>
-        </MediaText>
+        {(() => {
+          if (DISPLAY_INDEX_SOFIA_JULIN) {
+            return (
+              <MediaText image={referenceSofiaJulin}>
+                <h3>{i("index_sofia_julin_title")}</h3>
+                <p>
+                  {i("index_sofia_julin", {
+                    sofia: (...chunk) => (
+                      <a
+                        key={1}
+                        rel="noreferrer noopener"
+                        href="https://sofiajulin.fi"
+                        target="_blank"
+                      >
+                        {chunk}
+                      </a>
+                    )
+                  })}
+                </p>
+              </MediaText>
+            );
+          }
+        })()}
 
-        <div className={styles.hidden}>
-          <MediaText image={referenceOppilaskunta}>
-            <h3>{i("index_oppilaskunta_title")}</h3>
-            <p>
-              {i("index_oppilaskunta", {
-                ruk: (...chunk) => (
-                  <a
-                    key={1}
-                    rel="noreferrer noopener"
-                    href="https://oppilaskunta.net"
-                    target="_blank"
-                  >
-                    {chunk}
-                  </a>
-                )
-              })}
-            </p>
-          </MediaText>
-        </div>
+        {(() => {
+          if (DISPLAY_INDEX_RESERVE_OFFICER_SCHOOL_STUDENT_BODY) {
+            return (
+              <MediaText image={referenceOppilaskunta}>
+                <h3>{i("index_oppilaskunta_title")}</h3>
+                <p>
+                  {i("index_oppilaskunta", {
+                    ruk: (...chunk) => (
+                      <a
+                        key={1}
+                        rel="noreferrer noopener"
+                        href="https://oppilaskunta.net"
+                        target="_blank"
+                      >
+                        {chunk}
+                      </a>
+                    )
+                  })}
+                </p>
+              </MediaText>
+            );
+          }
+        })()}
       </div>
     </Layout>
   );

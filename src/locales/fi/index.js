@@ -10,7 +10,7 @@ export const indexMessages = {
   <p>Löydät täältä kuitenkin jo esimerkiksi <cv>ansioluetteloni</cv></p>
   <p>Valmistumista odottaessa voi esimerkiksi tutustua <visiosto>yritykseni verkkosivustoon</visiosto></p>
   `,
-  index_portfolio_title: "Muutama projekti, jossa näkyy kädenjälkeni",
+  index_portfolio_title: "Pari projektia, joissa näkyy kädenjälkeni",
   index_aatu_itkonen_title: "Aatu Itkonen – Taikuri, juontaja & esiintyjä",
   index_aatu_itkonen:
     "Teimme yritykseni kanssa nuorelle kouvolalaislähtöiselle esiintyjälle Aatu Itkoselle uudet kotisivut. Sivustoon voit tutustua osoitteessa <aatu>aatuitkonen.fi</aatu>.",
