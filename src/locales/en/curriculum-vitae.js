@@ -213,7 +213,7 @@ export const curriculumVitaeMessages = {
   cv_education_university_of_helsinki_title: "University of Helsinki",
   cv_education_university_of_helsinki_social_sciences_degree:
     "Social Sciences Student, Economics",
-  cv_education_university_of_helsinki_social_sciences_time: "since 202",
+  cv_education_university_of_helsinki_social_sciences_time: "since 2020",
   cv_education_university_of_helsinki_open_ayoik_101_name:
     "Open uni: Introduction to Law",
   cv_education_university_of_helsinki_open_ayoik_101_time: "2019",
@@ -221,7 +221,8 @@ export const curriculumVitaeMessages = {
   cv_education_university_of_helsinki_open_aytkt10002_name:
     "Open uni: Basics of Programming",
   cv_education_university_of_helsinki_open_aytkt10002_time: "2019",
-  cv_education_university_of_helsinki_open_aytkt10002_mark: "5 credits, mark: 5",
+  cv_education_university_of_helsinki_open_aytkt10002_mark:
+    "5 credits, mark: 5",
 
   cv_languages_title: "Languages",
   cv_languages_list: `
@@ -256,6 +257,19 @@ export const curriculumVitaeMessages = {
     content for them. I’ve also got a lot of experience in versatile use of each
     platform.
   </p>
+  `,
+
+  cv_other_title: "Other Skills and Knowledge",
+  cv_other: `
+  <p>
+    Through both experience and learning I’ve acquired a lot of other skills
+    and knowledge, including:
+  </p>
+  <ul>
+    <li>vast skills in event management and planning</li>
+    <li>skills and experience in management and bookkeeping of organizations</li>
+    <li>confident and diverse ability to perform and especially give speeches</li>
+  </ul>
   `
   /* eslint-enable camelcase max-len */
 };
