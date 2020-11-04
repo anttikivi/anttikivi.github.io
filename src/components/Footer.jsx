@@ -9,6 +9,8 @@ import LanguageSwitcher from "./LanguageSwitcher";
 
 import footerStyles from "./Footer.module.scss";
 
+import {DISPLAY_LANGUAGE_SWITCHER} from "../site-constants";
+
 import {createIntl} from "../utils/createIntl";
 
 import iconInstagram from "../images/footer/instagram_footer.png";
@@ -21,7 +23,7 @@ const Footer = props => {
   return (
     <footer id="colophon" className={footerStyles.siteFooter}>
       {(() => {
-        if (!props.notFound) {
+        if (!props.notFound && DISPLAY_LANGUAGE_SWITCHER) {
           return (
             <div className={footerStyles.languages}>
               <LanguageSwitcher {...props} />

@@ -12,7 +12,7 @@
     "nit": "prettier --config .prettierrc.json --list-different \"**/*.{js,jsx,json,md}\"",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "lint:scss": "stylelint '**/*.scss'",
-    "lint:js": "eslint 'src/**/*.js'",
+    "lint:js": "eslint 'src/**/*.js' 'src/**/*.jsx'",
     "clean": "gatsby clean && rm -rf src/__generated__",
     "start": "yarn dev"
   },
