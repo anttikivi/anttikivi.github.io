@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - Ability to change the langauge of the current page.
 - Configuration to hide chosen references from the home page.
 - Configuration to hide the language switcher.
+- JSX-typed components to files that are checked by lint.
 
 ### Changed
 
