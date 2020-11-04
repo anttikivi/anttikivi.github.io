@@ -27,6 +27,8 @@ const LanguageSwitcher = props => {
             </>
           );
         }
+
+        return <></>;
       })()}
       {(() => {
         if (props.lang !== "en") {
@@ -41,6 +43,8 @@ const LanguageSwitcher = props => {
             </>
           );
         }
+
+        return <></>;
       })()}
     </>
   );

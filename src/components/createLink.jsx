@@ -8,13 +8,15 @@ import {allFiles} from "../__generated__/all-pages";
 
 import pageSlugs from "../data/page-slugs.json";
 
+const pageKeySlashIndex = 1;
+
 const createLink = currentLocale => {
   const paths = allFiles;
   const slugs = pageSlugs;
 
   return linkProps => {
-    const pageKey = linkProps.to.substring(1);
-    let to = linkProps.to;
+    const pageKey = linkProps.to.substring(pageKeySlashIndex);
+    let {to} = linkProps;
 
     if (pageKey in slugs && currentLocale in slugs[pageKey]) {
       to = `/${slugs[pageKey][currentLocale]}`;
