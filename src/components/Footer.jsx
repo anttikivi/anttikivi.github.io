@@ -30,6 +30,8 @@ const Footer = props => {
             </div>
           );
         }
+
+        return <></>;
       })()}
       <div className={footerStyles.socialMediaInfo}>
         <a

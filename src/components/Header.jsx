@@ -53,6 +53,9 @@ const Header = props => {
 
 Header.defaultProps = {home: false};
 
-Header.propTypes = {home: PropTypes.bool, lang: PropTypes.string.isRequired};
+Header.propTypes = {
+  home: PropTypes.bool,
+  lang: PropTypes.string.isRequired
+};
 
 export default Header;
