@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [0.3.0] - 2020-11-04
+
+### Added
+
+- Support for translating contents of page by using page templates.
+- Support for translating the paths of pages.
+- Function creating link components that direct to the correct translated paths.
+- Translations for components and the index and curriculum vitae pages.
+- Wrapper component that provides context for internationalization.
+- Component for links that change the current language.
+- Ability to change the langauge of the current page.
+- Configuration to hide chosen references from the home page.
+- Configuration to hide the language switcher.
+- JSX-typed components to files that are checked by lint.
+
+### Changed
+
+- Location of the search engine optimization component from each page to the layout component.
+- Reference to Union of Upper Secondary School Students to be hidden.
+- Language switcher to be hidden.
+
 ## [0.2.1] - 2020-10-31
 
 ### Changed
@@ -27,7 +48,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.2.1...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/anttikivi/anttikivi.github.io/releases/tag/v0.1.0

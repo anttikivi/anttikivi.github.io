@@ -7,28 +7,32 @@ import PropTypes from "prop-types";
 import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";
+import SEO from "./SEO";
 
 import layoutStyles from "./Layout.module.scss";
 
-const Layout = ({children, isHome, isNotFound, title}) => (
-  <div className={layoutStyles.site}>
-    <Header isHome={isHome} />
-    <Main isHome={isHome} isNotFound={isNotFound} title={title}>
-      {children}
-    </Main>
-    <Footer />
-  </div>
+const Layout = props => (
+  <>
+    <SEO title={props.title} />
+    <div className={layoutStyles.site}>
+      <Header {...props} />
+      <Main {...props}>{props.children}</Main>
+      <Footer {...props} />
+    </div>
+  </>
 );
 
 Layout.defaultProps = {
-  isHome: false,
-  isNotFound: false
+  home: false,
+  notFound: false
 };
 
 Layout.propTypes = {
   children: PropTypes.node,
-  isHome: PropTypes.bool,
-  isNotFound: PropTypes.bool,
+  lang: PropTypes.string.isRequired,
+  pageKey: PropTypes.string.isRequired,
+  home: PropTypes.bool,
+  notFound: PropTypes.bool,
   title: PropTypes.string.isRequired
 };
 
