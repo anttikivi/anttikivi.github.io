@@ -2,6 +2,7 @@
 // Licensed under the MIT License
 
 import React from "react";
+import PropTypes from "prop-types";
 import {graphql} from "gatsby";
 import {useIntl} from "react-intl";
 
@@ -33,7 +34,7 @@ import referenceSofiaJulin from "../images/home/reference_sofiajulin-1536x864.pn
 import referenceOppilaskunta from "../images/home/reference_reserve_officer_school_student_body.png";
 /* eslint-enable max-len */
 
-const Index = props => {
+const IndexPage = props => {
   const i = createIntl(useIntl());
   const Link = createLink(props.pageContext.lang);
 
@@ -103,6 +104,8 @@ const Index = props => {
               </MediaText>
             );
           }
+
+          return <></>;
         })()}
 
         {(() => {
@@ -127,6 +130,8 @@ const Index = props => {
               </MediaText>
             );
           }
+
+          return <></>;
         })()}
 
         {(() => {
@@ -151,6 +156,8 @@ const Index = props => {
               </MediaText>
             );
           }
+
+          return <></>;
         })()}
 
         {(() => {
@@ -175,17 +182,25 @@ const Index = props => {
               </MediaText>
             );
           }
+
+          return <></>;
         })()}
       </div>
     </Layout>
   );
 };
 
-export default props => (
+IndexPage.propTypes = {pageContext: PropTypes.object};
+
+const Index = props => (
   <Intl locale={props.pageContext.lang}>
-    <Index {...props} />
+    <IndexPage {...props} />
   </Intl>
 );
+
+Index.propTypes = {pageContext: PropTypes.object};
+
+export default Index;
 
 export const query = graphql`
   query IndexPage {

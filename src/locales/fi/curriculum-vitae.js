@@ -2,7 +2,7 @@
 // Licensed under the MIT License
 
 export const curriculumVitaeMessages = {
-  /* eslint-disable camelcase max-len */
+  /* eslint-disable camelcase */
   cv_title: "Ansioluettelo",
   cv_summary_title: "Pähkinänkuoressa",
   cv_summary: `
@@ -271,9 +271,13 @@ export const curriculumVitaeMessages = {
   </p>
   <ul>
     <li>monipuoliset taidot tapahtumatuotannossa,</li>
-    <li>sekä yhtiön että yhdistysten hallinnon ja kirjanpidon vankka osaaminen, ja</li>
-    <li>itsevarma ja moninainen esiintyminen ja erityisesti puhe-esiintyminen.</li>
+    <li>
+      sekä yhtiön että yhdistysten hallinnon ja kirjanpidon vankka osaaminen, ja
+    </li>
+    <li>
+      itsevarma ja moninainen esiintyminen ja erityisesti puhe-esiintyminen.
+    </li>
   </ul>
   `
-  /* eslint-enable camelcase max-len */
+  /* eslint-enable camelcase */
 };

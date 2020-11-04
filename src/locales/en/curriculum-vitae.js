@@ -2,7 +2,7 @@
 // Licensed under the MIT License
 
 export const curriculumVitaeMessages = {
-  /* eslint-disable camelcase max-len */
+  /* eslint-disable camelcase */
   cv_title: "Curriculum Vitae",
   cv_summary_title: "In a Nutshell",
   cv_summary: `
@@ -116,7 +116,7 @@ export const curriculumVitaeMessages = {
   cv_positions_of_trust_title: "Position of Trust",
   cv_positions_of_trust_reserve_officer_school_title: "Reserve Officer School",
   cv_positions_of_trust_reserve_officer_school_job:
-    "President of the Board of the Student Body in the 256th Reserve Officer Course",
+    "President of the Board of the Student Body in the 256th Reserve Officer Course", // eslint-disable-line max-len
   cv_positions_of_trust_reserve_officer_school_time: "2020",
   cv_positions_of_trust_kokoomusnuoret_helsinki_title:
     "Youth of the National Coalition Party in Helsinki",
@@ -267,9 +267,13 @@ export const curriculumVitaeMessages = {
   </p>
   <ul>
     <li>vast skills in event management and planning</li>
-    <li>skills and experience in management and bookkeeping of organizations</li>
-    <li>confident and diverse ability to perform and especially give speeches</li>
+    <li>
+      skills and experience in management and bookkeeping of organizations
+    </li>
+    <li>
+      confident and diverse ability to perform and especially give speeches
+    </li>
   </ul>
   `
-  /* eslint-enable camelcase max-len */
+  /* eslint-enable camelcase */
 };

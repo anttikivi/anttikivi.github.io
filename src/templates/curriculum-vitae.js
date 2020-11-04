@@ -2,6 +2,7 @@
 // Licensed under the MIT License
 
 import React from "react";
+import PropTypes from "prop-types";
 import {useIntl} from "react-intl";
 
 import Intl from "../components/Intl";
@@ -16,7 +17,7 @@ import imageStyles from "../components/Image.module.scss";
 
 import frontPageProfile from "../images/front-page-profile-2.jpg";
 
-const CurriculumVitae = props => {
+const CurriculumVitaePage = props => {
   const i = createIntl(useIntl());
 
   return (
@@ -262,8 +263,14 @@ const CurriculumVitae = props => {
   );
 };
 
-export default props => (
+CurriculumVitaePage.propTypes = {pageContext: PropTypes.object};
+
+const CurriculumVitae = props => (
   <Intl locale={props.pageContext.lang}>
-    <CurriculumVitae {...props} />
+    <CurriculumVitaePage {...props} />
   </Intl>
 );
+
+CurriculumVitae.propTypes = {pageContext: PropTypes.object};
+
+export default CurriculumVitae;
