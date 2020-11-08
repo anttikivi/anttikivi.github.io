@@ -4,7 +4,7 @@
 @import "../styles/variables";
 
 .toggleButton {
-  border: $color__border-button;
+  border: 2px solid $color__border-button;
   border-radius: $size__border-radius;
   background: $color__background-button;
   color: $color__text-main;
@@ -40,4 +40,9 @@
       /* stylelint-enable media-feature-name-no-unknown */
     }
   }
+}
+
+.sectionHr {
+  border: 2px solid $color__text-main;
+  background-color: $color__text-main;
 }

@@ -82,6 +82,7 @@ export const curriculumVitaeMessages = {
     hyväksyttiin.
   </p>
   `,
+  cv_work_experience_other_title: "Muu työkokemus",
   cv_work_experience_frank_title: "Oy Frank Students Ab",
   cv_work_experience_frank_job: "Community Assistant",
   cv_work_experience_frank_time: "syksy 2018",

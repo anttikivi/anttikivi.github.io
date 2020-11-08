@@ -5,6 +5,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import {useIntl} from "react-intl";
 
+import CurriculumVitaeSection from "../components/CurriculumVitaeSection";
 import Intl from "../components/Intl";
 import Layout from "../components/Layout";
 
@@ -72,31 +73,33 @@ const CurriculumVitaePage = props => {
               p: (...chunk) => <p>{chunk}</p>
             })}
 
-            <h3>{i("cv_work_experience_frank_title")}</h3>
+            <CurriculumVitaeSection title={i("cv_work_experience_other_title")}>
+              <h3>{i("cv_work_experience_frank_title")}</h3>
 
-            <h4>{i("cv_work_experience_frank_job")}</h4>
-            <p>
-              <em>{i("cv_work_experience_frank_time")}</em>
-            </p>
-            {i("cv_work_experience_frank", {p: (...chunk) => <p>{chunk}</p>})}
+              <h4>{i("cv_work_experience_frank_job")}</h4>
+              <p>
+                <em>{i("cv_work_experience_frank_time")}</em>
+              </p>
+              {i("cv_work_experience_frank", {p: (...chunk) => <p>{chunk}</p>})}
 
-            <h3>{i("cv_work_experience_lidl_title")}</h3>
-            <h4>{i("cv_work_experience_lidl_job")}</h4>
-            <p>
-              <em>{i("cv_work_experience_lidl_time")}</em>
-            </p>
-            {i("cv_work_experience_lidl", {
-              p: (...chunk) => {
-                <p>{chunk}</p>;
-              }
-            })}
+              <h3>{i("cv_work_experience_lidl_title")}</h3>
+              <h4>{i("cv_work_experience_lidl_job")}</h4>
+              <p>
+                <em>{i("cv_work_experience_lidl_time")}</em>
+              </p>
+              {i("cv_work_experience_lidl", {
+                p: (...chunk) => {
+                  <p>{chunk}</p>;
+                }
+              })}
 
-            <h3>{i("cv_work_experience_palloliitto_title")}</h3>
+              <h3>{i("cv_work_experience_palloliitto_title")}</h3>
 
-            <h4>{i("cv_work_experience_palloliitto_job")}</h4>
-            <p>
-              <em>{i("cv_work_experience_palloliitto_time")}</em>
-            </p>
+              <h4>{i("cv_work_experience_palloliitto_job")}</h4>
+              <p>
+                <em>{i("cv_work_experience_palloliitto_time")}</em>
+              </p>
+            </CurriculumVitaeSection>
 
             <h2>{i("cv_positions_of_trust_title")}</h2>
 

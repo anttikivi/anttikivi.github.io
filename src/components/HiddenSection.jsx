@@ -32,7 +32,16 @@ const HiddenSection = props => {
       </button>
       {(() => {
         if (toggled) {
-          return <div>{props.children}</div>;
+          if (props.displayHr) {
+            return (
+              <>
+                <div>{props.children}</div>
+                <hr className={sectionStyles.sectionHr} />
+              </>
+            );
+          } else {
+            return <div>{props.children}</div>;
+          }
         }
 
         return <></>;
@@ -41,9 +50,11 @@ const HiddenSection = props => {
   );
 };
 
+HiddenSection.defaultProps = {displayHr: false};
+
 HiddenSection.propTypes = {
   children: PropTypes.node,
-  lang: PropTypes.string.isRequired
+  displayHr: PropTypes.bool
 };
 
 export default HiddenSection;

@@ -85,6 +85,7 @@ export const curriculumVitaeMessages = {
     general upper secondary education.
   </p>
   `,
+  cv_work_experience_other_title: "Other Work Experience",
   cv_work_experience_frank_title: "Oy Frank Students Ab",
   cv_work_experience_frank_job: "Community Assistant",
   cv_work_experience_frank_time: "autumn 2018",

@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [Unreleased]
+
+### Added
+
+- Component for section that can be shown and hidden by button.
+- Component for hiding and showing sections in specifically in the curriculum vitae.
+
 ## [0.3.0] - 2020-11-04
 
 ### Added
