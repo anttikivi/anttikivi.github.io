@@ -233,16 +233,19 @@ export const curriculumVitaeMessages = {
   cv_education_university_of_helsinki_social_sciences_degree:
     "Valtiotieteiden ylioppilas, taloustiede",
   cv_education_university_of_helsinki_title: "Helsingin yliopisto",
-  cv_education_university_of_helsinki_social_sciences_time: "2020 alkaen",
-  cv_education_university_of_helsinki_open_ayoik_101_name:
-    "Avoin yo: Johdatus oikeustieteeseen",
-  cv_education_university_of_helsinki_open_ayoik_101_time: "2019",
-  cv_education_university_of_helsinki_open_ayoik_101_mark:
-    "5 op, arvosana: hyväksytty",
-  cv_education_university_of_helsinki_open_aytkt10002_name:
-    "Avoin yo: Ohjelmoinnin perusteet",
-  cv_education_university_of_helsinki_open_aytkt10002_time: "2019",
-  cv_education_university_of_helsinki_open_aytkt10002_mark: "5 op, arvosana: 5",
+  cv_education_university_of_helsinki_social_sciences_time:
+    "2020 alkaen, läsnä syksystä 2021 alkaen",
+  cv_education_helsinki_open_uni_show: "Näytä opinnot avoimessa yliopistossa",
+  cv_education_helsinki_open_uni_hide: "Piilota opinnot avoimessa yliopistossa",
+  cv_education_helsinki_open_uni_ayon_p222_name: "Immateriaalioikeus",
+  cv_education_helsinki_open_uni_ayon_p222_time: "kesken",
+  cv_education_helsinki_open_uni_ayon_p222_mark: "3 op",
+  cv_education_helsinki_open_uni_ayoik_101_name: "Johdatus oikeustieteeseen",
+  cv_education_helsinki_open_uni_ayoik_101_time: "2019",
+  cv_education_helsinki_open_uni_ayoik_101_mark: "5 op, arvosana: hyväksytty",
+  cv_education_helsinki_open_uni_aytkt10002_name: "Ohjelmoinnin perusteet",
+  cv_education_helsinki_open_uni_aytkt10002_time: "2019",
+  cv_education_helsinki_open_uni_aytkt10002_mark: "5 op, arvosana: 5",
   cv_education_reserve_officer_degree: "Reserviupseeritutkinto",
   cv_education_reserve_officer_course_title:
     "Maavoimien reserviupseerikurssi 256",

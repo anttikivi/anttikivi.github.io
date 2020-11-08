@@ -277,28 +277,35 @@ const CurriculumVitaePage = props => {
                 {i("cv_education_university_of_helsinki_social_sciences_time")}
               </em>
             </p>
-            <h4 className={cvStyles.subHeading}>
-              {i("cv_education_university_of_helsinki_open_ayoik_101_name")}
-            </h4>
-            <p>
-              <em>
-                {i("cv_education_university_of_helsinki_open_ayoik_101_time")}
-              </em>
-            </p>
-            <p>
-              {i("cv_education_university_of_helsinki_open_ayoik_101_mark")}
-            </p>
-            <h4 className={cvStyles.subHeading}>
-              {i("cv_education_university_of_helsinki_open_aytkt10002_name")}
-            </h4>
-            <p>
-              <em>
-                {i("cv_education_university_of_helsinki_open_aytkt10002_time")}
-              </em>
-            </p>
-            <p>
-              {i("cv_education_university_of_helsinki_open_aytkt10002_mark")}
-            </p>
+            <div className={cvStyles.openUniStudies}>
+              <HiddenSection
+                showText={i("cv_education_helsinki_open_uni_show")}
+                hideText={i("cv_education_helsinki_open_uni_hide")}
+                displayHr
+              >
+                <h4 className={cvStyles.subHeading}>
+                  {i("cv_education_helsinki_open_uni_ayon_p222_name")}
+                </h4>
+                <p>
+                  <em>{i("cv_education_helsinki_open_uni_ayon_p222_time")}</em>
+                </p>
+                <p>{i("cv_education_helsinki_open_uni_ayon_p222_mark")}</p>
+                <h4 className={cvStyles.subHeading}>
+                  {i("cv_education_helsinki_open_uni_ayoik_101_name")}
+                </h4>
+                <p>
+                  <em>{i("cv_education_helsinki_open_uni_ayoik_101_time")}</em>
+                </p>
+                <p>{i("cv_education_helsinki_open_uni_ayoik_101_mark")}</p>
+                <h4 className={cvStyles.subHeading}>
+                  {i("cv_education_helsinki_open_uni_aytkt10002_name")}
+                </h4>
+                <p>
+                  <em>{i("cv_education_helsinki_open_uni_aytkt10002_time")}</em>
+                </p>
+                <p>{i("cv_education_helsinki_open_uni_aytkt10002_mark")}</p>
+              </HiddenSection>
+            </div>
 
             <h3 className={cvStyles.subHeading}>
               {i("cv_education_reserve_officer_degree")}
