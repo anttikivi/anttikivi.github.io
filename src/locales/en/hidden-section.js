@@ -3,7 +3,7 @@
 
 export const hiddenSectionMessages = {
   /* eslint-disable camelcase */
-  hidden_section_button_hide: "Hide",
-  hidden_section_button_show: "Show"
+  toggle_button_hide: "Hide",
+  toggle_button_show: "Show"
   /* eslint-enable camelcase */
 };

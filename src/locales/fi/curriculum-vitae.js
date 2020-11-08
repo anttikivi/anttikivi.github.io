@@ -150,6 +150,22 @@ export const curriculumVitaeMessages = {
     hallituksen työskentelyyn niin sanotusti piirijärjestöjen soihdunkantajana.
   </p>
   `,
+  cv_positions_of_trust_vantaa_title: "Vantaan kaupunki",
+  cv_positions_of_trust_vantaa_youth_council_job: "Nuorisovaltuutettu",
+  cv_positions_of_trust_vantaa_youth_council_time: "2016–2017",
+  cv_positions_of_trust_vantaa_youth_council: `
+  <p>
+    Nuorisovaltuutettuna osallistuin Vantaan nuorisovaltuuston toimintaan ja
+    kokouksiin. Nuorisovaltuuston tehtävänä on toimia erityisesti nuorten
+    äänitorvena ja edunvalvojana kaupungin päätöksenteossa. Osallistuin myös
+    nuorisovaltuuston edustajana useita kertoja Vantaan kaupunginvaltuuston
+    kokouksiin, joissa olin muun muassa nuorten edustajana kaupungin budjetti-
+    ja strategiapäätöksiä tehtäessä, ja Vantaan ruotsinkielisen lautakunnan,
+    Svenska Kommitténin, kokouksiin nuorten edustajana.
+  </p>
+  `,
+
+  cv_positions_of_trust_other_title: "Muita luottamustoimia",
   cv_positions_of_trust_uudenmaan_lukiolaiset_title:
     "Suomen Lukiolaisten Liitto ry:n Uudenmaan piiri ry",
   cv_positions_of_trust_uudenmaan_lukiolaiset_vp_job: "Varapuheenjohtaja",
@@ -182,20 +198,6 @@ export const curriculumVitaeMessages = {
     "Pääkaupunkiseudun Eurooppanuoret ry",
   cv_positions_of_trust_jef_helsinki_job: "Hallituksen jäsen",
   cv_positions_of_trust_jef_helsinki_time: "2017",
-  cv_positions_of_trust_vantaa_title: "Vantaan kaupunki",
-  cv_positions_of_trust_vantaa_youth_council_job: "Nuorisovaltuutettu",
-  cv_positions_of_trust_vantaa_youth_council_time: "2016–2017",
-  cv_positions_of_trust_vantaa_youth_council: `
-  <p>
-    Nuorisovaltuutettuna osallistuin Vantaan nuorisovaltuuston toimintaan ja
-    kokouksiin. Nuorisovaltuuston tehtävänä on toimia erityisesti nuorten
-    äänitorvena ja edunvalvojana kaupungin päätöksenteossa. Osallistuin myös
-    nuorisovaltuuston edustajana useita kertoja Vantaan kaupunginvaltuuston
-    kokouksiin, joissa olin muun muassa nuorten edustajana kaupungin budjetti-
-    ja strategiapäätöksiä tehtäessä, ja Vantaan ruotsinkielisen lautakunnan,
-    Svenska Kommitténin, kokouksiin nuorten edustajana.
-  </p>
-  `,
   cv_positions_of_trust_lukio_title: "Tikkurilan lukion opiskelijakunta",
   cv_positions_of_trust_lukio_job: "Hallituksen jäsen",
   cv_positions_of_trust_lukio_time: "2015–2018",

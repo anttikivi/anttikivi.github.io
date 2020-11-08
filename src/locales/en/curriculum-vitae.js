@@ -156,6 +156,20 @@ export const curriculumVitaeMessages = {
     the board’s meetings.
   </p>
   `,
+  cv_positions_of_trust_vantaa_title: "City of Vantaa",
+  cv_positions_of_trust_vantaa_youth_council_job: "Member of Youth Council",
+  cv_positions_of_trust_vantaa_youth_council_time: "2016–2017",
+  cv_positions_of_trust_vantaa_youth_council: `
+  <p>
+    As a member of the youth council I took part in the activities and meetings
+    of the youth council of city of Vantaa. The youth council’s main function is
+    to be the youth’s voice in the city’s decision-making. I also took part in
+    the city council’s meetings many times and for instance represented the
+    youth when the city approved its budget and new strategy.
+  </p>
+  `,
+
+  cv_positions_of_trust_other_title: "Other Positions of Trust",
   cv_positions_of_trust_uudenmaan_lukiolaiset_title:
     "Uusimaa District of Union of Upper Secondary School Students",
   cv_positions_of_trust_uudenmaan_lukiolaiset_vp_job: "Vice President",
@@ -181,18 +195,6 @@ export const curriculumVitaeMessages = {
   cv_positions_of_trust_jef_helsinki_title: "JEF Helsinki",
   cv_positions_of_trust_jef_helsinki_job: "Member of the Board",
   cv_positions_of_trust_jef_helsinki_time: "2017",
-  cv_positions_of_trust_vantaa_title: "City of Vantaa",
-  cv_positions_of_trust_vantaa_youth_council_job: "Member of Youth Council",
-  cv_positions_of_trust_vantaa_youth_council_time: "2016–2017",
-  cv_positions_of_trust_vantaa_youth_council: `
-  <p>
-    As a member of the youth council I took part in the activities and meetings
-    of the youth council of city of Vantaa. The youth council’s main function is
-    to be the youth’s voice in the city’s decision-making. I also took part in
-    the city council’s meetings many times and for instance represented the
-    youth when the city approved its budget and new strategy.
-  </p>
-  `,
   cv_positions_of_trust_lukio_title: "Student Body of Tikkurilan lukio",
   cv_positions_of_trust_lukio_job: "Member of the Board",
   cv_positions_of_trust_lukio_time: "2015–2018",

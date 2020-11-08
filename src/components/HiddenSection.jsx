@@ -3,9 +3,8 @@
 
 import React, {useState} from "react";
 import PropTypes from "prop-types";
-import {useIntl} from "react-intl";
 
-import {createIntl} from "../utils/createIntl";
+import ToggleButton from "./ToggleButton";
 
 import sectionStyles from "./HiddenSection.module.scss";
 
@@ -17,19 +16,9 @@ const HiddenSection = props => {
     setToggled(!toggled);
   };
 
-  const i = createIntl(useIntl());
-
   return (
     <>
-      <button
-        className={sectionStyles.toggleButton}
-        onClick={handleClick}
-        aria-expanded={toggled.toString()}
-      >
-        {toggled
-          ? i("hidden_section_button_hide")
-          : i("hidden_section_button_show")}
-      </button>
+      <ToggleButton onClick={handleClick} toggled={toggled} />
       {(() => {
         if (toggled) {
           if (props.displayHr) {

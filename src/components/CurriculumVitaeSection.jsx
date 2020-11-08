@@ -9,10 +9,10 @@ import HiddenSection from "./HiddenSection";
 import sectionStyles from "./CurriculumVitaeSection.module.scss";
 
 const CurriculumVitaeSection = props => (
-  <>
-    <h3 className={sectionStyles.sectionTitle}>{props.title}</h3>
+  <div className={sectionStyles.container}>
+    <h2 className={sectionStyles.sectionTitle}>{props.title}</h2>
     <HiddenSection displayHr>{props.children}</HiddenSection>
-  </>
+  </div>
 );
 
 CurriculumVitaeSection.propTypes = {

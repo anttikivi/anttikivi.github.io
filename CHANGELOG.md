@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Component for section that can be shown and hidden by button.
 - Component for hiding and showing sections in specifically in the curriculum vitae.
+- Component that acts as the button for the section that allows hiding content.
 
 ### Changed
 
