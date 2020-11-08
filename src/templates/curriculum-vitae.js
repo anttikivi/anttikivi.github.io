@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import {useIntl} from "react-intl";
 
 import CurriculumVitaeSection from "../components/CurriculumVitaeSection";
+import HiddenSection from "../components/HiddenSection";
 import Intl from "../components/Intl";
 import Layout from "../components/Layout";
 
@@ -305,6 +306,19 @@ const CurriculumVitaePage = props => {
               <em>{i("cv_education_tikkurilan_lukio_time")}</em>
             </p>
             <p>{i("cv_education_tikkurilan_lukio_mark")}</p>
+            <div className={cvStyles.upperSecondaryMarks}>
+              <HiddenSection
+                showText={i("cv_education_tikkurilan_lukio_show_marks")}
+                hideText={i("cv_education_tikkurilan_lukio_hide_marks")}
+              >
+                <ul>
+                  {i("cv_education_tikkurilan_lukio_marks_by_subject", {
+                    li: (...chunk) => <li>{chunk}</li>,
+                    b: (...chunk) => <b>{chunk}</b>
+                  })}
+                </ul>
+              </HiddenSection>
+            </div>
             {i("cv_education_tikkurilan_lukio", {
               p: (...chunk) => <p>{chunk}</p>,
               vs: (...chunk) => (

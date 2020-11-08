@@ -244,6 +244,20 @@ export const curriculumVitaeMessages = {
   cv_education_tikkurilan_lukio_title: "Tikkurilan lukio",
   cv_education_tikkurilan_lukio_time: "2015–2018",
   cv_education_tikkurilan_lukio_mark: "Marks: LLLLLLEEEM",
+  cv_education_tikkurilan_lukio_show_marks: "Show marks",
+  cv_education_tikkurilan_lukio_hide_marks: "Hide marks",
+  cv_education_tikkurilan_lukio_marks_by_subject: `
+  <li><b>mother tongue</b>: laudatur</li>
+  <li><b>mathematics, advanced syllabus</b>: laudatur</li>
+  <li><b>English, advanced syllabus</b>: laudatur</li>
+  <li><b>Latin</b>: laudatur</li>
+  <li><b>social studies</b>: laudatur</li>
+  <li><b>chemistry</b>: laudatur</li>
+  <li><b>Swedish, advanced syllabus</b>: eximia cum laude approbatur</li>
+  <li><b>physics</b>: eximia cum laude approbatur</li>
+  <li><b>biology</b>: eximia cum laude approbatur</li>
+  <li><b>Russian, basic syllabus</b>: magna cum laude approbatur</li>
+  `,
   cv_education_tikkurilan_lukio: `
   <p>
     I graduated as Finland’s best student in autumn 2018. Read <vs>an article
