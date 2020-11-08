@@ -13,9 +13,9 @@ const ToggleButton = props => {
   const i = createIntl(useIntl());
 
   const showText =
-    props.showText !== undefined ? props.showText : i("toggle_button_show");
+    props.showText === "" ? i("toggle_button_show") : props.showText;
   const hideText =
-    props.hideText !== undefined ? props.hideText : i("toggle_button_hide");
+    props.hideText === "" ? i("toggle_button_hide") : props.hideText;
 
   return (
     <button
@@ -29,8 +29,8 @@ const ToggleButton = props => {
 };
 
 ToggleButton.defaultProps = {
-  showText: undefined,
-  hideText: undefined
+  showText: "",
+  hideText: ""
 };
 
 ToggleButton.propTypes = {

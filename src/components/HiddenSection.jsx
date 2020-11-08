@@ -46,8 +46,8 @@ const HiddenSection = props => {
 
 HiddenSection.defaultProps = {
   displayHr: false,
-  showText: undefined,
-  hideText: undefined
+  showText: "",
+  hideText: ""
 };
 
 HiddenSection.propTypes = {
