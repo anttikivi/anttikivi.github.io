@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - Component that acts as the button for the section that allows hiding content.
 - Summary to the curriculum vitae.
 - Couple of points about studies and politics to the summary list in the curriculum vitae.
+- Configuration to hide all of the references at the same time.
 
 ### Changed
 

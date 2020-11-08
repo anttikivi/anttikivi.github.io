@@ -13,6 +13,7 @@ import Layout from "../components/Layout";
 import MediaText from "../components/MediaText";
 
 import {
+  DISPLAY_INDEX_REFERENCES,
   DISPLAY_INDEX_AATU_ITKONEN,
   DISPLAY_INDEX_UNION_OF_UPPER_SECONDARY_SCHOOL_STUDENTS,
   DISPLAY_INDEX_SOFIA_JULIN,
@@ -78,12 +79,20 @@ const IndexPage = props => {
           })}
         </div>
 
-        <h2 className={`${indexStyles.homeTitle} ${styles.alignCenter}`}>
-          {i("index_portfolio_title")}
-        </h2>
+        {(() => {
+          if (DISPLAY_INDEX_REFERENCES) {
+            return (
+              <h2 className={`${indexStyles.homeTitle} ${styles.alignCenter}`}>
+                {i("index_portfolio_title")}
+              </h2>
+            );
+          }
+
+          return <></>;
+        })()}
 
         {(() => {
-          if (DISPLAY_INDEX_AATU_ITKONEN) {
+          if (DISPLAY_INDEX_REFERENCES && DISPLAY_INDEX_AATU_ITKONEN) {
             return (
               <MediaText image={referenceAatuItkonen}>
                 <h3>{i("index_aatu_itkonen_title")}</h3>
@@ -109,7 +118,10 @@ const IndexPage = props => {
         })()}
 
         {(() => {
-          if (DISPLAY_INDEX_UNION_OF_UPPER_SECONDARY_SCHOOL_STUDENTS) {
+          if (
+            DISPLAY_INDEX_REFERENCES &&
+            DISPLAY_INDEX_UNION_OF_UPPER_SECONDARY_SCHOOL_STUDENTS
+          ) {
             return (
               <MediaText image={referenceLukio}>
                 <h3>{i("index_lukio_title")}</h3>
@@ -135,7 +147,7 @@ const IndexPage = props => {
         })()}
 
         {(() => {
-          if (DISPLAY_INDEX_SOFIA_JULIN) {
+          if (DISPLAY_INDEX_REFERENCES && DISPLAY_INDEX_SOFIA_JULIN) {
             return (
               <MediaText image={referenceSofiaJulin}>
                 <h3>{i("index_sofia_julin_title")}</h3>
@@ -161,7 +173,10 @@ const IndexPage = props => {
         })()}
 
         {(() => {
-          if (DISPLAY_INDEX_RESERVE_OFFICER_SCHOOL_STUDENT_BODY) {
+          if (
+            DISPLAY_INDEX_REFERENCES &&
+            DISPLAY_INDEX_RESERVE_OFFICER_SCHOOL_STUDENT_BODY
+          ) {
             return (
               <MediaText image={referenceOppilaskunta}>
                 <h3>{i("index_oppilaskunta_title")}</h3>
