@@ -30,6 +30,10 @@ export const curriculumVitaeMessages = {
   `,
 
   cv_work_experience_title: "Työkokemus",
+  cv_work_experience_defence_force_title: "Puolustusvoimat",
+  cv_work_experience_defence_force_job:
+    "Toimittaja (varusmies), uutislehti Ruotuväki",
+  cv_work_experience_defence_force_time: "syyskuusta 2020 alkaen",
   cv_work_experience_visiosto_title: "Visiosto oy",
   cv_work_experience_visiosto_job: "Toimitusjohtaja & yrittäjä",
   cv_work_experience_visiosto_time: "2019 alkaen",
@@ -205,19 +209,9 @@ export const curriculumVitaeMessages = {
   cv_positions_of_trust_jef_helsinki_time: "2017",
 
   cv_education_title: "Koulutus",
-  cv_education_tikkurilan_lukio_title: "Tikkurilan lukio",
-  cv_education_tikkurilan_lukio_degree: "Ylioppilastutkinto",
-  cv_education_tikkurilan_lukio_time: "2015–2018",
-  cv_education_tikkurilan_lukio_mark: "Arvosanat: LLLLLLEEEM",
-  cv_education_tikkurilan_lukio: `
-  <p>
-    Valmistuin syksyn 2018 Suomen parhaana ylioppilaana. Lue <vs>Vantaan
-    Sanomien juttu</vs> aiheesta.
-  </p>
-  `,
-  cv_education_university_of_helsinki_title: "Helsingin yliopisto",
   cv_education_university_of_helsinki_social_sciences_degree:
     "Valtiotieteiden ylioppilas, taloustiede",
+  cv_education_university_of_helsinki_title: "Helsingin yliopisto",
   cv_education_university_of_helsinki_social_sciences_time: "2020 alkaen",
   cv_education_university_of_helsinki_open_ayoik_101_name:
     "Avoin yo: Johdatus oikeustieteeseen",
@@ -228,12 +222,25 @@ export const curriculumVitaeMessages = {
     "Avoin yo: Ohjelmoinnin perusteet",
   cv_education_university_of_helsinki_open_aytkt10002_time: "2019",
   cv_education_university_of_helsinki_open_aytkt10002_mark: "5 op, arvosana: 5",
+  cv_education_reserve_officer_degree: "Reserviupseeritutkinto",
+  cv_education_reserve_officer_course_title:
+    "Maavoimien reserviupseerikurssi 256",
+  cv_education_tikkurilan_lukio_degree: "Ylioppilastutkinto",
+  cv_education_tikkurilan_lukio_title: "Tikkurilan lukio",
+  cv_education_tikkurilan_lukio_time: "2015–2018",
+  cv_education_tikkurilan_lukio_mark: "Arvosanat: LLLLLLEEEM",
+  cv_education_tikkurilan_lukio: `
+  <p>
+    Valmistuin syksyn 2018 Suomen parhaana ylioppilaana. Lue <vs>Vantaan
+    Sanomien juttu</vs> aiheesta.
+  </p>
+  `,
 
   cv_languages_title: "Kielitaito",
   cv_languages_list: `
   <li>suomi: äidinkieli</li>
   <li>englanti: erinomainen</li>
-  <li>ruotsi: hyvä</li>
+  <li>ruotsi: sujuva</li>
   <li>venäjä: perusteet</li>
   <li>ranska: perusteet</li>
   <li>latina: hyvä</li>
