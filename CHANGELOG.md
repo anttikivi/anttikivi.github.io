@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - Curriculum vitae page to use classes to style subheadings.
 - Order of the entries in the curriculum vitae to be chronological.
 - Rest of the references on the home page to be hidden.
+- Language switcher to be visible.
 
 ## [0.3.1] - 2020-11-08
 

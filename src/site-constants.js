@@ -1,7 +1,7 @@
 // Copyright (c) 2020 Antti Kivi
 // Licensed under the MIT License
 
-const DISPLAY_LANGUAGE_SWITCHER = false;
+const DISPLAY_LANGUAGE_SWITCHER = true;
 
 const DISPLAY_INDEX_AATU_ITKONEN = false;
 const DISPLAY_INDEX_UNION_OF_UPPER_SECONDARY_SCHOOL_STUDENTS = false;
