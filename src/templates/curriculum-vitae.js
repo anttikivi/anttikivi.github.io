@@ -231,12 +231,21 @@ const CurriculumVitaePage = props => {
               <h3 className={cvStyles.subHeading}>
                 {i("cv_positions_of_trust_jef_helsinki_title")}
               </h3>
-
               <h4 className={cvStyles.subHeading}>
                 {i("cv_positions_of_trust_jef_helsinki_job")}
               </h4>
               <p>
                 <em>{i("cv_positions_of_trust_jef_helsinki_time")}</em>
+              </p>
+
+              <h3 className={cvStyles.subHeading}>
+                {i("cv_positions_of_trust_ita_vantaan_knl_title")}
+              </h3>
+              <h4 className={cvStyles.subHeading}>
+                {i("cv_positions_of_trust_ita_vantaan_knl_job")}
+              </h4>
+              <p>
+                <em>{i("cv_positions_of_trust_ita_vantaan_knl_time")}</em>
               </p>
 
               <h3 className={cvStyles.subHeading}>
