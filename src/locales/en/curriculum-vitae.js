@@ -230,16 +230,20 @@ export const curriculumVitaeMessages = {
   cv_education_university_of_helsinki_social_sciences_degree:
     "Social Sciences Student, Economics",
   cv_education_university_of_helsinki_title: "University of Helsinki",
-  cv_education_university_of_helsinki_social_sciences_time: "since 2020",
-  cv_education_university_of_helsinki_open_ayoik_101_name:
-    "Open uni: Introduction to Law",
-  cv_education_university_of_helsinki_open_ayoik_101_time: "2019",
-  cv_education_university_of_helsinki_open_ayoik_101_mark: "5 credits",
-  cv_education_university_of_helsinki_open_aytkt10002_name:
-    "Open uni: Basics of Programming",
-  cv_education_university_of_helsinki_open_aytkt10002_time: "2019",
-  cv_education_university_of_helsinki_open_aytkt10002_mark:
-    "5 credits, mark: 5",
+  cv_education_university_of_helsinki_social_sciences_time:
+    "since 2020, present in autumn 2021",
+  cv_education_helsinki_open_uni_show: "Show studies in open uni",
+  cv_education_helsinki_open_uni_hide: "Hide studies in open uni",
+  cv_education_helsinki_open_uni_ayon_p222_name: "Intellectual Property Law",
+  cv_education_helsinki_open_uni_ayon_p222_time: "in progress",
+  cv_education_helsinki_open_uni_ayon_p222_mark: "3 credits",
+  cv_education_helsinki_open_uni_ayoik_101_name:
+    "Introduction to Jurisprudence",
+  cv_education_helsinki_open_uni_ayoik_101_time: "2019",
+  cv_education_helsinki_open_uni_ayoik_101_mark: "5 credits, grading: pass",
+  cv_education_helsinki_open_uni_aytkt10002_name: "Introduction to Programming",
+  cv_education_helsinki_open_uni_aytkt10002_time: "2019",
+  cv_education_helsinki_open_uni_aytkt10002_mark: "5 credits, grading: 5",
   cv_education_reserve_officer_degree: "Reserve Officer’s Degree",
   cv_education_reserve_officer_course_title:
     "The Finnish Army’s Reserve Officer Course 256",
