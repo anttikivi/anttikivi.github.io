@@ -15,6 +15,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Curriculum vitae page to use classes to style subheadings.
 
+## [0.3.1] - 2020-11-08
+
+### Added
+
+- Finnish Defence Forces to work experience in curriculum vitae.
+- Reserve Officer Course to education in curriculum vitae.
+
+### Changed
+
+- Swedish to proficient.
+
 ## [0.3.0] - 2020-11-04
 
 ### Added
@@ -59,7 +70,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.3.0...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.3.1...HEAD
+[0.3.1]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.1.0...v0.2.0
