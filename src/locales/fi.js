@@ -6,6 +6,7 @@ import {defineMessages} from "react-intl";
 import {curriculumVitaeMessages} from "./fi/curriculum-vitae";
 import {footerMessages} from "./fi/footer";
 import {headerMessages} from "./fi/header";
+import {hiddenSectionMessages} from "./fi/hidden-section";
 import {indexMessages} from "./fi/index";
 import {navigationMessages} from "./fi/navigation";
 
@@ -13,6 +14,7 @@ export const messages = {
   ...curriculumVitaeMessages,
   ...footerMessages,
   ...headerMessages,
+  ...hiddenSectionMessages,
   ...indexMessages,
   ...navigationMessages
 };
