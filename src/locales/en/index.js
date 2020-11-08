@@ -6,8 +6,8 @@ export const indexMessages = {
   index_title: "Home",
   index_byline: "Entrepreneur from Helsinki, Finland",
   index_lede: `
-  <p>My website is still work in progress</p>
-  <p>However, you can already see my <cv>curriculum vitae</cv> here</p>
+  <p>My website isn’t quite ready yet</p>
+  <p>However, you can already check out my <cv>curriculum vitae</cv> here</p>
   <p>
     While waiting for the site to get ready, you can for example poke about my
     <visiosto>my company’s website</visiosto>

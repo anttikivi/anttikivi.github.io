@@ -293,9 +293,7 @@ const CurriculumVitaePage = props => {
             <h3 className={cvStyles.subHeading}>
               {i("cv_education_reserve_officer_degree")}
             </h3>
-            <h4 className={cvStyles.subHeading}>
-              {i("cv_education_reserve_officer_course_title")}
-            </h4>
+            <p>{i("cv_education_reserve_officer_course_title")}</p>
 
             <h3 className={cvStyles.subHeading}>
               {i("cv_education_tikkurilan_lukio_degree")}
@@ -326,26 +324,25 @@ const CurriculumVitaePage = props => {
               {i("cv_languages_list", {li: (...chunk) => <li>{chunk}</li>})}
             </ul>
 
-            <h2>{i("cv_ict_title")}</h2>
-            <h3 className={cvStyles.subHeading}>
-              {i("cv_ict_computer_sciences_title")}
-            </h3>
-            {i("cv_ict_computer_sciences", {p: (...chunk) => <p>{chunk}</p>})}
-            <h3 className={cvStyles.subHeading}>
-              {i("cv_ict_software_title")}
-            </h3>
-            {i("cv_ict_software", {p: (...chunk) => <p>{chunk}</p>})}
-            <h3 className={cvStyles.subHeading}>
-              {i("cv_ict_social_media_title")}
-            </h3>
-            {i("cv_ict_social_media", {p: (...chunk) => <p>{chunk}</p>})}
+            <h2>{i("cv_skills_title")}</h2>
 
-            <h2>{i("cv_other_title")}</h2>
-            {i("cv_other", {
-              p: (...chunk) => <p>{chunk}</p>,
-              ul: (...chunk) => <ul>{chunk}</ul>,
-              li: (...chunk) => <li>{chunk}</li>
-            })}
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_skills_communications_title")}
+            </h3>
+            {i("cv_skills_communications", {p: (...chunk) => <p>{chunk}</p>})}
+
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_skills_management_title")}
+            </h3>
+            {i("cv_skills_management", {p: (...chunk) => <p>{chunk}</p>})}
+
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_skills_events_title")}
+            </h3>
+            {i("cv_skills_events", {p: (...chunk) => <p>{chunk}</p>})}
+
+            <h3 className={cvStyles.subHeading}>{i("cv_skills_ict_title")}</h3>
+            {i("cv_skills_ict", {p: (...chunk) => <p>{chunk}</p>})}
           </div>
         </div>
       </div>

@@ -264,45 +264,50 @@ export const curriculumVitaeMessages = {
   <li>latina: hyvä</li>
   `,
 
-  cv_ict_title: "Tietotekninen osaaminen",
-  cv_ict_computer_sciences_title: "Tietojenkäsittelytiede",
-  cv_ict_computer_sciences: `
+  cv_skills_title: "Osaaminen",
+
+  cv_skills_communications_title: "Viestintä",
+  cv_skills_communications: `
   <p>
-    Osaamista tietojenkäsittelytieteissä sekä monien ohjelmointikielien
-    osaaminen, muun muassa C++, Python, PHP, HTML, CSS, JavaScript ja Java.
+    Hallitsen sujuvasti sosiaalisen median käytön, sen yleisimmät alustat ja
+    sisällön optimointi. Tunnen tärkeimpien alustojen käyttötarkoitusten erot ja
+    viestien terävöittämisen ja kanavan valitsemisen kohderyhmiä ajatellen.
   </p>
-  `,
-  cv_ict_software_title: "Ohjelmistot",
-  cv_ict_software: `
   <p>
-    Osaamista monista keskeisistä ohjelmistoista, kuten Microsoft 365 (entinen
-    Microsoft Office), Visma Netvisor ja Adobe Photoshop.
-  </p>
-  `,
-  cv_ict_social_media_title: "Sosiaalinen media",
-  cv_ict_social_media: `
-  <p>
-    Hallitsen keskeisimmät sosiaalisen median alustat ja sisällön optimoinnin
-    niille, ja minulla on myös paljon kokemusta näiden alustojen monipuolisesta
-    käytöstä.
+    Tekemisen ja kokemuksen kautta olen muovautunut itsevarmaksi, luontevaksi
+    ja moninaiseksi esiintyjäksi ja kirjoittajaksi.
   </p>
   `,
 
-  cv_other_title: "Muu keskeinen osaaminen",
-  cv_other: `
+  cv_skills_management_title: "Hallinto ja talous",
+  cv_skills_management: `
   <p>
-    Sekä kokemuksen ja tekemisen että opettelun kautta olen omaksunut myös monia
-    muita keskeisiä osaamisen alueita, kuten:
+    Minulla on vankka osaaminen yhdistysten ja yhtiöiden hallinnon ja
+    kirjanpidon pyörittämisestä pestieni kautta.
   </p>
-  <ul>
-    <li>monipuoliset taidot tapahtumatuotannossa,</li>
-    <li>
-      sekä yhtiön että yhdistysten hallinnon ja kirjanpidon vankka osaaminen, ja
-    </li>
-    <li>
-      itsevarma ja moninainen esiintyminen ja erityisesti puhe-esiintyminen.
-    </li>
-  </ul>
+  `,
+
+  cv_skills_events_title: "Tapahtumatuotanto",
+  cv_skills_events: `
+  <p>
+    Olen kartuttanut vahvat osaamisen tapahtumien järjestämiseen ja
+    tapahtumatuotantoon. Suurimmat järjestämäni tapahtumat, joiden
+    organisoinnissa olen ollut päävastuussa, ovat olleet lähes 250 osallistujan
+    kokonaisuuksia.
+  </p>
+  `,
+
+  cv_skills_ict_title: "Tietotekninen osaaminen",
+  cv_skills_ict: `
+  <p>
+    Taidan keskeiset ohjelmistot, kuten Microsoft 365 -ohjelmistot (entinen
+    Microsoft Office), Visma Netvisor ja Adobe Photoshop.
+  </p>
+  <p>
+    Minulta luonnistuu tietojenkäsittelytieteen perusteet sekä ohjelmoinnin ja
+    useita ohjelmointikieliä, muun muassa C++, Python, PHP, HTML, CSS,
+    JavaScript ja Java.
+  </p>
   `
   /* eslint-enable camelcase */
 };

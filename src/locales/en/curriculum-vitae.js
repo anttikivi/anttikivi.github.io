@@ -261,46 +261,50 @@ export const curriculumVitaeMessages = {
   <li>Latin: good</li>
   `,
 
-  cv_ict_title: "Information Technology",
-  cv_ict_computer_sciences_title: "Computer Sciences",
-  cv_ict_computer_sciences: `
+  cv_skills_title: "Skills and Knowledge",
+
+  cv_skills_communications_title: "Communications",
+  cv_skills_communications: `
+  <p>
+    I can fluently deal in social media and the essential social media platforms
+    in addition to optimizing content for them. I know the differences between
+    the uses of the major platforms and how to hone the message and choose the
+    platform with the target audience in mind.
+  </p>
+  <p>
+    Through both experience and learning I’ve become a confident, natural, and
+    diverse performer—especially when giving speeches—and writer.
+  </p>
+  `,
+
+  cv_skills_management_title: "Management and Finances",
+  cv_skills_management: `
+  <p>
+    I’ve got firm knowledge of management and bookkeeping of different
+    organizations through my past posts.
+  </p>
+  `,
+
+  cv_skills_events_title: "Event Management",
+  cv_skills_events: `
+  <p>
+    I’ve acquired expertise in organizing events and in event management and
+    planning in general. The largest events that I have been in charge of have
+    had almost 250 participants.
+  </p>
+  `,
+
+  cv_skills_ict_title: "Information Technology",
+  cv_skills_ict: `
+  <p>
+    I master many essential software, like Microsoft 365 (previously Microsoft
+    Office), Visma Netvisor, and Adobe Photoshop.
+  </p>
   <p>
     I’ve got basic knowledge in computer sciences and I know many different
     programming languages, including C++, Python, PHP, HTML, CSS, JavaScript,
     and Java.
   </p>
-  `,
-  cv_ict_software_title: "Software",
-  cv_ict_software: `
-  <p>
-    I know many essential software, like Microsoft 365, Visma Netvisor, and
-    Adobe Photoshop.
-  </p>
-  `,
-  cv_ict_social_media_title: "Social Media",
-  cv_ict_social_media: `
-  <p>
-    I can fluently deal in the essential social media platforms and optimize
-    content for them. I’ve also got a lot of experience in versatile use of each
-    platform.
-  </p>
-  `,
-
-  cv_other_title: "Other Skills and Knowledge",
-  cv_other: `
-  <p>
-    Through both experience and learning I’ve acquired a lot of other skills
-    and knowledge, including:
-  </p>
-  <ul>
-    <li>vast skills in event management and planning</li>
-    <li>
-      skills and experience in management and bookkeeping of organizations
-    </li>
-    <li>
-      confident and diverse ability to perform and especially give speeches
-    </li>
-  </ul>
   `
   /* eslint-enable camelcase */
 };
