@@ -293,9 +293,7 @@ const CurriculumVitaePage = props => {
             <h3 className={cvStyles.subHeading}>
               {i("cv_education_reserve_officer_degree")}
             </h3>
-            <p>
-              {i("cv_education_reserve_officer_course_title")}
-            </p>
+            <p>{i("cv_education_reserve_officer_course_title")}</p>
 
             <h3 className={cvStyles.subHeading}>
               {i("cv_education_tikkurilan_lukio_degree")}
@@ -343,9 +341,7 @@ const CurriculumVitaePage = props => {
             </h3>
             {i("cv_skills_events", {p: (...chunk) => <p>{chunk}</p>})}
 
-            <h3 className={cvStyles.subHeading}>
-              {i("cv_skills_ict_title")}
-            </h3>
+            <h3 className={cvStyles.subHeading}>{i("cv_skills_ict_title")}</h3>
             {i("cv_skills_ict", {p: (...chunk) => <p>{chunk}</p>})}
           </div>
         </div>
