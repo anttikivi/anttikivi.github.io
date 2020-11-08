@@ -41,9 +41,15 @@ const CurriculumVitaePage = props => {
           />
         </figure>
 
+        <div className={`${styles.alignCenter} ${cvStyles.summary}`}>
+          {i("cv_summary", {
+            p: (...chunk) => <p>{chunk}</p>
+          })}
+        </div>
+
         <div>
           <ul>
-            {i("cv_summary", {
+            {i("cv_summary_list", {
               li: (...chunk) => <li>{chunk}</li>
             })}
           </ul>

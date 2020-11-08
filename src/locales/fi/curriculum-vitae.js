@@ -6,11 +6,26 @@ export const curriculumVitaeMessages = {
   cv_title: "Ansioluettelo",
   cv_summary_title: "Pähkinänkuoressa",
   cv_summary: `
+    <p>
+      Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja
+      mieluummin hymyilen kuin jätän hymyilemättä. Vielä hetken lasken aamuja
+      upseerikokelaana ja vapaalla rakastan järjestötoimintaa ja musiikkia.
+    </p>
+  `,
+  cv_summary_list: `
   <li>Synnyin 4.5.1999, ikä 21 vuotta.</li>
   <li>Asun Helsingissä Etu-Töölössä.</li>
   <li>
     Olen toiminut monissa luottamustoimissa, merkittävimpänä kokoaikatyö Suomen
     Lukiolaisten Liiton järjestösektorista vastaavana varapuheenjohtajana.
+  </li>
+  <li>
+    Luonnollisesti olen erittäin kiinnostunut politiikasta ja yhteiskunnasta,
+    vahvuuksinani talous, koulutus sekä uusimpana turvallisuus.
+  </li>
+  <li>
+    Aloitan läsnäolevana taloustieteen opinnot Helsingin yliopiston
+    valtiotieteellisessä tiedekunnassa ensi syksynä.
   </li>
   <li>
     Valmistuin Suomen parhaana ylioppilaana Tikkurilan lukiosta syksyllä 2018.
@@ -21,16 +36,16 @@ export const curriculumVitaeMessages = {
     hallituksen puheenjohtajana.
   </li>
   <li>
-    Suoritan varusmiespalvelusta Helsingissä Kaartin jääkärirykmentissä ja
-    toimin Puolustusvoimien uutislehden, Ruotuväen toimittajana Pääesikunnan
-    viestintäosastolla.
+    Suoritan varusmiespalvelusta Helsingissä Kaartin jääkärirykmentissä
+    upseerikokelaana ja toimin Puolustusvoimien uutislehden, Ruotuväen
+    toimittajana Pääesikunnan viestintäosastolla.
   </li>
   <li>Olenkin monesta kiinnostunut ja toimin vapaa-ajallani yrittäjänä.</li>
   <li>Harrastuksenani muun muassa soitan kitaraa.</li>
   `,
 
   cv_work_experience_title: "Työkokemus",
-  cv_work_experience_defence_force_title: "Puolustusvoimat",
+  cv_work_experience_defence_force_title: "Puolustusvoimat, Pääesikunta",
   cv_work_experience_defence_force_job:
     "Toimittaja (varusmies), uutislehti Ruotuväki",
   cv_work_experience_defence_force_time: "syyskuusta 2020 alkaen",

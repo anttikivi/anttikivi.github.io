@@ -6,12 +6,29 @@ export const curriculumVitaeMessages = {
   cv_title: "Curriculum Vitae",
   cv_summary_title: "In a Nutshell",
   cv_summary: `
+    <p>
+      An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning
+      something new every day and smiling as much as possible. For a couple
+      weeks I’ll still be counting the mornings left in compulsory military
+      service as Officer Candidate. In my free time I delight in volunteering in
+      NGOs and music.
+    </p>
+  `,
+  cv_summary_list: `
   <li>I was born 4 May 1999 (age 21).</li>
   <li>I live in Helsinki, Finland.</li>
   <li>
     I’ve held numerous positions in several NGOs, the most notable being the job
     as the full-time vice president of Union of Upper Secondary School Students
     in Finland.
+  </li>
+  <li>
+    Naturally, I’m really interested in politics where my strengths are in
+    economics, education, and safety as the latest addition.
+  </li>
+  <li>
+    I begin my studies in economics in University of Helsinki, Faculty of Social
+    Sciences next autumn.
   </li>
   <li>
     I passed the Finnish Matriculation Examination and graduated from Tikkurilan
@@ -24,7 +41,7 @@ export const curriculumVitaeMessages = {
   <li>
     Currently I’m performing compulsory military service in Helsinki, Guard
     Jaeger Regiment as a journalist in the newspaper of the Finnish Defence
-    Forces, Ruotuväki.
+    Forces, Ruotuväki. My military rank is Officer Candidate.
   </li>
   <li>
     I’ve got interest in various subjects and work as an entrepreneur in my

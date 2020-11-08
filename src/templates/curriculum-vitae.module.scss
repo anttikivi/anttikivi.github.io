@@ -18,6 +18,22 @@
   width: 200px;
 }
 
+.summary {
+  margin: 0 $size__site-margin-phone;
+
+  @media screen and (min-width: $breakpoint__phone) {
+    margin: 0 $size__site-margin-tablet;
+  }
+
+  @media screen and (min-width: $breakpoint__tablet) {
+    margin: 0 ($size__site-margin / 2);
+  }
+
+  @media screen and (min-width: $breakpoint__wide) {
+    margin: 0 ($size__site-margin + 4em);
+  }
+}
+
 .columns {
   display: flex;
   flex-wrap: wrap;
