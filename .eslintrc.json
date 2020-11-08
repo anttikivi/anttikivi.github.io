@@ -17,6 +17,14 @@
       "version": "detect"
     }
   },
+  "overrides": [
+    {
+      "files": ["src/templates/curriculum-vitae.js"],
+      "rules": {
+        "max-lines": "off"
+      }
+    }
+  ],
   "rules": {
     "accessor-pairs": "error",
     "array-bracket-newline": "error",

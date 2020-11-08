@@ -39,9 +39,9 @@ const HiddenSection = props => {
                 <hr className={sectionStyles.sectionHr} />
               </>
             );
-          } else {
-            return <div>{props.children}</div>;
           }
+
+          return <div>{props.children}</div>;
         }
 
         return <></>;
