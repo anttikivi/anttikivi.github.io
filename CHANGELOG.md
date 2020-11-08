@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [Unreleased]
+
+### Changed
+
+- Texts on the English home page.
+- Skills and knowledge to be presented in a clearer form in the curriculum vitae.
+
 ## [0.4.1] - 2020-11-08
 
 ### Removed
