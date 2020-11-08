@@ -11,11 +11,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - Component for section that can be shown and hidden by button.
 - Component for hiding and showing sections in specifically in the curriculum vitae.
 - Component that acts as the button for the section that allows hiding content.
+- Summary to the curriculum vitae.
+- Couple of points about studies and politics to the summary list in the curriculum vitae.
 
 ### Changed
 
 - Curriculum vitae page to use classes to style subheadings.
 - Order of the entries in the curriculum vitae to be chronological.
+- Rest of the references on the home page to be hidden.
 
 ## [0.3.1] - 2020-11-08
 
