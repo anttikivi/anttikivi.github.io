@@ -336,7 +336,7 @@ const CurriculumVitaePage = props => {
             </h3>
             {i("cv_ict_software", {p: (...chunk) => <p>{chunk}</p>})}
             <h3 className={cvStyles.subHeading}>
-              {i("cv_ict_social_media_title")} media
+              {i("cv_ict_social_media_title")}
             </h3>
             {i("cv_ict_social_media", {p: (...chunk) => <p>{chunk}</p>})}
 
