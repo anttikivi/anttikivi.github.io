@@ -6,7 +6,7 @@ import {defineMessages} from "react-intl";
 import {curriculumVitaeMessages} from "./en/curriculum-vitae";
 import {footerMessages} from "./en/footer";
 import {headerMessages} from "./en/header";
-import {hiddenSectionMessages} from "./en/hidden-section";
+import {toggleButtonMessages} from "./en/toggle-button";
 import {indexMessages} from "./en/index";
 import {navigationMessages} from "./en/navigation";
 
@@ -14,9 +14,9 @@ export const messages = {
   ...curriculumVitaeMessages,
   ...footerMessages,
   ...headerMessages,
-  ...hiddenSectionMessages,
   ...indexMessages,
-  ...navigationMessages
+  ...navigationMessages,
+  ...toggleButtonMessages
 };
 
 export const lang = defineMessages(messages);

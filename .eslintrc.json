@@ -19,7 +19,7 @@
   },
   "overrides": [
     {
-      "files": ["src/templates/curriculum-vitae.js"],
+      "files": ["src/templates/curriculum-vitae.js", "src/locales/**/*.js"],
       "rules": {
         "max-lines": "off"
       }
