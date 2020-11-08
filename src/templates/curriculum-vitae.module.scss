@@ -3,18 +3,9 @@
 
 @import "../styles/variables";
 
-%subHeading {
+.subHeading {
   font-family: $font__main;
   font-weight: 700;
-}
-
-.content {
-  h3 {
-    @extend %subHeading;
-  }
-  h4 {
-    @extend %subHeading;
-  }
 }
 
 .nameLine {
