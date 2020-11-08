@@ -12,20 +12,32 @@ import buttonStyles from "./ToggleButton.module.scss";
 const ToggleButton = props => {
   const i = createIntl(useIntl());
 
+  const showText =
+    props.showText !== undefined ? props.showText : i("toggle_button_show");
+  const hideText =
+    props.hideText !== undefined ? props.hideText : i("toggle_button_hide");
+
   return (
     <button
       className={buttonStyles.toggleButton}
       onClick={props.onClick}
       aria-expanded={props.toggled.toString()}
     >
-      {props.toggled ? i("toggle_button_hide") : i("toggle_button_show")}
+      {props.toggled ? hideText : showText}
     </button>
   );
 };
 
+ToggleButton.defaultProps = {
+  showText: undefined,
+  hideText: undefined
+};
+
 ToggleButton.propTypes = {
   onClick: PropTypes.any,
-  toggled: PropTypes.bool
+  toggled: PropTypes.bool,
+  showText: PropTypes.string,
+  hideText: PropTypes.string
 };
 
 export default ToggleButton;

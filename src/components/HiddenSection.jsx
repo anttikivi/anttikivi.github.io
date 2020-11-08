@@ -18,7 +18,12 @@ const HiddenSection = props => {
 
   return (
     <>
-      <ToggleButton onClick={handleClick} toggled={toggled} />
+      <ToggleButton
+        onClick={handleClick}
+        toggled={toggled}
+        showText={props.showText}
+        hideText={props.hideText}
+      />
       {(() => {
         if (toggled) {
           if (props.displayHr) {
@@ -39,11 +44,17 @@ const HiddenSection = props => {
   );
 };
 
-HiddenSection.defaultProps = {displayHr: false};
+HiddenSection.defaultProps = {
+  displayHr: false,
+  showText: undefined,
+  hideText: undefined
+};
 
 HiddenSection.propTypes = {
   children: PropTypes.node,
-  displayHr: PropTypes.bool
+  displayHr: PropTypes.bool,
+  showText: PropTypes.string,
+  hideText: PropTypes.string
 };
 
 export default HiddenSection;
