@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [0.4.0] - 2020-11-08
+
+### Added
+
+- Component for section that can be shown and hidden by button.
+- Component for hiding and showing sections in specifically in the curriculum vitae.
+- Component that acts as the button for the section that allows hiding content.
+- Summary to the curriculum vitae.
+- Couple of points about studies and politics to the summary list in the curriculum vitae.
+- Configuration to hide all of the references at the same time.
+
+### Changed
+
+- Curriculum vitae page to use classes to style subheadings.
+- Order of the entries in the curriculum vitae to be chronological.
+- Rest of the references on the home page to be hidden.
+- Language switcher to be visible.
+
 ## [0.3.1] - 2020-11-08
 
 ### Added
@@ -59,7 +77,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.3.1...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.3.1...v0.4.0
 [0.3.1]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.2.0...v0.2.1

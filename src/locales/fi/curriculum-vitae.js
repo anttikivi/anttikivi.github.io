@@ -6,11 +6,26 @@ export const curriculumVitaeMessages = {
   cv_title: "Ansioluettelo",
   cv_summary_title: "Pähkinänkuoressa",
   cv_summary: `
+    <p>
+      Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja
+      mieluummin hymyilen kuin jätän hymyilemättä. Vielä hetken lasken aamuja
+      upseerikokelaana ja vapaalla rakastan järjestötoimintaa ja musiikkia.
+    </p>
+  `,
+  cv_summary_list: `
   <li>Synnyin 4.5.1999, ikä 21 vuotta.</li>
   <li>Asun Helsingissä Etu-Töölössä.</li>
   <li>
     Olen toiminut monissa luottamustoimissa, merkittävimpänä kokoaikatyö Suomen
     Lukiolaisten Liiton järjestösektorista vastaavana varapuheenjohtajana.
+  </li>
+  <li>
+    Luonnollisesti olen erittäin kiinnostunut politiikasta ja yhteiskunnasta,
+    vahvuuksinani talous, koulutus sekä uusimpana turvallisuus.
+  </li>
+  <li>
+    Aloitan läsnäolevana taloustieteen opinnot Helsingin yliopiston
+    valtiotieteellisessä tiedekunnassa ensi syksynä.
   </li>
   <li>
     Valmistuin Suomen parhaana ylioppilaana Tikkurilan lukiosta syksyllä 2018.
@@ -21,16 +36,16 @@ export const curriculumVitaeMessages = {
     hallituksen puheenjohtajana.
   </li>
   <li>
-    Suoritan varusmiespalvelusta Helsingissä Kaartin jääkärirykmentissä ja
-    toimin Puolustusvoimien uutislehden, Ruotuväen toimittajana Pääesikunnan
-    viestintäosastolla.
+    Suoritan varusmiespalvelusta Helsingissä Kaartin jääkärirykmentissä
+    upseerikokelaana ja toimin Puolustusvoimien uutislehden, Ruotuväen
+    toimittajana Pääesikunnan viestintäosastolla.
   </li>
   <li>Olenkin monesta kiinnostunut ja toimin vapaa-ajallani yrittäjänä.</li>
   <li>Harrastuksenani muun muassa soitan kitaraa.</li>
   `,
 
   cv_work_experience_title: "Työkokemus",
-  cv_work_experience_defence_force_title: "Puolustusvoimat",
+  cv_work_experience_defence_force_title: "Puolustusvoimat, Pääesikunta",
   cv_work_experience_defence_force_job:
     "Toimittaja (varusmies), uutislehti Ruotuväki",
   cv_work_experience_defence_force_time: "syyskuusta 2020 alkaen",
@@ -86,6 +101,7 @@ export const curriculumVitaeMessages = {
     hyväksyttiin.
   </p>
   `,
+  cv_work_experience_other_title: "Muu työkokemus",
   cv_work_experience_frank_title: "Oy Frank Students Ab",
   cv_work_experience_frank_job: "Community Assistant",
   cv_work_experience_frank_time: "syksy 2018",
@@ -149,6 +165,22 @@ export const curriculumVitaeMessages = {
     hallituksen työskentelyyn niin sanotusti piirijärjestöjen soihdunkantajana.
   </p>
   `,
+  cv_positions_of_trust_vantaa_title: "Vantaan kaupunki",
+  cv_positions_of_trust_vantaa_youth_council_job: "Nuorisovaltuutettu",
+  cv_positions_of_trust_vantaa_youth_council_time: "2016–2017",
+  cv_positions_of_trust_vantaa_youth_council: `
+  <p>
+    Nuorisovaltuutettuna osallistuin Vantaan nuorisovaltuuston toimintaan ja
+    kokouksiin. Nuorisovaltuuston tehtävänä on toimia erityisesti nuorten
+    äänitorvena ja edunvalvojana kaupungin päätöksenteossa. Osallistuin myös
+    nuorisovaltuuston edustajana useita kertoja Vantaan kaupunginvaltuuston
+    kokouksiin, joissa olin muun muassa nuorten edustajana kaupungin budjetti-
+    ja strategiapäätöksiä tehtäessä, ja Vantaan ruotsinkielisen lautakunnan,
+    Svenska Kommitténin, kokouksiin nuorten edustajana.
+  </p>
+  `,
+
+  cv_positions_of_trust_other_title: "Muita luottamustoimia",
   cv_positions_of_trust_uudenmaan_lukiolaiset_title:
     "Suomen Lukiolaisten Liitto ry:n Uudenmaan piiri ry",
   cv_positions_of_trust_uudenmaan_lukiolaiset_vp_job: "Varapuheenjohtaja",
@@ -177,20 +209,10 @@ export const curriculumVitaeMessages = {
     hallituksen jäsen, koska toimin piirijärjestön varapuheenjohtajana.
   </p>
   `,
-  cv_positions_of_trust_vantaa_title: "Vantaan kaupunki",
-  cv_positions_of_trust_vantaa_youth_council_job: "Nuorisovaltuutettu",
-  cv_positions_of_trust_vantaa_youth_council_time: "2016–2017",
-  cv_positions_of_trust_vantaa_youth_council: `
-  <p>
-    Nuorisovaltuutettuna osallistuin Vantaan nuorisovaltuuston toimintaan ja
-    kokouksiin. Nuorisovaltuuston tehtävänä on toimia erityisesti nuorten
-    äänitorvena ja edunvalvojana kaupungin päätöksenteossa. Osallistuin myös
-    nuorisovaltuuston edustajana useita kertoja Vantaan kaupunginvaltuuston
-    kokouksiin, joissa olin muun muassa nuorten edustajana kaupungin budjetti-
-    ja strategiapäätöksiä tehtäessä, ja Vantaan ruotsinkielisen lautakunnan,
-    Svenska Kommitténin, kokouksiin nuorten edustajana.
-  </p>
-  `,
+  cv_positions_of_trust_jef_helsinki_title:
+    "Pääkaupunkiseudun Eurooppanuoret ry",
+  cv_positions_of_trust_jef_helsinki_job: "Hallituksen jäsen",
+  cv_positions_of_trust_jef_helsinki_time: "2017",
   cv_positions_of_trust_lukio_title: "Tikkurilan lukion opiskelijakunta",
   cv_positions_of_trust_lukio_job: "Hallituksen jäsen",
   cv_positions_of_trust_lukio_time: "2015–2018",
@@ -203,10 +225,6 @@ export const curriculumVitaeMessages = {
     sisällä, esimerkiksi penkinpainajaiset.
   </p>
   `,
-  cv_positions_of_trust_jef_helsinki_title:
-    "Pääkaupunkiseudun Eurooppanuoret ry",
-  cv_positions_of_trust_jef_helsinki_job: "Hallituksen jäsen",
-  cv_positions_of_trust_jef_helsinki_time: "2017",
 
   cv_education_title: "Koulutus",
   cv_education_university_of_helsinki_social_sciences_degree:

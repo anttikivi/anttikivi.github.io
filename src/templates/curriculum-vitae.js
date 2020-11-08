@@ -5,6 +5,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import {useIntl} from "react-intl";
 
+import CurriculumVitaeSection from "../components/CurriculumVitaeSection";
 import Intl from "../components/Intl";
 import Layout from "../components/Layout";
 
@@ -40,9 +41,15 @@ const CurriculumVitaePage = props => {
           />
         </figure>
 
+        <div className={`${styles.alignCenter} ${cvStyles.summary}`}>
+          {i("cv_summary", {
+            p: (...chunk) => <p>{chunk}</p>
+          })}
+        </div>
+
         <div>
           <ul>
-            {i("cv_summary", {
+            {i("cv_summary_list", {
               li: (...chunk) => <li>{chunk}</li>
             })}
           </ul>
@@ -52,16 +59,22 @@ const CurriculumVitaePage = props => {
           <div className={cvStyles.mainColumn}>
             <h2>{i("cv_work_experience_title")}</h2>
 
-            <h3>{i("cv_work_experience_defence_force_title")}</h3>
-
-            <h4>{i("cv_work_experience_defence_force_job")}</h4>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_work_experience_defence_force_title")}
+            </h3>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_work_experience_defence_force_job")}
+            </h4>
             <p>
               <em>{i("cv_work_experience_defence_force_time")}</em>
             </p>
 
-            <h3>{i("cv_work_experience_visiosto_title")}</h3>
-
-            <h4>{i("cv_work_experience_visiosto_job")}</h4>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_work_experience_visiosto_title")}
+            </h3>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_work_experience_visiosto_job")}
+            </h4>
             <p>
               <em>{i("cv_work_experience_visiosto_time")}</em>
             </p>
@@ -69,9 +82,13 @@ const CurriculumVitaePage = props => {
               p: (...chunk) => <p>{chunk}</p>
             })}
 
-            <h3>{i("cv_work_experience_lukiolaiset_title")}</h3>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_work_experience_lukiolaiset_title")}
+            </h3>
 
-            <h4>{i("cv_work_experience_lukiolaiset_job")}</h4>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_work_experience_lukiolaiset_job")}
+            </h4>
             <p>
               <em>{i("cv_work_experience_lukiolaiset_time")}</em>
             </p>
@@ -79,50 +96,76 @@ const CurriculumVitaePage = props => {
               p: (...chunk) => <p>{chunk}</p>
             })}
 
-            <h3>{i("cv_work_experience_frank_title")}</h3>
+            <CurriculumVitaeSection title={i("cv_work_experience_other_title")}>
+              <h3 className={cvStyles.subHeading}>
+                {i("cv_work_experience_frank_title")}
+              </h3>
 
-            <h4>{i("cv_work_experience_frank_job")}</h4>
-            <p>
-              <em>{i("cv_work_experience_frank_time")}</em>
-            </p>
-            {i("cv_work_experience_frank", {p: (...chunk) => <p>{chunk}</p>})}
+              <h4 className={cvStyles.subHeading}>
+                {i("cv_work_experience_frank_job")}
+              </h4>
+              <p>
+                <em>{i("cv_work_experience_frank_time")}</em>
+              </p>
+              {i("cv_work_experience_frank", {p: (...chunk) => <p>{chunk}</p>})}
 
-            <h3>{i("cv_work_experience_lidl_title")}</h3>
-            <h4>{i("cv_work_experience_lidl_job")}</h4>
-            <p>
-              <em>{i("cv_work_experience_lidl_time")}</em>
-            </p>
-            {i("cv_work_experience_lidl", {
-              p: (...chunk) => {
-                <p>{chunk}</p>;
-              }
-            })}
+              <h3 className={cvStyles.subHeading}>
+                {i("cv_work_experience_lidl_title")}
+              </h3>
+              <h4 className={cvStyles.subHeading}>
+                {i("cv_work_experience_lidl_job")}
+              </h4>
+              <p>
+                <em>{i("cv_work_experience_lidl_time")}</em>
+              </p>
+              {i("cv_work_experience_lidl", {
+                p: (...chunk) => {
+                  <p>{chunk}</p>;
+                }
+              })}
 
-            <h3>{i("cv_work_experience_palloliitto_title")}</h3>
+              <h3 className={cvStyles.subHeading}>
+                {i("cv_work_experience_palloliitto_title")}
+              </h3>
 
-            <h4>{i("cv_work_experience_palloliitto_job")}</h4>
-            <p>
-              <em>{i("cv_work_experience_palloliitto_time")}</em>
-            </p>
+              <h4 className={cvStyles.subHeading}>
+                {i("cv_work_experience_palloliitto_job")}
+              </h4>
+              <p>
+                <em>{i("cv_work_experience_palloliitto_time")}</em>
+              </p>
+            </CurriculumVitaeSection>
 
             <h2>{i("cv_positions_of_trust_title")}</h2>
 
-            <h3>{i("cv_positions_of_trust_reserve_officer_school_title")}</h3>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_positions_of_trust_reserve_officer_school_title")}
+            </h3>
 
-            <h4>{i("cv_positions_of_trust_reserve_officer_school_job")}</h4>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_positions_of_trust_reserve_officer_school_job")}
+            </h4>
             <p>
               <em>{i("cv_positions_of_trust_reserve_officer_school_time")}</em>
             </p>
 
-            <h3>{i("cv_positions_of_trust_kokoomusnuoret_helsinki_title")}</h3>
-            <h4>{i("cv_positions_of_trust_kokoomusnuoret_helsinki_job")}</h4>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_positions_of_trust_kokoomusnuoret_helsinki_title")}
+            </h3>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_positions_of_trust_kokoomusnuoret_helsinki_job")}
+            </h4>
             <p>
               <em>{i("cv_positions_of_trust_kokoomusnuoret_helsinki_time")}</em>
             </p>
 
-            <h3>{i("cv_positions_of_trust_lukiolaiset_title")}</h3>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_positions_of_trust_lukiolaiset_title")}
+            </h3>
 
-            <h4>{i("cv_positions_of_trust_lukiolaiset_board_job")}</h4>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_positions_of_trust_lukiolaiset_board_job")}
+            </h4>
             <p>
               <em>{i("cv_positions_of_trust_lukiolaiset_board_time")}</em>
             </p>
@@ -130,7 +173,9 @@ const CurriculumVitaePage = props => {
               p: (...chunk) => <p>{chunk}</p>
             })}
 
-            <h4>{i("cv_positions_of_trust_lukiolaiset_districts_job")}</h4>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_positions_of_trust_lukiolaiset_districts_job")}
+            </h4>
             <p>
               <em>{i("cv_positions_of_trust_lukiolaiset_districts_time")}</em>
             </p>
@@ -138,33 +183,12 @@ const CurriculumVitaePage = props => {
               p: (...chunk) => <p>{chunk}</p>
             })}
 
-            <h3>{i("cv_positions_of_trust_uudenmaan_lukiolaiset_title")}</h3>
-
-            <h4>{i("cv_positions_of_trust_uudenmaan_lukiolaiset_vp_job")}</h4>
-            <p>
-              <em>
-                {i("cv_positions_of_trust_uudenmaan_lukiolaiset_vp_time")}
-              </em>
-            </p>
-            {i("cv_positions_of_trust_uudenmaan_lukiolaiset_vp", {
-              p: (...chunk) => <p>{chunk}</p>
-            })}
-
-            <h4>
-              {i("cv_positions_of_trust_uudenmaan_lukiolaiset_board_job")}
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_positions_of_trust_vantaa_title")}
+            </h3>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_positions_of_trust_vantaa_youth_council_job")}
             </h4>
-            <p>
-              <em>
-                {i("cv_positions_of_trust_uudenmaan_lukiolaiset_board_time")}
-              </em>
-            </p>
-            {i("cv_positions_of_trust_uudenmaan_lukiolaiset_board", {
-              p: (...chunk) => <p>{chunk}</p>
-            })}
-
-            <h3>{i("cv_positions_of_trust_vantaa_title")}</h3>
-
-            <h4>{i("cv_positions_of_trust_vantaa_youth_council_job")}</h4>
             <p>
               <em>{i("cv_positions_of_trust_vantaa_youth_council_time")}</em>
             </p>
@@ -172,37 +196,78 @@ const CurriculumVitaePage = props => {
               p: (...chunk) => <p>{chunk}</p>
             })}
 
-            <h3>{i("cv_positions_of_trust_lukio_title")}</h3>
+            <CurriculumVitaeSection
+              title={i("cv_positions_of_trust_other_title")}
+            >
+              <h3 className={cvStyles.subHeading}>
+                {i("cv_positions_of_trust_uudenmaan_lukiolaiset_title")}
+              </h3>
 
-            <h4>{i("cv_positions_of_trust_lukio_job")}</h4>
-            <p>
-              <em>{i("cv_positions_of_trust_lukio_time")}</em>
-            </p>
-            {i("cv_positions_of_trust_lukio", {
-              p: (...chunk) => <p>{chunk}</p>
-            })}
+              <h4 className={cvStyles.subHeading}>
+                {i("cv_positions_of_trust_uudenmaan_lukiolaiset_vp_job")}
+              </h4>
+              <p>
+                <em>
+                  {i("cv_positions_of_trust_uudenmaan_lukiolaiset_vp_time")}
+                </em>
+              </p>
+              {i("cv_positions_of_trust_uudenmaan_lukiolaiset_vp", {
+                p: (...chunk) => <p>{chunk}</p>
+              })}
 
-            <h3>{i("cv_positions_of_trust_jef_helsinki_title")}</h3>
+              <h4 className={cvStyles.subHeading}>
+                {i("cv_positions_of_trust_uudenmaan_lukiolaiset_board_job")}
+              </h4>
+              <p>
+                <em>
+                  {i("cv_positions_of_trust_uudenmaan_lukiolaiset_board_time")}
+                </em>
+              </p>
+              {i("cv_positions_of_trust_uudenmaan_lukiolaiset_board", {
+                p: (...chunk) => <p>{chunk}</p>
+              })}
 
-            <h4>{i("cv_positions_of_trust_jef_helsinki_job")}</h4>
-            <p>
-              <em>{i("cv_positions_of_trust_jef_helsinki_time")}</em>
-            </p>
+              <h3 className={cvStyles.subHeading}>
+                {i("cv_positions_of_trust_jef_helsinki_title")}
+              </h3>
+
+              <h4 className={cvStyles.subHeading}>
+                {i("cv_positions_of_trust_jef_helsinki_job")}
+              </h4>
+              <p>
+                <em>{i("cv_positions_of_trust_jef_helsinki_time")}</em>
+              </p>
+
+              <h3 className={cvStyles.subHeading}>
+                {i("cv_positions_of_trust_lukio_title")}
+              </h3>
+              <h4 className={cvStyles.subHeading}>
+                {i("cv_positions_of_trust_lukio_job")}
+              </h4>
+              <p>
+                <em>{i("cv_positions_of_trust_lukio_time")}</em>
+              </p>
+              {i("cv_positions_of_trust_lukio", {
+                p: (...chunk) => <p>{chunk}</p>
+              })}
+            </CurriculumVitaeSection>
           </div>
 
           <div className={cvStyles.sideColumn}>
             <h2>{i("cv_education_title")}</h2>
 
-            <h3>
+            <h3 className={cvStyles.subHeading}>
               {i("cv_education_university_of_helsinki_social_sciences_degree")}
             </h3>
-            <h4>{i("cv_education_university_of_helsinki_title")}</h4>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_education_university_of_helsinki_title")}
+            </h4>
             <p>
               <em>
                 {i("cv_education_university_of_helsinki_social_sciences_time")}
               </em>
             </p>
-            <h4>
+            <h4 className={cvStyles.subHeading}>
               {i("cv_education_university_of_helsinki_open_ayoik_101_name")}
             </h4>
             <p>
@@ -213,7 +278,7 @@ const CurriculumVitaePage = props => {
             <p>
               {i("cv_education_university_of_helsinki_open_ayoik_101_mark")}
             </p>
-            <h4>
+            <h4 className={cvStyles.subHeading}>
               {i("cv_education_university_of_helsinki_open_aytkt10002_name")}
             </h4>
             <p>
@@ -225,11 +290,19 @@ const CurriculumVitaePage = props => {
               {i("cv_education_university_of_helsinki_open_aytkt10002_mark")}
             </p>
 
-            <h3>{i("cv_education_reserve_officer_degree")}</h3>
-            <h4>{i("cv_education_reserve_officer_course_title")}</h4>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_education_reserve_officer_degree")}
+            </h3>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_education_reserve_officer_course_title")}
+            </h4>
 
-            <h3>{i("cv_education_tikkurilan_lukio_degree")}</h3>
-            <h4>{i("cv_education_tikkurilan_lukio_title")}</h4>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_education_tikkurilan_lukio_degree")}
+            </h3>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_education_tikkurilan_lukio_title")}
+            </h4>
             <p>
               <em>{i("cv_education_tikkurilan_lukio_time")}</em>
             </p>
@@ -254,11 +327,17 @@ const CurriculumVitaePage = props => {
             </ul>
 
             <h2>{i("cv_ict_title")}</h2>
-            <h3>{i("cv_ict_computer_sciences_title")}</h3>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_ict_computer_sciences_title")}
+            </h3>
             {i("cv_ict_computer_sciences", {p: (...chunk) => <p>{chunk}</p>})}
-            <h3>{i("cv_ict_software_title")}</h3>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_ict_software_title")}
+            </h3>
             {i("cv_ict_software", {p: (...chunk) => <p>{chunk}</p>})}
-            <h3>{i("cv_ict_social_media_title")} media</h3>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_ict_social_media_title")} media
+            </h3>
             {i("cv_ict_social_media", {p: (...chunk) => <p>{chunk}</p>})}
 
             <h2>{i("cv_other_title")}</h2>

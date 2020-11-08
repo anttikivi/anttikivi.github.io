@@ -72,7 +72,7 @@ $color__text-main: var(--text-main);
 $color__text-inverted: var(--text-inverted);
 $color__text-weak: var(--text-weak);
 
-$color__border-button: transparent;
+$color__border-button: $color__accent-primary;
 $color__border-button-hover: transparent;
 $color__border-button-focus: transparent;
 $color__border-input: #cccccc;

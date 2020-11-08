@@ -6,12 +6,29 @@ export const curriculumVitaeMessages = {
   cv_title: "Curriculum Vitae",
   cv_summary_title: "In a Nutshell",
   cv_summary: `
+    <p>
+      An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning
+      something new every day and smiling as much as possible. For a couple
+      weeks I’ll still be counting the mornings left in compulsory military
+      service as Officer Candidate. In my free time I delight in volunteering in
+      NGOs and music.
+    </p>
+  `,
+  cv_summary_list: `
   <li>I was born 4 May 1999 (age 21).</li>
   <li>I live in Helsinki, Finland.</li>
   <li>
     I’ve held numerous positions in several NGOs, the most notable being the job
     as the full-time vice president of Union of Upper Secondary School Students
     in Finland.
+  </li>
+  <li>
+    Naturally, I’m really interested in politics where my strengths are in
+    economics, education, and safety as the latest addition.
+  </li>
+  <li>
+    I begin my studies in economics in University of Helsinki, Faculty of Social
+    Sciences next autumn.
   </li>
   <li>
     I passed the Finnish Matriculation Examination and graduated from Tikkurilan
@@ -24,7 +41,7 @@ export const curriculumVitaeMessages = {
   <li>
     Currently I’m performing compulsory military service in Helsinki, Guard
     Jaeger Regiment as a journalist in the newspaper of the Finnish Defence
-    Forces, Ruotuväki.
+    Forces, Ruotuväki. My military rank is Officer Candidate.
   </li>
   <li>
     I’ve got interest in various subjects and work as an entrepreneur in my
@@ -89,6 +106,7 @@ export const curriculumVitaeMessages = {
     general upper secondary education.
   </p>
   `,
+  cv_work_experience_other_title: "Other Work Experience",
   cv_work_experience_frank_title: "Oy Frank Students Ab",
   cv_work_experience_frank_job: "Community Assistant",
   cv_work_experience_frank_time: "autumn 2018",
@@ -155,6 +173,20 @@ export const curriculumVitaeMessages = {
     the board’s meetings.
   </p>
   `,
+  cv_positions_of_trust_vantaa_title: "City of Vantaa",
+  cv_positions_of_trust_vantaa_youth_council_job: "Member of Youth Council",
+  cv_positions_of_trust_vantaa_youth_council_time: "2016–2017",
+  cv_positions_of_trust_vantaa_youth_council: `
+  <p>
+    As a member of the youth council I took part in the activities and meetings
+    of the youth council of city of Vantaa. The youth council’s main function is
+    to be the youth’s voice in the city’s decision-making. I also took part in
+    the city council’s meetings many times and for instance represented the
+    youth when the city approved its budget and new strategy.
+  </p>
+  `,
+
+  cv_positions_of_trust_other_title: "Other Positions of Trust",
   cv_positions_of_trust_uudenmaan_lukiolaiset_title:
     "Uusimaa District of Union of Upper Secondary School Students",
   cv_positions_of_trust_uudenmaan_lukiolaiset_vp_job: "Vice President",
@@ -177,18 +209,9 @@ export const curriculumVitaeMessages = {
     In 2017, I was part of the board as the vice president of the district.
   </p>
   `,
-  cv_positions_of_trust_vantaa_title: "City of Vantaa",
-  cv_positions_of_trust_vantaa_youth_council_job: "Member of Youth Council",
-  cv_positions_of_trust_vantaa_youth_council_time: "2016–2017",
-  cv_positions_of_trust_vantaa_youth_council: `
-  <p>
-    As a member of the youth council I took part in the activities and meetings
-    of the youth council of city of Vantaa. The youth council’s main function is
-    to be the youth’s voice in the city’s decision-making. I also took part in
-    the city council’s meetings many times and for instance represented the
-    youth when the city approved its budget and new strategy.
-  </p>
-  `,
+  cv_positions_of_trust_jef_helsinki_title: "JEF Helsinki",
+  cv_positions_of_trust_jef_helsinki_job: "Member of the Board",
+  cv_positions_of_trust_jef_helsinki_time: "2017",
   cv_positions_of_trust_lukio_title: "Student Body of Tikkurilan lukio",
   cv_positions_of_trust_lukio_job: "Member of the Board",
   cv_positions_of_trust_lukio_time: "2015–2018",
@@ -199,9 +222,6 @@ export const curriculumVitaeMessages = {
     Tikkurilan lukio and organizes various events in the school.
   </p>
   `,
-  cv_positions_of_trust_jef_helsinki_title: "JEF Helsinki",
-  cv_positions_of_trust_jef_helsinki_job: "Member of the Board",
-  cv_positions_of_trust_jef_helsinki_time: "2017",
 
   cv_education_title: "Education",
   cv_education_university_of_helsinki_social_sciences_degree:
