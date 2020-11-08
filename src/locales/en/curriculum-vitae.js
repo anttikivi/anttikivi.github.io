@@ -19,7 +19,7 @@ export const curriculumVitaeMessages = {
   <li>I live in Helsinki, Finland.</li>
   <li>
     I’ve held numerous positions in several NGOs, the most notable being the job
-    as the full-time vice president of Union of Upper Secondary School Students
+    as the full-time Vice President of Union of Upper Secondary School Students
     in Finland.
   </li>
   <li>
@@ -36,7 +36,7 @@ export const curriculumVitaeMessages = {
   </li>
   <li>
     I completed the Army’s reserve officer course in Reserve Officer School,
-    Hamina, and was the 256th course’s student body’s president.
+    Hamina, and was the 256th course’s student body’s President.
   </li>
   <li>
     Currently I’m performing compulsory military service in Helsinki, Guard
@@ -76,30 +76,30 @@ export const curriculumVitaeMessages = {
   cv_work_experience_lukiolaiset_time: "2019",
   cv_work_experience_lukiolaiset: `
   <p>
-    I work the year 2019 as the vice president of Union of Upper Secondary
+    I worked the year 2019 as the Vice President of the Union of Upper Secondary
     School Students. I was chosen to the position of trust in the union’s
     general assembly autumn 2018 and the position was a full-time job.
   </p>
   <p>
-    As vice president I led the union with the president and the other vice
-    president as equals. Additionally, I was in charge of the union’s
+    As Vice President I led the union with the President and the other vice
+    President as equals. Additionally, I was in charge of the union’s
     organizational team which consisted of three employees in addition to me.
   </p>
   <p>
     I was responsible for supporting the leaders of the union’s 11 district
     organizations and coordinating their activities. I also put together many
-    educations for the presidents and vice presidents of the districts.
+    educations for the Presidents and Vice Presidents of the districts.
   </p>
   <p>
-    I managed to organization of the union’s national events. Union of Upper
+    I managed to organization of the union’s national events. The Union of Upper
     Secondary School Students has almost twenty national education events every
     year for both the union’s active members and interested upper secondary
-    school students everywhere from Finland. The largest event gather over 200
+    school students everywhere from Finland. The largest events gather over 200
     participants.
   </p>
   <p>
     I also oversaw the union’s activities for the student bodies of upper
-    secondary schools. That includes supporting the student bodies in their
+    secondary schools. It includes supporting the student bodies in their
     day-to-day activities, organizing events meant for the student bodies, and
     lobbying for students’ rights to national decision makers. For example, I
     took part in many occasions regarding the new national core curriculum for
@@ -112,7 +112,7 @@ export const curriculumVitaeMessages = {
   cv_work_experience_frank_time: "autumn 2018",
   cv_work_experience_frank: `
   <p>
-    I worked as a community assistant in the customer service of Frank, a
+    I worked as a Community Assistant in the customer service of Frank, a
     company that provides Finnish students with the student card and discounts.
     I was hired to help during the most busy time of the year when new students
     had just begun their studies. I helped the customers with problems relating
@@ -131,7 +131,7 @@ export const curriculumVitaeMessages = {
   </p>
   `,
   cv_work_experience_palloliitto_title:
-    "Football Association of Findland, Helsinki District",
+    "Football Association of Finland, Helsinki District",
   cv_work_experience_palloliitto_job: "Referee",
   cv_work_experience_palloliitto_time: "2015–2018",
 
@@ -152,10 +152,10 @@ export const curriculumVitaeMessages = {
   <p>
     As a member of the board I took part in the strategic governance the union.
     The board also put together and carry out educations in multiple of the
-    union’s national events. Additionally I represented the union in different
+    union’s national events. Additionally, I represented the union in different
     occurrence organized by national decision makers, especially relating to the
     new Act on upper secondary schools. In 2019, I was part of the board as the
-    vice president of the union.
+    Vice President of the union.
   </p>
   `,
   cv_positions_of_trust_lukiolaiset_districts_job:
@@ -163,13 +163,13 @@ export const curriculumVitaeMessages = {
   cv_positions_of_trust_lukiolaiset_districts_time: "2017",
   cv_positions_of_trust_lukiolaiset_districts: `
   <p>
-    As the representative of the districts in the board I acted as the president
-    of the so-called district council of Union of Upper Secondary School
-    Students. The coucil consists of the presidents and vice presidents of
+    As the representative of the districts in the board I acted as the President
+    of the so-called district council of the Union of Upper Secondary School
+    Students. The council consists of the Presidents and Vice Presidents of
     every district organization of the union. Its function is to develop the
     activities in and of the union together with the board of the union. It also
     brings the districts’ point of view to the board’s decision-making. I, as
-    the president, represented the council and therefore all of the districts in
+    the President, represented the council and therefore all of the districts in
     the board’s meetings.
   </p>
   `,
@@ -193,9 +193,9 @@ export const curriculumVitaeMessages = {
   cv_positions_of_trust_uudenmaan_lukiolaiset_vp_time: "2017",
   cv_positions_of_trust_uudenmaan_lukiolaiset_vp: `
   <p>
-    I was the vice president of the largest district in Union of Upper Secondary
-    School Students, Uusimaa district. As vice president I led the board of the
-    district and coordinated the whole district together with the president as
+    I was the Vice President of the largest district in Union of Upper Secondary
+    School Students, Uusimaa district. As Vice President I led the board of the
+    district and coordinated the whole district together with the President as
     an equal pair. The post included a lot of leading volunteers.
   </p>
   `,
@@ -206,7 +206,7 @@ export const curriculumVitaeMessages = {
     As a member of the board I took part in coordinating and organizing the
     activities of the largest district of Union of Upper Secondary School
     Students. I lobbied local and national decision makers for students’ rights.
-    In 2017, I was part of the board as the vice president of the district.
+    In 2017, I was part of the board as the Vice President of the district.
   </p>
   `,
   cv_positions_of_trust_jef_helsinki_title: "JEF Helsinki",
