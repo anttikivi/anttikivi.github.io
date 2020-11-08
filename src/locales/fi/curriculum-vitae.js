@@ -178,6 +178,10 @@ export const curriculumVitaeMessages = {
     hallituksen jäsen, koska toimin piirijärjestön varapuheenjohtajana.
   </p>
   `,
+  cv_positions_of_trust_jef_helsinki_title:
+    "Pääkaupunkiseudun Eurooppanuoret ry",
+  cv_positions_of_trust_jef_helsinki_job: "Hallituksen jäsen",
+  cv_positions_of_trust_jef_helsinki_time: "2017",
   cv_positions_of_trust_vantaa_title: "Vantaan kaupunki",
   cv_positions_of_trust_vantaa_youth_council_job: "Nuorisovaltuutettu",
   cv_positions_of_trust_vantaa_youth_council_time: "2016–2017",
@@ -204,10 +208,6 @@ export const curriculumVitaeMessages = {
     sisällä, esimerkiksi penkinpainajaiset.
   </p>
   `,
-  cv_positions_of_trust_jef_helsinki_title:
-    "Pääkaupunkiseudun Eurooppanuoret ry",
-  cv_positions_of_trust_jef_helsinki_job: "Hallituksen jäsen",
-  cv_positions_of_trust_jef_helsinki_time: "2017",
 
   cv_education_title: "Koulutus",
   cv_education_university_of_helsinki_social_sciences_degree:

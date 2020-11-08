@@ -178,6 +178,9 @@ export const curriculumVitaeMessages = {
     In 2017, I was part of the board as the vice president of the district.
   </p>
   `,
+  cv_positions_of_trust_jef_helsinki_title: "JEF Helsinki",
+  cv_positions_of_trust_jef_helsinki_job: "Member of the Board",
+  cv_positions_of_trust_jef_helsinki_time: "2017",
   cv_positions_of_trust_vantaa_title: "City of Vantaa",
   cv_positions_of_trust_vantaa_youth_council_job: "Member of Youth Council",
   cv_positions_of_trust_vantaa_youth_council_time: "2016–2017",
@@ -200,9 +203,6 @@ export const curriculumVitaeMessages = {
     Tikkurilan lukio and organizes various events in the school.
   </p>
   `,
-  cv_positions_of_trust_jef_helsinki_title: "JEF Helsinki",
-  cv_positions_of_trust_jef_helsinki_job: "Member of the Board",
-  cv_positions_of_trust_jef_helsinki_time: "2017",
 
   cv_education_title: "Education",
   cv_education_university_of_helsinki_social_sciences_degree:
