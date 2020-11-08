@@ -53,8 +53,12 @@ const CurriculumVitaePage = props => {
           <div className={cvStyles.mainColumn}>
             <h2>{i("cv_work_experience_title")}</h2>
 
-            <h3 className={cvStyles.subHeading}>{i("cv_work_experience_defence_force_title")}</h3>
-            <h4 className={cvStyles.subHeading}>{i("cv_work_experience_defence_force_job")}</h4>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_work_experience_defence_force_title")}
+            </h3>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_work_experience_defence_force_job")}
+            </h4>
             <p>
               <em>{i("cv_work_experience_defence_force_time")}</em>
             </p>
@@ -247,7 +251,9 @@ const CurriculumVitaePage = props => {
             <h3 className={cvStyles.subHeading}>
               {i("cv_education_university_of_helsinki_social_sciences_degree")}
             </h3>
-            <h4 className={cvStyles.subHeading}>{i("cv_education_university_of_helsinki_title")}</h4>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_education_university_of_helsinki_title")}
+            </h4>
             <p>
               <em>
                 {i("cv_education_university_of_helsinki_social_sciences_time")}
@@ -276,11 +282,19 @@ const CurriculumVitaePage = props => {
               {i("cv_education_university_of_helsinki_open_aytkt10002_mark")}
             </p>
 
-            <h3 className={cvStyles.subHeading}>{i("cv_education_reserve_officer_degree")}</h3>
-            <h4 className={cvStyles.subHeading}>{i("cv_education_reserve_officer_course_title")}</h4>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_education_reserve_officer_degree")}
+            </h3>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_education_reserve_officer_course_title")}
+            </h4>
 
-            <h3 className={cvStyles.subHeading}>{i("cv_education_tikkurilan_lukio_degree")}</h3>
-            <h4 className={cvStyles.subHeading}>{i("cv_education_tikkurilan_lukio_title")}</h4>
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_education_tikkurilan_lukio_degree")}
+            </h3>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_education_tikkurilan_lukio_title")}
+            </h4>
             <p>
               <em>{i("cv_education_tikkurilan_lukio_time")}</em>
             </p>
