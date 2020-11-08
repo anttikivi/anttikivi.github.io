@@ -34,6 +34,10 @@ export const curriculumVitaeMessages = {
   `,
 
   cv_work_experience_title: "Work Experince",
+  cv_work_experience_defence_force_title: "The Finnish Defence Forces",
+  cv_work_experience_defence_force_job:
+    "Journalist (conscript), Defence Forces’ newspaper Ruotuväki",
+  cv_work_experience_defence_force_time: "since September 2020",
   cv_work_experience_visiosto_title: "Visiosto oy",
   cv_work_experience_visiosto_job: "Chief Executive Officer & entrepreneur",
   cv_work_experience_visiosto_time: "since 2019",
@@ -200,19 +204,9 @@ export const curriculumVitaeMessages = {
   cv_positions_of_trust_jef_helsinki_time: "2017",
 
   cv_education_title: "Education",
-  cv_education_tikkurilan_lukio_title: "Tikkurilan lukio",
-  cv_education_tikkurilan_lukio_degree: "Matriculation Examination",
-  cv_education_tikkurilan_lukio_time: "2015–2018",
-  cv_education_tikkurilan_lukio_mark: "Marks: LLLLLLEEEM",
-  cv_education_tikkurilan_lukio: `
-  <p>
-    I graduated as Finland’s best student in autumn 2018. Read <vs>an article
-    about it in Vantaa Sanomat</vs>.
-  </p>
-  `,
-  cv_education_university_of_helsinki_title: "University of Helsinki",
   cv_education_university_of_helsinki_social_sciences_degree:
     "Social Sciences Student, Economics",
+  cv_education_university_of_helsinki_title: "University of Helsinki",
   cv_education_university_of_helsinki_social_sciences_time: "since 2020",
   cv_education_university_of_helsinki_open_ayoik_101_name:
     "Open uni: Introduction to Law",
@@ -223,12 +217,25 @@ export const curriculumVitaeMessages = {
   cv_education_university_of_helsinki_open_aytkt10002_time: "2019",
   cv_education_university_of_helsinki_open_aytkt10002_mark:
     "5 credits, mark: 5",
+  cv_education_reserve_officer_degree: "Reserve Officer’s Degree",
+  cv_education_reserve_officer_course_title:
+    "The Finnish Army’s Reserve Officer Course 256",
+  cv_education_tikkurilan_lukio_degree: "Matriculation Examination",
+  cv_education_tikkurilan_lukio_title: "Tikkurilan lukio",
+  cv_education_tikkurilan_lukio_time: "2015–2018",
+  cv_education_tikkurilan_lukio_mark: "Marks: LLLLLLEEEM",
+  cv_education_tikkurilan_lukio: `
+  <p>
+    I graduated as Finland’s best student in autumn 2018. Read <vs>an article
+    about it in Vantaa Sanomat</vs>.
+  </p>
+  `,
 
   cv_languages_title: "Languages",
   cv_languages_list: `
   <li>Finnish: native</li>
   <li>English: excellent</li>
-  <li>Swedish: good</li>
+  <li>Swedish: proficient</li>
   <li>Russian: basic</li>
   <li>French: basic</li>
   <li>Latin: good</li>
