@@ -290,8 +290,8 @@ export const curriculumVitaeMessages = {
   cv_skills_communications: `
   <p>
     Hallitsen sujuvasti sosiaalisen median käytön, sen yleisimmät alustat ja
-    sisällön optimointi. Tunnen tärkeimpien alustojen käyttötarkoitusten erot ja
-    viestien terävöittämisen ja kanavan valitsemisen kohderyhmiä ajatellen.
+    sisällön optimoinnin. Tunnen tärkeimpien alustojen käyttötarkoitusten erot
+    ja viestien terävöittämisen ja kanavan valitsemisen kohderyhmiä ajatellen.
   </p>
   <p>
     Tekemisen ja kokemuksen kautta olen muovautunut itsevarmaksi, luontevaksi
@@ -310,7 +310,7 @@ export const curriculumVitaeMessages = {
   cv_skills_events_title: "Tapahtumatuotanto",
   cv_skills_events: `
   <p>
-    Olen kartuttanut vahvat osaamisen tapahtumien järjestämiseen ja
+    Olen kartuttanut vahvan osaamisen tapahtumien järjestämiseen ja
     tapahtumatuotantoon. Suurimmat järjestämäni tapahtumat, joiden
     organisoinnissa olen ollut päävastuussa, ovat olleet lähes 250 osallistujan
     kokonaisuuksia.
@@ -324,7 +324,7 @@ export const curriculumVitaeMessages = {
     Microsoft Office), Visma Netvisor ja Adobe Photoshop.
   </p>
   <p>
-    Minulta luonnistuu tietojenkäsittelytieteen perusteet sekä ohjelmoinnin ja
+    Minulta luonnistuu tietojenkäsittelytieteen perusteet sekä ohjelmointi ja
     useita ohjelmointikieliä, muun muassa C++, Python, PHP, HTML, CSS,
     JavaScript ja Java.
   </p>
