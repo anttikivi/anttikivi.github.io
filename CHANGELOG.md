@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 ### Fixed
 
 - Typo in the English curriculum vitae.
+- Incorrect import of the Node configuration file.
 
 ## [0.4.8] - 2020-11-11
 

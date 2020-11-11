@@ -10,7 +10,7 @@ import {useIntl} from "react-intl";
 import {createIntl} from "../utils/createIntl";
 import {createLanguageUrl} from "../utils/createLanguageUrl";
 
-import {config} from "../../config";
+import config from "../../config";
 
 // TODO Add at least 'og:image'
 const SEO = props => {
