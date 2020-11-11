@@ -10,6 +10,8 @@ import {useIntl} from "react-intl";
 import {createIntl} from "../utils/createIntl";
 import {createLanguageUrl} from "../utils/createLanguageUrl";
 
+import {config} from "../../config";
+
 // TODO Add at least 'og:image'
 const SEO = props => {
   const {site} = useStaticQuery(
@@ -31,7 +33,7 @@ const SEO = props => {
   const i = createIntl(useIntl());
 
   const baseUrl =
-    process.env.NODE_ENV === "development"
+    config.env === "development"
       ? "http://localhost:8000"
       : site.siteMetadata.siteUrl;
 
@@ -58,16 +60,14 @@ const SEO = props => {
       <meta name="twitter:site" content={site.siteMetadata.twitterAuthor} />
       <meta name="twitter:creator" content={site.siteMetadata.twitterAuthor} />
 
-      {site.siteMetadata.locales.map(locale => {
-        return (
-          <link
-            rel="alternate"
-            href={createUrl(locale)}
-            hrefLang={locale}
-            key={locale}
-          />
-        );
-      })}
+      {site.siteMetadata.locales.map(locale => (
+        <link
+          rel="alternate"
+          href={createUrl(locale)}
+          hrefLang={locale}
+          key={locale}
+        />
+      ))}
     </Helmet>
   );
 };
