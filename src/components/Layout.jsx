@@ -13,7 +13,7 @@ import layoutStyles from "./Layout.module.scss";
 
 const Layout = props => (
   <>
-    <SEO title={props.title} />
+    <SEO {...props} />
     <div className={layoutStyles.site}>
       <Header {...props} />
       <Main {...props}>{props.children}</Main>
@@ -33,7 +33,8 @@ Layout.propTypes = {
   pageKey: PropTypes.string.isRequired,
   home: PropTypes.bool,
   notFound: PropTypes.bool,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string
 };
 
 export default Layout;

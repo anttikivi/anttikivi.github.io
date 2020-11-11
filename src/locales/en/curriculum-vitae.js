@@ -5,6 +5,9 @@ export const curriculumVitaeMessages = {
   /* eslint-disable camelcase */
   cv_title: "Curriculum Vitae",
   cv_summary_title: "In a Nutshell",
+  cv_description: `In my curriculum vitae, you’ll find my positions,
+    experiences, and skills throughout my life. I’m a venturesome doer who has
+    already done a lot and collected diverse expertise.`,
   cv_summary: `
     <p>
       An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning

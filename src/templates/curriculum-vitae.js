@@ -25,6 +25,7 @@ const CurriculumVitaePage = props => {
   return (
     <Layout
       title={i("cv_title")}
+      description={i("cv_description")}
       lang={props.pageContext.lang}
       pageKey={props.pageContext.key}
     >

@@ -4,6 +4,9 @@
 export const curriculumVitaeMessages = {
   /* eslint-disable camelcase */
   cv_title: "Ansioluettelo",
+  cv_description: `Ansioluettelostani löydät tehtäväni, kokemukseni ja oppini
+    vuosien varrelta. Olen oma-aloitteinen tekijä, joka on ehtinyt jo paljon ja
+    kartuttanut monenlaista ammattitaitoa.`,
   cv_summary_title: "Pähkinänkuoressa",
   cv_summary: `
     <p>
