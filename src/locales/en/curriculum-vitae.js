@@ -11,7 +11,7 @@ export const curriculumVitaeMessages = {
   cv_summary: `
     <p>
       An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning
-      something new every day and smiling as much as possible. For a couple
+      something new every day and smiling as much as possible. For a couple of
       weeks I’ll still be counting the mornings left in compulsory military
       service as Officer Candidate. In my free time I delight in volunteering in
       NGOs and music.
