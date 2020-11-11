@@ -8,6 +8,7 @@ export const curriculumVitaeMessages = {
     vuosien varrelta. Olen oma-aloitteinen tekijä, joka on ehtinyt jo paljon ja
     kartuttanut monenlaista ammattitaitoa.`,
   cv_summary_title: "Pähkinänkuoressa",
+  cv_img_alt: "Antti Kivi pinkissä Jokapoika-paidassa",
   cv_summary: `
     <p>
       Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja

@@ -39,6 +39,7 @@ const CurriculumVitaePage = props => {
         <figure className={`${styles.alignCenter} ${imageStyles.circleMask}`}>
           <img
             src={frontPageProfile}
+            alt={i("cv_img_alt")}
             className={`${cvStyles.cvImage} ${styles.alignCenter}`}
           />
         </figure>

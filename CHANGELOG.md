@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [Unreleased]
+
+### Added
+
+- `alt` attributes to the image to match accessibility guidelines.
+
 ## [0.4.11] - 2020-11-11
 
 ### Fixed
