@@ -142,7 +142,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.7...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.8...HEAD
+[0.4.8]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.7...v0.4.8
 [0.4.7]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.6...v0.4.7
 [0.4.6]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.5...v0.4.6
 [0.4.5]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.4...v0.4.5
