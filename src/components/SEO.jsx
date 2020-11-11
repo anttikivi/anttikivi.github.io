@@ -43,7 +43,6 @@ const SEO = props => {
     <Helmet titleTemplate={`%s - ${site.siteMetadata.title}`}>
       <html lang={`${props.lang}`} />
       <title>{props.title}</title>
-      <base href={baseUrl} />
 
       <meta name="description" content={description} />
 
