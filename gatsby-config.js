@@ -8,7 +8,7 @@ module.exports = {
     siteUrl: "https://anttikivi.fi",
     title: "Antti Kivi",
     description: "Helsinkiläinen yrittäjä",
-    author: "@anttikiwi",
+    twitterAuthor: "@anttikiwi",
     locales: ["fi", "en"]
   },
   plugins: [

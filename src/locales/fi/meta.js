@@ -3,6 +3,9 @@
 
 export const metaMessages = {
   /* eslint-disable camelcase */
-  meta_description: "Helsinkiläinen yrittäjä"
+  meta_description: `Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin
+    uutta ja mieluummin hymyilen kuin jätän hymyilemättä. Vielä hetken lasken
+    aamuja upseerikokelaana ja vapaalla rakastan järjestötoimintaa ja
+    musiikkia.`
   /* eslint-enable camelcase */
 };

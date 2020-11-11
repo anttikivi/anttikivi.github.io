@@ -33,7 +33,8 @@ Layout.propTypes = {
   pageKey: PropTypes.string.isRequired,
   home: PropTypes.bool,
   notFound: PropTypes.bool,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string
 };
 
 export default Layout;

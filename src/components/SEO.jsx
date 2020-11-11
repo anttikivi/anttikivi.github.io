@@ -20,7 +20,7 @@ const SEO = props => {
             siteUrl
             title
             description
-            author
+            twitterAuthor
             locales
           }
         }
@@ -37,41 +37,27 @@ const SEO = props => {
 
   const createUrl = createLanguageUrl(baseUrl, props.pageKey);
 
+  const description = props.description || i("meta_description");
+
   return (
-    <Helmet
-      titleTemplate={`%s - ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: "twitter:card",
-          content: "summary"
-        },
-        {
-          name: "twitter:creator",
-          content: site.siteMetadata.author
-        },
-        {
-          name: "twitter:title",
-          content: `${props.title} - ${site.siteMetadata.title}`
-        },
-        {
-          name: "twitter:description",
-          content: i("meta_description")
-        }
-      ].concat(props.meta)}
-    >
+    <Helmet titleTemplate={`%s - ${site.siteMetadata.title}`}>
       <html lang={`${props.lang}`} />
       <title>{props.title}</title>
       <base href={baseUrl} />
 
-      <meta name="description" content={i("meta_description")} />
+      <meta name="description" content={description} />
 
       <meta
         property="og:title"
         content={`${props.title} - ${site.siteMetadata.title}`}
       />
-      <meta property="og:description" content={i("meta_description")} />
+      <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={createUrl(props.lang)} />
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content={site.siteMetadata.twitterAuthor} />
+      <meta name="twitter:creator" content={site.siteMetadata.twitterAuthor} />
 
       {site.siteMetadata.locales.map(locale => {
         return (
@@ -91,7 +77,6 @@ SEO.propTypes = {
   lang: PropTypes.string.isRequired,
   pageKey: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  meta: PropTypes.arrayOf(PropTypes.object),
   description: PropTypes.string
 };
 

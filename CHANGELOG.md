@@ -9,11 +9,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 ### Added
 
 - Canonical URL to every page.
+- Proper description for each page.
 
 ### Fixed
 
 - Metadata in the head of the pages.
 - HTML tag’s attributes.
+
+### Removed
+
+- Non-existent Twitter meta tags.
+- Property for adding own metadata from pages.
 
 ## [0.4.7] - 2020-11-10
 
