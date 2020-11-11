@@ -13,7 +13,7 @@ import layoutStyles from "./Layout.module.scss";
 
 const Layout = props => (
   <>
-    <SEO title={props.title} />
+    <SEO {...props} />
     <div className={layoutStyles.site}>
       <Header {...props} />
       <Main {...props}>{props.children}</Main>
