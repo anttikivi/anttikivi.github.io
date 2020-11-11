@@ -8,9 +8,16 @@ module.exports = {
     siteUrl: "https://anttikivi.fi",
     title: "Antti Kivi",
     description: "Helsinkiläinen yrittäjä",
-    author: "@anttikiwi"
+    twitterAuthor: "@anttikiwi",
+    locales: ["fi", "en"]
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: "https://anttikivi.fi"
+      }
+    },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -48,8 +55,8 @@ module.exports = {
       options: {
         path: path.join(__dirname, "src", "images")
       }
-    }
-    // "gatsby-plugin-sitemap",
+    },
+    "gatsby-plugin-sitemap"
     // {
     //   resolve: "gatsby-source-filesystem",
     //   options: {

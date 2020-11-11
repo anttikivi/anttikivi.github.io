@@ -2750,6 +2750,7 @@ __metadata:
     eslint-plugin-react: ^7.21.5
     gatsby: ^2.24.91
     gatsby-image: ^2.4.21
+    gatsby-plugin-canonical-urls: ^2.3.13
     gatsby-plugin-google-analytics: ^2.3.19
     gatsby-plugin-i18n: ^1.0.1
     gatsby-plugin-manifest: ^2.4.37
@@ -7462,6 +7463,17 @@ fsevents@~2.1.2:
     lodash: ^4.17.20
     micromatch: ^4.0.2
   checksum: 07a40bca39745a3d8a90b423a59ca971a1f3d08c520db27780bbd687535cec53049ee7c5e025469c25bce71f899f0fcf44176bdbe957f5cf3bb95372eedc9f68
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-canonical-urls@npm:^2.3.13":
+  version: 2.3.13
+  resolution: "gatsby-plugin-canonical-urls@npm:2.3.13"
+  dependencies:
+    "@babel/runtime": ^7.11.2
+  peerDependencies:
+    gatsby: ^2.0.0
+  checksum: 46bbea4ebfdd2fe3fb39b2c75e9b215dcf85b4e8ede2c44eabc304d2bb7cfdbf13f13a43b1a293e7382c3fdb36a1cc87899a9b36a8818e215bd3fedfe359108c
   languageName: node
   linkType: hard
 

@@ -6,15 +6,17 @@ import {defineMessages} from "react-intl";
 import {curriculumVitaeMessages} from "./en/curriculum-vitae";
 import {footerMessages} from "./en/footer";
 import {headerMessages} from "./en/header";
-import {toggleButtonMessages} from "./en/toggle-button";
 import {indexMessages} from "./en/index";
+import {metaMessages} from "./en/meta";
 import {navigationMessages} from "./en/navigation";
+import {toggleButtonMessages} from "./en/toggle-button";
 
 export const messages = {
   ...curriculumVitaeMessages,
   ...footerMessages,
   ...headerMessages,
   ...indexMessages,
+  ...metaMessages,
   ...navigationMessages,
   ...toggleButtonMessages
 };
