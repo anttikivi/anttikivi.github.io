@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ### Added
 
-- `alt` attributes to the image to match accessibility guidelines.
+- `alt` attributes to the images to match accessibility guidelines.
 
 ## [0.4.11] - 2020-11-11
 
