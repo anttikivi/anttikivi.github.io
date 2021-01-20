@@ -35,14 +35,13 @@ export const curriculumVitaeMessages = {
     Valmistuin Suomen parhaana ylioppilaana Tikkurilan lukiosta syksyllä 2018.
   </li>
   <li>
-    Suoritin Maavoimien reserviupseerikurssin Haminassa Reserviupseerikoulussa
-    upseerioppilaana ja toimin reserviupseerikurssin 256 Oppilaskunnan
-    hallituksen puheenjohtajana.
+    Sotilasarvoltani olen vänrikki.
   </li>
   <li>
-    Suoritan varusmiespalvelusta Helsingissä Kaartin jääkärirykmentissä
-    upseerikokelaana ja toimin Puolustusvoimien uutislehden, Ruotuväen
-    toimittajana Pääesikunnan viestintäosastolla.
+    Suoritin Maavoimien reserviupseerikurssin Haminassa Reserviupseerikoulussa
+    upseerioppilaana ja toimin reserviupseerikurssin 256 Oppilaskunnan
+    hallituksen puheenjohtajana. Tämän jälkeen toimin Puolustusvoimien
+    uutislehden, Ruotuväen toimittajana Pääesikunnan viestintäosastolla.
   </li>
   <li>Olenkin monesta kiinnostunut ja toimin vapaa-ajallani yrittäjänä.</li>
   <li>Harrastuksenani muun muassa soitan kitaraa.</li>
