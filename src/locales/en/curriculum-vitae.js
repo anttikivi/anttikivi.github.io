@@ -63,7 +63,7 @@ export const curriculumVitaeMessages = {
   cv_work_experience_defence_force_title: "The Finnish Defence Forces",
   cv_work_experience_defence_force_job:
     "Journalist (conscript), Defence Forces’ newspaper Ruotuväki",
-  cv_work_experience_defence_force_time: "since September 2020",
+  cv_work_experience_defence_force_time: "from September to December 2020",
   cv_work_experience_visiosto_title: "Visiosto oy",
   cv_work_experience_visiosto_job: "Chief Executive Officer & entrepreneur",
   cv_work_experience_visiosto_time: "since 2019",

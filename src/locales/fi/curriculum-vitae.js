@@ -56,7 +56,7 @@ export const curriculumVitaeMessages = {
   cv_work_experience_defence_force_title: "Puolustusvoimat, Pääesikunta",
   cv_work_experience_defence_force_job:
     "Toimittaja (varusmies), uutislehti Ruotuväki",
-  cv_work_experience_defence_force_time: "syyskuusta 2020 alkaen",
+  cv_work_experience_defence_force_time: "syyskuu–joulukuu 2020",
   cv_work_experience_visiosto_title: "Visiosto oy",
   cv_work_experience_visiosto_job: "Toimitusjohtaja & yrittäjä",
   cv_work_experience_visiosto_time: "2019 alkaen",
