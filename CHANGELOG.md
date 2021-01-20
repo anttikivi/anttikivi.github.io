@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [0.5.1] - 2021-01-21
+
+### Changed
+
+- Information about military service in the summary of the curriculum vitae to be up to date.
+
 ## [0.5.0] - 2021-01-20
 
 ### Added
@@ -172,7 +178,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.5.0...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.5.1...HEAD
+[0.5.1]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.11...v0.5.0
 [0.4.11]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.10...v0.4.11
 [0.4.10]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.9...v0.4.10
