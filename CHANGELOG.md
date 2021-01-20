@@ -9,6 +9,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 ### Added
 
 - `alt` attributes to the images to match accessibility guidelines.
+- New job to the curriculum vitae.
+
+### Changed
+
+- Duration of the job in the Finnish Defence Forces.
 
 ## [0.4.11] - 2020-11-11
 
