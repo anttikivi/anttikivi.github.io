@@ -69,7 +69,9 @@ const CurriculumVitaePage = props => {
               {i("cv_work_experience_coalition_party_youth_helsinki_job")}
             </h4>
             <p>
-              <em>{i("cv_work_experience_coalition_party_youth_helsinki_time")}</em>
+              <em>
+                {i("cv_work_experience_coalition_party_youth_helsinki_time")}
+              </em>
             </p>
 
             <h3 className={cvStyles.subHeading}>
