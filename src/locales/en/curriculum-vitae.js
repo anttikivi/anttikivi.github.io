@@ -39,13 +39,13 @@ export const curriculumVitaeMessages = {
     lukio as the best candidate in Finland autumn 2018.
   </li>
   <li>
-    I completed the Army’s reserve officer course in Reserve Officer School,
-    Hamina, and was the 256th course’s student body’s President.
+    My military rank is Second Lieutenant.
   </li>
   <li>
-    Currently I’m performing compulsory military service in Helsinki, Guard
-    Jaeger Regiment as a journalist in the newspaper of the Finnish Defence
-    Forces, Ruotuväki. My military rank is Officer Candidate.
+    I completed the Army’s reserve officer course in Reserve Officer School,
+    Hamina, and was the 256th course’s student body’s President. After that I
+    worked as a journalist in the newspaper of the Finnish Defence Forces,
+    Ruotuväki.
   </li>
   <li>
     I’ve got interest in various subjects and work as an entrepreneur in my
