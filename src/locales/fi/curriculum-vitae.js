@@ -49,6 +49,10 @@ export const curriculumVitaeMessages = {
   `,
 
   cv_work_experience_title: "Työkokemus",
+  cv_work_experience_coalition_party_youth_helsinki_title: "Helsingin Kokoomusnuoret ry",
+  cv_work_experience_coalition_party_youth_helsinki_job:
+    "Järjestökoordinaattori",
+  cv_work_experience_coalition_party_youth_helsinki_time: "tammikuusta 2021 alkaen",
   cv_work_experience_defence_force_title: "Puolustusvoimat, Pääesikunta",
   cv_work_experience_defence_force_job:
     "Toimittaja (varusmies), uutislehti Ruotuväki",

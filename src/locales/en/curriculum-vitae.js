@@ -55,6 +55,11 @@ export const curriculumVitaeMessages = {
   `,
 
   cv_work_experience_title: "Work Experince",
+  cv_work_experience_coalition_party_youth_helsinki_title:
+    "Youth of the National Coalition Party in Helsinki",
+  cv_work_experience_coalition_party_youth_helsinki_job:
+    "Coordinator",
+  cv_work_experience_coalition_party_youth_helsinki_time: "since January 2021",
   cv_work_experience_defence_force_title: "The Finnish Defence Forces",
   cv_work_experience_defence_force_job:
     "Journalist (conscript), Defence Forces’ newspaper Ruotuväki",
