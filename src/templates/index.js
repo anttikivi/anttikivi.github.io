@@ -50,6 +50,7 @@ const IndexPage = props => {
         <figure className={`${styles.alignCenter} ${imageStyles.circleMask}`}>
           <img
             src={frontPageProfile}
+            alt={i("index_img_alt")}
             className={`${indexStyles.frontPageImage} ${styles.alignCenter}`}
           />
         </figure>

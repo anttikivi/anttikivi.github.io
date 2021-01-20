@@ -1,7 +1,7 @@
 {
   "name": "anttikivi.github.io",
   "private": true,
-  "version": "0.4.11",
+  "version": "0.5.0",
   "description": "Antti Kivi's website",
   "scripts": {
     "build": "yarn clean && gatsby build",
@@ -29,7 +29,7 @@
   "homepage": "https://github.com/anttikivi/anttikivi.github.io#readme",
   "dependencies": {
     "autoprefixer": "^10.0.1",
-    "gatsby": "^2.24.91",
+    "gatsby": "^2.27.0",
     "gatsby-image": "^2.4.21",
     "gatsby-plugin-canonical-urls": "^2.3.13",
     "gatsby-plugin-google-analytics": "^2.3.19",

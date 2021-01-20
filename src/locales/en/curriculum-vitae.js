@@ -4,10 +4,11 @@
 export const curriculumVitaeMessages = {
   /* eslint-disable camelcase */
   cv_title: "Curriculum Vitae",
-  cv_summary_title: "In a Nutshell",
   cv_description: `In my curriculum vitae, you’ll find my positions,
     experiences, and skills throughout my life. I’m a venturesome doer who has
     already done a lot and collected diverse expertise.`,
+  cv_summary_title: "In a Nutshell",
+  cv_img_alt: "Antti Kivi in a pink Jokapoika shirt",
   cv_summary: `
     <p>
       An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning
@@ -54,10 +55,14 @@ export const curriculumVitaeMessages = {
   `,
 
   cv_work_experience_title: "Work Experince",
+  cv_work_experience_coalition_party_youth_helsinki_title:
+    "Youth of the National Coalition Party in Helsinki",
+  cv_work_experience_coalition_party_youth_helsinki_job: "Coordinator",
+  cv_work_experience_coalition_party_youth_helsinki_time: "since January 2021",
   cv_work_experience_defence_force_title: "The Finnish Defence Forces",
   cv_work_experience_defence_force_job:
     "Journalist (conscript), Defence Forces’ newspaper Ruotuväki",
-  cv_work_experience_defence_force_time: "since September 2020",
+  cv_work_experience_defence_force_time: "from September to December 2020",
   cv_work_experience_visiosto_title: "Visiosto oy",
   cv_work_experience_visiosto_job: "Chief Executive Officer & entrepreneur",
   cv_work_experience_visiosto_time: "since 2019",

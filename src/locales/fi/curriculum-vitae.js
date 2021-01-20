@@ -8,6 +8,7 @@ export const curriculumVitaeMessages = {
     vuosien varrelta. Olen oma-aloitteinen tekijä, joka on ehtinyt jo paljon ja
     kartuttanut monenlaista ammattitaitoa.`,
   cv_summary_title: "Pähkinänkuoressa",
+  cv_img_alt: "Antti Kivi pinkissä Jokapoika-paidassa",
   cv_summary: `
     <p>
       Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja
@@ -48,10 +49,16 @@ export const curriculumVitaeMessages = {
   `,
 
   cv_work_experience_title: "Työkokemus",
+  cv_work_experience_coalition_party_youth_helsinki_title:
+    "Helsingin Kokoomusnuoret ry",
+  cv_work_experience_coalition_party_youth_helsinki_job:
+    "Järjestökoordinaattori",
+  cv_work_experience_coalition_party_youth_helsinki_time:
+    "tammikuusta 2021 alkaen",
   cv_work_experience_defence_force_title: "Puolustusvoimat, Pääesikunta",
   cv_work_experience_defence_force_job:
     "Toimittaja (varusmies), uutislehti Ruotuväki",
-  cv_work_experience_defence_force_time: "syyskuusta 2020 alkaen",
+  cv_work_experience_defence_force_time: "syyskuu–joulukuu 2020",
   cv_work_experience_visiosto_title: "Visiosto oy",
   cv_work_experience_visiosto_job: "Toimitusjohtaja & yrittäjä",
   cv_work_experience_visiosto_time: "2019 alkaen",

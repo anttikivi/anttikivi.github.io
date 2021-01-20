@@ -6,14 +6,14 @@ We currently support the following versions of the website with security updates
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.4.x   | :white_check_mark: |
-| < 0.4   | :x:                |
+| 0.5.x   | :white_check_mark: |
+| < 0.5   | :x:                |
 
 Please note that while the project is still in development, older versions aren’t supported for long.
 
 ## Reporting a Vulnerability
 
-If you’ve found an vulnerability, please report it to security@visisto.fi.
+If you’ve found an vulnerability, please report it to security@visiosto.fi.
 
 We get back to you as soon as possible, usually within five working days.
 

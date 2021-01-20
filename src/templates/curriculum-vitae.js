@@ -39,6 +39,7 @@ const CurriculumVitaePage = props => {
         <figure className={`${styles.alignCenter} ${imageStyles.circleMask}`}>
           <img
             src={frontPageProfile}
+            alt={i("cv_img_alt")}
             className={`${cvStyles.cvImage} ${styles.alignCenter}`}
           />
         </figure>
@@ -60,6 +61,18 @@ const CurriculumVitaePage = props => {
         <div className={cvStyles.columns}>
           <div className={cvStyles.mainColumn}>
             <h2>{i("cv_work_experience_title")}</h2>
+
+            <h3 className={cvStyles.subHeading}>
+              {i("cv_work_experience_coalition_party_youth_helsinki_title")}
+            </h3>
+            <h4 className={cvStyles.subHeading}>
+              {i("cv_work_experience_coalition_party_youth_helsinki_job")}
+            </h4>
+            <p>
+              <em>
+                {i("cv_work_experience_coalition_party_youth_helsinki_time")}
+              </em>
+            </p>
 
             <h3 className={cvStyles.subHeading}>
               {i("cv_work_experience_defence_force_title")}

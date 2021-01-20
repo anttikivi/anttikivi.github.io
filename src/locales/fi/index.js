@@ -4,6 +4,7 @@
 export const indexMessages = {
   /* eslint-disable camelcase */
   index_title: "Etusivu",
+  index_img_alt: "Antti Kivi pinkissä Jokapoika-paidassa",
   index_byline: "Helsinkiläinen viestintäalan yrittäjä",
   index_lede: `
   <p>Verkkosivustoni on vielä hieman keskentekoinen</p>

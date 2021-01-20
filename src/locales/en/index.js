@@ -4,6 +4,7 @@
 export const indexMessages = {
   /* eslint-disable camelcase */
   index_title: "Home",
+  index_img_alt: "Antti Kivi in a pink Jokapoika shirt",
   index_byline: "Entrepreneur from Helsinki, Finland",
   index_lede: `
   <p>My website isn’t quite ready yet</p>

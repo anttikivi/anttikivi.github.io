@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [0.5.0] - 2021-01-20
+
+### Added
+
+- `alt` attributes to the images to match accessibility guidelines.
+- New job to the curriculum vitae.
+
+### Changed
+
+- Duration of the job in the Finnish Defence Forces.
+
 ## [0.4.11] - 2020-11-11
 
 ### Fixed
@@ -161,7 +172,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.11...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.11...v0.5.0
 [0.4.11]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.10...v0.4.11
 [0.4.10]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.9...v0.4.10
 [0.4.9]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.8...v0.4.9
