@@ -12,39 +12,10 @@ export const curriculumVitaeMessages = {
   cv_summary: `
     <p>
       Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja
-      mieluummin hymyilen kuin jätän hymyilemättä. Vielä hetken lasken aamuja
-      upseerikokelaana ja vapaalla rakastan järjestötoimintaa ja musiikkia.
+      mieluummin hymyilen kuin jätän hymyilemättä. Töissä olen Helsingin
+      Kokoomusnuorilla ja vapaalla rakastan järjestötoimintaa ja musiikkia.
     </p>
-  `,
-  cv_summary_list: `
-  <li>Synnyin 4.5.1999, ikä 21 vuotta.</li>
-  <li>Asun Helsingissä Etu-Töölössä.</li>
-  <li>
-    Olen toiminut monissa luottamustoimissa, merkittävimpänä kokoaikatyö Suomen
-    Lukiolaisten Liiton järjestösektorista vastaavana varapuheenjohtajana.
-  </li>
-  <li>
-    Luonnollisesti olen erittäin kiinnostunut politiikasta ja yhteiskunnasta,
-    vahvuuksinani talous, koulutus sekä uusimpana turvallisuus.
-  </li>
-  <li>
-    Aloitan läsnäolevana taloustieteen opinnot Helsingin yliopiston
-    valtiotieteellisessä tiedekunnassa ensi syksynä.
-  </li>
-  <li>
-    Valmistuin Suomen parhaana ylioppilaana Tikkurilan lukiosta syksyllä 2018.
-  </li>
-  <li>
-    Sotilasarvoltani olen vänrikki.
-  </li>
-  <li>
-    Suoritin Maavoimien reserviupseerikurssin Haminassa Reserviupseerikoulussa
-    upseerioppilaana ja toimin reserviupseerikurssin 256 Oppilaskunnan
-    hallituksen puheenjohtajana. Tämän jälkeen toimin Puolustusvoimien
-    uutislehden, Ruotuväen toimittajana Pääesikunnan viestintäosastolla.
-  </li>
-  <li>Olenkin monesta kiinnostunut ja toimin vapaa-ajallani yrittäjänä.</li>
-  <li>Harrastuksenani muun muassa soitan kitaraa.</li>
+    <p>Synnyin 4.5.1999, ikä 21 vuotta.</p>
   `,
 
   cv_work_experience_title: "Työkokemus",
