@@ -12,10 +12,9 @@ export const curriculumVitaeMessages = {
   cv_summary: `
     <p>
       An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning
-      something new every day and smiling as much as possible. For a couple of
-      weeks I’ll still be counting the mornings left in compulsory military
-      service as Officer Candidate. In my free time I delight in volunteering in
-      NGOs and music.
+      something new every day and smiling as much as possible. I work as the
+      Coordinator of the Youth of the National Coalition Party in Helsinki. In
+      my free time I delight in spending my time with NGOs and music.
     </p>
     <p>I was born 4 May 1999 (age 21).</p>
   `,
