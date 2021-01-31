@@ -17,7 +17,7 @@ export const curriculumVitaeMessages = {
       service as Officer Candidate. In my free time I delight in volunteering in
       NGOs and music.
     </p>
-    <p>I was born 4 May 1999 (age 21).</li>
+    <p>I was born 4 May 1999 (age 21).</p>
   `,
 
   cv_work_experience_title: "Work Experince",

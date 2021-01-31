@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
-## [0.5.2] - 2021-01-21
+## [0.5.3] - 2021-01-31
+
+### Fixed
+
+- English curriculum vitae page’s formatting caused by a wrong closing tag.
+- Release date for `v0.5.2` in the changelog.
+- Git comparing links for `v0.5.2`.
+
+## [0.5.2] - 2021-01-31
 
 ### Changed
 
@@ -185,7 +193,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.5.1...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.5.3...HEAD
+[0.5.3]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.5.2...v0.5.3
+[0.5.2]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.11...v0.5.0
 [0.4.11]: https://github.com/anttikivi/anttikivi.github.io/compare/v0.4.10...v0.4.11
