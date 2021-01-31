@@ -50,14 +50,6 @@ const CurriculumVitaePage = props => {
           })}
         </div>
 
-        <div>
-          <ul>
-            {i("cv_summary_list", {
-              li: (...chunk) => <li>{chunk}</li>
-            })}
-          </ul>
-        </div>
-
         <div className={cvStyles.columns}>
           <div className={cvStyles.mainColumn}>
             <h2>{i("cv_work_experience_title")}</h2>

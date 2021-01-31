@@ -17,41 +17,7 @@ export const curriculumVitaeMessages = {
       service as Officer Candidate. In my free time I delight in volunteering in
       NGOs and music.
     </p>
-  `,
-  cv_summary_list: `
-  <li>I was born 4 May 1999 (age 21).</li>
-  <li>I live in Helsinki, Finland.</li>
-  <li>
-    I’ve held numerous positions in several NGOs, the most notable being the job
-    as the full-time Vice President of Union of Upper Secondary School Students
-    in Finland.
-  </li>
-  <li>
-    Naturally, I’m really interested in politics where my strengths are in
-    economics, education, and safety as the latest addition.
-  </li>
-  <li>
-    I begin my studies in economics in University of Helsinki, Faculty of Social
-    Sciences next autumn.
-  </li>
-  <li>
-    I passed the Finnish Matriculation Examination and graduated from Tikkurilan
-    lukio as the best candidate in Finland autumn 2018.
-  </li>
-  <li>
-    My military rank is Second Lieutenant.
-  </li>
-  <li>
-    I completed the Army’s reserve officer course in Reserve Officer School,
-    Hamina, and was the 256th course’s student body’s President. After that I
-    worked as a journalist in the newspaper of the Finnish Defence Forces,
-    Ruotuväki.
-  </li>
-  <li>
-    I’ve got interest in various subjects and work as an entrepreneur in my
-    free time.
-  </li>
-  <li>Among other pastimes, I’m also a hobbyist guitar player.</li>
+    <p>I was born 4 May 1999 (age 21).</li>
   `,
 
   cv_work_experience_title: "Work Experince",
