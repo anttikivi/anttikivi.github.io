@@ -12,6 +12,7 @@ module.exports = {
     locales: ["fi", "en"]
   },
   plugins: [
+    "gatsby-plugin-gatsby-cloud",
     {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
