@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ## [Unreleased]
 
+### Changed
+
+- Button texts on the CV page.
+
 ### Removed
 
 - Community health files and such that are in the central `.github` repository.
