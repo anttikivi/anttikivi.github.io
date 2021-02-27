@@ -28,7 +28,7 @@ jobs:
 
     - name: Determine the project’s version
       id: version
-      uses: anttikivi/maintain-revision@v0.8.2
+      uses: anttikivi/maintain-revision@v0.10.1
       with:
         type: npm
 
@@ -37,7 +37,7 @@ jobs:
       run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
 
     - name: Cache dependencies
-      uses: actions/cache@v2.1.3
+      uses: actions/cache@v2.1.4
       id: yarn-cache
       with:
         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}

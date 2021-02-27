@@ -233,8 +233,8 @@ export const curriculumVitaeMessages = {
   cv_education_tikkurilan_lukio_title: "Tikkurilan lukio",
   cv_education_tikkurilan_lukio_time: "2015–2018",
   cv_education_tikkurilan_lukio_mark: "Arvosanat: LLLLLLEEEM",
-  cv_education_tikkurilan_lukio_show_marks: "Näytä arvosanat",
-  cv_education_tikkurilan_lukio_hide_marks: "Piilota arvosanat",
+  cv_education_tikkurilan_lukio_show_marks: "Näytä arvosanojen erittely",
+  cv_education_tikkurilan_lukio_hide_marks: "Piilota arvosanojen erittely",
   cv_education_tikkurilan_lukio_marks_by_subject: `
   <li><b>äidinkieli</b>: laudatur</li>
   <li><b>matematiikka, pitkä oppimäärä</b>: laudatur</li>

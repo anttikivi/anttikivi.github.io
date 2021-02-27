@@ -224,8 +224,8 @@ export const curriculumVitaeMessages = {
   cv_education_tikkurilan_lukio_title: "Tikkurilan lukio",
   cv_education_tikkurilan_lukio_time: "2015–2018",
   cv_education_tikkurilan_lukio_mark: "Marks: LLLLLLEEEM",
-  cv_education_tikkurilan_lukio_show_marks: "Show marks",
-  cv_education_tikkurilan_lukio_hide_marks: "Hide marks",
+  cv_education_tikkurilan_lukio_show_marks: "Show marks by subject",
+  cv_education_tikkurilan_lukio_hide_marks: "Hide marks by subject",
   cv_education_tikkurilan_lukio_marks_by_subject: `
   <li><b>mother tongue</b>: laudatur</li>
   <li><b>mathematics, advanced syllabus</b>: laudatur</li>
