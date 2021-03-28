@@ -1,30 +1,41 @@
-// Copyright (c) 2020 Antti Kivi
+// Copyright (c) 2021 Antti Kivi
 // Licensed under the MIT License
 
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import {IntlProvider} from "react-intl";
+import { IntlProvider } from 'react-intl';
 
-const Intl = ({children, locale}) => {
-  let messages = require("../locales/fi").lang; // eslint-disable-line global-require, no-undef
+const Intl = ({ children, locale }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            defaultLocale
+          }
+        }
+      }
+    `,
+  );
+
+  const { defaultLocale } = site.siteMetadata;
+
+  // eslint-disable-next-line global-require, no-undef
+  let messages = require(`../locales/${defaultLocale}`).locale;
 
   try {
-    messages = require(`../locales/${locale}`).lang; // eslint-disable-line global-require, no-undef
+    // eslint-disable-next-line global-require, no-undef
+    messages = require(`../locales/${locale}`).locale;
   } catch (error) {
     // Do nothing and use the default.
   }
 
   return (
-    <IntlProvider locale={locale || "fi"} messages={messages}>
+    <IntlProvider locale={locale || defaultLocale} messages={messages}>
       {children}
     </IntlProvider>
   );
-};
-
-Intl.propTypes = {
-  children: PropTypes.node,
-  locale: PropTypes.string
 };
 
 export default Intl;

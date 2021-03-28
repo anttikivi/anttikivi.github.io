@@ -1,69 +1,92 @@
-// Copyright (c) 2020 Antti Kivi
+// Copyright (c) 2021 Antti Kivi
 // Licensed under the MIT License
 
-const path = require("path");
+require('dotenv').config();
+
+const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://anttikivi.fi",
-    title: "Antti Kivi",
-    description: "Helsinkiläinen yrittäjä",
-    twitterAuthor: "@anttikiwi",
-    locales: ["fi", "en"]
+    siteUrl: 'https://anttikivi.fi',
+    title: 'Antti Kivi',
+    description: 'Helsinkiläinen yrittäjä',
+    twitterAuthor: '@anttikiwi',
+    locales: ['fi', 'en-GB'],
+    localePaths: { fi: '', 'en-GB': 'en' },
+    simpleLocales: { fi: 'fi', 'en-GB': 'en' },
+    defaultLocale: 'fi',
+    defaultEmail: 'antti.kivi@visiosto.fi',
+    facebookAppID: 'TODO',
+    socialMedia: {
+      // facebook: 'https://facebook.com/visiosto',
+      github: 'https://github.com/anttikivi',
+      instagram: 'https://instagram.com/anttikiwi',
+      linkedin: 'https://linkedin.com/in/anttikivi',
+      twitter: 'https://twitter.com/anttikiwi',
+    },
   },
   plugins: [
-    "gatsby-plugin-gatsby-cloud",
     {
-      resolve: "gatsby-plugin-canonical-urls",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        siteUrl: "https://anttikivi.fi"
-      }
+        name: 'images',
+        path: path.join(__dirname, 'src', 'images'),
+      },
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        trackingId: "UA-154440462-1"
-      }
+        name: 'assets',
+        path: path.join(__dirname, 'src', 'assets'),
+      },
     },
     {
-      resolve: "gatsby-plugin-i18n",
+      resolve: 'gatsby-transformer-remark',
+    },
+    'gatsby-transformer-json',
+    'gatsby-plugin-image',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-source-contentful',
       options: {
-        langKeyDefault: "fi",
-        useLangKeyLayout: true
-      }
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || process.env.CONTENTFUL_DELIVERY_TOKEN,
+      },
     },
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-i18n',
       options: {
-        name: "Antti Kivi",
-        short_name: "Antti Kivi",
-        icon: "src/images/favicon-alternative.png",
-        theme_color: "#f55e96",
-        background_color: "#ffffff",
-        display: "browser"
-      }
+        langKeyDefault: 'fi',
+        useLangKeyLayout: true,
+      },
     },
     {
-      resolve: "gatsby-plugin-postcss",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        postCssPlugins: [require("autoprefixer")]
-      }
+        name: 'Antti Kivi',
+        short_name: 'Antti Kivi',
+        icon: 'src/assets/favicon-alternative.png',
+        theme_color: '#0a15c8',
+        background_color: '#ffffff',
+        display: 'browser',
+      },
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sass",
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-catch-links',
     {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: path.join(__dirname, "src", "images")
-      }
+      resolve: 'gatsby-plugin-netlify',
     },
-    "gatsby-plugin-sitemap"
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     path: path.join(__dirname, "src", "content")
-    //   }
-    // },
-    // "gatsby-transformer-remark"
-  ]
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-NX8V4NT',
+        includeInDevelopment: true,
+        routeChangeEventName: 'gatsby-route-change',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+    },
+  ],
 };

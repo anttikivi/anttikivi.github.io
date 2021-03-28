@@ -1,12 +1,14 @@
 // Copyright (c) 2020 Antti Kivi
 // Licensed under the MIT License
 
-export const footerMessages = {
-  /* eslint-disable camelcase */
-  footer_alt_instagram_logo: "Instagram Logo",
-  footer_alt_linkedin_logo: "LinkedIn Logo",
-  footer_alt_twitter_logo: "Twitter Logo",
-  footer_made_by:
-    "This site is rendered through the lens of <visiosto>Visiosto</visiosto>"
-  /* eslint-enable camelcase */
+export default {
+  footerSocialMediaTitle: 'Social Media',
+  footerFacebookAlt: 'Facebook Logo',
+  footerGithubAlt: 'GitHub Logo',
+  footerInstagramAlt: 'Instagram Logo',
+  footerLinkedinAlt: 'LinkedIn Logo',
+  footerTwitterAlt: 'Twitter Logo',
+  footerOcticons: 'Octicons&nbsp;&copy;&nbsp;2021&nbsp;GitHub,&nbsp;Inc.',
+  footerCopyright: '&copy;&nbsp;2021&nbsp;Antti&nbsp;Kivi',
+  footerMadeBy: 'The site is rendered through the lens of <a>Visiosto</a>',
 };
