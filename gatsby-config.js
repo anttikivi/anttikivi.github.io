@@ -3,13 +3,13 @@
 
 require('dotenv').config();
 
-const path = require("path");
+const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://anttikivi.fi",
-    title: "Antti Kivi",
-    description: "Helsinkiläinen yrittäjä",
+    siteUrl: 'https://anttikivi.fi',
+    title: 'Antti Kivi',
+    description: 'Helsinkiläinen yrittäjä',
     twitterAuthor: '@anttikiwi',
     locales: ['fi', 'en-GB'],
     localePaths: { fi: '', 'en-GB': 'en' },
@@ -66,8 +66,8 @@ module.exports = {
       options: {
         name: 'Antti Kivi',
         short_name: 'Antti Kivi',
-        icon: 'src/assets/favicon.svg',
-        theme_color: '#eb5952', // TODO
+        icon: 'src/assets/favicon-alternative.png',
+        theme_color: '#0a15c8',
         background_color: '#ffffff',
         display: 'browser',
       },
