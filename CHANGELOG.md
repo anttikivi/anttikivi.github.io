@@ -15,6 +15,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Favicon colour.
 
+### Fixed
+
+- Open Graph title.
+
 ## [0.7.3] - 2021-03-29
 
 ### Fixed

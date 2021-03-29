@@ -53,7 +53,7 @@ const Head = (props) => {
     process.env.NODE_ENV === 'development' ? 'http://localhost:8000' : siteMetadata.siteUrl;
 
   const titleTemplate = `%s - ${siteMetadata.title}`;
-  const title = `%s - ${siteMetadata.title}`;
+  const title = `${props.title} - ${siteMetadata.title}`;
   const description = props.description || i('metaDescription');
 
   return (
