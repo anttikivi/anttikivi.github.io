@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ## [Unreleased]
 
+### Added
+
+- Localized `404` error pages and redirects for them.
+
 ### Changed
 
 - Colour palette of the site.

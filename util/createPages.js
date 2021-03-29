@@ -16,6 +16,7 @@ module.exports = async ({ actions, graphql, reporter }) => {
             alternativeURL
             defaultLocale
             defaultURL
+            locales
             siteUrl
             localePaths {
               en_GB
@@ -46,6 +47,7 @@ module.exports = async ({ actions, graphql, reporter }) => {
     alternativeURL,
     defaultLocale,
     defaultURL,
+    locales,
     localePaths,
     siteUrl,
   } = query.data.site.siteMetadata;
@@ -86,5 +88,39 @@ module.exports = async ({ actions, graphql, reporter }) => {
     toPath: siteUrl,
     isPermanent: true,
     force: true,
+  });
+
+  // Create the 404 error pages.
+
+  locales.forEach((locale) => {
+    reporter.verbose(`Creating a 404 error page for the locale '${locale}'`);
+
+    const pagePath =
+      locale === defaultLocale ? '/404' : `/${localePaths[locale.replace('-', '_')]}/404`;
+
+    reporter.verbose(`The path created is ${pagePath}`);
+
+    const pageOpts = {
+      path: pagePath,
+      component: path.resolve('src', 'templates', '404.jsx'),
+      context: {
+        locale,
+        pageId: 404,
+      },
+    };
+
+    createPage(pageOpts);
+  });
+
+  // Create the redirects for the 404 error pages.
+  createRedirect({
+    fromPath: '/*',
+    toPath: `/404`,
+    statusCode: 404,
+  });
+  createRedirect({
+    fromPath: '/en/*',
+    toPath: `/en/404`,
+    statusCode: 404,
   });
 };
