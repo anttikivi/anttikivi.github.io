@@ -2,10 +2,11 @@
 // Licensed under the MIT License
 
 const colors = {
-  blue: '#0a15c8',
-  blueAlternative: '#a3a7ea',
-  lightBlue: '#7bd3ff',
-  lightBlueAlternative: '#def4ff',
+  blue: '#3f51b5',
+  turquoise: '#009688',
+  yellow: '#ffc107',
+  orange: '#ff9800',
+  red: '#ff5722',
   black: '#404040',
   white: '#ffffff',
   alternativeBlack: '#262c34',
@@ -34,11 +35,11 @@ export const COLORS = {
   // },
   link: {
     light: colors.blue,
-    dark: colors.lightBlue,
+    dark: colors.yellow,
   },
   'link-hover': {
-    light: colors.blueAlternative,
-    dark: colors.lightBlueAlternative,
+    light: colors.turquoise,
+    dark: colors.orange,
   },
   // 'button-green': {
   //   light: colors.buttonGreen,
@@ -50,7 +51,7 @@ export const COLORS = {
   // },
   primary: {
     light: colors.blue,
-    dark: colors.lightBlue,
+    dark: colors.yellow,
   },
   // secondary: {
   //   light: colors.peach,
