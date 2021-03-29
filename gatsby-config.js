@@ -8,6 +8,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://anttikivi.fi',
+    alternativeURL: 'https://anttikivi.com',
     title: 'Antti Kivi',
     description: 'Helsinkiläinen yrittäjä',
     twitterAuthor: '@anttikiwi',
