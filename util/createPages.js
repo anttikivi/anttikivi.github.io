@@ -68,5 +68,5 @@ module.exports = async ({ actions, graphql, reporter }) => {
   });
 
   // Create the redirects for the index page.
-  createRedirect({ fromPath: alternativeURL, toPath: `${siteUrl}/${localePaths['en_GB']}` });
+  createRedirect({ fromPath: alternativeURL, toPath: `${siteUrl}/${localePaths.en_GB}` });
 };
