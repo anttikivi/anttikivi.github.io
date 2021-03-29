@@ -105,7 +105,7 @@ module.exports = async ({ actions, graphql, reporter }) => {
       component: path.resolve('src', 'templates', '404.jsx'),
       context: {
         locale,
-        pageId: 404,
+        pageId: '404',
       },
     };
 
@@ -114,13 +114,13 @@ module.exports = async ({ actions, graphql, reporter }) => {
 
   // Create the redirects for the 404 error pages.
   createRedirect({
-    fromPath: '/*',
-    toPath: `/404`,
+    fromPath: '/en/*',
+    toPath: `/en/404`,
     statusCode: 404,
   });
   createRedirect({
-    fromPath: '/en/*',
-    toPath: `/en/404`,
+    fromPath: '/*',
+    toPath: `/404`,
     statusCode: 404,
   });
 };
