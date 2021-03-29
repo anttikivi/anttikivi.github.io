@@ -6,7 +6,7 @@ import { defineMessages } from 'react-intl';
 import footerMessages from './fi/footer';
 import headerMessages from './fi/header';
 import metaMessages from './fi/meta';
-import notFoundMessages from './en/not-found';
+import notFoundMessages from './fi/not-found';
 
 export const messages = {
   ...footerMessages,
