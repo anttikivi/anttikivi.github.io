@@ -8,6 +8,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://anttikivi.fi',
+    alternativeURL: 'https://anttikivi.com',
     title: 'Antti Kivi',
     description: 'Helsinkiläinen yrittäjä',
     twitterAuthor: '@anttikiwi',
@@ -16,7 +17,7 @@ module.exports = {
     simpleLocales: { fi: 'fi', 'en-GB': 'en' },
     defaultLocale: 'fi',
     defaultEmail: 'antti.kivi@visiosto.fi',
-    facebookAppID: 'TODO',
+    facebookAppID: '544113829894022',
     socialMedia: {
       // facebook: 'https://facebook.com/visiosto',
       github: 'https://github.com/anttikivi',
@@ -66,7 +67,7 @@ module.exports = {
       options: {
         name: 'Antti Kivi',
         short_name: 'Antti Kivi',
-        icon: 'src/assets/favicon-alternative.png',
+        icon: 'src/assets/favicon.png',
         theme_color: '#0a15c8',
         background_color: '#ffffff',
         display: 'browser',

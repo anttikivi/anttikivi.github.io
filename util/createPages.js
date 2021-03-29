@@ -6,14 +6,16 @@ const path = require('path');
 // const createPagePath = require('./createPagePath');
 
 module.exports = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
 
   const query = await graphql(
     `
       {
         site {
           siteMetadata {
+            alternativeURL
             defaultLocale
+            siteUrl
             localePaths {
               en_GB
               fi
@@ -39,7 +41,7 @@ module.exports = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  const { defaultLocale, localePaths } = query.data.site.siteMetadata;
+  const { alternativeURL, defaultLocale, localePaths, siteUrl } = query.data.site.siteMetadata;
 
   // Create the index page from Contentful.
 
@@ -64,4 +66,7 @@ module.exports = async ({ actions, graphql, reporter }) => {
 
     createPage(pageOpts);
   });
+
+  // Create the redirects for the index page.
+  createRedirect({ fromPath: alternativeURL, toPath: `${siteUrl}/${localePaths['en_GB']}` });
 };

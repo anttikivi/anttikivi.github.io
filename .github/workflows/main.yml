@@ -26,6 +26,8 @@ jobs:
 
     - name: Set up Node.js environment
       uses: actions/setup-node@v2.1.5
+      with:
+        node-version: 12.x
 
     - name: Determine the project’s version
       id: version
