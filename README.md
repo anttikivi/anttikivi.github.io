@@ -1,6 +1,6 @@
 # Antti Kivi’s website
 
-![Main workflow](https://github.com/anttikivi/anttikivi.fi/workflows/Main%20workflow/badge.svg)
+![Main workflow](https://github.com/anttikivi/anttikivi.fi/workflows/Main%20workflow/badge.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/3d60edc0-609d-4b8d-b3c1-66d7d05c7342/deploy-status)](https://app.netlify.com/sites/anttikivi/deploys)
 
 This is the source code for [Antti Kivi’s](https://github.com/anttikivi) website-in-progress.
 
