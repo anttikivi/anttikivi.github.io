@@ -10,17 +10,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Favicon colour.
 
+## [0.7.3] - 2021-03-29
+
+### Fixed
+
+- Changelog typos for releases `0.7.1` and `0.7.2`.
+
 ## [0.7.2] - 2021-03-29
 
 ### Fixed
 
-- Changelog typo for release [`0.7.1`].
+- Changelog typo for release `0.7.1`.
 
 ## [0.7.1] - 2021-03-29
 
 ### Fixed
 
-- Changelog typo for release [`0.7.0`].
+- Changelog typo for release `0.7.0`.
 
 ## [0.7.0] - 2021-03-29
 
@@ -244,7 +250,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.fi/compare/v0.7.2...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi.fi/compare/v0.7.3...HEAD
+[0.7.3]: https://github.com/anttikivi/anttikivi.fi/compare/v0.7.2...v0.7.3
 [0.7.2]: https://github.com/anttikivi/anttikivi.fi/compare/v0.7.1...v0.7.2
 [0.7.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.6.0...v0.7.0
