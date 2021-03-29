@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 ### Added
 
 - Redirects for the English site URL.
+- Facebook App ID.
 
 ### Changed
 

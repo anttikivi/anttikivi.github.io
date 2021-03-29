@@ -17,7 +17,7 @@ module.exports = {
     simpleLocales: { fi: 'fi', 'en-GB': 'en' },
     defaultLocale: 'fi',
     defaultEmail: 'antti.kivi@visiosto.fi',
-    facebookAppID: 'TODO',
+    facebookAppID: '544113829894022',
     socialMedia: {
       // facebook: 'https://facebook.com/visiosto',
       github: 'https://github.com/anttikivi',
