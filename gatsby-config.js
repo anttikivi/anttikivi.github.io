@@ -66,7 +66,7 @@ module.exports = {
       options: {
         name: 'Antti Kivi',
         short_name: 'Antti Kivi',
-        icon: 'src/assets/favicon-alternative.png',
+        icon: 'src/assets/favicon.png',
         theme_color: '#0a15c8',
         background_color: '#ffffff',
         display: 'browser',
