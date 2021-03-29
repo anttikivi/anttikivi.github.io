@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 ### Changed
 
 - Colour palette of the site.
+- Favicon to match the new colour palette.
 
 ## [0.8.3] - 2021-03-29
 
