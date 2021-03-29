@@ -15,6 +15,7 @@ module.exports = async ({ actions, graphql, reporter }) => {
           siteMetadata {
             alternativeURL
             defaultLocale
+            defaultURL
             siteUrl
             localePaths {
               en_GB
@@ -41,7 +42,13 @@ module.exports = async ({ actions, graphql, reporter }) => {
     return;
   }
 
-  const { alternativeURL, defaultLocale, localePaths, siteUrl } = query.data.site.siteMetadata;
+  const {
+    alternativeURL,
+    defaultLocale,
+    defaultURL,
+    localePaths,
+    siteUrl,
+  } = query.data.site.siteMetadata;
 
   // Create the index page from Contentful.
 
@@ -72,7 +79,12 @@ module.exports = async ({ actions, graphql, reporter }) => {
     fromPath: alternativeURL,
     toPath: `${siteUrl}/${localePaths.en_GB}`,
     isPermanent: true,
-    statusCode: 301,
+    force: true,
+  });
+  createRedirect({
+    fromPath: defaultURL,
+    toPath: siteUrl,
+    isPermanent: true,
     force: true,
   });
 };

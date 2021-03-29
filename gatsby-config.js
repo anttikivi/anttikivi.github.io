@@ -9,6 +9,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://anttikivi.fi',
     alternativeURL: 'https://anttikivi.com',
+    defaultURL: 'https://anttikivi.netlify.app',
     title: 'Antti Kivi',
     description: 'Helsinkiläinen yrittäjä',
     twitterAuthor: '@anttikiwi',
