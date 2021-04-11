@@ -20,7 +20,7 @@ const Toggle = styled.div`
   cursor: pointer;
   user-select: none;
 
-  @media screen and ${(props) => props.theme.devices.tablet} {
+  @media screen and (${(props) => props.theme.devices.tablet}) {
     display: none;
   }
 `;
@@ -90,7 +90,7 @@ const Ul = styled.ul`
       max-height: none;
     `};
 
-  @media screen and ${(props) => props.theme.devices.tablet} {
+  @media screen and (${(props) => props.theme.devices.tablet}) {
     overflow: visible;
     display: flex;
     justify-content: center;
@@ -101,7 +101,7 @@ const Ul = styled.ul`
 const Li = styled.li`
   margin: 2rem 1em;
 
-  @media screen and ${(props) => props.theme.devices.tablet} {
+  @media screen and (${(props) => props.theme.devices.tablet}) {
     margin: 1em;
   }
 `;

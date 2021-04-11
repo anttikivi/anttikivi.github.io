@@ -16,11 +16,11 @@ import createIntl from '../../util/createIntl';
 const Div = styled.header`
   margin: 2em ${(props) => props.theme.layout.marginMobile};
 
-  @media screen and ${(props) => props.theme.devices.mobileL} {
+  @media screen and (${(props) => props.theme.devices.mobileL}) {
     margin: 2em ${(props) => props.theme.layout.marginTablet};
   }
 
-  @media screen and ${(props) => props.theme.devices.tablet} {
+  @media screen and (${(props) => props.theme.devices.tablet}) {
     margin: 2em ${(props) => props.theme.layout.marginDesktop};
   }
 `;
@@ -64,7 +64,7 @@ const SiteBranding = styled.div`
   margin: 2rem auto;
   text-align: center;
 
-  @media screen and ${(props) => props.theme.devices.tablet} {
+  @media screen and (${(props) => props.theme.devices.tablet}) {
     margin: 3rem auto;
   }
 `;

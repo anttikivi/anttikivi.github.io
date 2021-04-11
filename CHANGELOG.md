@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - Deploy status to the README.
 - Explicit Babel configration.
 
+### Fixed
+
+- Media queries in styled components to work with development tools.
+
 ## [0.9.2] - 2021-03-30
 
 ### Changed
