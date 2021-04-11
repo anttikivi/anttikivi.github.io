@@ -17,7 +17,7 @@ import { COLORS } from './src/theme';
 function setColorsByTheme() {
   const colors = '🌈';
   const colorModeKey = '🔑';
-  const colorModeCssProp = '⚡️';
+  const colorModeCSSProp = '⚡️';
 
   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
   const prefersDarkScheme = mediaQuery.matches;
@@ -37,7 +37,7 @@ function setColorsByTheme() {
 
   const root = document.documentElement;
 
-  root.style.setProperty(colorModeCssProp, colorMode);
+  root.style.setProperty(colorModeCSSProp, colorMode);
 
   Object.entries(colors).forEach(([name, colorByTheme]) => {
     const cssVarName = `--color-${name}`;
