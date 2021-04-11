@@ -2,6 +2,7 @@
 // Licensed under the MIT License
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Span = styled.span`
@@ -27,8 +28,18 @@ const SpanNormal = styled(Span)`
   }
 `;
 
-const Button = (props) => {
-  return <SpanNormal onClick={props.onClick}>{props.children}</SpanNormal>;
+const propTypes = {
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
 };
+
+const defaultProps = { onClick: null };
+
+function Button({ children, onClick }) {
+  return <SpanNormal onClick={onClick}>{children}</SpanNormal>;
+}
+
+Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
 
 export default Button;

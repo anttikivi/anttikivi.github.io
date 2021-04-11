@@ -3,15 +3,15 @@
 
 import { defineMessages } from 'react-intl';
 
-import footerMessages from './fi/footer';
-import headerMessages from './fi/header';
-import metaMessages from './fi/meta';
-import notFoundMessages from './fi/not-found';
+import footerMessages from './fi/footerMessages';
+import headerMessages from './fi/headerMessages';
+import headMessages from './fi/headMessages';
+import notFoundMessages from './fi/notFoundMessages';
 
 export const messages = {
   ...footerMessages,
   ...headerMessages,
-  ...metaMessages,
+  ...headMessages,
   ...notFoundMessages,
 };
 

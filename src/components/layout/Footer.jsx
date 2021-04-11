@@ -2,18 +2,19 @@
 // Licensed under the MIT License
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
-import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { useIntl } from 'react-intl';
 
 import LocaleSwitcher from './LocaleSwitcher';
+import LocalizedLink from '../link/LocalizedLink';
 import SchemedImage from '../SchemedImage';
 
-import createIntl from '../../util/createIntl';
+import createInternationalization from '../../util/createInternationalization';
 
-const Footer = styled.footer`
+const FooterElement = styled.footer`
   margin: 4em ${(props) => props.theme.layout.marginMobile} 2em;
   text-align: center;
 
@@ -52,14 +53,14 @@ const SocialMediaImage = styled(SchemedImage)`
   margin: 1rem;
 `;
 
-const GithubImage = styled(SocialMediaImage)`
-  filter: brightness(0) saturate(100%) invert(24%) sepia(50%) saturate(252%) hue-rotate(166deg)
-    brightness(93%) contrast(88%);
+// const GithubImage = styled(SocialMediaImage)`
+//   filter: brightness(0) saturate(100%) invert(24%) sepia(50%) saturate(252%) hue-rotate(166deg)
+//     brightness(93%) contrast(88%);
 
-  @media screen and (prefers-color-scheme: dark) {
-    filter: brightness(0) saturate(100%) invert(100%);
-  }
-`;
+//   @media screen and (prefers-color-scheme: dark) {
+//     filter: brightness(0) saturate(100%) invert(100%);
+//   }
+// `;
 
 const InstagramImage = styled(SocialMediaImage)`
   @media screen and (prefers-color-scheme: dark) {
@@ -79,17 +80,40 @@ const TwitterImage = styled(SocialMediaImage)`
   }
 `;
 
-export default (props) => {
-  const i = createIntl(useIntl());
+// const DataProtectionP = styled.p`
+//   margin: 2rem 0 0;
+// `;
+
+// const CookieSettings = styled.div`
+//   margin: 2rem 0 1rem;
+
+//   @media screen and (${(props) => props.theme.devices.tablet}) {
+//     margin: 0;
+//   }
+// `;
+
+// const TermsOfUseP = styled.p`
+//   margin: 2rem 0 1rem;
+
+//   @media screen and (${(props) => props.theme.devices.tablet}) {
+//     margin: 0;
+//   }
+// `;
+
+const propTypes = {
+  locale: PropTypes.string.isRequired,
+  pageID: PropTypes.string.isRequired,
+};
+
+function Footer({ locale, pageID }) {
+  const intl = createInternationalization(useIntl());
 
   const data = useStaticQuery(
     graphql`
       {
         site {
           siteMetadata {
-            defaultEmail
             socialMedia {
-              github
               instagram
               linkedin
               twitter
@@ -145,53 +169,46 @@ export default (props) => {
     `,
   );
 
-  const { defaultEmail, businessId, vatNumber, socialMedia } = data.site.siteMetadata;
+  const { socialMedia } = data.site.siteMetadata;
 
   return (
-    <Footer>
-      {/* <Search {...props} /> */}
-      {(() => {
-        if (!props.noLocaleSwitcher) {
-          return (
-            <Div>
-              <LocaleSwitcher {...props} />
-            </Div>
-          );
-        }
-      })()}
-      <SocialMediaTitle>{i('footerSocialMediaTitle')}</SocialMediaTitle>
+    <FooterElement>
+      <Div>
+        <LocaleSwitcher locale={locale} pageID={pageID} />
+      </Div>
+      <SocialMediaTitle>{intl('footerSocialMediaTitle')}</SocialMediaTitle>
       <SocialMediaDiv>
         <a href={socialMedia.instagram} rel="noopener noreferrer" target="_blank">
           <InstagramImage
-            alt={i('footerInstagramAlt')}
+            alt={intl('footerInstagramImageText')}
             light={getImage(data.instagramColor)}
             dark={getImage(data.instagram)}
           />
         </a>
         {/* <a href={socialMedia.facebook} rel="noopener noreferrer" target="_blank">
           <SocialMediaImage
-            alt={i('footerFacebookAlt')}
+            alt={intl('footerFacebookImageText')}
             light={getImage(data.facebookColor)}
             dark={getImage(data.facebook)}
           />
         </a> */}
         <a href={socialMedia.twitter} rel="noopener noreferrer" target="_blank">
           <TwitterImage
-            alt={i('footerTwitterAlt')}
+            alt={intl('footerTwitterImageText')}
             light={getImage(data.twitterColor)}
             dark={getImage(data.twitter)}
           />
         </a>
         <a href={socialMedia.linkedin} rel="noopener noreferrer" target="_blank">
           <LinkedinImage
-            alt={i('footerLinkedinAlt')}
+            alt={intl('footerLinkedinImageText')}
             light={getImage(data.linkedinColor)}
             dark={getImage(data.linkedin)}
           />
         </a>
         {/* <a href={socialMedia.github} rel="noopener noreferrer" target="_blank">
           <GithubImage
-            alt={i('footerGithubAlt')}
+            alt={intl('footerGithubImageText')}
             light={getImage(data.github)}
             dark={getImage(data.github)}
           />
@@ -199,36 +216,40 @@ export default (props) => {
       </SocialMediaDiv>
       {/* <Div>
         <DataProtectionP>
-          <LocalizedLink to="/data-protection" locale={props.locale}>
-            {i('footerDataProtection')}
+          <LocalizedLink to="/data-protection" locale={locale}>
+            {intl('footerDataProtection')}
           </LocalizedLink>
         </DataProtectionP>
-        <CookieSettingsP>
-          <CookieNotice {...props} />
-        </CookieSettingsP>
+        <CookieSettings>
+          <CookieNotice locale={locale} />
+        </CookieSettings>
         <TermsOfUseP>
-          <LocalizedLink to="/terms-of-use" locale={props.locale}>
-            {i('footerTermsOfUse')}
+          <LocalizedLink to="/terms-of-use" locale={locale}>
+            {intl('footerTermsOfUse')}
           </LocalizedLink>
         </TermsOfUseP>
       </Div>
       <Div>
-        <p dangerouslySetInnerHTML={{ __html: i('footerOcticons') }} />
+        <p dangerouslySetInnerHTML={{ __html: intl('footerOcticons') }} />
       </Div> */}
       <Div>
-        <p dangerouslySetInnerHTML={{ __html: i('footerCopyright') }} />
+        <p dangerouslySetInnerHTML={{ __html: intl('footerCopyright') }} />
       </Div>
       <Div>
         <p>
-          {i('footerMadeBy', {
+          {intl('footerMadeBy', {
             a: (...chunk) => (
-              <OutboundLink href="https://visiosto.fi" rel="noopener noreferrer" target="_blank">
+              <LocalizedLink to="/" locale={locale}>
                 {chunk}
-              </OutboundLink>
+              </LocalizedLink>
             ),
           })}
         </p>
       </Div>
-    </Footer>
+    </FooterElement>
   );
-};
+}
+
+Footer.propTypes = propTypes;
+
+export default Footer;

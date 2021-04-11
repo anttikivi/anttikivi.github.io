@@ -8,7 +8,7 @@ import errorTypes from './errorTypes';
 import logWarning from './logWarning';
 import scroller from './scroller';
 
-export default (to, e, onAnchorLinkClick) => {
+export default function handleStrippedLinkClick(to, event, onAnchorLinkClick) {
   /**
    * Log warnings on click
    */
@@ -29,7 +29,7 @@ export default (to, e, onAnchorLinkClick) => {
   const isDifferentPage = isBrowser && window.location.pathname !== anchorPath;
 
   if (isSamePage) {
-    e.preventDefault();
+    event.preventDefault();
     scroller(`#${anchor}`, window.anttikiviScrollOffset, window.anttikiviScrollDuration);
   }
 
@@ -40,4 +40,4 @@ export default (to, e, onAnchorLinkClick) => {
   if (onAnchorLinkClick) {
     onAnchorLinkClick();
   }
-};
+}

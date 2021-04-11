@@ -2,6 +2,7 @@
 // Licensed under the MIT License
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Footer from './Footer';
@@ -9,29 +10,55 @@ import GlobalStyle from './GlobalStyle';
 import Head from './Head';
 import Header from './Header';
 
-import listenColorScheme from '../../util/listenColorScheme';
+import useColorScheme from '../../util/useColorScheme';
 
 const PageTitle = styled.h2`
   display: none;
 `;
 
-export default (props) => {
-  listenColorScheme();
+const propTypes = {
+  children: PropTypes.node.isRequired,
+  description: PropTypes.string,
+  image: PropTypes.object,
+  locale: PropTypes.string.isRequired,
+  pageID: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+const defaultProps = {
+  description: '',
+  image: null,
+};
+
+function LayoutIndex({ children, description, image, locale, pageID, title }) {
+  useColorScheme();
 
   return (
     <>
       <GlobalStyle />
-      <Head home {...props} />
-      <Header {...props} />
+      <Head
+        home
+        description={description}
+        image={image}
+        locale={locale}
+        pageID={pageID}
+        title={title}
+      />
+      <Header home locale={locale} pageID={pageID} />
       <main>
         <section>
           <header>
-            <PageTitle>{props.title}</PageTitle>
+            <PageTitle>{title}</PageTitle>
           </header>
-          <div>{props.children}</div>
+          <div>{children}</div>
         </section>
       </main>
-      <Footer {...props} />
+      <Footer locale={locale} pageID={pageID} />
     </>
   );
-};
+}
+
+LayoutIndex.propTypes = propTypes;
+LayoutIndex.defaultProps = defaultProps;
+
+export default LayoutIndex;

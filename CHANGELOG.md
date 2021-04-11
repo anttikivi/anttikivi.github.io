@@ -10,15 +10,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Deploy status to the README.
 - Explicit Babel configration.
+- `alternativeURLs` to the site configuration to handle URLs that are redirected.
+- `prop-types` as a dependency.
+- Prop types and default props to the components.
+- Prop types and default props to the page template components.
 
 ### Changed
 
 - Light theme background colour for the site.
+- Code related to the Gatsby APIs to comply better with the coding standards.
+- Utility code to comply better with the coding standards.
+- Page template components to comply better with the coding standards.
+- Components to comply better with the coding standards.
 - Variable `siteUrl` to `siteURL` to match coding standards.
+- `meta` translations to `head`.
+- Variable `pageId` to `pageID` to match coding standards.
+- Function `createIntl` to `createInternationalization` to match coding standards.
+- All of the variables `e` to `event` to match coding standards.
+- All of the functions `i` to `intl` to match coding standards.
 
 ### Fixed
 
 - Media queries in styled components to work with development tools.
+- Style of the locale files.
+- Community file links in the README.
 
 ## [0.9.2] - 2021-03-30
 

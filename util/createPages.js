@@ -5,7 +5,7 @@ const path = require('path');
 
 // const createPagePath = require('./createPagePath');
 
-module.exports = async ({ actions, graphql, reporter }) => {
+module.exports = async function createPages({ actions, graphql, reporter }) {
   const { createPage, createRedirect } = actions;
 
   const query = await graphql(
@@ -13,9 +13,8 @@ module.exports = async ({ actions, graphql, reporter }) => {
       {
         site {
           siteMetadata {
-            alternativeURL
+            alternativeURLs
             defaultLocale
-            defaultURL
             locales
             siteURL
             localePaths {
@@ -44,11 +43,10 @@ module.exports = async ({ actions, graphql, reporter }) => {
   }
 
   const {
-    alternativeURL,
+    alternativeURLs,
     defaultLocale,
-    defaultURL,
-    locales,
     localePaths,
+    locales,
     siteURL,
   } = query.data.site.siteMetadata;
 
@@ -56,38 +54,22 @@ module.exports = async ({ actions, graphql, reporter }) => {
 
   query.data.indexPages.edges.forEach(({ node }) => {
     // eslint-disable-next-line camelcase
-    const { contentful_id: pageId, node_locale: locale } = node;
+    const { contentful_id: pageID, node_locale: locale } = node;
 
-    reporter.verbose(`Creating the index page for ID '${pageId}'`);
+    reporter.verbose(`Creating the index page for ID '${pageID}'`);
 
     const pagePath = locale === defaultLocale ? '/' : `/${localePaths[locale.replace('-', '_')]}`;
 
     reporter.verbose(`The path created is ${pagePath}`);
 
-    const pageOpts = {
+    createPage({
       path: pagePath,
-      component: path.resolve('src', 'templates', 'index.jsx'),
+      component: path.resolve('src', 'templates', 'Index.jsx'),
       context: {
         locale,
-        pageId,
+        pageID,
       },
-    };
-
-    createPage(pageOpts);
-  });
-
-  // Create the redirects for the index page.
-  createRedirect({
-    fromPath: alternativeURL,
-    toPath: siteURL,
-    isPermanent: true,
-    force: true,
-  });
-  createRedirect({
-    fromPath: defaultURL,
-    toPath: siteURL,
-    isPermanent: true,
-    force: true,
+    });
   });
 
   // Create the 404 error pages.
@@ -100,16 +82,14 @@ module.exports = async ({ actions, graphql, reporter }) => {
 
     reporter.verbose(`The path created is ${pagePath}`);
 
-    const pageOpts = {
+    createPage({
       path: pagePath,
-      component: path.resolve('src', 'templates', '404.jsx'),
+      component: path.resolve('src', 'templates', 'NotFound.jsx'),
       context: {
         locale,
-        pageId: '404',
+        pageID: '404',
       },
-    };
-
-    createPage(pageOpts);
+    });
   });
 
   // Create the redirects for the 404 error pages.
@@ -122,5 +102,27 @@ module.exports = async ({ actions, graphql, reporter }) => {
     fromPath: '/*',
     toPath: `/404`,
     statusCode: 404,
+  });
+
+  // Create the redirects for the URLs.
+
+  alternativeURLs.forEach((url) => {
+    createRedirect({
+      fromPath: url,
+      toPath: siteURL,
+      isPermanent: true,
+      force: true,
+    });
+  });
+
+  // Create the redirects for all of the pages.
+
+  alternativeURLs.forEach((url) => {
+    createRedirect({
+      fromPath: `${url}/*`,
+      toPath: `${siteURL}/:splat`,
+      isPermanent: true,
+      force: true,
+    });
   });
 };

@@ -1,8 +1,9 @@
-// Copyright (c) 2021 Antti Kivi
+// Copyright (c) 2021 Visiosto oy
 // Licensed under the MIT License
 
 export default {
-  metaDescription:
+  headSlogan: 'Helsinkiläinen yrittäjä',
+  headDescription:
     'Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja mieluummin hymyilen kuin jätän hymyilemättä. Vapaalla rakastan järjestötoimintaa ja musiikkia.',
-  metaOgImageAlt: 'Antti Kivi pyöreässä kehyksessä',
+  headOGImageText: 'Antti Kivi pyöreässä kehyksessä',
 };
