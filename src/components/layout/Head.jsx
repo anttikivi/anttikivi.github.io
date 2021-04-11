@@ -19,7 +19,7 @@ const Head = (props) => {
             description
             facebookAppID
             locales
-            siteUrl
+            siteURL
             title
             twitterAuthor
             localePaths {
@@ -51,7 +51,7 @@ const Head = (props) => {
 
   const i = createIntl(useIntl());
   const baseURL =
-    process.env.NODE_ENV === 'development' ? 'http://localhost:8000' : siteMetadata.siteUrl;
+    process.env.NODE_ENV === 'development' ? 'http://localhost:8000' : siteMetadata.siteURL;
 
   const titleTemplate = `%s - ${siteMetadata.title}`;
   const title = `${props.title} - ${siteMetadata.title}`;

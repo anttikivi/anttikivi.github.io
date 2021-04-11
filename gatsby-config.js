@@ -5,9 +5,12 @@ require('dotenv').config();
 
 const path = require('path');
 
+const siteURL = 'https://visiosto.netlify.app';
+
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://anttikivi.fi',
+    siteURL,
+    siteUrl: siteURL,
     alternativeURL: 'https://anttikivi.com',
     defaultURL: 'https://anttikivi.netlify.app',
     title: 'Antti Kivi',
