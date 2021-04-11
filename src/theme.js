@@ -7,14 +7,15 @@ const colors = {
   yellow: '#ffc107',
   orange: '#ff9800',
   red: '#ff5722',
-  black: '#404040',
   white: '#ffffff',
+  beige: '#f9eee5',
+  black: '#404040',
   alternativeBlack: '#262c34',
 };
 
 export const COLORS = {
   background: {
-    light: colors.white,
+    light: colors.beige,
     dark: colors.alternativeBlack,
   },
   text: {
