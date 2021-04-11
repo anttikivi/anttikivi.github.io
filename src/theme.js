@@ -10,7 +10,7 @@ const colors = {
   white: '#ffffff',
   beige: '#f9eee5',
   black: '#404040',
-  alternativeBlack: '#262c34',
+  alternativeBlack: '#22272c',
 };
 
 export const COLORS = {
