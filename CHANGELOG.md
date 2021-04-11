@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 ### Added
 
 - Deploy status to the README.
+- Explicit Babel configration.
 
 ## [0.9.2] - 2021-03-30
 
