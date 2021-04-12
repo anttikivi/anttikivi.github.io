@@ -40,7 +40,7 @@ const TitleLink = styled(LocalizedLink)`
   &:hover,
   &:focus,
   &:active {
-    color: var(--color-primary);
+    color: var(--color-link);
   }
 `;
 

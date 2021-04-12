@@ -26,18 +26,6 @@ export const COLORS = {
     light: colors.white,
     dark: colors.black,
   },
-  // 'text-weak': {
-  //   light: colors.shade,
-  //   dark: colors.gray,
-  // },
-  'text-button': {
-    light: colors.white,
-    dark: colors.black,
-  },
-  // 'text-button-green': {
-  //   light: colors.black,
-  //   dark: colors.black,
-  // },
   link: {
     light: colors.blue,
     dark: colors.yellow,
@@ -46,22 +34,6 @@ export const COLORS = {
     light: colors.turquoise,
     dark: colors.orange,
   },
-  // 'button-green': {
-  //   light: colors.buttonGreen,
-  //   dark: colors.buttonGreen,
-  // },
-  // 'button-green-hover': {
-  //   light: colors.buttonGreenDark,
-  //   dark: colors.buttonGreenDark,
-  // },
-  primary: {
-    light: colors.blue,
-    dark: colors.yellow,
-  },
-  // secondary: {
-  //   light: colors.peach,
-  //   dark: colors.cream,
-  // },
 };
 
 const fonts = {
