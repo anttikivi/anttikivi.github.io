@@ -260,9 +260,9 @@ function Footer({ locale, pageID }) {
         <p>
           {intl('footerMadeBy', {
             a: (...chunk) => (
-              <LocalizedLink to="/" locale={locale}>
+              <a href="https://visiosto.fi" rel="noopener noreferrer" target="_blank">
                 {chunk}
-              </LocalizedLink>
+              </a>
             ),
           })}
         </p>

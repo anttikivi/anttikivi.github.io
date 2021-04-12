@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [0.10.1] - 2021-04-12
+
+### Fixed
+
+- Link to Visiosto’s website in the footer.
+
 ## [0.10.0] - 2021-04-12
 
 ### Added
@@ -339,7 +345,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.fi/compare/v0.10.0...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi.fi/compare/v0.10.1...HEAD
+[0.10.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.10.0...v0.10.1
 [0.10.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.9.2...v0.10.0
 [0.9.2]: https://github.com/anttikivi/anttikivi.fi/compare/v0.9.1...v0.9.2
 [0.9.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.9.0...v0.9.1
