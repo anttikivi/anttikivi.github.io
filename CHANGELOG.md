@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - `prop-types` as a dependency.
 - Prop types and default props to the components.
 - Prop types and default props to the page template components.
+- Signature as a logo to the footer.
 
 ### Changed
 

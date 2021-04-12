@@ -4,7 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
-import { getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { useIntl } from 'react-intl';
 
@@ -29,6 +29,18 @@ const FooterElement = styled.footer`
 
 const Div = styled.div`
   margin: 2em 0;
+`;
+
+const LogoDiv = styled.div`
+  margin: 2em 0 4rem;
+`;
+
+const LogoImage = styled(GatsbyImage)`
+  filter: invert(17%) sepia(86%) saturate(0%) hue-rotate(181deg) brightness(103%) contrast(85%);
+
+  @media screen and (prefers-color-scheme: dark) {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(232deg) brightness(107%) contrast(102%);
+  }
 `;
 
 const SocialMediaTitle = styled.h3`
@@ -64,19 +76,19 @@ const SocialMediaImage = styled(SchemedImage)`
 
 const InstagramImage = styled(SocialMediaImage)`
   @media screen and (prefers-color-scheme: dark) {
-    filter: invert(100%);
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(232deg) brightness(107%) contrast(102%);
   }
 `;
 
 const LinkedinImage = styled(SocialMediaImage)`
   @media screen and (prefers-color-scheme: dark) {
-    filter: invert(100%);
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(232deg) brightness(107%) contrast(102%);
   }
 `;
 
 const TwitterImage = styled(SocialMediaImage)`
   @media screen and (prefers-color-scheme: dark) {
-    filter: invert(100%);
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(232deg) brightness(107%) contrast(102%);
   }
 `;
 
@@ -118,6 +130,11 @@ function Footer({ locale, pageID }) {
               linkedin
               twitter
             }
+          }
+        }
+        nameLogo: file(relativePath: { eq: "name-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(width: 250, placeholder: BLURRED, quality: 100)
           }
         }
         facebook: file(relativePath: { eq: "footer/facebook.png" }) {
@@ -169,10 +186,14 @@ function Footer({ locale, pageID }) {
     `,
   );
 
+  const { nameLogo } = data;
   const { socialMedia } = data.site.siteMetadata;
 
   return (
     <FooterElement>
+      <LogoDiv>
+        <LogoImage alt={intl('footerLogoImageText')} image={getImage(nameLogo)} />
+      </LogoDiv>
       <Div>
         <LocaleSwitcher locale={locale} pageID={pageID} />
       </Div>
