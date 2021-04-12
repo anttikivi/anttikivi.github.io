@@ -132,7 +132,7 @@ function Head({ article, author, description, errorPage, home, image, locale, pa
           return <meta property="og:url" content={`${baseURL}/${pagePath}`} />;
         } else {
           return (
-            <meta property="og:url" content={createLocaleURL(baseURL, pageID, locale, data)} />
+            <meta property="og:url" content={createLocaleURL(baseURL, pageID, locale, data).replace('//', '/')} />
           );
         }
       })()}
@@ -175,7 +175,7 @@ function Head({ article, author, description, errorPage, home, image, locale, pa
           return siteMetadata.locales.map((listLocale) => (
             <link
               rel="alternate"
-              href={createLocaleURL(baseURL, pageID, listLocale, data)}
+              href={createLocaleURL(baseURL, pageID, listLocale, data).replace('//', '/')}
               hrefLang={siteMetadata.simpleLocales[listLocale.replace('-', '_')]}
               key={listLocale}
             />
