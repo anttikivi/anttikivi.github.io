@@ -1,6 +1,6 @@
 # Antti Kivi’s website
 
-![Main workflow](https://github.com/anttikivi/anttikivi.fi/workflows/Main%20workflow/badge.svg)
+![Main workflow](https://github.com/anttikivi/anttikivi.fi/workflows/Main%20workflow/badge.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/3d60edc0-609d-4b8d-b3c1-66d7d05c7342/deploy-status)](https://app.netlify.com/sites/anttikivi/deploys)
 
 This is the source code for [Antti Kivi’s](https://github.com/anttikivi) website-in-progress.
 
@@ -10,7 +10,7 @@ The released versions of the website are available on the [Releases page](https:
 
 ### Build
 
-Before building the website, please ensure that you have [Node.js](https://nodejs.org), [npm](https://nodejs.org), and [Yarn](https://yarnpkg.com) installed.
+Before building the website, please ensure that you have [Node.js](https://nodejs.org) and [Yarn](https://yarnpkg.com) installed. Please note that this project uses the [Yarn Classic](https://classic.yarnpkg.com).
 
 First, clone the GitHub repository of the website.
 
@@ -42,9 +42,9 @@ The built site is in the `public` directory.
 
 ## Contributing
 
-Contributions to the website are welcome and encouraged! There are many ways to [contribute](https://github.com/anttikivi/anttikivi.fi/blob/develop/CONTRIBUTING.md#how-can-i-contribute) to it. You can find the guidelines for contributing in [CONTRIBUTING](CONTRIBUTING.md).
+Contributions to the website are welcome and encouraged! There are many ways to [contribute](https://github.com/anttikivi/.github/blob/main/CONTRIBUTING.md#how-can-i-contribute) to it. You can find the guidelines for contributing in [CONTRIBUTING](CONTRIBUTING.md).
 
-This project adheres to the Contributor Covenant [Code of Conduct](https://github.com/anttikivi/anttikivi.fi/blob/develop/CODE_OF_CONDUCT.md). By participating, you’re expected to uphold this code. Please report unacceptable behaviour to antti.kivi@visiosto.fi.
+This project adheres to the Contributor Covenant [Code of Conduct](https://github.com/anttikivi/.github/blob/main/CODE_OF_CONDUCT.md). By participating, you’re expected to uphold this code. Please report unacceptable behaviour to antti.kivi@visiosto.fi.
 
 ## Licence
 

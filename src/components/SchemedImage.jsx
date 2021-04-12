@@ -2,26 +2,80 @@
 // Licensed under the MIT License
 
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 import ThemeContext from './ThemeContext';
 
-const SchemedImage = (props) => {
+const propTypes = {
+  alt: PropTypes.string,
+  className: PropTypes.string,
+  dark: PropTypes.object.isRequired,
+  light: PropTypes.object.isRequired,
+  objectFit: PropTypes.string,
+  style: PropTypes.object,
+};
+
+const defaultProps = {
+  alt: '',
+  className: null,
+  objectFit: null,
+  style: null,
+};
+
+function SchemedImage({ alt, className, dark, light, objectFit, style }) {
   const { colorMode } = useContext(ThemeContext);
 
-  const { light, dark, alt, ...imageProps } = props;
+  if (colorMode === 'dark') {
+    if (alt === '') {
+      return (
+        <GatsbyImage
+          className={className}
+          image={dark}
+          alt=""
+          role="presentation"
+          objectFit={objectFit}
+          style={style}
+        />
+      );
+    } else {
+      return (
+        <GatsbyImage
+          className={className}
+          image={dark}
+          alt={alt}
+          objectFit={objectFit}
+          style={style}
+        />
+      );
+    }
+  } else {
+    if (alt === '') {
+      return (
+        <GatsbyImage
+          className={className}
+          image={light}
+          alt=""
+          role="presentation"
+          objectFit={objectFit}
+          style={style}
+        />
+      );
+    } else {
+      return (
+        <GatsbyImage
+          className={className}
+          image={light}
+          alt={alt}
+          objectFit={objectFit}
+          style={style}
+        />
+      );
+    }
+  }
+}
 
-  const createImage = (image) => () =>
-    alt ? (
-      <GatsbyImage image={image} alt={alt} {...imageProps} />
-    ) : (
-      <GatsbyImage image={image} alt="" role="presentation" {...imageProps} />
-    );
-
-  const LightImage = createImage(light);
-  const DarkImage = createImage(dark);
-
-  return colorMode === 'dark' ? <DarkImage /> : <LightImage />;
-};
+SchemedImage.propTypes = propTypes;
+SchemedImage.defaultProps = defaultProps;
 
 export default SchemedImage;

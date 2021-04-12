@@ -7,14 +7,15 @@ const colors = {
   yellow: '#ffc107',
   orange: '#ff9800',
   red: '#ff5722',
-  black: '#404040',
   white: '#ffffff',
-  alternativeBlack: '#262c34',
+  beige: '#f9eee5',
+  black: '#404040',
+  alternativeBlack: '#22272c',
 };
 
 export const COLORS = {
   background: {
-    light: colors.white,
+    light: colors.beige,
     dark: colors.alternativeBlack,
   },
   text: {
@@ -77,13 +78,13 @@ const sizes = {
 };
 
 const devices = {
-  mobileS: `(min-width: ${sizes.mobileS})`,
-  mobileM: `(min-width: ${sizes.mobileM})`,
-  mobileL: `(min-width: ${sizes.mobileL})`,
-  tablet: `(min-width: ${sizes.tablet})`,
-  laptop: `(min-width: ${sizes.laptop})`,
-  laptopL: `(min-width: ${sizes.laptopL})`,
-  fourK: `(min-width: ${sizes.fourK})`,
+  mobileS: `min-width: ${sizes.mobileS}`,
+  mobileM: `min-width: ${sizes.mobileM}`,
+  mobileL: `min-width: ${sizes.mobileL}`,
+  tablet: `min-width: ${sizes.tablet}`,
+  laptop: `min-width: ${sizes.laptop}`,
+  laptopL: `min-width: ${sizes.laptopL}`,
+  fourK: `min-width: ${sizes.fourK}`,
 };
 
 const layout = {

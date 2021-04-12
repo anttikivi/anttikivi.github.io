@@ -5,11 +5,14 @@ require('dotenv').config();
 
 const path = require('path');
 
+const siteURL = 'https://visiosto.netlify.app';
+
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://anttikivi.fi',
-    alternativeURL: 'https://anttikivi.com',
-    defaultURL: 'https://anttikivi.netlify.app',
+    siteURL,
+    // The wrong case of the constant must be included as some plugins depend on it.
+    siteUrl: siteURL,
+    alternativeURLs: ['https://anttikivi.com', 'https://anttikivi.netlify.app'],
     title: 'Antti Kivi',
     description: 'Helsinkiläinen yrittäjä',
     twitterAuthor: '@anttikiwi',

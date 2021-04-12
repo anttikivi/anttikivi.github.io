@@ -2,6 +2,7 @@
 // Licensed under the MIT License
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
@@ -17,11 +18,11 @@ const Section = styled.div`
     text-align: center;
   }
 
-  @media screen and ${(props) => props.theme.devices.mobileL} {
+  @media screen and (${(props) => props.theme.devices.mobileL}) {
     margin: 3em ${(props) => props.theme.layout.marginTablet};
   }
 
-  @media screen and ${(props) => props.theme.devices.tablet} {
+  @media screen and (${(props) => props.theme.devices.tablet}) {
     margin: 4em ${(props) => props.theme.layout.marginDesktop};
   }
 `;
@@ -37,16 +38,31 @@ const Image = styled(GatsbyImage)`
   }
 `;
 
-const Page = (props) => {
-  const { contentfulIndexPage: page } = props.data;
+const propTypes = {
+  children: PropTypes.node,
+  data: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
+  navigate: PropTypes.func.isRequired,
+  pageContext: PropTypes.object.isRequired,
+  pageResources: PropTypes.object.isRequired,
+  params: PropTypes.object.isRequired,
+  path: PropTypes.string.isRequired,
+  uri: PropTypes.string.isRequired,
+};
+
+const defaultProps = { children: undefined };
+
+function Page({ data, pageContext }) {
+  const { contentfulIndexPage: page } = data;
+  const { locale, pageID } = pageContext;
 
   return (
     <LayoutIndex
-      title={page.title}
-      locale={props.pageContext.locale}
-      pageId={props.pageContext.pageId}
       description={page.description.description}
       image={page.image}
+      locale={locale}
+      pageID={pageID}
+      title={page.title}
     >
       <ImageDiv>
         <Image alt={page.introImage.description} image={getImage(page.introImage)} />
@@ -56,17 +72,25 @@ const Page = (props) => {
       </Section>
     </LayoutIndex>
   );
-};
+}
 
-const Index = (props) => (
-  <Intl
-    locale={props.data.site.siteMetadata.simpleLocales[props.pageContext.locale.replace('-', '_')]}
-  >
-    <Theme>
-      <Page {...props} />
-    </Theme>
-  </Intl>
-);
+Page.propTypes = propTypes;
+Page.defaultProps = defaultProps;
+
+function Index(props) {
+  const { simpleLocales } = props.data.site.siteMetadata;
+  const { locale } = props.pageContext;
+  return (
+    <Intl locale={simpleLocales[locale.replace('-', '_')]}>
+      <Theme>
+        <Page {...props} />
+      </Theme>
+    </Intl>
+  );
+}
+
+Index.propTypes = propTypes;
+Index.defaultProps = defaultProps;
 
 export default Index;
 

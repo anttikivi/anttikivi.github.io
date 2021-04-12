@@ -4,6 +4,39 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [0.10.0] - 2021-04-12
+
+### Added
+
+- Deploy status to the README.
+- Explicit Babel configration.
+- `alternativeURLs` to the site configuration to handle URLs that are redirected.
+- `prop-types` as a dependency.
+- Prop types and default props to the components.
+- Prop types and default props to the page template components.
+- Signature as a logo to the footer.
+
+### Changed
+
+- Light theme background colour for the site.
+- Dark theme background colour for the site.
+- Code related to the Gatsby APIs to comply better with the coding standards.
+- Utility code to comply better with the coding standards.
+- Page template components to comply better with the coding standards.
+- Components to comply better with the coding standards.
+- Variable `siteUrl` to `siteURL` to match coding standards.
+- `meta` translations to `head`.
+- Variable `pageId` to `pageID` to match coding standards.
+- Function `createIntl` to `createInternationalization` to match coding standards.
+- All of the variables `e` to `event` to match coding standards.
+- All of the functions `i` to `intl` to match coding standards.
+
+### Fixed
+
+- Media queries in styled components to work with development tools.
+- Style of the locale files.
+- Community file links in the README.
+
 ## [0.9.2] - 2021-03-30
 
 ### Changed
@@ -306,7 +339,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.fi/compare/v0.9.2...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi.fi/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.9.2...v0.10.0
 [0.9.2]: https://github.com/anttikivi/anttikivi.fi/compare/v0.9.1...v0.9.2
 [0.9.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.8.3...v0.9.0
