@@ -20,11 +20,17 @@ const Span = styled.span`
 `;
 
 const SpanNormal = styled(Span)`
-  background-color: var(--color-link);
-  color: var(--color-text-button);
+  border: 0.3rem solid var(--color-link);
+  background-color: transparent;
+  font-weight: 700;
+  text-decoration: underline;
+  color: var(--color-text);
 
   &:hover {
-    background-color: var(--color-link-hover);
+    border: 0.3rem solid transparent;
+    background-color: var(--color-link);
+    text-decoration: none;
+    color: var(--color-text-inverted);
   }
 `;
 

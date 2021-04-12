@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [Unreleased]
+
+### Changed
+
+- Style of the button componenets to have background on hover and only an outline otherwise.
+
 ## [0.10.1] - 2021-04-12
 
 ### Fixed

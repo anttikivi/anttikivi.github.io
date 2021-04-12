@@ -22,6 +22,10 @@ export const COLORS = {
     light: colors.black,
     dark: colors.white,
   },
+  'text-inverted': {
+    light: colors.white,
+    dark: colors.black,
+  },
   // 'text-weak': {
   //   light: colors.shade,
   //   dark: colors.gray,
