@@ -132,7 +132,10 @@ function Head({ article, author, description, errorPage, home, image, locale, pa
           return <meta property="og:url" content={`${baseURL}/${pagePath}`} />;
         } else {
           return (
-            <meta property="og:url" content={createLocaleURL(baseURL, pageID, locale, data).replace('//', '/')} />
+            <meta
+              property="og:url"
+              content={createLocaleURL(baseURL, pageID, locale, data).replace('//', '/')}
+            />
           );
         }
       })()}
