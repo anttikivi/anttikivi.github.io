@@ -108,6 +108,17 @@ function LocalizedLink({ children, className, locale, onClick, to }) {
             }
           }
         }
+        cvPages: allContentfulCurriculumVitaePage(
+          filter: { contentful_id: { eq: "29kQlzt1s2bR8OirrtTbCo" } }
+        ) {
+          edges {
+            node {
+              contentful_id
+              node_locale
+              slug
+            }
+          }
+        }
       }
     `,
   );
@@ -149,6 +160,19 @@ function LocalizedLink({ children, className, locale, onClick, to }) {
     )[0].node;
 
     switch (node.internal.type) {
+      case 'ContentfulCurriculumVitaePage': {
+        const pageNode = data.cvPages.edges.filter(
+          ({ node }) => node.contentful_id === to && node.node_locale === locale,
+        )[0].node;
+        return (
+          <Link
+            children={children}
+            className={className}
+            onClick={onClick}
+            to={createPagePath(pageNode, locale, defaultLocale, localePaths)}
+          />
+        );
+      }
       case 'ContentfulIndexPage': {
         const indexPath =
           locale === defaultLocale ? '/' : `/${localePaths[locale.replace('-', '_')]}`;

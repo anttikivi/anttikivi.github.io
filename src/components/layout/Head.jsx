@@ -64,6 +64,17 @@ function Head({ article, author, description, errorPage, home, image, locale, pa
             }
           }
         }
+        allContentfulCurriculumVitaePage(
+          filter: { contentful_id: { eq: "29kQlzt1s2bR8OirrtTbCo" } }
+        ) {
+          edges {
+            node {
+              contentful_id
+              node_locale
+              slug
+            }
+          }
+        }
       }
     `,
   );

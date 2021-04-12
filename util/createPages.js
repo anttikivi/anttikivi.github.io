@@ -23,6 +23,17 @@ module.exports = async function createPages({ actions, graphql, reporter }) {
             }
           }
         }
+        cvPages: allContentfulCurriculumVitaePage(
+          filter: { slug: { regex: "/^ansioluettelo|cv$/" } }
+        ) {
+          edges {
+            node {
+              contentful_id
+              node_locale
+              slug
+            }
+          }
+        }
         indexPages: allContentfulIndexPage(
           filter: { contentful_id: { eq: "6JksITICuGCEYUIVHlWl5U" } }
         ) {
@@ -65,6 +76,29 @@ module.exports = async function createPages({ actions, graphql, reporter }) {
     createPage({
       path: pagePath,
       component: path.resolve('src', 'templates', 'Index.jsx'),
+      context: {
+        locale,
+        pageID,
+      },
+    });
+  });
+
+  // Create the curriculum vitae page from Contentful.
+
+  query.data.cvPages.edges.forEach(({ node }) => {
+    // eslint-disable-next-line camelcase
+    const { contentful_id: pageID, node_locale: locale, slug } = node;
+
+    reporter.verbose(`Creating page for the base slug '${slug}'`);
+
+    const pagePath =
+      locale === defaultLocale ? `/${slug}` : `/${localePaths[locale.replace('-', '_')]}/${slug}`;
+
+    reporter.verbose(`The path created is ${pagePath}`);
+
+    createPage({
+      path: pagePath,
+      component: path.resolve('src', 'templates', 'CurriculumVitae.jsx'),
       context: {
         locale,
         pageID,

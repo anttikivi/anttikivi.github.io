@@ -11,6 +11,34 @@ import Intl from '../components/Intl';
 import Layout from '../components/layout/Layout';
 import Theme from '../components/Theme';
 
+const Div = styled.div`
+  text-align: center;
+`;
+
+const Section = styled.div`
+  margin: 2em ${(props) => props.theme.layout.marginMobile};
+  text-align: center;
+
+  @media screen and (${(props) => props.theme.devices.mobileL}) {
+    margin: 3em ${(props) => props.theme.layout.marginTablet};
+  }
+
+  @media screen and (${(props) => props.theme.devices.tablet}) {
+    margin: 4em ${(props) => props.theme.layout.marginTablet};
+  }
+`;
+
+const ImageDiv = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Image = styled(GatsbyImage)`
+  > * {
+    border-radius: 50%;
+  }
+`;
+
 const Sections = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -43,17 +71,22 @@ const propTypes = {
 const defaultProps = { children: undefined };
 
 function Page({ data, pageContext }) {
-  const { contentfulIndexPage: page } = data;
+  const { contentfulCurriculumVitaePage: page } = data;
   const { locale, pageID } = pageContext;
 
   return (
-    <Layout
-      locale={locale}
-      pageID={pageID}
-      title={page.title}
-    >
-      <Sections>
-      </Sections>
+    <Layout locale={locale} pageID={pageID} title={page.title}>
+      <Div>
+        <Section>
+          <h2>{page.personName}</h2>
+          <ImageDiv>
+            <Image alt={page.profileImage.description} image={getImage(page.profileImage)} />
+          </ImageDiv>
+          <h3>{page.summaryTitle}</h3>
+          <div dangerouslySetInnerHTML={{ __html: page.summaryBody.childMarkdownRemark.html }} />
+        </Section>
+      </Div>
+      <Sections></Sections>
     </Layout>
   );
 }
@@ -89,6 +122,18 @@ export const pageQuery = graphql`
       }
     }
     contentfulCurriculumVitaePage(node_locale: { eq: $locale }) {
+      personName
+      summaryTitle
       title
+      profileImage {
+        description
+        gatsbyImageData(quality: 100, width: 200)
+      }
+      summaryBody {
+        childMarkdownRemark {
+          html
+        }
+      }
+    }
   }
 `;
