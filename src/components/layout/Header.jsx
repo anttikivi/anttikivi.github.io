@@ -10,7 +10,7 @@ import { ChevronRightIcon } from '@primer/octicons-react';
 import { useIntl } from 'react-intl';
 
 import LocalizedLink from '../link/LocalizedLink';
-// import Navigation from './Navigation';
+import Navigation from './Navigation';
 // import SchemedImage from '../SchemedImage';
 
 import createInternationalization from '../../util/createInternationalization';
@@ -229,7 +229,7 @@ function Header({ errorPage, home, locale, pageID }) {
         </TitleLink>
         <p>{intl('headerByline')}</p>
       </SiteBranding>
-      {/* <Navigation locale={locale} /> */}
+      <Navigation locale={locale} />
       <Breadcrumb>
         {(() => {
           if (breadcrumb && breadcrumb.length > 1) {

@@ -135,12 +135,19 @@ const withMenuData = function withNavigationMenuQueryData(WrappedComponent) {
     const data = useStaticQuery(
       graphql`
         query {
-          allContentfulMenu(filter: { contentful_id: { eq: "7oKEb5SnrTGF1vbDGwfBbr" } }) {
+          allContentfulMenu(filter: { contentful_id: { eq: "12OH6cgaTcp4TUDvpqslYc" } }) {
             edges {
               node {
                 node_locale
                 links {
                   ... on ContentfulIndexPage {
+                    contentful_id
+                    title
+                    internal {
+                      type
+                    }
+                  }
+                  ... on ContentfulCurriculumVitaePage {
                     contentful_id
                     title
                     internal {
@@ -200,6 +207,15 @@ class Navigation extends React.Component {
             .filter(({ node }) => node.node_locale === locale)[0]
             .node.links.map((link) => {
               switch (link.internal.type) {
+                case 'ContentfulCurriculumVitaePage': {
+                  return (
+                    <Li key={link.contentful_id}>
+                      <Link to={link.contentful_id} locale={locale}>
+                        {link.title}
+                      </Link>
+                    </Li>
+                  );
+                }
                 case 'ContentfulIndexPage': {
                   return (
                     <Li key={link.contentful_id}>
