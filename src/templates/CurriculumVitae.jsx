@@ -7,6 +7,7 @@ import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 
+import HiddenSection from '../components/HiddenSection';
 import Intl from '../components/Intl';
 import Layout from '../components/layout/Layout';
 import Theme from '../components/Theme';
@@ -91,17 +92,40 @@ function Page({ data, pageContext }) {
       <Sections>
         <Column>
           <h2 dangerouslySetInnerHTML={{ __html: page.workExperienceTitle }} />
-          <div dangerouslySetInnerHTML={{ __html: page.workExperienceBody.childMarkdownRemark.html }} />
+          <div
+            dangerouslySetInnerHTML={{ __html: page.workExperienceBody.childMarkdownRemark.html }}
+          />
           <h3 dangerouslySetInnerHTML={{ __html: page.otherWorkExperienceTitle }} />
-          <div dangerouslySetInnerHTML={{ __html: page.otherWorkExperienceBody.childMarkdownRemark.html }} />
+          <HiddenSection>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: page.otherWorkExperienceBody.childMarkdownRemark.html,
+              }}
+            />
+          </HiddenSection>
           <h2 dangerouslySetInnerHTML={{ __html: page.positionsOfTrustTitle }} />
-          <div dangerouslySetInnerHTML={{ __html: page.positionsOfTrustBody.childMarkdownRemark.html }} />
+          <div
+            dangerouslySetInnerHTML={{ __html: page.positionsOfTrustBody.childMarkdownRemark.html }}
+          />
           <h3 dangerouslySetInnerHTML={{ __html: page.otherPositionsOfTrustTitle }} />
-          <div dangerouslySetInnerHTML={{ __html: page.otherPositionsOfTrustBody.childMarkdownRemark.html }} />
+          <HiddenSection>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: page.otherPositionsOfTrustBody.childMarkdownRemark.html,
+              }}
+            />
+          </HiddenSection>
         </Column>
         <Column>
           <h2 dangerouslySetInnerHTML={{ __html: page.educationTitle }} />
           <div dangerouslySetInnerHTML={{ __html: page.educationBody.childMarkdownRemark.html }} />
+          <HiddenSection hideLabel="cvGradesHide" showLabel="cvGradesShow">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: page.matriculationExaminationGrades.childMarkdownRemark.html,
+              }}
+            />
+          </HiddenSection>
           <h2 dangerouslySetInnerHTML={{ __html: page.languagesTitle }} />
           <div dangerouslySetInnerHTML={{ __html: page.languagesBody.childMarkdownRemark.html }} />
           <h2 dangerouslySetInnerHTML={{ __html: page.skillsTitle }} />
@@ -159,6 +183,11 @@ export const pageQuery = graphql`
         }
       }
       languagesBody {
+        childMarkdownRemark {
+          html
+        }
+      }
+      matriculationExaminationGrades {
         childMarkdownRemark {
           html
         }

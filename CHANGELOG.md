@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - Template component for curriculum vitae pages.
 - Curriculum vitae pages.
 - Main menu as the primary means of navigation to the header.
+- Sections that can be hidden and shown with a button.
 
 ### Changed
 

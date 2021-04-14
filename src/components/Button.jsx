@@ -10,7 +10,7 @@ const Span = styled.span`
   border-style: none;
   border-radius: 3rem;
   border: 3px solid transparent;
-  padding: 1rem 1.5rem;
+  padding: ${(props) => props.smaller ? '0.5rem 1.5rem' : '1rem 1.5rem'};
   cursor: pointer;
   transition: all 100ms ease-in;
   background-clip: padding-box;
@@ -27,7 +27,7 @@ const SpanNormal = styled(Span)`
   color: var(--color-text);
 
   &:hover {
-    border: 0.3rem solid transparent;
+    /* border: 0.3rem solid transparent; */
     background-color: var(--color-link);
     text-decoration: none;
     color: var(--color-text-inverted);
@@ -37,12 +37,13 @@ const SpanNormal = styled(Span)`
 const propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
+  smaller: PropTypes.bool,
 };
 
-const defaultProps = { onClick: null };
+const defaultProps = { onClick: null, smaller: false };
 
-function Button({ children, onClick }) {
-  return <SpanNormal onClick={onClick}>{children}</SpanNormal>;
+function Button({ children, onClick, smaller }) {
+  return <SpanNormal onClick={onClick} smaller={smaller}>{children}</SpanNormal>;
 }
 
 Button.propTypes = propTypes;
