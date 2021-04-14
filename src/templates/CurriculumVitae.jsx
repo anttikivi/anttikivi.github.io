@@ -17,14 +17,13 @@ const Div = styled.div`
 
 const Section = styled.div`
   margin: 2em ${(props) => props.theme.layout.marginMobile};
-  text-align: center;
 
   @media screen and (${(props) => props.theme.devices.mobileL}) {
     margin: 3em ${(props) => props.theme.layout.marginTablet};
   }
 
   @media screen and (${(props) => props.theme.devices.tablet}) {
-    margin: 4em ${(props) => props.theme.layout.marginTablet};
+    margin: 4em ${(props) => props.theme.layout.marginDesktop};
   }
 `;
 
@@ -46,15 +45,18 @@ const Sections = styled.div`
   margin: 2em ${(props) => props.theme.layout.marginMobile};
 
   @media screen and (${(props) => props.theme.devices.mobileL}) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     margin: 3em ${(props) => props.theme.layout.marginTablet};
   }
 
   @media screen and (${(props) => props.theme.devices.tablet}) {
     grid-template-columns: 1fr 1fr;
-    margin: 4em ${(props) => props.theme.layout.marginDesktop};
+    gap: 8rem;
+    margin: 4em ${(props) => props.theme.layout.marginTablet};
   }
 `;
+
+const Column = styled.div``;
 
 const propTypes = {
   children: PropTypes.node,
@@ -86,7 +88,26 @@ function Page({ data, pageContext }) {
           <div dangerouslySetInnerHTML={{ __html: page.summaryBody.childMarkdownRemark.html }} />
         </Section>
       </Div>
-      <Sections></Sections>
+      <Sections>
+        <Column>
+          <h2 dangerouslySetInnerHTML={{ __html: page.workExperienceTitle }} />
+          <div dangerouslySetInnerHTML={{ __html: page.workExperienceBody.childMarkdownRemark.html }} />
+          <h3 dangerouslySetInnerHTML={{ __html: page.otherWorkExperienceTitle }} />
+          <div dangerouslySetInnerHTML={{ __html: page.otherWorkExperienceBody.childMarkdownRemark.html }} />
+          <h2 dangerouslySetInnerHTML={{ __html: page.positionsOfTrustTitle }} />
+          <div dangerouslySetInnerHTML={{ __html: page.positionsOfTrustBody.childMarkdownRemark.html }} />
+          <h3 dangerouslySetInnerHTML={{ __html: page.otherPositionsOfTrustTitle }} />
+          <div dangerouslySetInnerHTML={{ __html: page.otherPositionsOfTrustBody.childMarkdownRemark.html }} />
+        </Column>
+        <Column>
+          <h2 dangerouslySetInnerHTML={{ __html: page.educationTitle }} />
+          <div dangerouslySetInnerHTML={{ __html: page.educationBody.childMarkdownRemark.html }} />
+          <h2 dangerouslySetInnerHTML={{ __html: page.languagesTitle }} />
+          <div dangerouslySetInnerHTML={{ __html: page.languagesBody.childMarkdownRemark.html }} />
+          <h2 dangerouslySetInnerHTML={{ __html: page.skillsTitle }} />
+          <div dangerouslySetInnerHTML={{ __html: page.skillsBody.childMarkdownRemark.html }} />
+        </Column>
+      </Sections>
     </Layout>
   );
 }
@@ -122,14 +143,56 @@ export const pageQuery = graphql`
       }
     }
     contentfulCurriculumVitaePage(node_locale: { eq: $locale }) {
+      educationTitle
+      languagesTitle
+      otherPositionsOfTrustTitle
+      otherWorkExperienceTitle
       personName
+      positionsOfTrustTitle
+      skillsTitle
       summaryTitle
       title
+      workExperienceTitle
+      educationBody {
+        childMarkdownRemark {
+          html
+        }
+      }
+      languagesBody {
+        childMarkdownRemark {
+          html
+        }
+      }
+      otherPositionsOfTrustBody {
+        childMarkdownRemark {
+          html
+        }
+      }
+      otherWorkExperienceBody {
+        childMarkdownRemark {
+          html
+        }
+      }
+      positionsOfTrustBody {
+        childMarkdownRemark {
+          html
+        }
+      }
       profileImage {
         description
         gatsbyImageData(quality: 100, width: 200)
       }
+      skillsBody {
+        childMarkdownRemark {
+          html
+        }
+      }
       summaryBody {
+        childMarkdownRemark {
+          html
+        }
+      }
+      workExperienceBody {
         childMarkdownRemark {
           html
         }

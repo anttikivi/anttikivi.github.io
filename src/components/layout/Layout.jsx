@@ -21,7 +21,7 @@ const PageTitle = styled.h1`
   hyphens: auto;
 
   @media screen and (${(props) => props.theme.devices.mobileL}) {
-    margin: 2em ${(props) => props.theme.layout.marginTablet};
+    margin: 2em 0.5rem;
     font-size: 4rem;
   }
 
