@@ -13,7 +13,7 @@ import Header from './Header';
 import useColorScheme from '../../util/useColorScheme';
 
 const PageTitle = styled.h1`
-  margin: 2em 0.5rem;
+  margin: 1em 0.5rem 2em;
   font-size: 3rem;
   text-align: center;
   word-break: break-all;
