@@ -7,24 +7,45 @@ import styled from 'styled-components';
 
 const Span = styled.span`
   display: inline-block;
-  border-style: none;
-  border-radius: 3rem;
-  border: 3px solid transparent;
-  padding: 1rem 1.5rem;
+  position: relative;
+  margin: 1rem 0;
+  padding: 0.7rem 1rem;
   cursor: pointer;
-  transition: all 100ms ease-in;
-  background-clip: padding-box;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      width: 0;
+      visibility: hidden;
+    }
+  }
 `;
 
 const SpanNormal = styled(Span)`
-  background-color: var(--color-link);
-  color: var(--color-text-button);
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--color-link);
+
+  &::before {
+    background-color: var(--color-link);
+  }
 
   &:hover {
-    background-color: var(--color-link-hover);
+    color: var(--color-text);
   }
 `;
 

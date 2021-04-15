@@ -1,7 +1,7 @@
 // Copyright (c) 2021 Antti Kivi
 // Licensed under the MIT License
 
-// import createPagePath from './createPagePath';
+import createPagePath from './createPagePath';
 
 export default function createLocaleURL(baseURL, pageID, locale, data) {
   const { defaultLocale, localePaths } = data.site.siteMetadata;
@@ -11,6 +11,12 @@ export default function createLocaleURL(baseURL, pageID, locale, data) {
   )[0].node;
 
   switch (entryNode.internal.type) {
+    case 'ContentfulCurriculumVitaePage': {
+      const pageNode = data.allContentfulCurriculumVitaePage.edges.filter(
+        ({ node }) => node.contentful_id === pageID && node.node_locale === locale,
+      )[0].node;
+      return `${baseURL}${createPagePath(pageNode, locale, defaultLocale, localePaths)}`;
+    }
     case 'ContentfulIndexPage': {
       return locale === defaultLocale
         ? baseURL

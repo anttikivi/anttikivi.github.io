@@ -13,21 +13,21 @@ import Header from './Header';
 import useColorScheme from '../../util/useColorScheme';
 
 const PageTitle = styled.h1`
-  margin: 2em ${(props) => props.theme.layout.marginMobile};
-  font-size: 2rem;
+  margin: 1em 0.5rem 2em;
+  font-size: 3rem;
   text-align: center;
   word-break: break-all;
   word-break: break-word;
   hyphens: auto;
 
   @media screen and (${(props) => props.theme.devices.mobileL}) {
-    margin: 2em ${(props) => props.theme.layout.marginTablet};
-    font-size: 3rem;
+    margin: 1em 0.5rem;
+    font-size: 4rem;
   }
 
   @media screen and (${(props) => props.theme.devices.tablet}) {
-    margin: 2em ${(props) => props.theme.layout.marginTablet};
-    font-size: 3rem;
+    margin: 1em ${(props) => props.theme.layout.marginTablet};
+    font-size: 4rem;
   }
 `;
 
@@ -66,12 +66,12 @@ function Layout({ article, author, children, description, image, locale, pageID,
       />
       <Header locale={locale} pageID={pageID} />
       <main>
-        <section>
+        <article>
           <header>
             <PageTitle>{title}</PageTitle>
           </header>
-          <div>{children}</div>
-        </section>
+          {children}
+        </article>
       </main>
       <Footer locale={locale} pageID={pageID} />
     </>

@@ -9,7 +9,7 @@ import styled, { css } from 'styled-components';
 import LocalizedLink from '../link/LocalizedLink';
 
 const Nav = styled.nav`
-  margin: 0 auto;
+  margin: 0 auto 2em;
 `;
 
 const Toggle = styled.div`
@@ -116,7 +116,20 @@ const Link = styled(LocalizedLink)`
   font-size: 1.1rem;
   font-weight: 400;
   text-decoration: none;
+  text-transform: uppercase;
   color: var(--color-text);
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    background-color: var(--color-link);
+    transition: all 0.3s ease-in-out;
+  }
 
   &:visited {
     color: var(--color-text);
@@ -125,8 +138,12 @@ const Link = styled(LocalizedLink)`
   &:hover,
   &:focus,
   &:active {
-    background: var(--color-background-hover);
-    color: var(--color-text);
+    color: var(--color-link);
+
+    &::before {
+      visibility: visible;
+      width: 100%;
+    }
   }
 `;
 
@@ -135,12 +152,19 @@ const withMenuData = function withNavigationMenuQueryData(WrappedComponent) {
     const data = useStaticQuery(
       graphql`
         query {
-          allContentfulMenu(filter: { contentful_id: { eq: "7oKEb5SnrTGF1vbDGwfBbr" } }) {
+          allContentfulMenu(filter: { contentful_id: { eq: "12OH6cgaTcp4TUDvpqslYc" } }) {
             edges {
               node {
                 node_locale
                 links {
                   ... on ContentfulIndexPage {
+                    contentful_id
+                    title
+                    internal {
+                      type
+                    }
+                  }
+                  ... on ContentfulCurriculumVitaePage {
                     contentful_id
                     title
                     internal {
@@ -200,6 +224,15 @@ class Navigation extends React.Component {
             .filter(({ node }) => node.node_locale === locale)[0]
             .node.links.map((link) => {
               switch (link.internal.type) {
+                case 'ContentfulCurriculumVitaePage': {
+                  return (
+                    <Li key={link.contentful_id}>
+                      <Link to={link.contentful_id} locale={locale}>
+                        {link.title}
+                      </Link>
+                    </Li>
+                  );
+                }
                 case 'ContentfulIndexPage': {
                   return (
                     <Li key={link.contentful_id}>

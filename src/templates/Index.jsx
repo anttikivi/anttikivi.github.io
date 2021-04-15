@@ -117,7 +117,7 @@ export const pageQuery = graphql`
       }
       introImage {
         description
-        gatsbyImageData(quality: 100, width: 200)
+        gatsbyImageData(quality: 100, width: 250)
       }
     }
   }
