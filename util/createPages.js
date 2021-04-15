@@ -126,16 +126,15 @@ module.exports = async function createPages({ actions, graphql, reporter }) {
     });
   });
 
-  // Create the redirects for the 404 error pages.
-  createRedirect({
-    fromPath: '/en/*',
-    toPath: `/en/404`,
-    statusCode: 404,
-  });
-  createRedirect({
-    fromPath: '/*',
-    toPath: `/404`,
-    statusCode: 404,
+  // Create the redirects for all of the pages.
+
+  alternativeURLs.forEach((url) => {
+    createRedirect({
+      fromPath: `${url}/*`,
+      toPath: `${siteURL}/:splat`,
+      isPermanent: true,
+      force: true,
+    });
   });
 
   // Create the redirects for the URLs.
@@ -149,14 +148,15 @@ module.exports = async function createPages({ actions, graphql, reporter }) {
     });
   });
 
-  // Create the redirects for all of the pages.
-
-  alternativeURLs.forEach((url) => {
-    createRedirect({
-      fromPath: `${url}/*`,
-      toPath: `${siteURL}/:splat`,
-      isPermanent: true,
-      force: true,
-    });
+  // Create the redirects for the 404 error pages.
+  createRedirect({
+    fromPath: '/en/*',
+    toPath: `/en/404`,
+    statusCode: 404,
+  });
+  createRedirect({
+    fromPath: '/*',
+    toPath: `/404`,
+    statusCode: 404,
   });
 };
