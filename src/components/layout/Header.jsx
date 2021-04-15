@@ -224,7 +224,7 @@ function Header({ errorPage, home, locale, pageID }) {
               return <HomeTitle>{site.siteMetadata.title}</HomeTitle>;
             }
 
-            return <SiteTitle>{site.siteMetadata.title}</SiteTitle>;
+            return <SiteTitle role="heading">{site.siteMetadata.title}</SiteTitle>;
           })()}
         </TitleLink>
         <p>{intl('headerByline')}</p>

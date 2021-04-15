@@ -7,7 +7,7 @@ import { useStaticQuery } from 'gatsby';
 
 import Head from '../Head';
 
-import renderWithReactIntl from '../../../../test/renderWithReactIntl';
+import renderWithProviders from '../../../../test/renderWithProviders';
 
 describe('Head component', () => {
   beforeAll(() => {
@@ -114,7 +114,7 @@ describe('Head component', () => {
     const mockDescription =
       'Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja mieluummin hymyilen kuin jätän hymyilemättä. Vapaalla rakastan järjestötoimintaa ja musiikkia.';
 
-    renderWithReactIntl(
+    const {container } = renderWithProviders(
       <Head
         home
         description="Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja mieluummin hymyilen kuin jätän hymyilemättä. Vapaalla rakastan järjestötoimintaa ja musiikkia."
@@ -124,6 +124,9 @@ describe('Head component', () => {
       />,
       'fi',
     );
+
+    expect(container).toMatchSnapshot();
+
     const { title, metaTags } = Helmet.peek();
 
     expect(title).toBe(mockTitle);
@@ -136,7 +139,7 @@ describe('Head component', () => {
     const mockDescription =
       'An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning something new every day and smiling as much as possible. In my free time I delight in politics and music.';
 
-    renderWithReactIntl(
+      const {container } = renderWithProviders(
       <Head
         home
         description="An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning something new every day and smiling as much as possible. In my free time I delight in politics and music."
@@ -146,6 +149,9 @@ describe('Head component', () => {
       />,
       'en',
     );
+
+    expect(container).toMatchSnapshot();
+
     const { title, metaTags } = Helmet.peek();
 
     expect(title).toBe(mockTitle);
@@ -158,7 +164,7 @@ describe('Head component', () => {
     const mockDescription =
       'Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja mieluummin hymyilen kuin jätän hymyilemättä. Vapaalla rakastan järjestötoimintaa ja musiikkia.';
 
-    renderWithReactIntl(
+      const {container } = renderWithProviders(
       <Head
         description="Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja mieluummin hymyilen kuin jätän hymyilemättä. Vapaalla rakastan järjestötoimintaa ja musiikkia."
         locale="fi"
@@ -167,6 +173,9 @@ describe('Head component', () => {
       />,
       'fi',
     );
+
+    expect(container).toMatchSnapshot();
+
     const { title, metaTags } = Helmet.peek();
 
     expect(title).toBe(mockTitle);
@@ -179,7 +188,7 @@ describe('Head component', () => {
     const mockDescription =
       'An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning something new every day and smiling as much as possible. In my free time I delight in politics and music.';
 
-    renderWithReactIntl(
+      const {container } = renderWithProviders(
       <Head
         description="An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning something new every day and smiling as much as possible. In my free time I delight in politics and music."
         locale="en-GB"
@@ -188,6 +197,9 @@ describe('Head component', () => {
       />,
       'en',
     );
+
+    expect(container).toMatchSnapshot();
+
     const { title, metaTags } = Helmet.peek();
 
     expect(title).toBe(mockTitle);

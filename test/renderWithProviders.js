@@ -8,7 +8,7 @@ import { IntlProvider } from 'react-intl';
 import App from '../src/components/App';
 import Theme from '../src/components/Theme';
 
-export default function renderWithReactIntlAndTheme(component, locale) {
+export default function renderWithProviders(component, locale) {
   // eslint-disable-next-line global-require, no-undef, import/no-dynamic-require
   const messages = require(`../src/locales/${locale}`).locale;
 

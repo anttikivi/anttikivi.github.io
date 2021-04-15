@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders index page header correctly 1`] = `
+<div>
+  <header
+    class="sc-gKckTs fLSVeS"
+  >
+    <div
+      class="sc-jrQzUz gSvUzw"
+    >
+      <a
+        class="sc-iCfLBT cKTlDZ"
+        href="/"
+      >
+        <h1
+          class="sc-furvIG iKYDHp"
+        >
+          Antti Kivi
+        </h1>
+      </a>
+      <p>
+        Helsinkiläinen yrittäjä
+      </p>
+    </div>
+    <nav
+      class="sc-bdvvaa hxAumW"
+    >
+      <div
+        aria-controls="primary-menu"
+        aria-expanded="false"
+        class="sc-gsDJrp ZGrYg"
+      >
+        <div
+          class="sc-dkPtyc ftSqoe"
+        />
+        <div
+          class="sc-dkPtyc ftSqoe"
+        />
+        <div
+          class="sc-dkPtyc ftSqoe"
+        />
+      </div>
+      <ul
+        class="sc-hKwCoD cTPmWZ"
+        id="primary-menu"
+      >
+        <li
+          class="sc-eCImvq hpiMMr"
+        >
+          <a
+            class="sc-jRQAMF eFQDbW"
+            href="/"
+          >
+            Etusivu
+          </a>
+        </li>
+        <li
+          class="sc-eCImvq hpiMMr"
+        >
+          <a
+            class="sc-jRQAMF eFQDbW"
+            href="/ansioluettelo"
+          >
+            Ansioluettelo
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="sc-kDThTU eNKZKu"
+    />
+  </header>
+  ,
+</div>
+`;
+
+exports[`Header component renders page header correctly 1`] = `
+<div>
+  <header
+    class="sc-gKckTs fLSVeS"
+  >
+    <div
+      class="sc-jrQzUz gSvUzw"
+    >
+      <a
+        class="sc-iCfLBT cKTlDZ"
+        href="/"
+      >
+        <p
+          class="sc-pVTma bmUQdy"
+          role="heading"
+        >
+          Antti Kivi
+        </p>
+      </a>
+      <p>
+        Helsinkiläinen yrittäjä
+      </p>
+    </div>
+    <nav
+      class="sc-bdvvaa hxAumW"
+    >
+      <div
+        aria-controls="primary-menu"
+        aria-expanded="false"
+        class="sc-gsDJrp ZGrYg"
+      >
+        <div
+          class="sc-dkPtyc ftSqoe"
+        />
+        <div
+          class="sc-dkPtyc ftSqoe"
+        />
+        <div
+          class="sc-dkPtyc ftSqoe"
+        />
+      </div>
+      <ul
+        class="sc-hKwCoD cTPmWZ"
+        id="primary-menu"
+      >
+        <li
+          class="sc-eCImvq hpiMMr"
+        >
+          <a
+            class="sc-jRQAMF eFQDbW"
+            href="/"
+          >
+            Etusivu
+          </a>
+        </li>
+        <li
+          class="sc-eCImvq hpiMMr"
+        >
+          <a
+            class="sc-jRQAMF eFQDbW"
+            href="/ansioluettelo"
+          >
+            Ansioluettelo
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="sc-kDThTU eNKZKu"
+    />
+  </header>
+  ,
+</div>
+`;
