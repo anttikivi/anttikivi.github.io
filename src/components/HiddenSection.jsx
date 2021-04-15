@@ -12,7 +12,6 @@ import createInternationalization from '../util/createInternationalization';
 const propTypes = {
   children: PropTypes.node.isRequired,
   hideLabel: PropTypes.string,
-  intl: PropTypes.any.isRequired,
   showLabel: PropTypes.string,
 };
 
@@ -21,7 +20,7 @@ const defaultProps = {
   showLabel: 'hiddenSectionShow',
 };
 
-class HiddenSection extends React.Component {
+class HiddenSectionProper extends React.Component {
   constructor(props) {
     super(props);
 
@@ -53,7 +52,12 @@ class HiddenSection extends React.Component {
   }
 }
 
+HiddenSectionProper.propTypes = { intl: PropTypes.any.isRequired, ...propTypes };
+HiddenSectionProper.defaultProps = defaultProps;
+
+const HiddenSection = injectIntl(HiddenSectionProper);
+
 HiddenSection.propTypes = propTypes;
 HiddenSection.defaultProps = defaultProps;
 
-export default injectIntl(HiddenSection);
+export default HiddenSection;

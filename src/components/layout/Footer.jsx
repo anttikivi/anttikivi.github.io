@@ -191,9 +191,9 @@ function Footer({ locale, pageID }) {
 
   return (
     <FooterElement>
-      <LogoDiv>
+      {/* <LogoDiv>
         <LogoImage alt={intl('footerLogoImageText')} image={getImage(nameLogo)} />
-      </LogoDiv>
+      </LogoDiv> */}
       <Div>
         <LocaleSwitcher locale={locale} pageID={pageID} />
       </Div>
