@@ -120,7 +120,7 @@ const Link = styled(LocalizedLink)`
   color: var(--color-text);
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 0;
     height: 4px;

@@ -41,8 +41,13 @@ class HiddenSection extends React.Component {
 
     return (
       <>
-        <Button onClick={this.handleClick} smaller>{isHidden ? intl(showLabel) : intl(hideLabel)}</Button>
-        <div hidden={isHidden}>{children}<hr /></div>
+        <Button onClick={this.handleClick} smaller>
+          {isHidden ? intl(showLabel) : intl(hideLabel)}
+        </Button>
+        <div hidden={isHidden}>
+          {children}
+          <hr />
+        </div>
       </>
     );
   }
