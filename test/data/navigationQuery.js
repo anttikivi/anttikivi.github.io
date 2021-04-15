@@ -5,50 +5,50 @@ import localizedLinkQuery from './localizedLinkQuery';
 
 export default {
   ...localizedLinkQuery,
-  "allContentfulMenu": {
-    "edges": [
+  allContentfulMenu: {
+    edges: [
       {
-        "node": {
-          "node_locale": "fi",
-          "links": [
+        node: {
+          node_locale: 'fi',
+          links: [
             {
-              "contentful_id": "6JksITICuGCEYUIVHlWl5U",
-              "title": "Etusivu",
-              "internal": {
-                "type": "ContentfulIndexPage"
-              }
+              contentful_id: '6JksITICuGCEYUIVHlWl5U',
+              title: 'Etusivu',
+              internal: {
+                type: 'ContentfulIndexPage',
+              },
             },
             {
-              "contentful_id": "29kQlzt1s2bR8OirrtTbCo",
-              "title": "Ansioluettelo",
-              "internal": {
-                "type": "ContentfulCurriculumVitaePage"
-              }
-            }
-          ]
-        }
+              contentful_id: '29kQlzt1s2bR8OirrtTbCo',
+              title: 'Ansioluettelo',
+              internal: {
+                type: 'ContentfulCurriculumVitaePage',
+              },
+            },
+          ],
+        },
       },
       {
-        "node": {
-          "node_locale": "en-GB",
-          "links": [
+        node: {
+          node_locale: 'en-GB',
+          links: [
             {
-              "contentful_id": "6JksITICuGCEYUIVHlWl5U",
-              "title": "Front Page",
-              "internal": {
-                "type": "ContentfulIndexPage"
-              }
+              contentful_id: '6JksITICuGCEYUIVHlWl5U',
+              title: 'Front Page',
+              internal: {
+                type: 'ContentfulIndexPage',
+              },
             },
             {
-              "contentful_id": "29kQlzt1s2bR8OirrtTbCo",
-              "title": "Curriculum Vitae",
-              "internal": {
-                "type": "ContentfulCurriculumVitaePage"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  }
+              contentful_id: '29kQlzt1s2bR8OirrtTbCo',
+              title: 'Curriculum Vitae',
+              internal: {
+                type: 'ContentfulCurriculumVitaePage',
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
 };

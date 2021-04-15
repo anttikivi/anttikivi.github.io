@@ -114,7 +114,7 @@ describe('Head component', () => {
     const mockDescription =
       'Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja mieluummin hymyilen kuin jätän hymyilemättä. Vapaalla rakastan järjestötoimintaa ja musiikkia.';
 
-    const {container } = renderWithProviders(
+    const { container } = renderWithProviders(
       <Head
         home
         description="Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja mieluummin hymyilen kuin jätän hymyilemättä. Vapaalla rakastan järjestötoimintaa ja musiikkia."
@@ -139,7 +139,7 @@ describe('Head component', () => {
     const mockDescription =
       'An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning something new every day and smiling as much as possible. In my free time I delight in politics and music.';
 
-      const {container } = renderWithProviders(
+    const { container } = renderWithProviders(
       <Head
         home
         description="An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning something new every day and smiling as much as possible. In my free time I delight in politics and music."
@@ -164,7 +164,7 @@ describe('Head component', () => {
     const mockDescription =
       'Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja mieluummin hymyilen kuin jätän hymyilemättä. Vapaalla rakastan järjestötoimintaa ja musiikkia.';
 
-      const {container } = renderWithProviders(
+    const { container } = renderWithProviders(
       <Head
         description="Etutöölöläinen yrittäjä ja tekijä. Haluan oppia päivittäin uutta ja mieluummin hymyilen kuin jätän hymyilemättä. Vapaalla rakastan järjestötoimintaa ja musiikkia."
         locale="fi"
@@ -188,7 +188,7 @@ describe('Head component', () => {
     const mockDescription =
       'An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning something new every day and smiling as much as possible. In my free time I delight in politics and music.';
 
-      const {container } = renderWithProviders(
+    const { container } = renderWithProviders(
       <Head
         description="An entrepreneur and doer from Etu-Töölö, Helsinki. I’m all about learning something new every day and smiling as much as possible. In my free time I delight in politics and music."
         locale="en-GB"
