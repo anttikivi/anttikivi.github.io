@@ -189,9 +189,9 @@ const withMenuData = function withNavigationMenuQueryData(WrappedComponent) {
   return WithMenuData;
 };
 
-const propTypes = { data: PropTypes.object.isRequired, locale: PropTypes.string.isRequired };
+const propTypes = { locale: PropTypes.string.isRequired };
 
-class Navigation extends React.Component {
+class NavigationProper extends React.Component {
   constructor(props) {
     super(props);
 
@@ -253,6 +253,10 @@ class Navigation extends React.Component {
   }
 }
 
+NavigationProper.propTypes = { data: PropTypes.object.isRequired, ...propTypes };
+
+const Navigation = withMenuData(NavigationProper);
+
 Navigation.propTypes = propTypes;
 
-export default withMenuData(Navigation);
+export default Navigation;
