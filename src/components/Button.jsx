@@ -7,43 +7,57 @@ import styled from 'styled-components';
 
 const Span = styled.span`
   display: inline-block;
-  border-style: none;
-  border-radius: 3rem;
-  border: 3px solid transparent;
-  padding: ${(props) => props.smaller ? '0.5rem 1.5rem' : '1rem 1.5rem'};
+  position: relative;
+  margin: 1rem 0;
+  padding: 0.7rem 1rem;
   cursor: pointer;
-  transition: all 100ms ease-in;
-  background-clip: padding-box;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      width: 0;
+      visibility: hidden;
+    }
+  }
 `;
 
 const SpanNormal = styled(Span)`
-  border: 0.3rem solid var(--color-link);
-  background-color: transparent;
-  font-weight: 700;
-  text-decoration: underline;
-  color: var(--color-text);
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--color-link);
+
+  &::before {
+    background-color: var(--color-link);
+  }
 
   &:hover {
-    /* border: 0.3rem solid transparent; */
-    background-color: var(--color-link);
-    text-decoration: none;
-    color: var(--color-text-inverted);
+    color: var(--color-text);
   }
 `;
 
 const propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
-  smaller: PropTypes.bool,
 };
 
-const defaultProps = { onClick: null, smaller: false };
+const defaultProps = { onClick: null };
 
-function Button({ children, onClick, smaller }) {
-  return <SpanNormal onClick={onClick} smaller={smaller}>{children}</SpanNormal>;
+function Button({ children, onClick }) {
+  return <SpanNormal onClick={onClick}>{children}</SpanNormal>;
 }
 
 Button.propTypes = propTypes;

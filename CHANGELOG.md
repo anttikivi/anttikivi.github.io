@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 ### Changed
 
-- Style of the button componenets to have background on hover and only an outline otherwise.
+- Style of the button components to have an underline instead of the background colour.
 
 ### Removed
 
