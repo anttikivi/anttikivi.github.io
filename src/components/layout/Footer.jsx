@@ -31,8 +31,8 @@ const Div = styled.div`
   margin: 2em 0;
 `;
 
-const LogoDiv = styled.div`
-  margin: 2em 0 4rem;
+const SignatureDiv = styled.div`
+  margin: 2em 0;
 `;
 
 const LogoImage = styled(GatsbyImage)`
@@ -132,9 +132,9 @@ function Footer({ locale, pageID }) {
             }
           }
         }
-        nameLogo: file(relativePath: { eq: "name-logo.png" }) {
+        signature: file(relativePath: { eq: "signature.png" }) {
           childImageSharp {
-            gatsbyImageData(width: 250, placeholder: BLURRED, quality: 100)
+            gatsbyImageData(width: 200, placeholder: BLURRED, quality: 100)
           }
         }
         facebook: file(relativePath: { eq: "footer/facebook.png" }) {
@@ -186,14 +186,14 @@ function Footer({ locale, pageID }) {
     `,
   );
 
-  const { nameLogo } = data;
+  const { signature } = data;
   const { socialMedia } = data.site.siteMetadata;
 
   return (
     <FooterElement>
-      {/* <LogoDiv>
-        <LogoImage alt={intl('footerLogoImageText')} image={getImage(nameLogo)} />
-      </LogoDiv> */}
+      <SignatureDiv>
+        <LogoImage alt={intl('footerSignatureImageText')} image={getImage(signature)} />
+      </SignatureDiv>
       <Div>
         <LocaleSwitcher locale={locale} pageID={pageID} />
       </Div>
