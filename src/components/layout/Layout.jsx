@@ -21,12 +21,12 @@ const PageTitle = styled.h1`
   hyphens: auto;
 
   @media screen and (${(props) => props.theme.devices.mobileL}) {
-    margin: 2em 0.5rem;
+    margin: 1em 0.5rem;
     font-size: 4rem;
   }
 
   @media screen and (${(props) => props.theme.devices.tablet}) {
-    margin: 2em ${(props) => props.theme.layout.marginTablet};
+    margin: 1em ${(props) => props.theme.layout.marginTablet};
     font-size: 4rem;
   }
 `;
