@@ -2,7 +2,7 @@
 // Licensed under the MIT License
 
 export default {
-  footerLogoImageText: 'Antin nimikirjoitus',
+  footerSignatureImageText: 'Antin nimikirjoitus',
   footerSocialMediaTitle: 'Sosiaalisessa mediassa',
   footerFacebookImageText: 'Facebookin logo',
   footerGithubImageText: 'Githubin logo',

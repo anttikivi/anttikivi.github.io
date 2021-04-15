@@ -2,7 +2,7 @@
 // Licensed under the MIT License
 
 export default {
-  footerLogoImageText: 'Antti’s signature',
+  footerSignatureImageText: 'Antti’s signature',
   footerSocialMediaTitle: 'Social Media',
   footerFacebookImageText: 'Facebook Logo',
   footerGithubImageText: 'GitHub Logo',
