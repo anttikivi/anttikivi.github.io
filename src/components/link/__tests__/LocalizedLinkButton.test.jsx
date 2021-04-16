@@ -10,9 +10,7 @@ import localizedLinkQuery from '../../../../test/data/localizedLinkQuery';
 import renderWithProviders from '../../../../test/renderWithProviders';
 
 describe('Localized link button component', () => {
-  beforeAll(() => {
-    useStaticQuery.mockReturnValue(localizedLinkQuery);
-  });
+  beforeAll(() => useStaticQuery.mockReturnValue(localizedLinkQuery));
 
   it('renders correctly', () => {
     const { container, getByText } = renderWithProviders(

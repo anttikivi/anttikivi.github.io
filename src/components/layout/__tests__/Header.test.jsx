@@ -11,9 +11,7 @@ import headerQuery from '../../../../test/data/headerQuery';
 import renderWithProviders from '../../../../test/renderWithProviders';
 
 describe('Header component', () => {
-  beforeAll(() => {
-    useStaticQuery.mockReturnValue(headerQuery);
-  });
+  beforeAll(() => useStaticQuery.mockReturnValue(headerQuery));
 
   it('renders index page header correctly', () => {
     const { container } = renderWithProviders(

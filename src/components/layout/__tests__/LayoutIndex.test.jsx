@@ -13,9 +13,7 @@ import layoutQuery from '../../../../test/data/layoutQuery';
 import renderWithProviders from '../../../../test/renderWithProviders';
 
 describe('Index layout component', () => {
-  beforeAll(() => {
-    useStaticQuery.mockReturnValue(layoutQuery);
-  });
+  beforeAll(() => useStaticQuery.mockReturnValue(layoutQuery));
 
   it('renders correctly', () => {
     const { container } = renderWithProviders(
