@@ -7,107 +7,11 @@ import { useStaticQuery } from 'gatsby';
 
 import Head from '../Head';
 
+import headQuery from '../../../../test/data/headQuery';
 import renderWithProviders from '../../../../test/renderWithProviders';
 
 describe('Head component', () => {
-  beforeAll(() => {
-    useStaticQuery.mockReturnValue({
-      site: {
-        siteMetadata: {
-          description: 'Helsinkiläinen yrittäjä',
-          facebookAppID: '544113829894022',
-          locales: ['fi', 'en-GB'],
-          siteURL: 'https://anttikivi.fi',
-          title: 'Antti Kivi',
-          twitterAuthor: '@anttikiwi',
-          localePaths: {
-            en_GB: 'en',
-            fi: '',
-          },
-          simpleLocales: {
-            en_GB: 'en',
-            fi: 'fi',
-          },
-        },
-      },
-      allContentfulEntry: {
-        edges: [
-          {
-            node: {
-              contentful_id: '6JksITICuGCEYUIVHlWl5U',
-              node_locale: 'fi',
-              internal: {
-                type: 'ContentfulIndexPage',
-              },
-            },
-          },
-          {
-            node: {
-              contentful_id: '6JksITICuGCEYUIVHlWl5U',
-              node_locale: 'en-GB',
-              internal: {
-                type: 'ContentfulIndexPage',
-              },
-            },
-          },
-          {
-            node: {
-              contentful_id: '12OH6cgaTcp4TUDvpqslYc',
-              node_locale: 'fi',
-              internal: {
-                type: 'ContentfulMenu',
-              },
-            },
-          },
-          {
-            node: {
-              contentful_id: '12OH6cgaTcp4TUDvpqslYc',
-              node_locale: 'en-GB',
-              internal: {
-                type: 'ContentfulMenu',
-              },
-            },
-          },
-          {
-            node: {
-              contentful_id: '29kQlzt1s2bR8OirrtTbCo',
-              node_locale: 'fi',
-              internal: {
-                type: 'ContentfulCurriculumVitaePage',
-              },
-            },
-          },
-          {
-            node: {
-              contentful_id: '29kQlzt1s2bR8OirrtTbCo',
-              node_locale: 'en-GB',
-              internal: {
-                type: 'ContentfulCurriculumVitaePage',
-              },
-            },
-          },
-        ],
-      },
-      allContentfulCurriculumVitaePage: {
-        edges: [
-          {
-            node: {
-              contentful_id: '29kQlzt1s2bR8OirrtTbCo',
-              node_locale: 'fi',
-              slug: 'ansioluettelo',
-            },
-          },
-          {
-            node: {
-              contentful_id: '29kQlzt1s2bR8OirrtTbCo',
-              node_locale: 'en-GB',
-              slug: 'cv',
-            },
-          },
-        ],
-      },
-    });
-  });
+  beforeAll(() => useStaticQuery.mockReturnValue(headQuery));
 
   it('renders the tests correctly for Finnish index page', () => {
     const mockTitle = 'Antti Kivi - Helsinkiläinen yrittäjä';

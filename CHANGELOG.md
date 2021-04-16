@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 ### Added
 
 - Unit testing framework.
+- Unit tests for most of the components.
 
 ## [0.11.3] - 2021-04-15
 
