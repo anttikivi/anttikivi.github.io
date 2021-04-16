@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Localized link button component renders correctly 1`] = `
+<div>
+  <a
+    class="sc-dkPtyc jHNiIS"
+    href="/ansioluettelo"
+  >
+    <span
+      class="sc-bdvvaa sc-gsDJrp hQcwYn iJMLxP"
+    >
+      Linkki
+    </span>
+  </a>
+  ,
+</div>
+`;

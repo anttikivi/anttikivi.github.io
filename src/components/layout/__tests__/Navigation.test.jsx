@@ -15,10 +15,7 @@ describe('Navigation component', () => {
   });
 
   it('renders Finnish correctly', () => {
-    const { container, getByText } = renderWithProviders(
-      <Navigation locale="fi" />,
-      'fi',
-    );
+    const { container, getByText } = renderWithProviders(<Navigation locale="fi" />, 'fi');
 
     expect(container).toMatchSnapshot();
 
@@ -27,10 +24,7 @@ describe('Navigation component', () => {
   });
 
   it('renders English correctly', () => {
-    const { container, getByText } = renderWithProviders(
-      <Navigation locale="en-GB" />,
-      'en',
-    );
+    const { container, getByText } = renderWithProviders(<Navigation locale="en-GB" />, 'en');
 
     expect(container).toMatchSnapshot();
 

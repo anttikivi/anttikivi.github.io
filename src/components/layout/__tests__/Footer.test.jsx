@@ -22,13 +22,13 @@ describe('Header component', () => {
 
     expect(container).toMatchSnapshot();
 
-    expect(getByText('Tämä sivusto on tehty', { exact: false }));
-    expect(getByText('Visioston', { exact: false }));
-    expect(getByText('linssin läpi', { exact: false }));
-    expect(getByText('In English'));
+    expect(getByText('Tämä sivusto on tehty', { exact: false })).toBeInTheDocument();
+    expect(getByText('Visioston', { exact: false })).toBeInTheDocument();
+    expect(getByText('linssin läpi', { exact: false })).toBeInTheDocument();
+    expect(getByText('In English')).toBeInTheDocument();
 
-    expect(getByAltText('Instagramin logo'));
-    expect(getByAltText('Linkedinin logo'));
-    expect(getByAltText('Twitterin logo'));
+    expect(getByAltText('Instagramin logo')).toBeInTheDocument();
+    expect(getByAltText('Linkedinin logo')).toBeInTheDocument();
+    expect(getByAltText('Twitterin logo')).toBeInTheDocument();
   });
 });
