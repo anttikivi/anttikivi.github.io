@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Locale link component renders English correctly 1`] = `
+<div>
+  <a
+    href="/"
+  >
+    A link
+  </a>
+  ,
+</div>
+`;
+
+exports[`Locale link component renders English page correctly 1`] = `
+<div>
+  <a
+    href="/ansioluettelo"
+  >
+    A link
+  </a>
+  ,
+</div>
+`;
+
+exports[`Locale link component renders Finnish correctly 1`] = `
+<div>
+  <a
+    href="/en"
+  >
+    Linkki
+  </a>
+  ,
+</div>
+`;
+
+exports[`Locale link component renders Finnish page correctly 1`] = `
+<div>
+  <a
+    href="/en/cv"
+  >
+    Linkki
+  </a>
+  ,
+</div>
+`;
