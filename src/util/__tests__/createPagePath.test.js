@@ -3,7 +3,7 @@
 
 import createPagePath from '../createPagePath';
 
-describe('function for creating paths of pages', () => {
+describe('function for creating paths of pages for components', () => {
   const defaultLocale = 'fi';
   const localePaths = { fi: '', en_GB: 'en' };
 
