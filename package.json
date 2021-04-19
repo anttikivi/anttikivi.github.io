@@ -11,7 +11,7 @@
     "format": "prettier --config .prettierrc.json --write \"**/*.{js,jsx,json,md}\"",
     "nit": "prettier --config .prettierrc.json --list-different \"**/*.{js,jsx,json,md}\"",
     "test": "jest",
-    "lint:js": "eslint .",
+    "lint:js": "eslint --ext .jsx --ext .js .",
     "lint:css": "stylelint './src/**/*{.js,jsx}'",
     "clean": "gatsby clean",
     "start": "yarn dev",
