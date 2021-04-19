@@ -17,34 +17,31 @@ export default {
       },
     },
   },
-  nameLogo: {
-    childImageSharp: {
-      gatsbyImageData: {
-        layout: 'constrained',
-        placeholder: {
-          fallback:
-            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABd0lEQVQoz4WS3UrDQBCFN7v5a1paYkAkaCGgVhQvciFCLApWa1VQQVTwpuCFIBZfwacQX8FL37B+Eza1QcWFw5mdnDk7OxulflnGdZUxpgatjXI9r4w9WGutXKsT/nO5P81iilccxymN2HOem5Hrw81/DcsOEYmBPeACrIkZnIJd4mU0Q9CpDEVf1ZRLrlAlETgiAjk4stfsga1Wq6XhDd/3FyQvq6qrGRoMNQkKFGIxCCm4BiFxN4qipUajQejtccg6JW2aWMQkqRlKZxVsp0ZijEbwKeiCd8R35J7AGft9cOw4ekT+kJyeeXwbOuVLEncQXcGv4BJ8aGM+KTqQi9ClmR+RrDAMZ48436EvH+0vMeajvOQj/EZuU8SMQtvuZ3+EjCfLMlUUhZpOp+VAtb3/AJxQsANyiu7BBIzZr4JnGQGaHO7BTTjFcDtNUzdJEhXHce2FZLhDRJHtuI/ZOTwAMr8H+AVMwA24JZcHQdD2/aDsmFh9ASe0HbEgj2lDAAAAAElFTkSuQmCC',
+  "signature": {
+    "childImageSharp": {
+      "gatsbyImageData": {
+        "layout": "constrained",
+        "placeholder": {
+          "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArElEQVQY043QWwtBQRDA8XFI7nJOrkWhpFBOuUUUj4pnD16UD+DF9/ffms0kxdSvc3a3md0ZkXck9NvEUL5HXf4MXyyLDdJm7aOGFebo6V7wq/AaLeT0pQNzlsESY72o8ZGb9B24wwoWuOKGCAV0tLCLGHcU9dIQJc0P9BHuTPo44IkHLtjqflsT8xhhhh3O6oiTjiC0rbjFHhN0MUXKtONn5QqXTVfuv2pmLi+w2Ap2m2NGhQAAAABJRU5ErkJggg=="
         },
-        images: {
-          fallback: {
-            src: '/static/d84ef63f75058e6e5a4d40234c8c2d49/6899a/name-logo.png',
-            srcSet:
-              '/static/d84ef63f75058e6e5a4d40234c8c2d49/45daf/name-logo.png 63w,\n/static/d84ef63f75058e6e5a4d40234c8c2d49/e11d5/name-logo.png 125w,\n/static/d84ef63f75058e6e5a4d40234c8c2d49/6899a/name-logo.png 250w,\n/static/d84ef63f75058e6e5a4d40234c8c2d49/625f7/name-logo.png 500w',
-            sizes: '(min-width: 250px) 250px, 100vw',
+        "images": {
+          "fallback": {
+            "src": "/static/5cef2cf45670eefe13cdb72f443d5290/47397/signature.png",
+            "srcSet": "/static/5cef2cf45670eefe13cdb72f443d5290/4143e/signature.png 50w,\n/static/5cef2cf45670eefe13cdb72f443d5290/9054a/signature.png 100w,\n/static/5cef2cf45670eefe13cdb72f443d5290/47397/signature.png 200w,\n/static/5cef2cf45670eefe13cdb72f443d5290/95bb8/signature.png 400w",
+            "sizes": "(min-width: 200px) 200px, 100vw"
           },
-          sources: [
+          "sources": [
             {
-              srcSet:
-                '/static/d84ef63f75058e6e5a4d40234c8c2d49/0cade/name-logo.webp 63w,\n/static/d84ef63f75058e6e5a4d40234c8c2d49/adbe3/name-logo.webp 125w,\n/static/d84ef63f75058e6e5a4d40234c8c2d49/b150d/name-logo.webp 250w,\n/static/d84ef63f75058e6e5a4d40234c8c2d49/7379c/name-logo.webp 500w',
-              type: 'image/webp',
-              sizes: '(min-width: 250px) 250px, 100vw',
-            },
-          ],
+              "srcSet": "/static/5cef2cf45670eefe13cdb72f443d5290/afdce/signature.webp 50w,\n/static/5cef2cf45670eefe13cdb72f443d5290/e7df2/signature.webp 100w,\n/static/5cef2cf45670eefe13cdb72f443d5290/c0a75/signature.webp 200w,\n/static/5cef2cf45670eefe13cdb72f443d5290/81fe6/signature.webp 400w",
+              "type": "image/webp",
+              "sizes": "(min-width: 200px) 200px, 100vw"
+            }
+          ]
         },
-        width: 250,
-        height: 125,
-      },
-    },
+        "width": 200,
+        "height": 65
+      }
+    }
   },
   facebook: {
     childImageSharp: {
