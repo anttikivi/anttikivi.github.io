@@ -6837,10 +6837,10 @@ gatsby-page-utils@^1.2.0:
     lodash "^4.17.21"
     micromatch "^4.0.2"
 
-gatsby-plugin-catch-links@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-3.2.0.tgz#92e89a2a4fa9bc7d618fd62dede587f6437f2dff"
-  integrity sha512-mXAHWBTm6xaHfNKuyMte5PXxExHzXzpOdK6SiYoj0/uV+OHPIMiLf28ixvmgaxNVCb/k2hgEsnR1GtGb3+KC2w==
+gatsby-plugin-catch-links@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-3.3.0.tgz#cf22d4188714f377f835a62b4b4d0dda7804df07"
+  integrity sha512-LjxGN02TYJm78Eddi2LqDSWN4E0WSixOLg12ADkwpkcQxGOwRSaXD4BpijhX0F2qUaZD2dv89j+TVY14Ltwbiw==
   dependencies:
     "@babel/runtime" "^7.12.5"
     escape-string-regexp "^1.0.5"
@@ -7130,10 +7130,10 @@ gatsby-telemetry@^2.2.0, gatsby-telemetry@^2.3.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby-transformer-json@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-3.2.0.tgz#3cfc4aef0913387b26ecf89b040a48408ed91d61"
-  integrity sha512-U0uOjTXkozFOzoMG46+Vmc7N0CH/hTYrvyIqtxpV+xDPvWNn07Ynk/0qaxAjRANe5oyJHYfTl1vd0Y/9R89AlA==
+gatsby-transformer-json@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-3.3.0.tgz#ed17e46214e6a56867464bb6b2b808c6fe26c311"
+  integrity sha512-JvOL8v50cqRwB32yhS7TJRDZP5R89YgZnvjftU2L9itryDE1RDj4xZLRz9U1zyaAJKxbzThsc4emvcEAtJ8sFQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     bluebird "^3.7.2"
