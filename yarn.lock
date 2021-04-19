@@ -6845,10 +6845,10 @@ gatsby-plugin-catch-links@^3.2.0:
     "@babel/runtime" "^7.12.5"
     escape-string-regexp "^1.0.5"
 
-gatsby-plugin-google-gtag@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.2.0.tgz#8326133ef676a9059a63091a11c6b786ac21a657"
-  integrity sha512-NmKv9bRkdxgmkGUIpK1Tk0sgnggU6WDY+oH+nQG1+gs1yJqW6g1d3zzFKf/m0c5A/44Eqb7f+6h8PTjIL/XoVw==
+gatsby-plugin-google-gtag@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.3.0.tgz#78cee75ad8061003bce5a0740dd0bdd3619aaac4"
+  integrity sha512-cm8epDF9fWGULEnZwEsVbnSRUVi2JrOAgzR2PSt28ayKdIKjJzd1ssQb/V0ZqoaZq7dHMdjTq0g9wFuXwSX/Tw==
   dependencies:
     "@babel/runtime" "^7.12.5"
     minimatch "^3.0.4"
