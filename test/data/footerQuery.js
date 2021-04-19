@@ -17,31 +17,34 @@ export default {
       },
     },
   },
-  "signature": {
-    "childImageSharp": {
-      "gatsbyImageData": {
-        "layout": "constrained",
-        "placeholder": {
-          "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArElEQVQY043QWwtBQRDA8XFI7nJOrkWhpFBOuUUUj4pnD16UD+DF9/ffms0kxdSvc3a3md0ZkXck9NvEUL5HXf4MXyyLDdJm7aOGFebo6V7wq/AaLeT0pQNzlsESY72o8ZGb9B24wwoWuOKGCAV0tLCLGHcU9dIQJc0P9BHuTPo44IkHLtjqflsT8xhhhh3O6oiTjiC0rbjFHhN0MUXKtONn5QqXTVfuv2pmLi+w2Ap2m2NGhQAAAABJRU5ErkJggg=="
+  signature: {
+    childImageSharp: {
+      gatsbyImageData: {
+        layout: 'constrained',
+        placeholder: {
+          fallback:
+            'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArElEQVQY043QWwtBQRDA8XFI7nJOrkWhpFBOuUUUj4pnD16UD+DF9/ffms0kxdSvc3a3md0ZkXck9NvEUL5HXf4MXyyLDdJm7aOGFebo6V7wq/AaLeT0pQNzlsESY72o8ZGb9B24wwoWuOKGCAV0tLCLGHcU9dIQJc0P9BHuTPo44IkHLtjqflsT8xhhhh3O6oiTjiC0rbjFHhN0MUXKtONn5QqXTVfuv2pmLi+w2Ap2m2NGhQAAAABJRU5ErkJggg==',
         },
-        "images": {
-          "fallback": {
-            "src": "/static/5cef2cf45670eefe13cdb72f443d5290/47397/signature.png",
-            "srcSet": "/static/5cef2cf45670eefe13cdb72f443d5290/4143e/signature.png 50w,\n/static/5cef2cf45670eefe13cdb72f443d5290/9054a/signature.png 100w,\n/static/5cef2cf45670eefe13cdb72f443d5290/47397/signature.png 200w,\n/static/5cef2cf45670eefe13cdb72f443d5290/95bb8/signature.png 400w",
-            "sizes": "(min-width: 200px) 200px, 100vw"
+        images: {
+          fallback: {
+            src: '/static/5cef2cf45670eefe13cdb72f443d5290/47397/signature.png',
+            srcSet:
+              '/static/5cef2cf45670eefe13cdb72f443d5290/4143e/signature.png 50w,\n/static/5cef2cf45670eefe13cdb72f443d5290/9054a/signature.png 100w,\n/static/5cef2cf45670eefe13cdb72f443d5290/47397/signature.png 200w,\n/static/5cef2cf45670eefe13cdb72f443d5290/95bb8/signature.png 400w',
+            sizes: '(min-width: 200px) 200px, 100vw',
           },
-          "sources": [
+          sources: [
             {
-              "srcSet": "/static/5cef2cf45670eefe13cdb72f443d5290/afdce/signature.webp 50w,\n/static/5cef2cf45670eefe13cdb72f443d5290/e7df2/signature.webp 100w,\n/static/5cef2cf45670eefe13cdb72f443d5290/c0a75/signature.webp 200w,\n/static/5cef2cf45670eefe13cdb72f443d5290/81fe6/signature.webp 400w",
-              "type": "image/webp",
-              "sizes": "(min-width: 200px) 200px, 100vw"
-            }
-          ]
+              srcSet:
+                '/static/5cef2cf45670eefe13cdb72f443d5290/afdce/signature.webp 50w,\n/static/5cef2cf45670eefe13cdb72f443d5290/e7df2/signature.webp 100w,\n/static/5cef2cf45670eefe13cdb72f443d5290/c0a75/signature.webp 200w,\n/static/5cef2cf45670eefe13cdb72f443d5290/81fe6/signature.webp 400w',
+              type: 'image/webp',
+              sizes: '(min-width: 200px) 200px, 100vw',
+            },
+          ],
         },
-        "width": 200,
-        "height": 65
-      }
-    }
+        width: 200,
+        height: 65,
+      },
+    },
   },
   facebook: {
     childImageSharp: {

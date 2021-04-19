@@ -8,7 +8,7 @@ import pagesQuery from '../../../test/data/pagesQuery';
 
 describe('function for creating localized URLs of pages', () => {
   const data = {
-    site: { siteMetadata: { defaultLocale: 'fi', localePaths: { fi: '', 'en_GB': 'en' } } },
+    site: { siteMetadata: { defaultLocale: 'fi', localePaths: { fi: '', en_GB: 'en' } } },
     ...pagesQuery,
   };
   const baseURL = 'https://anttikivi.fi';
