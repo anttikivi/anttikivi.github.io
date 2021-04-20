@@ -9,7 +9,6 @@ import styled from 'styled-components';
 import { useIntl } from 'react-intl';
 
 import LocaleSwitcher from './LocaleSwitcher';
-import LocalizedLink from '../link/LocalizedLink';
 import SchemedImage from '../SchemedImage';
 
 import createInternationalization from '../../util/createInternationalization';
@@ -65,15 +64,6 @@ const SocialMediaImage = styled(SchemedImage)`
   margin: 1rem;
 `;
 
-// const GithubImage = styled(SocialMediaImage)`
-//   filter: brightness(0) saturate(100%) invert(24%) sepia(50%) saturate(252%) hue-rotate(166deg)
-//     brightness(93%) contrast(88%);
-
-//   @media screen and (prefers-color-scheme: dark) {
-//     filter: brightness(0) saturate(100%) invert(100%);
-//   }
-// `;
-
 const InstagramImage = styled(SocialMediaImage)`
   @media screen and (prefers-color-scheme: dark) {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(232deg) brightness(107%) contrast(102%);
@@ -91,26 +81,6 @@ const TwitterImage = styled(SocialMediaImage)`
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(232deg) brightness(107%) contrast(102%);
   }
 `;
-
-// const DataProtectionP = styled.p`
-//   margin: 2rem 0 0;
-// `;
-
-// const CookieSettings = styled.div`
-//   margin: 2rem 0 1rem;
-
-//   @media screen and (${(props) => props.theme.devices.tablet}) {
-//     margin: 0;
-//   }
-// `;
-
-// const TermsOfUseP = styled.p`
-//   margin: 2rem 0 1rem;
-
-//   @media screen and (${(props) => props.theme.devices.tablet}) {
-//     margin: 0;
-//   }
-// `;
 
 const propTypes = {
   locale: PropTypes.string.isRequired,
@@ -206,13 +176,6 @@ function Footer({ locale, pageID }) {
             dark={getImage(data.instagram)}
           />
         </a>
-        {/* <a href={socialMedia.facebook} rel="noopener noreferrer" target="_blank">
-          <SocialMediaImage
-            alt={intl('footerFacebookImageText')}
-            light={getImage(data.facebookColor)}
-            dark={getImage(data.facebook)}
-          />
-        </a> */}
         <a href={socialMedia.twitter} rel="noopener noreferrer" target="_blank">
           <TwitterImage
             alt={intl('footerTwitterImageText')}
@@ -227,32 +190,7 @@ function Footer({ locale, pageID }) {
             dark={getImage(data.linkedin)}
           />
         </a>
-        {/* <a href={socialMedia.github} rel="noopener noreferrer" target="_blank">
-          <GithubImage
-            alt={intl('footerGithubImageText')}
-            light={getImage(data.github)}
-            dark={getImage(data.github)}
-          />
-        </a> */}
       </SocialMediaDiv>
-      {/* <Div>
-        <DataProtectionP>
-          <LocalizedLink to="/data-protection" locale={locale}>
-            {intl('footerDataProtection')}
-          </LocalizedLink>
-        </DataProtectionP>
-        <CookieSettings>
-          <CookieNotice locale={locale} />
-        </CookieSettings>
-        <TermsOfUseP>
-          <LocalizedLink to="/terms-of-use" locale={locale}>
-            {intl('footerTermsOfUse')}
-          </LocalizedLink>
-        </TermsOfUseP>
-      </Div>
-      <Div>
-        <p dangerouslySetInnerHTML={{ __html: intl('footerOcticons') }} />
-      </Div> */}
       <Div>
         <p dangerouslySetInnerHTML={{ __html: intl('footerCopyright') }} />
       </Div>

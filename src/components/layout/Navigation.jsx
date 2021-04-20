@@ -1,7 +1,7 @@
 // Copyright (c) 2021 Antti Kivi
 // Licensed under the MIT License
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import styled, { css } from 'styled-components';
@@ -36,42 +36,34 @@ const ToggleBar = styled.div`
   z-index: 1;
   background: var(--color-text);
 
-  ${(props) => {
-    if (props.toggled) {
-      return 'opacity: 1;';
-    }
-  }}
-  ${(props) => {
-    if (props.toggled) {
-      return 'transform: translate(4px) translate(4px, -1px) rotate(45deg) translate(-2px, -1px);';
-    }
-  }}
+  ${(props) =>
+    props.toggled &&
+    css`
+      opacity: 1;
+      transform: translate(4px) translate(4px, -1px) rotate(45deg) translate(-2px, -1px);
+    `};
 
-    &:first-child {
+  &:first-child {
     transform-origin: 0% 0%;
   }
 
   &:nth-child(2) {
     transform-origin: 0% 100%;
 
-    ${(props) => {
-      if (props.toggled) {
-        return 'opacity: 0;';
-      }
-    }}
-    ${(props) => {
-      if (props.toggled) {
-        return 'transform: translate(4px) rotate(0deg) scale(0.2, 0.2);';
-      }
-    }}
+    ${(props) =>
+      props.toggled &&
+      css`
+        opacity: 0;
+        transform: translate(4px) rotate(0deg) scale(0.2, 0.2);
+      `};
   }
 
   &:last-child {
-    ${(props) => {
-      if (props.toggled) {
-        return 'transform: translate(4px) rotate(-45deg) translate(0, -1px);';
-      }
-    }}
+    ${(props) =>
+      props.toggled &&
+      css`
+        transform: translate(4px) rotate(-45deg) translate(0, -1px);
+      `};
   }
 `;
 
@@ -147,115 +139,84 @@ const Link = styled(LocalizedLink)`
   }
 `;
 
-const withMenuData = function withNavigationMenuQueryData(WrappedComponent) {
-  function WithMenuData(props) {
-    const data = useStaticQuery(
-      graphql`
-        query {
-          allContentfulMenu(filter: { contentful_id: { eq: "12OH6cgaTcp4TUDvpqslYc" } }) {
-            edges {
-              node {
-                node_locale
-                links {
-                  ... on ContentfulIndexPage {
-                    contentful_id
-                    title
-                    internal {
-                      type
-                    }
+const propTypes = { locale: PropTypes.string.isRequired };
+
+function Navigation({ locale }) {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allContentfulMenu(filter: { contentful_id: { eq: "12OH6cgaTcp4TUDvpqslYc" } }) {
+          edges {
+            node {
+              node_locale
+              links {
+                ... on ContentfulIndexPage {
+                  contentful_id
+                  title
+                  internal {
+                    type
                   }
-                  ... on ContentfulCurriculumVitaePage {
-                    contentful_id
-                    title
-                    internal {
-                      type
-                    }
+                }
+                ... on ContentfulCurriculumVitaePage {
+                  contentful_id
+                  title
+                  internal {
+                    type
                   }
                 }
               }
             }
           }
         }
-      `,
-    );
+      }
+    `,
+  );
 
-    return <WrappedComponent data={data} {...props} />;
-  }
+  const [toggled, setToggled] = useState(false);
 
-  const wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
-
-  WithMenuData.displayName = `withMenuData(${wrappedComponentName})`;
-
-  return WithMenuData;
-};
-
-const propTypes = { locale: PropTypes.string.isRequired };
-
-class NavigationProper extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { isToggled: false };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(event) {
-    event.preventDefault();
-    this.setState((state, props) => ({ isToggled: !state.isToggled }));
-  }
-
-  render() {
-    const { data, locale } = this.props;
-
-    return (
-      <Nav>
-        <Toggle
-          aria-controls="primary-menu"
-          aria-expanded={this.state.isToggled.toString()}
-          onClick={this.handleClick}
-        >
-          <ToggleBar toggled={this.state.isToggled} />
-          <ToggleBar toggled={this.state.isToggled} />
-          <ToggleBar toggled={this.state.isToggled} />
-        </Toggle>
-        <Ul id="primary-menu" toggled={this.state.isToggled}>
-          {data.allContentfulMenu.edges
-            .filter(({ node }) => node.node_locale === locale)[0]
-            .node.links.map((link) => {
-              switch (link.internal.type) {
-                case 'ContentfulCurriculumVitaePage': {
-                  return (
-                    <Li key={link.contentful_id}>
-                      <Link to={link.contentful_id} locale={locale}>
-                        {link.title}
-                      </Link>
-                    </Li>
-                  );
-                }
-                case 'ContentfulIndexPage': {
-                  return (
-                    <Li key={link.contentful_id}>
-                      <Link to={link.contentful_id} locale={locale}>
-                        {link.title}
-                      </Link>
-                    </Li>
-                  );
-                }
-                default: {
-                  return null;
-                }
+  return (
+    <Nav>
+      <Toggle
+        aria-controls="primary-menu"
+        aria-expanded={toggled.toString()}
+        onClick={() => setToggled(!toggled)}
+      >
+        <ToggleBar toggled={toggled} />
+        <ToggleBar toggled={toggled} />
+        <ToggleBar toggled={toggled} />
+      </Toggle>
+      <Ul id="primary-menu" toggled={toggled}>
+        {data.allContentfulMenu.edges
+          .filter(({ node }) => node.node_locale === locale)[0]
+          .node.links.map((link) => {
+            switch (link.internal.type) {
+              case 'ContentfulCurriculumVitaePage': {
+                return (
+                  <Li key={link.contentful_id}>
+                    <Link to={link.contentful_id} locale={locale}>
+                      {link.title}
+                    </Link>
+                  </Li>
+                );
               }
-            })}
-        </Ul>
-      </Nav>
-    );
-  }
+              case 'ContentfulIndexPage': {
+                return (
+                  <Li key={link.contentful_id}>
+                    <Link to={link.contentful_id} locale={locale}>
+                      {link.title}
+                    </Link>
+                  </Li>
+                );
+              }
+              default: {
+                return null;
+              }
+            }
+          })}
+      </Ul>
+    </Nav>
+  );
 }
-
-NavigationProper.propTypes = { data: PropTypes.object.isRequired, ...propTypes };
-
-const Navigation = withMenuData(NavigationProper);
 
 Navigation.propTypes = propTypes;
 

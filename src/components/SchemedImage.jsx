@@ -10,20 +10,20 @@ import ThemeContext from './ThemeContext';
 const propTypes = {
   alt: PropTypes.string,
   className: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
   dark: PropTypes.object.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   light: PropTypes.object.isRequired,
   objectFit: PropTypes.string,
-  style: PropTypes.object,
 };
 
 const defaultProps = {
   alt: '',
   className: null,
   objectFit: null,
-  style: null,
 };
 
-function SchemedImage({ alt, className, dark, light, objectFit, style }) {
+function SchemedImage({ alt, className, dark, light, objectFit }) {
   const { colorMode } = useContext(ThemeContext);
 
   if (colorMode === 'dark') {
@@ -35,44 +35,24 @@ function SchemedImage({ alt, className, dark, light, objectFit, style }) {
           alt=""
           role="presentation"
           objectFit={objectFit}
-          style={style}
-        />
-      );
-    } else {
-      return (
-        <GatsbyImage
-          className={className}
-          image={dark}
-          alt={alt}
-          objectFit={objectFit}
-          style={style}
         />
       );
     }
-  } else {
-    if (alt === '') {
-      return (
-        <GatsbyImage
-          className={className}
-          image={light}
-          alt=""
-          role="presentation"
-          objectFit={objectFit}
-          style={style}
-        />
-      );
-    } else {
-      return (
-        <GatsbyImage
-          className={className}
-          image={light}
-          alt={alt}
-          objectFit={objectFit}
-          style={style}
-        />
-      );
-    }
+    return <GatsbyImage className={className} image={dark} alt={alt} objectFit={objectFit} />;
   }
+
+  if (alt === '') {
+    return (
+      <GatsbyImage
+        className={className}
+        image={light}
+        alt=""
+        role="presentation"
+        objectFit={objectFit}
+      />
+    );
+  }
+  return <GatsbyImage className={className} image={light} alt={alt} objectFit={objectFit} />;
 }
 
 SchemedImage.propTypes = propTypes;

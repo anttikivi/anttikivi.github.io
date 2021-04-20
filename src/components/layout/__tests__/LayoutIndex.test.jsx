@@ -1,11 +1,11 @@
 // Copyright (c) 2021 Antti Kivi
 // Licensed under the MIT License
 
+import './matchMedia.mock';
+
 import React from 'react';
 import { screen } from '@testing-library/react';
 import { useStaticQuery } from 'gatsby';
-
-import '../../../../__mocks__/matchMedia';
 
 import LayoutIndex from '../LayoutIndex';
 

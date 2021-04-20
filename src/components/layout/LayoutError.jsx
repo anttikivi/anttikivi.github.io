@@ -35,16 +35,14 @@ const propTypes = {
   children: PropTypes.node.isRequired,
   description: PropTypes.string,
   errorCode: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   image: PropTypes.object,
   locale: PropTypes.string.isRequired,
   pageID: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 };
 
-const defaultProps = {
-  description: '',
-  image: null,
-};
+const defaultProps = { description: '', image: null };
 
 function LayoutError({ children, description, errorCode, image, locale, pageID, title }) {
   useColorScheme();

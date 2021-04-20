@@ -1,10 +1,9 @@
 // Copyright (c) 2021 Antti Kivi
 // Licensed under the MIT License
 
-import React from 'react';
-import { useContext } from 'react';
+import './matchMedia.mock';
 
-import '../../../__mocks__/matchMedia';
+import React, { useContext } from 'react';
 
 import ThemeContext from '../ThemeContext';
 

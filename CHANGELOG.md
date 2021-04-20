@@ -12,6 +12,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 - Unit tests for the components.
 - Unit tests for the utilities.
 
+### Changed
+
+- ESLint to lint JSX files in addition to JS files.
+
+### Fixed
+
+- Lint errors in JSX files.
+
 ## [0.11.4] - 2021-04-15
 
 ### Fixed

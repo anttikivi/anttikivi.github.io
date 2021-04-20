@@ -12,10 +12,11 @@ import createLocaleURL from '../../util/createLocaleURL';
 
 const propTypes = {
   article: PropTypes.bool,
-  author: PropTypes.object,
+  author: PropTypes.shape({ twitter: PropTypes.string }),
   description: PropTypes.string,
   errorPage: PropTypes.bool,
   home: PropTypes.bool,
+  // eslint-disable-next-line react/forbid-prop-types
   image: PropTypes.object,
   locale: PropTypes.string.isRequired,
   pageID: PropTypes.string.isRequired,
@@ -93,9 +94,18 @@ function Head({ article, author, description, errorPage, home, image, locale, pa
     : `${title} - ${siteMetadata.title}`;
   const pageDescription = description === '' ? intl('headDescription') : description;
 
+  // Use an anonymous function to resolve the lang attribute to make sure the value is valid.
+  const lang = () => {
+    if (locale === 'en-GB') {
+      return 'en';
+    }
+
+    return 'fi';
+  };
+
   return (
     <Helmet titleTemplate={titleTemplate}>
-      <html lang={`${siteMetadata.simpleLocales[locale.replace('-', '_')]}`} />
+      <html lang={lang} />
       <title>{title}</title>
 
       <meta name="description" content={pageDescription} />
@@ -109,9 +119,12 @@ function Head({ article, author, description, errorPage, home, image, locale, pa
         content={(() => {
           if (article) {
             return 'article';
-          } else if (author) {
+          }
+
+          if (author) {
             return 'profile';
           }
+
           return 'website';
         })()}
       />
@@ -130,14 +143,14 @@ function Head({ article, author, description, errorPage, home, image, locale, pa
               ? '404'
               : `${siteMetadata.localePaths[locale.replace('-', '_')]}/404`;
           return <meta property="og:url" content={`${baseURL}/${pagePath}`} />;
-        } else {
-          return (
-            <meta
-              property="og:url"
-              content={createLocaleURL(baseURL, pageID, locale, data).replace('//', '/')}
-            />
-          );
         }
+
+        return (
+          <meta
+            property="og:url"
+            content={createLocaleURL(baseURL, pageID, locale, data).replace('//', '/')}
+          />
+        );
       })()}
       <meta property="og:locale" content={locale === 'fi' ? 'fi_FI' : locale.replace('-', '_')} />
 
@@ -174,16 +187,16 @@ function Head({ article, author, description, errorPage, home, image, locale, pa
               key={listLocale}
             />
           ));
-        } else {
-          return siteMetadata.locales.map((listLocale) => (
-            <link
-              rel="alternate"
-              href={createLocaleURL(baseURL, pageID, listLocale, data).replace('//', '/')}
-              hrefLang={siteMetadata.simpleLocales[listLocale.replace('-', '_')]}
-              key={listLocale}
-            />
-          ));
         }
+
+        return siteMetadata.locales.map((listLocale) => (
+          <link
+            rel="alternate"
+            href={createLocaleURL(baseURL, pageID, listLocale, data).replace('//', '/')}
+            hrefLang={siteMetadata.simpleLocales[listLocale.replace('-', '_')]}
+            key={listLocale}
+          />
+        ));
       })()}
     </Helmet>
   );

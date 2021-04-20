@@ -60,99 +60,93 @@ const Sections = styled.div`
 const Column = styled.div``;
 
 const propTypes = {
-  children: PropTypes.node,
+  // eslint-disable-next-line react/forbid-prop-types
   data: PropTypes.object.isRequired,
-  location: PropTypes.object.isRequired,
-  navigate: PropTypes.func.isRequired,
-  pageContext: PropTypes.object.isRequired,
-  pageResources: PropTypes.object.isRequired,
-  params: PropTypes.object.isRequired,
-  path: PropTypes.string.isRequired,
-  uri: PropTypes.string.isRequired,
+  pageContext: PropTypes.shape({
+    locale: PropTypes.string.isRequired,
+    pageID: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
-const defaultProps = { children: undefined };
-
-function Page({ data, pageContext }) {
+function CurriculumVitae({ data, pageContext }) {
   const { contentfulCurriculumVitaePage: page } = data;
+  const { simpleLocales } = data.site.siteMetadata;
   const { locale, pageID } = pageContext;
 
   return (
-    <Layout locale={locale} pageID={pageID} title={page.title}>
-      <Div>
-        <Section>
-          <h2>{page.personName}</h2>
-          <ImageDiv>
-            <Image alt={page.profileImage.description} image={getImage(page.profileImage)} />
-          </ImageDiv>
-          <h3>{page.summaryTitle}</h3>
-          <div dangerouslySetInnerHTML={{ __html: page.summaryBody.childMarkdownRemark.html }} />
-        </Section>
-      </Div>
-      <Sections>
-        <Column>
-          <h2 dangerouslySetInnerHTML={{ __html: page.workExperienceTitle }} />
-          <div
-            dangerouslySetInnerHTML={{ __html: page.workExperienceBody.childMarkdownRemark.html }}
-          />
-          <h3 dangerouslySetInnerHTML={{ __html: page.otherWorkExperienceTitle }} />
-          <HiddenSection>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: page.otherWorkExperienceBody.childMarkdownRemark.html,
-              }}
-            />
-          </HiddenSection>
-          <h2 dangerouslySetInnerHTML={{ __html: page.positionsOfTrustTitle }} />
-          <div
-            dangerouslySetInnerHTML={{ __html: page.positionsOfTrustBody.childMarkdownRemark.html }}
-          />
-          <h3 dangerouslySetInnerHTML={{ __html: page.otherPositionsOfTrustTitle }} />
-          <HiddenSection>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: page.otherPositionsOfTrustBody.childMarkdownRemark.html,
-              }}
-            />
-          </HiddenSection>
-        </Column>
-        <Column>
-          <h2 dangerouslySetInnerHTML={{ __html: page.educationTitle }} />
-          <div dangerouslySetInnerHTML={{ __html: page.educationBody.childMarkdownRemark.html }} />
-          <HiddenSection hideLabel="cvGradesHide" showLabel="cvGradesShow">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: page.matriculationExaminationGrades.childMarkdownRemark.html,
-              }}
-            />
-          </HiddenSection>
-          <h2 dangerouslySetInnerHTML={{ __html: page.languagesTitle }} />
-          <div dangerouslySetInnerHTML={{ __html: page.languagesBody.childMarkdownRemark.html }} />
-          <h2 dangerouslySetInnerHTML={{ __html: page.skillsTitle }} />
-          <div dangerouslySetInnerHTML={{ __html: page.skillsBody.childMarkdownRemark.html }} />
-        </Column>
-      </Sections>
-    </Layout>
-  );
-}
-
-Page.propTypes = propTypes;
-Page.defaultProps = defaultProps;
-
-function CurriculumVitae(props) {
-  const { simpleLocales } = props.data.site.siteMetadata;
-  const { locale } = props.pageContext;
-  return (
     <Intl locale={simpleLocales[locale.replace('-', '_')]}>
       <Theme>
-        <Page {...props} />
+        <Layout locale={locale} pageID={pageID} title={page.title}>
+          <Div>
+            <Section>
+              <h2>{page.personName}</h2>
+              <ImageDiv>
+                <Image alt={page.profileImage.description} image={getImage(page.profileImage)} />
+              </ImageDiv>
+              <h3>{page.summaryTitle}</h3>
+              <div
+                dangerouslySetInnerHTML={{ __html: page.summaryBody.childMarkdownRemark.html }}
+              />
+            </Section>
+          </Div>
+          <Sections>
+            <Column>
+              <h2 dangerouslySetInnerHTML={{ __html: page.workExperienceTitle }} />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: page.workExperienceBody.childMarkdownRemark.html,
+                }}
+              />
+              <h3 dangerouslySetInnerHTML={{ __html: page.otherWorkExperienceTitle }} />
+              <HiddenSection>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: page.otherWorkExperienceBody.childMarkdownRemark.html,
+                  }}
+                />
+              </HiddenSection>
+              <h2 dangerouslySetInnerHTML={{ __html: page.positionsOfTrustTitle }} />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: page.positionsOfTrustBody.childMarkdownRemark.html,
+                }}
+              />
+              <h3 dangerouslySetInnerHTML={{ __html: page.otherPositionsOfTrustTitle }} />
+              <HiddenSection>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: page.otherPositionsOfTrustBody.childMarkdownRemark.html,
+                  }}
+                />
+              </HiddenSection>
+            </Column>
+            <Column>
+              <h2 dangerouslySetInnerHTML={{ __html: page.educationTitle }} />
+              <div
+                dangerouslySetInnerHTML={{ __html: page.educationBody.childMarkdownRemark.html }}
+              />
+              <HiddenSection hideLabel="cvGradesHide" showLabel="cvGradesShow">
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: page.matriculationExaminationGrades.childMarkdownRemark.html,
+                  }}
+                />
+              </HiddenSection>
+              <h2 dangerouslySetInnerHTML={{ __html: page.languagesTitle }} />
+              <div
+                dangerouslySetInnerHTML={{ __html: page.languagesBody.childMarkdownRemark.html }}
+              />
+              <h2 dangerouslySetInnerHTML={{ __html: page.skillsTitle }} />
+              <div dangerouslySetInnerHTML={{ __html: page.skillsBody.childMarkdownRemark.html }} />
+            </Column>
+          </Sections>
+        </Layout>
       </Theme>
     </Intl>
   );
 }
 
 CurriculumVitae.propTypes = propTypes;
-CurriculumVitae.defaultProps = defaultProps;
 
 export default CurriculumVitae;
 

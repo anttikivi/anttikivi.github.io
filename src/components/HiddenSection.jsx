@@ -1,9 +1,9 @@
 // Copyright (c) 2021 Antti Kivi
 // Licensed under the MIT License
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 
 import Button from './Button';
 
@@ -20,42 +20,23 @@ const defaultProps = {
   showLabel: 'hiddenSectionShow',
 };
 
-class HiddenSectionProper extends React.Component {
-  constructor(props) {
-    super(props);
+function HiddenSection({ children, hideLabel, showLabel }) {
+  const intl = createInternationalization(useIntl());
 
-    this.state = { isHidden: true };
+  const [hidden, setHidden] = useState(true);
 
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState((state, props) => ({ isHidden: !state.isHidden }));
-  }
-
-  render() {
-    const intl = createInternationalization(this.props.intl);
-    const { children, hideLabel, showLabel } = this.props;
-    const { isHidden } = this.state;
-
-    return (
-      <>
-        <Button onClick={this.handleClick} smaller>
-          {isHidden ? intl(showLabel) : intl(hideLabel)}
-        </Button>
-        <div hidden={isHidden}>
-          {children}
-          <hr />
-        </div>
-      </>
-    );
-  }
+  return (
+    <>
+      <Button onClick={() => setHidden(!hidden)} smaller>
+        {hidden ? intl(showLabel) : intl(hideLabel)}
+      </Button>
+      <div hidden={hidden}>
+        {children}
+        <hr />
+      </div>
+    </>
+  );
 }
-
-HiddenSectionProper.propTypes = { intl: PropTypes.any.isRequired, ...propTypes };
-HiddenSectionProper.defaultProps = defaultProps;
-
-const HiddenSection = injectIntl(HiddenSectionProper);
 
 HiddenSection.propTypes = propTypes;
 HiddenSection.defaultProps = defaultProps;

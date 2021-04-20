@@ -4,18 +4,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import { getImage, withArtDirection } from 'gatsby-plugin-image';
 import styled from 'styled-components';
-import { ChevronRightIcon } from '@primer/octicons-react';
 import { useIntl } from 'react-intl';
 
 import LocalizedLink from '../link/LocalizedLink';
 import Navigation from './Navigation';
-// import SchemedImage from '../SchemedImage';
 
 import createInternationalization from '../../util/createInternationalization';
-
-import theme from '../../theme';
 
 const HeaderElement = styled.header`
   margin: 2em 0;
@@ -72,115 +67,11 @@ const SiteBranding = styled.div`
   }
 `;
 
-// const Image = styled(SchemedImage)`
-//   @media screen and (${(props) => props.theme.devices.tablet}) {
-//     width: 300px;
-//     height: auto;
-//   }
-// `;
+const propTypes = { home: PropTypes.bool, locale: PropTypes.string.isRequired };
 
-const Breadcrumb = styled.div`
-  margin: 2rem 0;
-  text-align: center;
-`;
+const defaultProps = { home: false };
 
-const ChevronIcon = styled(ChevronRightIcon)`
-  margin: 0 0 0.1rem;
-`;
-
-const createPath = function createPathEntryForNode(pathNode) {
-  if (pathNode.parentPath) {
-    return concat(createPath(pathNode.parentPath)).concat([pathNode]);
-  }
-
-  return [pathNode];
-};
-
-const createBreadcrumbPath = function createBreadcrumbNodesPath(node, parentPath) {
-  let pagePath = [node];
-
-  if (parentPath) {
-    if (node.parentPath) {
-      pagePath = createPath(parentPath).concat(createPath(node.parentPath)).concat(pagePath);
-    } else {
-      pagePath = createPath(parentPath).concat(pagePath);
-    }
-  } else if (node.parentPath) {
-    pagePath = createPath(node.parentPath).concat(pagePath);
-  }
-
-  return pagePath;
-};
-
-const createBreadcrumb = function createBreadcrumbFromQueryData(data, errorPage, locale, pageID) {
-  if (!errorPage) {
-    const node = data.allContentfulEntry.edges.filter(
-      ({ node }) => node.contentful_id === pageID && node.node_locale === locale,
-    )[0].node;
-
-    switch (node.internal.type) {
-      case 'ContentfulAuthor': {
-        const authorNode = data.allContentfulAuthor.edges.filter(
-          ({ node }) => node.contentful_id === pageID && node.node_locale === locale,
-        )[0].node;
-        const authorPath = data.authorPaths.edges.filter(
-          ({ node }) => node.node_locale === locale,
-        )[0].node;
-
-        return [authorPath, authorNode];
-      }
-      case 'ContentfulBlogPost': {
-        const blogPostNode = data.allContentfulBlogPost.edges.filter(
-          ({ node }) => node.contentful_id === pageID && node.node_locale === locale,
-        )[0].node;
-        const blogPath = data.blogPaths.edges.filter(({ node }) => node.node_locale === locale)[0]
-          .node;
-
-        return [blogPath, blogPostNode];
-      }
-      case 'ContentfulCategory': {
-        const categoryNode = data.allContentfulCategory.edges.filter(
-          ({ node }) => node.contentful_id === pageID && node.node_locale === locale,
-        )[0].node;
-        const categoryPath = data.categoryPaths.edges.filter(
-          ({ node }) => node.node_locale === locale,
-        )[0].node;
-        const parentPath = categoryPath.parentPath;
-
-        return [parentPath, categoryPath, categoryNode];
-      }
-      case 'ContentfulPage': {
-        const pageNode = data.allContentfulPage.edges.filter(
-          ({ node }) => node.contentful_id === pageID && node.node_locale === locale,
-        )[0].node;
-        return createBreadcrumbPath(pageNode);
-      }
-      case 'ContentfulIndexPage': {
-        return null;
-      }
-      case 'ContentfulPath': {
-        const pathNode = data.allContentfulPath.edges.filter(
-          ({ node }) => node.contentful_id === pageID && node.node_locale === locale,
-        )[0].node;
-        return createBreadcrumbPath(pathNode);
-      }
-      default:
-        return null;
-    }
-  }
-  return null;
-};
-
-const propTypes = {
-  errorPage: PropTypes.bool,
-  home: PropTypes.bool,
-  locale: PropTypes.string.isRequired,
-  pageID: PropTypes.string.isRequired,
-};
-
-const defaultProps = { errorPage: false, home: false };
-
-function Header({ errorPage, home, locale, pageID }) {
+function Header({ home, locale }) {
   const intl = createInternationalization(useIntl());
 
   const data = useStaticQuery(
@@ -188,23 +79,7 @@ function Header({ errorPage, home, locale, pageID }) {
       query {
         site {
           siteMetadata {
-            defaultLocale
             title
-            localePaths {
-              en_GB
-              fi
-            }
-          }
-        }
-        allContentfulEntry {
-          edges {
-            node {
-              contentful_id
-              node_locale
-              internal {
-                type
-              }
-            }
           }
         }
       }
@@ -212,8 +87,6 @@ function Header({ errorPage, home, locale, pageID }) {
   );
 
   const { site } = data;
-
-  const breadcrumb = createBreadcrumb(data, errorPage, locale, pageID);
 
   return (
     <HeaderElement>
@@ -230,30 +103,6 @@ function Header({ errorPage, home, locale, pageID }) {
         <p>{intl('headerByline')}</p>
       </SiteBranding>
       <Navigation locale={locale} />
-      <Breadcrumb>
-        {(() => {
-          if (breadcrumb && breadcrumb.length > 1) {
-            return breadcrumb.map((entry, index) => {
-              const title = entry.name ? entry.name : entry.title;
-              if (index === 0) {
-                return (
-                  <LocalizedLink to={entry.contentful_id} locale={locale}>
-                    {title}
-                  </LocalizedLink>
-                );
-              }
-              return (
-                <>
-                  <ChevronIcon />
-                  <LocalizedLink to={entry.contentful_id} locale={locale}>
-                    {title}
-                  </LocalizedLink>
-                </>
-              );
-            });
-          }
-        })()}
-      </Breadcrumb>
     </HeaderElement>
   );
 }
