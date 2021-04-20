@@ -16,8 +16,8 @@ describe('Schemed image component', () => {
     const { container, getByAltText } = renderWithProviders(
       <SchemedImage
         alt="Test"
-        light={getImage((schemedImageQuery.assetLight as ImageData))!}
-        dark={getImage((schemedImageQuery.assetDark as ImageData))!}
+        light={getImage(schemedImageQuery.assetLight as ImageData)!}
+        dark={getImage(schemedImageQuery.assetDark as ImageData)!}
       />,
       'fi',
     );
@@ -30,8 +30,8 @@ describe('Schemed image component', () => {
   it('renders presentation images correctly', () => {
     const { container, getByRole } = renderWithProviders(
       <SchemedImage
-        light={getImage((schemedImageQuery.assetLight as ImageData))!}
-        dark={getImage((schemedImageQuery.assetDark as ImageData))!}
+        light={getImage(schemedImageQuery.assetLight as ImageData)!}
+        dark={getImage(schemedImageQuery.assetDark as ImageData)!}
       />,
       'fi',
     );
