@@ -32,13 +32,13 @@ exports[`Layout component renders correctly 1`] = `
         class="sc-egiSv jLuuRS"
       >
         <div
-          class="sc-bqiQRQ grDTlz"
+          class="sc-bqiQRQ fVUflD"
         />
         <div
-          class="sc-bqiQRQ grDTlz"
+          class="sc-bqiQRQ fVUflD"
         />
         <div
-          class="sc-bqiQRQ grDTlz"
+          class="sc-bqiQRQ fVUflD"
         />
       </div>
       <ul
@@ -67,15 +67,12 @@ exports[`Layout component renders correctly 1`] = `
         </li>
       </ul>
     </nav>
-    <div
-      class="sc-dlVyqM cakLfj"
-    />
   </header>
   <main>
     <article>
       <header>
         <h1
-          class="sc-fKVsgm gppFPb"
+          class="sc-dlVyqM jguQlG"
         >
           Curriculum Vitae
         </h1>

@@ -32,13 +32,13 @@ exports[`Error layout component renders correctly 1`] = `
         class="sc-egiSv jLuuRS"
       >
         <div
-          class="sc-bqiQRQ grDTlz"
+          class="sc-bqiQRQ fVUflD"
         />
         <div
-          class="sc-bqiQRQ grDTlz"
+          class="sc-bqiQRQ fVUflD"
         />
         <div
-          class="sc-bqiQRQ grDTlz"
+          class="sc-bqiQRQ fVUflD"
         />
       </div>
       <ul
@@ -67,20 +67,17 @@ exports[`Error layout component renders correctly 1`] = `
         </li>
       </ul>
     </nav>
-    <div
-      class="sc-dlVyqM cakLfj"
-    />
   </header>
   <main>
     <section>
       <header>
         <h1
-          class="sc-fKVsgm llVveQ"
+          class="sc-dlVyqM eOeKit"
         >
           404
         </h1>
         <h2
-          class="sc-bBHwJV gxMFCW"
+          class="sc-kfPtPH jGHULE"
         >
           Ei löydy
         </h2>

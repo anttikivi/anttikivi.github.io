@@ -31,13 +31,13 @@ exports[`Header component renders index page header correctly 1`] = `
         class="sc-gsDJrp ZGrYg"
       >
         <div
-          class="sc-dkPtyc ftSqoe"
+          class="sc-dkPtyc bvXWki"
         />
         <div
-          class="sc-dkPtyc ftSqoe"
+          class="sc-dkPtyc bvXWki"
         />
         <div
-          class="sc-dkPtyc ftSqoe"
+          class="sc-dkPtyc bvXWki"
         />
       </div>
       <ul
@@ -66,9 +66,6 @@ exports[`Header component renders index page header correctly 1`] = `
         </li>
       </ul>
     </nav>
-    <div
-      class="sc-kDThTU eNKZKu"
-    />
   </header>
   ,
 </div>
@@ -106,13 +103,13 @@ exports[`Header component renders page header correctly 1`] = `
         class="sc-gsDJrp ZGrYg"
       >
         <div
-          class="sc-dkPtyc ftSqoe"
+          class="sc-dkPtyc bvXWki"
         />
         <div
-          class="sc-dkPtyc ftSqoe"
+          class="sc-dkPtyc bvXWki"
         />
         <div
-          class="sc-dkPtyc ftSqoe"
+          class="sc-dkPtyc bvXWki"
         />
       </div>
       <ul
@@ -141,9 +138,6 @@ exports[`Header component renders page header correctly 1`] = `
         </li>
       </ul>
     </nav>
-    <div
-      class="sc-kDThTU eNKZKu"
-    />
   </header>
   ,
 </div>

@@ -11,13 +11,13 @@ exports[`Navigation component renders English correctly 1`] = `
       class="sc-gsDJrp ZGrYg"
     >
       <div
-        class="sc-dkPtyc ftSqoe"
+        class="sc-dkPtyc bvXWki"
       />
       <div
-        class="sc-dkPtyc ftSqoe"
+        class="sc-dkPtyc bvXWki"
       />
       <div
-        class="sc-dkPtyc ftSqoe"
+        class="sc-dkPtyc bvXWki"
       />
     </div>
     <ul
@@ -61,13 +61,13 @@ exports[`Navigation component renders Finnish correctly 1`] = `
       class="sc-gsDJrp ZGrYg"
     >
       <div
-        class="sc-dkPtyc ftSqoe"
+        class="sc-dkPtyc bvXWki"
       />
       <div
-        class="sc-dkPtyc ftSqoe"
+        class="sc-dkPtyc bvXWki"
       />
       <div
-        class="sc-dkPtyc ftSqoe"
+        class="sc-dkPtyc bvXWki"
       />
     </div>
     <ul
