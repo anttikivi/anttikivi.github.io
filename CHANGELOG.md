@@ -21,6 +21,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Lint errors in JSX files.
 
+## [0.11.6] - 2021-04-20
+
+### Fixed
+
+- Position of the last name in the signature image.
+
 ## [0.11.5] - 2021-04-20
 
 ### Changed
@@ -413,7 +419,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.5...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.6...HEAD
+[0.11.6]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.5...v0.11.6
 [0.11.5]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.4...v0.11.5
 [0.11.4]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.3...v0.11.4
 [0.11.3]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.2...v0.11.3
