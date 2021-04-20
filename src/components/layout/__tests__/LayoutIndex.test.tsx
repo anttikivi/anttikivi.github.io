@@ -7,25 +7,25 @@ import React from 'react';
 import { screen } from '@testing-library/react';
 import { useStaticQuery } from 'gatsby';
 
-import LayoutError from '../LayoutError';
+import LayoutIndex from '../LayoutIndex';
 
 import layoutQuery from '../../../../test/data/layoutQuery';
 import renderWithProviders from '../../../../test/renderWithProviders';
 
-describe('Error layout component', () => {
-  beforeAll(() => useStaticQuery.mockReturnValue(layoutQuery));
+describe('Index layout component', () => {
+  beforeAll(() => (useStaticQuery as jest.Mock).mockReturnValue(layoutQuery));
 
   it('renders correctly', () => {
     const { container } = renderWithProviders(
-      <LayoutError errorCode="404" locale="fi" pageID="404" title="Ei löydy">
-        <p>Tätä sivua ei ole olemassa</p>
-      </LayoutError>,
+      <LayoutIndex locale="fi" pageID="6JksITICuGCEYUIVHlWl5U" title="Etusivu">
+        <p>Test content</p>
+      </LayoutIndex>,
       'fi',
     );
 
     expect(container).toMatchSnapshot();
 
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('404');
-    expect(screen.getAllByRole('heading')[1]).toHaveTextContent('404');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Antti Kivi');
+    expect(screen.getAllByRole('heading')[0]).toHaveTextContent('Antti Kivi');
   });
 });

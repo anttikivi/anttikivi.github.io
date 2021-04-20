@@ -6,6 +6,8 @@ import { getImage } from 'gatsby-plugin-image';
 
 import SchemedImage from '../SchemedImage';
 
+import ImageData from '../../ImageData';
+
 import renderWithProviders from '../../../test/renderWithProviders';
 import schemedImageQuery from '../../../test/data/schemedImageQuery';
 
@@ -14,8 +16,8 @@ describe('Schemed image component', () => {
     const { container, getByAltText } = renderWithProviders(
       <SchemedImage
         alt="Test"
-        light={getImage(schemedImageQuery.assetLight)}
-        dark={getImage(schemedImageQuery.assetDark)}
+        light={getImage((schemedImageQuery.assetLight as ImageData))!}
+        dark={getImage((schemedImageQuery.assetDark as ImageData))!}
       />,
       'fi',
     );
@@ -28,8 +30,8 @@ describe('Schemed image component', () => {
   it('renders presentation images correctly', () => {
     const { container, getByRole } = renderWithProviders(
       <SchemedImage
-        light={getImage(schemedImageQuery.assetLight)}
-        dark={getImage(schemedImageQuery.assetDark)}
+        light={getImage((schemedImageQuery.assetLight as ImageData))!}
+        dark={getImage((schemedImageQuery.assetDark as ImageData))!}
       />,
       'fi',
     );

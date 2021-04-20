@@ -15,7 +15,7 @@ import renderWithProviders from '../../../test/renderWithProviders';
 describe('Error layout component', () => {
   const pageContext = { locale: 'fi', pageID: '404' };
 
-  beforeAll(() => useStaticQuery.mockReturnValue(layoutQuery));
+  beforeAll(() => (useStaticQuery as jest.Mock).mockReturnValue(layoutQuery));
 
   it('renders correctly', () => {
     const { container } = renderWithProviders(<NotFoundPage pageContext={pageContext} />, 'fi');

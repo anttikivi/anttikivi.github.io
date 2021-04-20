@@ -11,13 +11,10 @@ import headerQuery from '../../../../test/data/headerQuery';
 import renderWithProviders from '../../../../test/renderWithProviders';
 
 describe('Header component', () => {
-  beforeAll(() => useStaticQuery.mockReturnValue(headerQuery));
+  beforeAll(() => (useStaticQuery as jest.Mock).mockReturnValue(headerQuery));
 
   it('renders index page header correctly', () => {
-    const { container } = renderWithProviders(
-      <Header home locale="fi" pageID="6JksITICuGCEYUIVHlWl5U" />,
-      'fi',
-    );
+    const { container } = renderWithProviders(<Header home locale="fi" />, 'fi');
 
     expect(container).toMatchSnapshot();
 
@@ -25,10 +22,7 @@ describe('Header component', () => {
   });
 
   it('renders page header correctly', () => {
-    const { container } = renderWithProviders(
-      <Header locale="fi" pageID="12OH6cgaTcp4TUDvpqslYc" />,
-      'fi',
-    );
+    const { container } = renderWithProviders(<Header locale="fi" />, 'fi');
 
     expect(container).toMatchSnapshot();
 

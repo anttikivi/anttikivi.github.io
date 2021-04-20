@@ -10,7 +10,7 @@ import navigationQuery from '../../../../test/data/navigationQuery';
 import renderWithProviders from '../../../../test/renderWithProviders';
 
 describe('Navigation component', () => {
-  beforeAll(() => useStaticQuery.mockReturnValue(navigationQuery));
+  beforeAll(() => (useStaticQuery as jest.Mock).mockReturnValue(navigationQuery));
 
   it('renders Finnish correctly', () => {
     const { container, getByText } = renderWithProviders(<Navigation locale="fi" />, 'fi');

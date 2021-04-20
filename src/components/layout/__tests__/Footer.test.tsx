@@ -10,7 +10,7 @@ import footerQuery from '../../../../test/data/footerQuery';
 import renderWithProviders from '../../../../test/renderWithProviders';
 
 describe('Header component', () => {
-  beforeAll(() => useStaticQuery.mockReturnValue(footerQuery));
+  beforeAll(() => (useStaticQuery as jest.Mock).mockReturnValue(footerQuery));
 
   it('renders correctly', () => {
     const { container, getByAltText, getByText } = renderWithProviders(

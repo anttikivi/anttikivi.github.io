@@ -11,7 +11,7 @@ import headQuery from '../../../../test/data/headQuery';
 import renderWithProviders from '../../../../test/renderWithProviders';
 
 describe('Head component', () => {
-  beforeAll(() => useStaticQuery.mockReturnValue(headQuery));
+  beforeAll(() => (useStaticQuery as jest.Mock).mockReturnValue(headQuery));
 
   it('renders the tests correctly for Finnish index page', () => {
     const mockTitle = 'Antti Kivi - Helsinkiläinen yrittäjä';

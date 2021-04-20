@@ -10,7 +10,7 @@ import Intl from '../Intl';
 import intlQuery from '../../../test/data/intlQuery';
 
 describe('Intl component', () => {
-  beforeAll(() => useStaticQuery.mockReturnValue(intlQuery));
+  beforeAll(() => (useStaticQuery as jest.Mock).mockReturnValue(intlQuery));
 
   it('renders correctly', () => {
     const { container, getByText } = render(<Intl locale="fi">Content</Intl>);

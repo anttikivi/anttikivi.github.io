@@ -10,7 +10,7 @@ import localizedLinkQuery from '../../../../test/data/localizedLinkQuery';
 import renderWithProviders from '../../../../test/renderWithProviders';
 
 describe('Locale link component', () => {
-  beforeAll(() => useStaticQuery.mockReturnValue(localizedLinkQuery));
+  beforeAll(() => (useStaticQuery as jest.Mock).mockReturnValue(localizedLinkQuery));
 
   it('renders Finnish correctly', () => {
     const { container, getByText } = renderWithProviders(
