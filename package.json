@@ -5,7 +5,7 @@
   "description": "Antti Kivi's website",
   "scripts": {
     "build": "gatsby build",
-    "check-all": "npm-run-all type-check format --parallel lint:js lint:css",
+    "check-all": "npm-run-all format --parallel lint:js lint:css type-check",
     "ci-check": "npm-run-all nit --parallel lint:js lint:css",
     "dev": "gatsby develop",
     "format": "prettier --config .prettierrc.json --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
