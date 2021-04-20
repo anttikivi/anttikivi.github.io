@@ -12,29 +12,30 @@ import Header from './Header';
 
 import useColorScheme from '../../util/useColorScheme';
 
-const ErrorCode = styled.h1`
+const PageTitle = styled.h1`
+  margin: 1em 0.5rem 2em;
   font-size: 3rem;
-  font-family: ${(props) => props.theme.fonts.code};
   text-align: center;
+  word-break: break-all;
+  word-break: break-word;
+  hyphens: auto;
 
   @media screen and (${(props) => props.theme.devices.mobileL}) {
-    font-size: 4em;
+    margin: 1em 0.5rem;
+    font-size: 4rem;
   }
 
   @media screen and (${(props) => props.theme.devices.tablet}) {
-    font-size: 5em;
+    margin: 1em ${(props) => props.theme.layout.marginTablet};
+    font-size: 4rem;
   }
 `;
 
-const PageTitle = styled.h2`
-  font-size: 2rem;
-  text-align: center;
-`;
-
 const propTypes = {
+  article: PropTypes.bool,
+  author: PropTypes.shape({ twitter: PropTypes.string }),
   children: PropTypes.node.isRequired,
   description: PropTypes.string,
-  errorCode: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   image: PropTypes.object,
   locale: PropTypes.string.isRequired,
@@ -42,38 +43,43 @@ const propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-const defaultProps = { description: '', image: null };
+const defaultProps = {
+  article: false,
+  author: null,
+  description: '',
+  image: null,
+};
 
-function LayoutError({ children, description, errorCode, image, locale, pageID, title }) {
+function Layout({ article, author, children, description, image, locale, pageID, title }) {
   useColorScheme();
 
   return (
     <>
       <GlobalStyle />
       <Head
-        errorPage
+        article={article}
+        author={author}
         description={description}
         image={image}
         locale={locale}
         pageID={pageID}
         title={title}
       />
-      <Header errorPage locale={locale} pageID={pageID} />
+      <Header locale={locale} />
       <main>
-        <section>
+        <article>
           <header>
-            <ErrorCode>{errorCode}</ErrorCode>
             <PageTitle>{title}</PageTitle>
           </header>
-          <div>{children}</div>
-        </section>
+          {children}
+        </article>
       </main>
       <Footer locale={locale} pageID={pageID} />
     </>
   );
 }
 
-LayoutError.propTypes = propTypes;
-LayoutError.defaultProps = defaultProps;
+Layout.propTypes = propTypes;
+Layout.defaultProps = defaultProps;
 
-export default LayoutError;
+export default Layout;

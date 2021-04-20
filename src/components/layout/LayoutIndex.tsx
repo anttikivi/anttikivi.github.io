@@ -12,28 +12,11 @@ import Header from './Header';
 
 import useColorScheme from '../../util/useColorScheme';
 
-const PageTitle = styled.h1`
-  margin: 1em 0.5rem 2em;
-  font-size: 3rem;
-  text-align: center;
-  word-break: break-all;
-  word-break: break-word;
-  hyphens: auto;
-
-  @media screen and (${(props) => props.theme.devices.mobileL}) {
-    margin: 1em 0.5rem;
-    font-size: 4rem;
-  }
-
-  @media screen and (${(props) => props.theme.devices.tablet}) {
-    margin: 1em ${(props) => props.theme.layout.marginTablet};
-    font-size: 4rem;
-  }
+const PageTitle = styled.h2`
+  display: none;
 `;
 
 const propTypes = {
-  article: PropTypes.bool,
-  author: PropTypes.shape({ twitter: PropTypes.string }),
   children: PropTypes.node.isRequired,
   description: PropTypes.string,
   // eslint-disable-next-line react/forbid-prop-types
@@ -43,43 +26,37 @@ const propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-const defaultProps = {
-  article: false,
-  author: null,
-  description: '',
-  image: null,
-};
+const defaultProps = { description: '', image: null };
 
-function Layout({ article, author, children, description, image, locale, pageID, title }) {
+function LayoutIndex({ children, description, image, locale, pageID, title }) {
   useColorScheme();
 
   return (
     <>
       <GlobalStyle />
       <Head
-        article={article}
-        author={author}
+        home
         description={description}
         image={image}
         locale={locale}
         pageID={pageID}
         title={title}
       />
-      <Header locale={locale} pageID={pageID} />
+      <Header home locale={locale} />
       <main>
-        <article>
+        <section>
           <header>
             <PageTitle>{title}</PageTitle>
           </header>
-          {children}
-        </article>
+          <div>{children}</div>
+        </section>
       </main>
       <Footer locale={locale} pageID={pageID} />
     </>
   );
 }
 
-Layout.propTypes = propTypes;
-Layout.defaultProps = defaultProps;
+LayoutIndex.propTypes = propTypes;
+LayoutIndex.defaultProps = defaultProps;
 
-export default Layout;
+export default LayoutIndex;

@@ -1,6 +1,8 @@
 // Copyright (c) 2021 Antti Kivi
 // Licensed under the MIT License
 
+import '../../DefaultTheme';
+
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`

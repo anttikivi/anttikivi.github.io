@@ -95,13 +95,13 @@ function Head({ article, author, description, errorPage, home, image, locale, pa
   const pageDescription = description === '' ? intl('headDescription') : description;
 
   // Use an anonymous function to resolve the lang attribute to make sure the value is valid.
-  const lang = () => {
+  const lang: string = (() => {
     if (locale === 'en-GB') {
       return 'en';
     }
 
     return 'fi';
-  };
+  })();
 
   return (
     <Helmet titleTemplate={titleTemplate}>

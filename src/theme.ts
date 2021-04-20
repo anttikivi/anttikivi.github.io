@@ -1,6 +1,10 @@
 // Coypright (c) 2021 Antti Kivi
 // Licensed under the MIT License
 
+import './DefaultTheme';
+
+import { DefaultTheme } from 'styled-components';
+
 const colors = {
   blue: '#3f51b5',
   turquoise: '#009688',
@@ -73,10 +77,12 @@ const borders = {
   commonRadius: '25px',
 };
 
-export default {
+const theme: DefaultTheme = {
   fonts: { ...fonts },
   sizes: { ...sizes },
   devices: { ...devices },
   layout: { ...layout },
   borders: { ...borders },
 };
+
+export default theme;

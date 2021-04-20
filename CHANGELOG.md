@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 ### Changed
 
 - ESLint to lint JSX files in addition to JS files.
+- Project to use TypeScript.
 
 ### Fixed
 

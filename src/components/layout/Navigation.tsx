@@ -26,7 +26,7 @@ const Toggle = styled.div`
   }
 `;
 
-const ToggleBar = styled.div`
+const ToggleBar = styled.div<{ toggled: boolean }>`
   display: block;
   width: 33px;
   height: 4px;
@@ -67,7 +67,7 @@ const ToggleBar = styled.div`
   }
 `;
 
-const Ul = styled.ul`
+const Ul = styled.ul<{ toggled: boolean }>`
   overflow: hidden;
   display: block;
   max-height: 0;
@@ -178,7 +178,7 @@ function Navigation({ locale }) {
     <Nav>
       <Toggle
         aria-controls="primary-menu"
-        aria-expanded={toggled.toString()}
+        aria-expanded={toggled}
         onClick={() => setToggled(!toggled)}
       >
         <ToggleBar toggled={toggled} />

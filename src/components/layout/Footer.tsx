@@ -8,6 +8,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { useIntl } from 'react-intl';
 
+import ImageData from '../../ImageData';
 import LocaleSwitcher from './LocaleSwitcher';
 import SchemedImage from '../SchemedImage';
 
@@ -87,10 +88,28 @@ const propTypes = {
   pageID: PropTypes.string.isRequired,
 };
 
+type Data = {
+  site: {
+    siteMetadata: {
+      socialMedia: { instagram: string; linkedin: string; twitter: string };
+    };
+  };
+  signature: ImageData;
+  facebook: ImageData;
+  facebookColor: ImageData;
+  github: ImageData;
+  instagram: ImageData;
+  instagramColor: ImageData;
+  linkedin: ImageData;
+  linkedinColor: ImageData;
+  twitter: ImageData;
+  twitterColor: ImageData;
+};
+
 function Footer({ locale, pageID }) {
   const intl = createInternationalization(useIntl());
 
-  const data = useStaticQuery(
+  const data = useStaticQuery<Data>(
     graphql`
       {
         site {
@@ -162,7 +181,7 @@ function Footer({ locale, pageID }) {
   return (
     <FooterElement>
       <SignatureDiv>
-        <LogoImage alt={intl('footerSignatureImageText')} image={getImage(signature)} />
+        <LogoImage alt={intl('footerSignatureImageText')} image={getImage(signature)!} />
       </SignatureDiv>
       <Div>
         <LocaleSwitcher locale={locale} pageID={pageID} />

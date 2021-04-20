@@ -27,7 +27,7 @@ function HiddenSection({ children, hideLabel, showLabel }) {
 
   return (
     <>
-      <Button onClick={() => setHidden(!hidden)} smaller>
+      <Button onClick={() => setHidden(!hidden)}>
         {hidden ? intl(showLabel) : intl(hideLabel)}
       </Button>
       <div hidden={hidden}>

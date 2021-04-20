@@ -33,7 +33,7 @@ const ImageDiv = styled.div`
 `;
 
 const Image = styled(GatsbyImage)`
-  > * {
+  * {
     border-radius: 50%;
   }
 `;
@@ -63,7 +63,7 @@ function Index({ data, pageContext }) {
           title={page.title}
         >
           <ImageDiv>
-            <Image alt={page.introImage.description} image={getImage(page.introImage)} />
+            <Image alt={page.introImage.description} image={getImage(page.introImage)!} />
           </ImageDiv>
           <Section>
             <div dangerouslySetInnerHTML={{ __html: page.introBody.childMarkdownRemark.html }} />

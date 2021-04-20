@@ -75,7 +75,7 @@ module.exports = async function createPages({ actions, graphql, reporter }) {
 
     createPage({
       path: pagePath,
-      component: path.resolve('src', 'templates', 'Index.jsx'),
+      component: path.resolve('src', 'templates', 'Index.tsx'),
       context: {
         locale,
         pageID,
@@ -98,7 +98,7 @@ module.exports = async function createPages({ actions, graphql, reporter }) {
 
     createPage({
       path: pagePath,
-      component: path.resolve('src', 'templates', 'CurriculumVitae.jsx'),
+      component: path.resolve('src', 'templates', 'CurriculumVitae.tsx'),
       context: {
         locale,
         pageID,
@@ -118,7 +118,7 @@ module.exports = async function createPages({ actions, graphql, reporter }) {
 
     createPage({
       path: pagePath,
-      component: path.resolve('src', 'templates', 'NotFound.jsx'),
+      component: path.resolve('src', 'templates', 'NotFound.tsx'),
       context: {
         locale,
         pageID: '404',

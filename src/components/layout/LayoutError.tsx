@@ -12,13 +12,29 @@ import Header from './Header';
 
 import useColorScheme from '../../util/useColorScheme';
 
+const ErrorCode = styled.h1`
+  font-size: 3rem;
+  font-family: ${(props) => props.theme.fonts.code};
+  text-align: center;
+
+  @media screen and (${(props) => props.theme.devices.mobileL}) {
+    font-size: 4em;
+  }
+
+  @media screen and (${(props) => props.theme.devices.tablet}) {
+    font-size: 5em;
+  }
+`;
+
 const PageTitle = styled.h2`
-  display: none;
+  font-size: 2rem;
+  text-align: center;
 `;
 
 const propTypes = {
   children: PropTypes.node.isRequired,
   description: PropTypes.string,
+  errorCode: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   image: PropTypes.object,
   locale: PropTypes.string.isRequired,
@@ -28,24 +44,25 @@ const propTypes = {
 
 const defaultProps = { description: '', image: null };
 
-function LayoutIndex({ children, description, image, locale, pageID, title }) {
+function LayoutError({ children, description, errorCode, image, locale, pageID, title }) {
   useColorScheme();
 
   return (
     <>
       <GlobalStyle />
       <Head
-        home
+        errorPage
         description={description}
         image={image}
         locale={locale}
         pageID={pageID}
         title={title}
       />
-      <Header home locale={locale} pageID={pageID} />
+      <Header locale={locale} />
       <main>
         <section>
           <header>
+            <ErrorCode>{errorCode}</ErrorCode>
             <PageTitle>{title}</PageTitle>
           </header>
           <div>{children}</div>
@@ -56,7 +73,7 @@ function LayoutIndex({ children, description, image, locale, pageID, title }) {
   );
 }
 
-LayoutIndex.propTypes = propTypes;
-LayoutIndex.defaultProps = defaultProps;
+LayoutError.propTypes = propTypes;
+LayoutError.defaultProps = defaultProps;
 
-export default LayoutIndex;
+export default LayoutError;

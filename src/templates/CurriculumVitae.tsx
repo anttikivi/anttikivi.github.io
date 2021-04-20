@@ -34,7 +34,7 @@ const ImageDiv = styled.div`
 `;
 
 const Image = styled(GatsbyImage)`
-  > * {
+  * {
     border-radius: 50%;
   }
 `;
@@ -81,7 +81,7 @@ function CurriculumVitae({ data, pageContext }) {
             <Section>
               <h2>{page.personName}</h2>
               <ImageDiv>
-                <Image alt={page.profileImage.description} image={getImage(page.profileImage)} />
+                <Image alt={page.profileImage.description} image={getImage(page.profileImage)!} />
               </ImageDiv>
               <h3>{page.summaryTitle}</h3>
               <div
