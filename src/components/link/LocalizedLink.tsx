@@ -204,7 +204,7 @@ function LocalizedLink({ children, className, locale, to }) {
       );
     }
     default: {
-      break;
+      return null;
     }
   }
 }
