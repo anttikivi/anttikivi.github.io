@@ -33,6 +33,7 @@ jobs:
       id: version
       uses: visiosto/maintain-revision@v0.12.1
       with:
+        bucket: 'anthem-workflows'
         type: npm
 
     - name: Get Yarn cache directory path
