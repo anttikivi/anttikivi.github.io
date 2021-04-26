@@ -31,7 +31,7 @@ jobs:
 
     - name: Determine the project’s version
       id: version
-      uses: visiosto/maintain-revision@v0.10.1
+      uses: visiosto/maintain-revision@v0.11.0
       with:
         type: npm
 
