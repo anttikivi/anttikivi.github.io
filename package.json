@@ -54,7 +54,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "react-intl": "^5.15.8",
+    "react-intl": "^5.17.1",
     "react-is": "^17.0.2",
     "scroll-to-element": "^2.0.3",
     "styled-components": "^5.2.3",
@@ -64,7 +64,7 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.13.0",
-    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^13.1.5",
     "@types/jest": "^26.0.22",
