@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
-## [Unreleased]
+## [0.12.0] - 2021-04-28
 
 ### Added
 
@@ -421,7 +421,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.6...HEAD
+[unreleased]: https://github.com/anttikivi/anttikivi-website/compare/v0.12.0...HEAD
+[0.12.0]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.6...v0.12.0
 [0.11.6]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.5...v0.11.6
 [0.11.5]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.4...v0.11.5
 [0.11.4]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.3...v0.11.4
