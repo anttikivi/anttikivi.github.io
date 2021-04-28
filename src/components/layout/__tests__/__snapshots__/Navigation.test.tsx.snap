@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component renders English correctly 1`] = `
+<div>
+  <nav
+    class="sc-bdvvaa hxAumW"
+  >
+    <div
+      aria-controls="primary-menu"
+      aria-expanded="false"
+      class="sc-gsDJrp ZGrYg"
+    >
+      <div
+        class="sc-dkPtyc bvXWki"
+      />
+      <div
+        class="sc-dkPtyc bvXWki"
+      />
+      <div
+        class="sc-dkPtyc bvXWki"
+      />
+    </div>
+    <ul
+      class="sc-hKwCoD cTPmWZ"
+      id="primary-menu"
+    >
+      <li
+        class="sc-eCImvq hpiMMr"
+      >
+        <a
+          class="sc-jRQAMF eFQDbW"
+          href="/en"
+        >
+          Front Page
+        </a>
+      </li>
+      <li
+        class="sc-eCImvq hpiMMr"
+      >
+        <a
+          class="sc-jRQAMF eFQDbW"
+          href="/en/cv"
+        >
+          Curriculum Vitae
+        </a>
+      </li>
+    </ul>
+  </nav>
+  ,
+</div>
+`;
+
+exports[`Navigation component renders Finnish correctly 1`] = `
+<div>
+  <nav
+    class="sc-bdvvaa hxAumW"
+  >
+    <div
+      aria-controls="primary-menu"
+      aria-expanded="false"
+      class="sc-gsDJrp ZGrYg"
+    >
+      <div
+        class="sc-dkPtyc bvXWki"
+      />
+      <div
+        class="sc-dkPtyc bvXWki"
+      />
+      <div
+        class="sc-dkPtyc bvXWki"
+      />
+    </div>
+    <ul
+      class="sc-hKwCoD cTPmWZ"
+      id="primary-menu"
+    >
+      <li
+        class="sc-eCImvq hpiMMr"
+      >
+        <a
+          class="sc-jRQAMF eFQDbW"
+          href="/"
+        >
+          Etusivu
+        </a>
+      </li>
+      <li
+        class="sc-eCImvq hpiMMr"
+      >
+        <a
+          class="sc-jRQAMF eFQDbW"
+          href="/ansioluettelo"
+        >
+          Ansioluettelo
+        </a>
+      </li>
+    </ul>
+  </nav>
+  ,
+</div>
+`;
