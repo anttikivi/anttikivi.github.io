@@ -16,6 +16,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - ESLint to lint JSX files in addition to JS files.
 - Project to use TypeScript.
+- Name of the project from `anttikivi.fi` to `anttikivi-website`.
+- Netlify site name from `anttikivi` to `anttikivi-website-main`.
 
 ### Fixed
 
@@ -419,47 +421,47 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 
 - Existing contents of the site from the old source code repository at [anttikivi/shared-sonnet](https://github.com/anttikivi/shared-sonnet).
 
-[unreleased]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.6...HEAD
-[0.11.6]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.5...v0.11.6
-[0.11.5]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.4...v0.11.5
-[0.11.4]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.3...v0.11.4
-[0.11.3]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.2...v0.11.3
-[0.11.2]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.1...v0.11.2
-[0.11.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.11.0...v0.11.1
-[0.11.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.10.1...v0.11.0
-[0.10.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.10.0...v0.10.1
-[0.10.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.9.2...v0.10.0
-[0.9.2]: https://github.com/anttikivi/anttikivi.fi/compare/v0.9.1...v0.9.2
-[0.9.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.9.0...v0.9.1
-[0.9.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.8.3...v0.9.0
-[0.8.3]: https://github.com/anttikivi/anttikivi.fi/compare/v0.8.2...v0.8.3
-[0.8.2]: https://github.com/anttikivi/anttikivi.fi/compare/v0.8.1...v0.8.2
-[0.8.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.8.0...v0.8.1
-[0.8.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.7.3...v0.8.0
-[0.7.3]: https://github.com/anttikivi/anttikivi.fi/compare/v0.7.2...v0.7.3
-[0.7.2]: https://github.com/anttikivi/anttikivi.fi/compare/v0.7.1...v0.7.2
-[0.7.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.7.0...v0.7.1
-[0.7.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.6.0...v0.7.0
-[0.6.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.5.4...v0.6.0
-[0.5.4]: https://github.com/anttikivi/anttikivi.fi/compare/v0.5.3...v0.5.4
-[0.5.3]: https://github.com/anttikivi/anttikivi.fi/compare/v0.5.2...v0.5.3
-[0.5.2]: https://github.com/anttikivi/anttikivi.fi/compare/v0.5.1...v0.5.2
-[0.5.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.5.0...v0.5.1
-[0.5.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.11...v0.5.0
-[0.4.11]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.10...v0.4.11
-[0.4.10]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.9...v0.4.10
-[0.4.9]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.8...v0.4.9
-[0.4.8]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.7...v0.4.8
-[0.4.7]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.6...v0.4.7
-[0.4.6]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.5...v0.4.6
-[0.4.5]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.4...v0.4.5
-[0.4.4]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.3...v0.4.4
-[0.4.3]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.2...v0.4.3
-[0.4.2]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.1...v0.4.2
-[0.4.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.4.0...v0.4.1
-[0.4.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.3.1...v0.4.0
-[0.3.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.3.0...v0.3.1
-[0.3.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.2.1...v0.3.0
-[0.2.1]: https://github.com/anttikivi/anttikivi.fi/compare/v0.2.0...v0.2.1
-[0.2.0]: https://github.com/anttikivi/anttikivi.fi/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/anttikivi/anttikivi.fi/releases/tag/v0.1.0
+[unreleased]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.6...HEAD
+[0.11.6]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.5...v0.11.6
+[0.11.5]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.4...v0.11.5
+[0.11.4]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.3...v0.11.4
+[0.11.3]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.2...v0.11.3
+[0.11.2]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.1...v0.11.2
+[0.11.1]: https://github.com/anttikivi/anttikivi-website/compare/v0.11.0...v0.11.1
+[0.11.0]: https://github.com/anttikivi/anttikivi-website/compare/v0.10.1...v0.11.0
+[0.10.1]: https://github.com/anttikivi/anttikivi-website/compare/v0.10.0...v0.10.1
+[0.10.0]: https://github.com/anttikivi/anttikivi-website/compare/v0.9.2...v0.10.0
+[0.9.2]: https://github.com/anttikivi/anttikivi-website/compare/v0.9.1...v0.9.2
+[0.9.1]: https://github.com/anttikivi/anttikivi-website/compare/v0.9.0...v0.9.1
+[0.9.0]: https://github.com/anttikivi/anttikivi-website/compare/v0.8.3...v0.9.0
+[0.8.3]: https://github.com/anttikivi/anttikivi-website/compare/v0.8.2...v0.8.3
+[0.8.2]: https://github.com/anttikivi/anttikivi-website/compare/v0.8.1...v0.8.2
+[0.8.1]: https://github.com/anttikivi/anttikivi-website/compare/v0.8.0...v0.8.1
+[0.8.0]: https://github.com/anttikivi/anttikivi-website/compare/v0.7.3...v0.8.0
+[0.7.3]: https://github.com/anttikivi/anttikivi-website/compare/v0.7.2...v0.7.3
+[0.7.2]: https://github.com/anttikivi/anttikivi-website/compare/v0.7.1...v0.7.2
+[0.7.1]: https://github.com/anttikivi/anttikivi-website/compare/v0.7.0...v0.7.1
+[0.7.0]: https://github.com/anttikivi/anttikivi-website/compare/v0.6.0...v0.7.0
+[0.6.0]: https://github.com/anttikivi/anttikivi-website/compare/v0.5.4...v0.6.0
+[0.5.4]: https://github.com/anttikivi/anttikivi-website/compare/v0.5.3...v0.5.4
+[0.5.3]: https://github.com/anttikivi/anttikivi-website/compare/v0.5.2...v0.5.3
+[0.5.2]: https://github.com/anttikivi/anttikivi-website/compare/v0.5.1...v0.5.2
+[0.5.1]: https://github.com/anttikivi/anttikivi-website/compare/v0.5.0...v0.5.1
+[0.5.0]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.11...v0.5.0
+[0.4.11]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.10...v0.4.11
+[0.4.10]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.9...v0.4.10
+[0.4.9]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.8...v0.4.9
+[0.4.8]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.7...v0.4.8
+[0.4.7]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.6...v0.4.7
+[0.4.6]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.5...v0.4.6
+[0.4.5]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.4...v0.4.5
+[0.4.4]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.3...v0.4.4
+[0.4.3]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.2...v0.4.3
+[0.4.2]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.1...v0.4.2
+[0.4.1]: https://github.com/anttikivi/anttikivi-website/compare/v0.4.0...v0.4.1
+[0.4.0]: https://github.com/anttikivi/anttikivi-website/compare/v0.3.1...v0.4.0
+[0.3.1]: https://github.com/anttikivi/anttikivi-website/compare/v0.3.0...v0.3.1
+[0.3.0]: https://github.com/anttikivi/anttikivi-website/compare/v0.2.1...v0.3.0
+[0.2.1]: https://github.com/anttikivi/anttikivi-website/compare/v0.2.0...v0.2.1
+[0.2.0]: https://github.com/anttikivi/anttikivi-website/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/anttikivi/anttikivi-website/releases/tag/v0.1.0

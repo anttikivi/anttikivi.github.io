@@ -12,7 +12,7 @@ module.exports = {
     siteURL,
     // The wrong case of the constant must be included as some plugins depend on it.
     siteUrl: siteURL,
-    alternativeURLs: ['https://anttikivi.com', 'https://anttikivi.netlify.app'],
+    alternativeURLs: ['https://anttikivi.com', 'https://anttikivi-website-main.netlify.app'],
     title: 'Antti Kivi',
     description: 'Helsinkiläinen yrittäjä',
     twitterAuthor: '@anttikiwi',
