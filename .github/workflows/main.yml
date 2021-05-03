@@ -35,7 +35,7 @@ jobs:
 
     - name: Determine the project’s version
       id: version
-      uses: visiosto/maintain-revision@v0.12.1
+      uses: visiosto/maintain-revision@v0.14.0
       with:
         bucket: ${{ env.REVISION_BUCKET_NAME }}
         type: npm
@@ -84,7 +84,7 @@ jobs:
 
     - name: Determine the project’s version
       id: version
-      uses: visiosto/maintain-revision@v0.12.1
+      uses: visiosto/maintain-revision@v0.14.0
       with:
         bucket: ${{ env.REVISION_BUCKET_NAME }}
         type: npm
@@ -125,7 +125,7 @@ jobs:
 
     - name: Determine the project’s version
       id: version
-      uses: visiosto/maintain-revision@v0.12.1
+      uses: visiosto/maintain-revision@v0.14.0
       with:
         bucket: ${{ env.REVISION_BUCKET_NAME }}
         type: npm
@@ -175,7 +175,7 @@ jobs:
 
     - name: Determine the project’s version
       id: version
-      uses: visiosto/maintain-revision@v0.12.1
+      uses: visiosto/maintain-revision@v0.14.0
       with:
         bucket: ${{ env.REVISION_BUCKET_NAME }}
         type: npm
