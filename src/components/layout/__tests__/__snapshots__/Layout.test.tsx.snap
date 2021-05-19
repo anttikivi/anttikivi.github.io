@@ -87,6 +87,7 @@ exports[`Layout component renders correctly 1`] = `
   >
     <div
       class="sc-jRQAMF htvqto"
+      hidden=""
     >
       <div
         class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-gKckTs PiNRD"
