@@ -180,7 +180,7 @@ function Footer({ locale, pageID }) {
 
   return (
     <FooterElement>
-      <SignatureDiv>
+      <SignatureDiv hidden>
         <LogoImage alt={intl('footerSignatureImageText')} image={getImage(signature)!} />
       </SignatureDiv>
       <Div>
