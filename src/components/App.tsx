@@ -9,7 +9,8 @@ import PropTypes from 'prop-types';
 
 import ThemeContextProvider from './ThemeContextProvider';
 
-const propTypes = { children: PropTypes.node.isRequired };
+// eslint-disable-next-line react/forbid-prop-types
+const propTypes = { children: PropTypes.any.isRequired };
 
 function App({ children }) {
   return <ThemeContextProvider>{children}</ThemeContextProvider>;
