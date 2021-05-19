@@ -26,10 +26,6 @@ export const COLORS = {
     light: colors.black,
     dark: colors.white,
   },
-  'text-inverted': {
-    light: colors.white,
-    dark: colors.black,
-  },
   link: {
     light: colors.blue,
     dark: colors.yellow,
