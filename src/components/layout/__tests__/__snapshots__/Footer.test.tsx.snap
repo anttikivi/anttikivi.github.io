@@ -3,14 +3,14 @@
 exports[`Footer component renders correctly 1`] = `
 <div>
   <footer
-    class="sc-hKwCoD iYWZsh"
+    class="sc-hKFxyN elJbqB"
   >
     <div
-      class="sc-jRQAMF htvqto"
+      class="sc-jSFjdj Dfwma"
       hidden=""
     >
       <div
-        class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-gKckTs PiNRD"
+        class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-gKAaRy diasrB"
         data-gatsby-image-wrapper=""
         style="position: relative; overflow: hidden; display: inline-block;"
       >
@@ -60,14 +60,14 @@ exports[`Footer component renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-eCImvq khAoJq"
+      class="sc-eCApnc eUCFZL"
     >
       <a
-        class="sc-dkPtyc jHNiIS"
+        class="sc-dlnjwi buEYDr"
         href="/en"
       >
         <span
-          class="sc-bdvvaa sc-gsDJrp hQcwYn iJMLxP"
+          class="sc-bdnxRM sc-gtsrHT fyhPxc trVZf"
         >
           In English
         </span>
@@ -75,12 +75,12 @@ exports[`Footer component renders correctly 1`] = `
       <br />
     </div>
     <h3
-      class="sc-iCfLBT kEtEla"
+      class="sc-iCoGMd iFWmUR"
     >
       Sosiaalisessa mediassa
     </h3>
     <div
-      class="sc-eCImvq sc-furvIG khAoJq hKqLyv"
+      class="sc-eCApnc sc-fujyAs eUCFZL CzFBG"
     >
       <a
         href="https://instagram.com/anttikiwi"
@@ -88,7 +88,7 @@ exports[`Footer component renders correctly 1`] = `
         target="_blank"
       >
         <div
-          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pVTma sc-jrQzUz kBOFhA bNWgzT"
+          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pNWdM sc-jrsJWt eJyORU iaxtGn"
           data-gatsby-image-wrapper=""
           style="position: relative; overflow: hidden; display: inline-block;"
         >
@@ -140,7 +140,7 @@ exports[`Footer component renders correctly 1`] = `
         target="_blank"
       >
         <div
-          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pVTma sc-iqsfdx kBOFhA gRbcRW"
+          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pNWdM sc-iqAclL eJyORU fyeFFP"
           data-gatsby-image-wrapper=""
           style="position: relative; overflow: hidden; display: inline-block;"
         >
@@ -192,7 +192,7 @@ exports[`Footer component renders correctly 1`] = `
         target="_blank"
       >
         <div
-          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pVTma sc-kDThTU kBOFhA bSHqtZ"
+          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pNWdM sc-kEqXSa eJyORU xtpQs"
           data-gatsby-image-wrapper=""
           style="position: relative; overflow: hidden; display: inline-block;"
         >
@@ -240,14 +240,14 @@ exports[`Footer component renders correctly 1`] = `
       </a>
     </div>
     <div
-      class="sc-eCImvq khAoJq"
+      class="sc-eCApnc eUCFZL"
     >
       <p>
         © 2021 Antti Kivi
       </p>
     </div>
     <div
-      class="sc-eCImvq khAoJq"
+      class="sc-eCApnc eUCFZL"
     >
       <p>
         Tämä sivusto on tehty 

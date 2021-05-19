@@ -3,11 +3,11 @@
 exports[`Localized link button component renders correctly 1`] = `
 <div>
   <a
-    class="sc-dkPtyc jHNiIS"
+    class="sc-dlnjwi buEYDr"
     href="/ansioluettelo"
   >
     <span
-      class="sc-bdvvaa sc-gsDJrp hQcwYn iJMLxP"
+      class="sc-bdnxRM sc-gtsrHT fyhPxc trVZf"
     >
       Linkki
     </span>

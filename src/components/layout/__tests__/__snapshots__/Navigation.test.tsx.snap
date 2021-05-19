@@ -3,42 +3,42 @@
 exports[`Navigation component renders English correctly 1`] = `
 <div>
   <nav
-    class="sc-bdvvaa hxAumW"
+    class="sc-bdnxRM iDTZBF"
   >
     <div
       aria-controls="primary-menu"
       aria-expanded="false"
-      class="sc-gsDJrp ZGrYg"
+      class="sc-gtsrHT iyLpWA"
     >
       <div
-        class="sc-dkPtyc bvXWki"
+        class="sc-dlnjwi fodIaX"
       />
       <div
-        class="sc-dkPtyc bvXWki"
+        class="sc-dlnjwi fodIaX"
       />
       <div
-        class="sc-dkPtyc bvXWki"
+        class="sc-dlnjwi fodIaX"
       />
     </div>
     <ul
-      class="sc-hKwCoD cTPmWZ"
+      class="sc-hKFxyN jSDNlB"
       id="primary-menu"
     >
       <li
-        class="sc-eCImvq hpiMMr"
+        class="sc-eCApnc exXzti"
       >
         <a
-          class="sc-jRQAMF eFQDbW"
+          class="sc-jSFjdj iFcKsM"
           href="/en"
         >
           Front Page
         </a>
       </li>
       <li
-        class="sc-eCImvq hpiMMr"
+        class="sc-eCApnc exXzti"
       >
         <a
-          class="sc-jRQAMF eFQDbW"
+          class="sc-jSFjdj iFcKsM"
           href="/en/cv"
         >
           Curriculum Vitae
@@ -53,42 +53,42 @@ exports[`Navigation component renders English correctly 1`] = `
 exports[`Navigation component renders Finnish correctly 1`] = `
 <div>
   <nav
-    class="sc-bdvvaa hxAumW"
+    class="sc-bdnxRM iDTZBF"
   >
     <div
       aria-controls="primary-menu"
       aria-expanded="false"
-      class="sc-gsDJrp ZGrYg"
+      class="sc-gtsrHT iyLpWA"
     >
       <div
-        class="sc-dkPtyc bvXWki"
+        class="sc-dlnjwi fodIaX"
       />
       <div
-        class="sc-dkPtyc bvXWki"
+        class="sc-dlnjwi fodIaX"
       />
       <div
-        class="sc-dkPtyc bvXWki"
+        class="sc-dlnjwi fodIaX"
       />
     </div>
     <ul
-      class="sc-hKwCoD cTPmWZ"
+      class="sc-hKFxyN jSDNlB"
       id="primary-menu"
     >
       <li
-        class="sc-eCImvq hpiMMr"
+        class="sc-eCApnc exXzti"
       >
         <a
-          class="sc-jRQAMF eFQDbW"
+          class="sc-jSFjdj iFcKsM"
           href="/"
         >
           Etusivu
         </a>
       </li>
       <li
-        class="sc-eCImvq hpiMMr"
+        class="sc-eCApnc exXzti"
       >
         <a
-          class="sc-jRQAMF eFQDbW"
+          class="sc-jSFjdj iFcKsM"
           href="/ansioluettelo"
         >
           Ansioluettelo

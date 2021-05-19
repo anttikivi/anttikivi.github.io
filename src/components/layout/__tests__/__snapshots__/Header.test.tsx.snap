@@ -3,17 +3,17 @@
 exports[`Header component renders index page header correctly 1`] = `
 <div>
   <header
-    class="sc-gKckTs fLSVeS"
+    class="sc-gKAaRy cUPzss"
   >
     <div
-      class="sc-jrQzUz gSvUzw"
+      class="sc-jrsJWt CRpZk"
     >
       <a
-        class="sc-iCfLBT cKTlDZ"
+        class="sc-iCoGMd lbzBiO"
         href="/"
       >
         <h1
-          class="sc-furvIG iKYDHp"
+          class="sc-fujyAs ixfWkY"
         >
           Antti Kivi
         </h1>
@@ -23,42 +23,42 @@ exports[`Header component renders index page header correctly 1`] = `
       </p>
     </div>
     <nav
-      class="sc-bdvvaa hxAumW"
+      class="sc-bdnxRM iDTZBF"
     >
       <div
         aria-controls="primary-menu"
         aria-expanded="false"
-        class="sc-gsDJrp ZGrYg"
+        class="sc-gtsrHT iyLpWA"
       >
         <div
-          class="sc-dkPtyc bvXWki"
+          class="sc-dlnjwi fodIaX"
         />
         <div
-          class="sc-dkPtyc bvXWki"
+          class="sc-dlnjwi fodIaX"
         />
         <div
-          class="sc-dkPtyc bvXWki"
+          class="sc-dlnjwi fodIaX"
         />
       </div>
       <ul
-        class="sc-hKwCoD cTPmWZ"
+        class="sc-hKFxyN jSDNlB"
         id="primary-menu"
       >
         <li
-          class="sc-eCImvq hpiMMr"
+          class="sc-eCApnc exXzti"
         >
           <a
-            class="sc-jRQAMF eFQDbW"
+            class="sc-jSFjdj iFcKsM"
             href="/"
           >
             Etusivu
           </a>
         </li>
         <li
-          class="sc-eCImvq hpiMMr"
+          class="sc-eCApnc exXzti"
         >
           <a
-            class="sc-jRQAMF eFQDbW"
+            class="sc-jSFjdj iFcKsM"
             href="/ansioluettelo"
           >
             Ansioluettelo
@@ -74,17 +74,17 @@ exports[`Header component renders index page header correctly 1`] = `
 exports[`Header component renders page header correctly 1`] = `
 <div>
   <header
-    class="sc-gKckTs fLSVeS"
+    class="sc-gKAaRy cUPzss"
   >
     <div
-      class="sc-jrQzUz gSvUzw"
+      class="sc-jrsJWt CRpZk"
     >
       <a
-        class="sc-iCfLBT cKTlDZ"
+        class="sc-iCoGMd lbzBiO"
         href="/"
       >
         <p
-          class="sc-pVTma bmUQdy"
+          class="sc-pNWdM gjFOXu"
           role="heading"
         >
           Antti Kivi
@@ -95,42 +95,42 @@ exports[`Header component renders page header correctly 1`] = `
       </p>
     </div>
     <nav
-      class="sc-bdvvaa hxAumW"
+      class="sc-bdnxRM iDTZBF"
     >
       <div
         aria-controls="primary-menu"
         aria-expanded="false"
-        class="sc-gsDJrp ZGrYg"
+        class="sc-gtsrHT iyLpWA"
       >
         <div
-          class="sc-dkPtyc bvXWki"
+          class="sc-dlnjwi fodIaX"
         />
         <div
-          class="sc-dkPtyc bvXWki"
+          class="sc-dlnjwi fodIaX"
         />
         <div
-          class="sc-dkPtyc bvXWki"
+          class="sc-dlnjwi fodIaX"
         />
       </div>
       <ul
-        class="sc-hKwCoD cTPmWZ"
+        class="sc-hKFxyN jSDNlB"
         id="primary-menu"
       >
         <li
-          class="sc-eCImvq hpiMMr"
+          class="sc-eCApnc exXzti"
         >
           <a
-            class="sc-jRQAMF eFQDbW"
+            class="sc-jSFjdj iFcKsM"
             href="/"
           >
             Etusivu
           </a>
         </li>
         <li
-          class="sc-eCImvq hpiMMr"
+          class="sc-eCApnc exXzti"
         >
           <a
-            class="sc-jRQAMF eFQDbW"
+            class="sc-jSFjdj iFcKsM"
             href="/ansioluettelo"
           >
             Ansioluettelo

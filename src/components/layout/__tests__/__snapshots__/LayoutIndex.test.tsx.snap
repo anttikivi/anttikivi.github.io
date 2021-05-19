@@ -3,17 +3,17 @@
 exports[`Index layout component renders correctly 1`] = `
 <div>
   <header
-    class="sc-fFehDp gFWvwo"
+    class="sc-fFSPTT ddGbJc"
   >
     <div
-      class="sc-hGPAah ykoOH"
+      class="sc-hHEiqL ldnlav"
     >
       <a
-        class="sc-bkkfTU bVNsme"
+        class="sc-bkbkJK kEa-Dtg"
         href="/"
       >
         <h1
-          class="sc-ieebsP gNCzYQ"
+          class="sc-iemWCZ mrNKN"
         >
           Antti Kivi
         </h1>
@@ -23,42 +23,42 @@ exports[`Index layout component renders correctly 1`] = `
       </p>
     </div>
     <nav
-      class="sc-crHlIS fuvXSP"
+      class="sc-crzoAE klPIQC"
     >
       <div
         aria-controls="primary-menu"
         aria-expanded="false"
-        class="sc-egiSv jLuuRS"
+        class="sc-dIsUp hrnwKV"
       >
         <div
-          class="sc-bqiQRQ fVUflD"
+          class="sc-bqGGPW ieIJrZ"
         />
         <div
-          class="sc-bqiQRQ fVUflD"
+          class="sc-bqGGPW ieIJrZ"
         />
         <div
-          class="sc-bqiQRQ fVUflD"
+          class="sc-bqGGPW ieIJrZ"
         />
       </div>
       <ul
-        class="sc-ksdxAp dKSDDg"
+        class="sc-ksluID fNpkaH"
         id="primary-menu"
       >
         <li
-          class="sc-hBURRC TuSAO"
+          class="sc-hBMUJo hPXrWj"
         >
           <a
-            class="sc-fotPbf jCeZtY"
+            class="sc-fnVZcZ dsNDiy"
             href="/"
           >
             Etusivu
           </a>
         </li>
         <li
-          class="sc-hBURRC TuSAO"
+          class="sc-hBMUJo hPXrWj"
         >
           <a
-            class="sc-fotPbf jCeZtY"
+            class="sc-fnVZcZ dsNDiy"
             href="/ansioluettelo"
           >
             Ansioluettelo
@@ -71,7 +71,7 @@ exports[`Index layout component renders correctly 1`] = `
     <section>
       <header>
         <h2
-          class="sc-dlVyqM QsicU"
+          class="sc-dlMDgC jGWyak"
         >
           Etusivu
         </h2>
@@ -84,14 +84,14 @@ exports[`Index layout component renders correctly 1`] = `
     </section>
   </main>
   <footer
-    class="sc-hKwCoD iYWZsh"
+    class="sc-hKFxyN elJbqB"
   >
     <div
-      class="sc-jRQAMF htvqto"
+      class="sc-jSFjdj Dfwma"
       hidden=""
     >
       <div
-        class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-gKckTs PiNRD"
+        class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-gKAaRy diasrB"
         data-gatsby-image-wrapper=""
         style="position: relative; overflow: hidden; display: inline-block;"
       >
@@ -141,14 +141,14 @@ exports[`Index layout component renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-eCImvq khAoJq"
+      class="sc-eCApnc eUCFZL"
     >
       <a
-        class="sc-dkPtyc jHNiIS"
+        class="sc-dlnjwi buEYDr"
         href="/en"
       >
         <span
-          class="sc-bdvvaa sc-gsDJrp hQcwYn iJMLxP"
+          class="sc-bdnxRM sc-gtsrHT fyhPxc trVZf"
         >
           In English
         </span>
@@ -156,12 +156,12 @@ exports[`Index layout component renders correctly 1`] = `
       <br />
     </div>
     <h3
-      class="sc-iCfLBT kEtEla"
+      class="sc-iCoGMd iFWmUR"
     >
       Sosiaalisessa mediassa
     </h3>
     <div
-      class="sc-eCImvq sc-furvIG khAoJq hKqLyv"
+      class="sc-eCApnc sc-fujyAs eUCFZL CzFBG"
     >
       <a
         href="https://instagram.com/anttikiwi"
@@ -169,7 +169,7 @@ exports[`Index layout component renders correctly 1`] = `
         target="_blank"
       >
         <div
-          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pVTma sc-jrQzUz kBOFhA bNWgzT"
+          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pNWdM sc-jrsJWt eJyORU iaxtGn"
           data-gatsby-image-wrapper=""
           style="position: relative; overflow: hidden; display: inline-block;"
         >
@@ -221,7 +221,7 @@ exports[`Index layout component renders correctly 1`] = `
         target="_blank"
       >
         <div
-          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pVTma sc-iqsfdx kBOFhA gRbcRW"
+          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pNWdM sc-iqAclL eJyORU fyeFFP"
           data-gatsby-image-wrapper=""
           style="position: relative; overflow: hidden; display: inline-block;"
         >
@@ -273,7 +273,7 @@ exports[`Index layout component renders correctly 1`] = `
         target="_blank"
       >
         <div
-          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pVTma sc-kDThTU kBOFhA bSHqtZ"
+          class="gatsby-image-wrapper gatsby-image-wrapper-constrained sc-pNWdM sc-kEqXSa eJyORU xtpQs"
           data-gatsby-image-wrapper=""
           style="position: relative; overflow: hidden; display: inline-block;"
         >
@@ -321,14 +321,14 @@ exports[`Index layout component renders correctly 1`] = `
       </a>
     </div>
     <div
-      class="sc-eCImvq khAoJq"
+      class="sc-eCApnc eUCFZL"
     >
       <p>
         © 2021 Antti Kivi
       </p>
     </div>
     <div
-      class="sc-eCImvq khAoJq"
+      class="sc-eCApnc eUCFZL"
     >
       <p>
         Tämä sivusto on tehty 
