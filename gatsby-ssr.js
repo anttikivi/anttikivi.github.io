@@ -18,7 +18,7 @@ import { COLORS } from './src/theme';
 function setColorsByTheme() {
   const colors = '🌈';
   const colorModeKey = '🔑';
-  const colorModeCSSProp = '⚡️';
+  const colorModeCssProp = '⚡️';
 
   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
   const prefersDarkScheme = mediaQuery.matches;
@@ -37,13 +37,15 @@ function setColorsByTheme() {
   }
 
   const root = document.documentElement;
+  const invertedColorMode = colorMode === 'dark' ? 'light' : 'dark';
 
-  root.style.setProperty(colorModeCSSProp, colorMode);
+  root.style.setProperty(colorModeCssProp, colorMode);
 
   Object.entries(colors).forEach(([name, colorByTheme]) => {
     const cssVarName = `--color-${name}`;
 
     root.style.setProperty(cssVarName, colorByTheme[colorMode]);
+    root.style.setProperty(`${cssVarName}-inverted`, colorByTheme[invertedColorMode]);
   });
 }
 
@@ -77,7 +79,8 @@ function FallbackStyles() {
   */
 
   const cssVariableString = Object.entries(COLORS).reduce(
-    (acc, [name, colorByTheme]) => `${acc}\n--color-${name}: ${colorByTheme.light};`,
+    (acc, [name, colorByTheme]) =>
+      `${acc}\n--color-${name}: ${colorByTheme.light};\n--color-${name}-inverted: ${colorByTheme.dark};`,
     '',
   );
 
@@ -95,6 +98,6 @@ export const onRenderBody = function addColorThemeStylesOnRenderBody({
   setPreBodyComponents(<MagicScriptTag key="color-scheme-magic-script-tag" />);
 };
 
-export const wrapPageElement = function wrapPageElementWithAppComponent({ element }) {
+export const wrapRootElement = function wrapRootElementWithAppComponent({ element }) {
   return <App>{element}</App>;
 };

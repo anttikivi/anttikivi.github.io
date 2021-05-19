@@ -16,7 +16,7 @@ const propTypes = { children: PropTypes.node.isRequired };
 
 function ThemeContextProvider({ children }) {
   // Use state in a function component as this is the way it was done in the original code.
-  const [colorMode, rawSetColorMode] = useState('');
+  const [colorMode, rawSetColorMode] = useState('light');
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -36,10 +36,13 @@ function ThemeContextProvider({ children }) {
       // TODO Uncomment the line if a dark mode toggle is added
       // localStorage.setItem(COLOR_MODE_KEY, newValue);
 
+      const invertedColorMode = newValue === 'dark' ? 'light' : 'dark';
+
       Object.entries(COLORS).forEach(([name, colorByTheme]) => {
         const cssVarName = `--color-${name}`;
 
         root.style.setProperty(cssVarName, colorByTheme[newValue]);
+        root.style.setProperty(`${cssVarName}-inverted`, colorByTheme[invertedColorMode]);
       });
 
       rawSetColorMode(newValue);
