@@ -1,4 +1,4 @@
-import { I18nPlugin } from "@11ty/eleventy";
+import { I18nPlugin, RenderPlugin } from "@11ty/eleventy";
 import Image, { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import path from "node:path";
 import { processCss } from "./util/css.js";
@@ -72,6 +72,27 @@ export default async function (eleventyConfig) {
      */
     eleventyConfig.addGlobalData("site", siteData);
     eleventyConfig.addGlobalData("nav", nav);
+
+    /*
+     * Plugins
+     */
+    eleventyConfig.addPlugin(I18nPlugin, { defaultLanguage: "en" });
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+        extensions: "html",
+        formats: ["webp", "jpeg"],
+        defaultAttributes: {
+            loading: "lazy",
+            decoding: "async",
+        },
+    });
+    eleventyConfig.addPlugin(RenderPlugin);
+
+    /*
+     * Collections
+     */
+    eleventyConfig.addCollection("writing", function (collectionsApi) {
+        return collectionsApi.getFilteredByTags("essay");
+    });
 
     /*
      * Filters
@@ -178,19 +199,6 @@ export default async function (eleventyConfig) {
 <meta property="og:image:type" content="${img.sourceType}" />
 <meta property="og:image:width" content="${img.width}" />
 <meta property="og:image:height" content="${img.height}" />`;
-    });
-
-    /*
-     * Plugins
-     */
-    eleventyConfig.addPlugin(I18nPlugin, { defaultLanguage: "en" });
-    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-        extensions: "html",
-        formats: ["webp", "jpeg"],
-        defaultAttributes: {
-            loading: "lazy",
-            decoding: "async",
-        },
     });
 
     /**

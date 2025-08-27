@@ -1,6 +1,6 @@
 ---
 date: git Last Modified
-layout: home.njk
+layout: layouts/home.njk
 permalink: '{{ "/" | makePath("en") }}'
 title: Home
 ---

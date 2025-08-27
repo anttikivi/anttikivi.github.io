@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="{{ lang | lang }}">
+<html lang="{{ page.lang | lang }}">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {% set home = false %}
-        {% if lang === "en" and page.inputPath === "./src/en/index.md" %}
+        {% if page.lang === "en" and page.inputPath === "./src/en/index.md" %}
             {% set home = true %}
-        {% elif lang === "fi" and page.inputPath === "./src/fi/index.md" %}
+        {% elif page.lang === "fi" and page.inputPath === "./src/fi/index.md" %}
             {% set home = true %}
         {% endif %}
 
@@ -26,7 +26,7 @@
 
         <link href="{{ site.url }}{{ page.url }}" rel="canonical" />
 
-        <link href="{{ site.url }}{{ page.url }}" hreflang="{{ lang | lang }}" rel="alternate" />
+        <link href="{{ site.url }}{{ page.url }}" hreflang="{{ page.lang | lang }}" rel="alternate" />
         {% for link in page.url | locale_links %}
             <link href="{{ site.url }}{{ link.url }}" hreflang="{{ link.lang | lang }}" rel="alternate" />
         {% endfor %}
@@ -56,10 +56,10 @@
         <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
         <meta property="og:type" content="website" />
         {% if page.fileSlug !== "404" -%}
-            <meta property="og:locale" content="{{ site.locales[lang] }}" />
+            <meta property="og:locale" content="{{ site.locales[page.lang] }}" />
 
             {% for link in page.url | locale_links %}
-                {% if link.lang !== lang %}
+                {% if link.lang !== page.lang %}
                     <meta property="og:locale:alternate" content="{{ site.locales[link.lang] }}" />
                 {% endif %}
             {% endfor %}
@@ -80,7 +80,7 @@
                 {% if page.fileSlug !== "404" -%}
                     <ul class="nav" role="menu" aria-label="{{- t.languageMenuLabel -}}">
                         {% for link in page.url | locale_links %}
-                            {% if not site.disabledLanguages.includes(language) -%}
+                            {% if not site.disabledLanguages.includes(link.lang) -%}
                                 <li lang="{{- link.lang | lang -}}" role="menuitem">
                                     <a href="{{- link.url -}}"> {{- nav.langs[link.lang] -}} </a>
                                 </li>
@@ -93,7 +93,7 @@
                 {% for link in nav.primary -%}
                     {% if not link.disabled -%}
                         <li role="menuitem">
-                            <a href="{{- link.link | geturl -}}">{{- link.label[lang] -}}</a>
+                            <a href="{{- link.link | geturl -}}">{{- link.label[page.lang] -}}</a>
                         </li>
                     {% endif -%}
                 {% endfor -%}
@@ -104,6 +104,8 @@
             {% if home %}
                 <div class="logo">{%- include "logo.njk" -%}</div>
             {% elif page.fileSlug === "404" %}
+                <a class="logo" href="{{ '/' | geturl }}">{%- include "logo-404.njk" -%}</a>
+            {% elif page.fileSlug === "blog" and collections.writing | length === 0 %}
                 <a class="logo" href="{{ '/' | geturl }}">{%- include "logo-404.njk" -%}</a>
             {% else %}
                 <a class="logo" href="{{ '/' | geturl }}">{%- include "logo.njk" -%}</a>
