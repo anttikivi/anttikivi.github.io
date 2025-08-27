@@ -4,3 +4,4 @@ package-lock.json
 
 src/robots.txt.njk
 src/sitemap.xml.njk
+src/.well-known/security.txt.njk
