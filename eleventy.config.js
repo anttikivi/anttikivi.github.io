@@ -60,7 +60,7 @@ const siteData = {
     languages: Object.keys(languages),
     locales,
     title: "Antti Kivi",
-    url: process.env.NODE_ENV === "production" ? "https://anttikivi.github.io" : "http://localhost:8080",
+    url: process.env.NODE_ENV === "production" ? "https://www.anttikivi.com" : "http://localhost:8080",
 };
 
 /**
