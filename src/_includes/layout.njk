@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="{{ lang | lang }}">
+    {% include "head.njk" %}
+    <body>
+        <a class="sr-only" href="#{{ t.mainID }}"> {{- t.skipToContent -}} </a>
+        <main id="{{ t.mainID }}">{{ content | safe }}</main>
+    </body>
+</html>
