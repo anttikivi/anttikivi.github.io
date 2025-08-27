@@ -1,4 +1,5 @@
 import { I18nPlugin } from "@11ty/eleventy";
+import Image, { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import path from "node:path";
 import { processCss } from "./util/css.js";
 import { createFileHash } from "./util/hash.js";
@@ -24,7 +25,7 @@ const paths = {
 /**
  * @param {UserConfig} eleventyConfig
  */
-export default function (eleventyConfig) {
+export default async function (eleventyConfig) {
     /*
      * Filters
      */
@@ -61,9 +62,89 @@ export default function (eleventyConfig) {
     });
 
     /*
+     * Shortcodes
+     */
+    eleventyConfig.addShortcode("favicons", async function () {
+        const options = {
+            urlPath: "/",
+            outputDir: "./_site",
+        };
+        const svgIcons = await Image("./src/assets/favicon.svg", {
+            widths: ["auto"],
+            formats: ["svg"],
+            ...options,
+        });
+        // const pngIcons = await Image("./src/assets/favicon.png", {
+        //     widths: [16, 32, 180],
+        //     formats: ["png"],
+        //     ...options,
+        // });
+
+        const appleTouchIconHash = await createFileHash(
+            "./src/assets/apple-touch-icon.png",
+        );
+        const icoHash = await createFileHash("./src/assets/favicon.ico");
+        const favicon16Hash = await createFileHash(
+            "./src/assets/favicon-16.png",
+        );
+        const favicon32Hash = await createFileHash(
+            "./src/assets/favicon-32.png",
+        );
+        const favicon192Hash = await createFileHash(
+            "./src/assets/favicon-192.png",
+        );
+        const favicon512Hash = await createFileHash(
+            "./src/assets/favicon-512.png",
+        );
+
+        return `<link href="${svgIcons.svg[0].url}" rel="icon" type="image/svg+xml" />
+<link href="/${process.env.NODE_ENV === "production" ? favicon32Hash : "favicon-32"}.png" rel="icon" sizes="32x32" type="image/png" />
+<link href="/${process.env.NODE_ENV === "production" ? favicon16Hash : "favicon-16"}.png" rel="icon" sizes="16x16" type="image/png" />
+<link href="/${process.env.NODE_ENV === "production" ? appleTouchIconHash : "apple-touch-icon"}.png" rel="apple-touch-icon" sizes="180x180" />
+<link href="/${process.env.NODE_ENV === "production" ? favicon192Hash : "favicon-192"}.png" rel="icon" sizes="192x192" type="image/png" />
+<link href="/${process.env.NODE_ENV === "production" ? favicon512Hash : "favicon-512"}.png" rel="icon" sizes="512x512" type="image/png" />
+<link href="/${process.env.NODE_ENV === "production" ? icoHash : "favicon"}.ico" rel="shortcut icon" />`;
+    });
+
+    /*
      * Plugins
      */
     eleventyConfig.addPlugin(I18nPlugin, { defaultLanguage: "en" });
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+        extensions: "html",
+        formats: ["webp", "jpeg"],
+        defaultAttributes: {
+            loading: "lazy",
+            decoding: "async",
+        },
+    });
+
+    /**
+     * Pass-through copies
+     */
+    // To be safe, add a pass-through copy of the plain "favicon.ico" in case
+    // the browser looks for it.
+    eleventyConfig.addPassthroughCopy({
+        "src/assets/favicon.ico": "/favicon.ico",
+    });
+    if (process.env.NODE_ENV === "production") {
+        eleventyConfig.addPassthroughCopy({
+            "src/assets/apple-touch-icon.png": `/${await createFileHash("./src/assets/apple-touch-icon.png")}.png`,
+            "src/assets/favicon-16.png": `/${await createFileHash("./src/assets/favicon-16.png")}.png`,
+            "src/assets/favicon-32.png": `/${await createFileHash("./src/assets/favicon-32.png")}.png`,
+            "src/assets/favicon-192.png": `/${await createFileHash("./src/assets/favicon-192.png")}.png`,
+            "src/assets/favicon-512.png": `/${await createFileHash("./src/assets/favicon-512.png")}.png`,
+            "src/assets/favicon.ico": `/${await createFileHash("./src/assets/favicon.ico")}.ico`,
+        });
+    } else {
+        eleventyConfig.addPassthroughCopy({
+            "src/assets/apple-touch-icon.png": "/apple-touch-icon.png",
+            "src/assets/favicon-16.png": "/favicon-16.png",
+            "src/assets/favicon-32.png": "/favicon-32.png",
+            "src/assets/favicon-192.png": "/favicon-192.png",
+            "src/assets/favicon-512.png": "/favicon-512.png",
+        });
+    }
 
     /*
      * Template Formats

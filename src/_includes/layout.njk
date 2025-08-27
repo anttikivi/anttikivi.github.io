@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="{{ lang | lang }}">
-    {% include "head.njk" %}
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {% favicons %}
+
+        <link href="{{ '/main.css' | hash }}" rel="stylesheet" />
+    </head>
     <body>
         <a class="sr-only" href="#{{ t.mainID }}"> {{- t.skipToContent -}} </a>
         <main id="{{ t.mainID }}">{{ content | safe }}</main>

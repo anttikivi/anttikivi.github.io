@@ -1,3 +1,4 @@
+import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import { processCssFile } from "./css.js";
 import { memoize } from "./index.js";
@@ -8,11 +9,14 @@ import { memoize } from "./index.js";
  */
 async function createFileHashInternal(inputPath) {
     try {
-        /** @type {Awaited<ReturnType<typeof processCssFile>>} */
-        let result;
         if (inputPath.endsWith(".css")) {
-            result = await processCssFile(inputPath);
+            return (await processCssFile(inputPath)).hash;
         } else if (inputPath.endsWith(".ico")) {
+            return crypto
+                .createHash("sha256")
+                .update(await fs.readFile(inputPath, "binary"))
+                .digest("hex");
+        } else if (inputPath.endsWith(".png")) {
             return crypto
                 .createHash("sha256")
                 .update(await fs.readFile(inputPath, "binary"))
@@ -20,7 +24,6 @@ async function createFileHashInternal(inputPath) {
         } else {
             throw new Error("invalid file type passed to the hashing function");
         }
-        return result.hash;
     } catch (err) {
         console.error(err);
     }
