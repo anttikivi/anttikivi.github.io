@@ -1,11 +1,6 @@
 /** @type {import("prettier").Config} */
 const config = {
-    plugins: [
-        "prettier-plugin-packagejson",
-        "prettier-plugin-organize-imports",
-        "prettier-plugin-jinja-template",
-        "prettier-plugin-tailwindcss",
-    ],
+    plugins: ["prettier-plugin-packagejson", "prettier-plugin-organize-imports", "prettier-plugin-jinja-template"],
     arrowParens: "always",
     bracketSpacing: true,
     printWidth: 120,
