@@ -1,6 +1,9 @@
 {
     "dir": "ltr",
     "lang": "fi",
+    "site": {
+        "description": "Olen Antti Kivi, ohjelmistokehittäjä ja yrittäjä. Tällä sivustolla jaan projektejani, kirjoituksiani ja ajatuksiani teknologiasta, yhteiskunnasta ja politiikasta."
+    },
     "t": {
         "footer": {
             "languageMenuLabel": "Sivuston kieli"

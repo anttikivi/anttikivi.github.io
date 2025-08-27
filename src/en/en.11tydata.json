@@ -1,6 +1,9 @@
 {
     "dir": "ltr",
     "lang": "en",
+    "site": {
+        "description": "I’m Antti Kivi, a Finnish software developer and entrepreneur. On this site I share my open‑source projects, writings, and thoughts on technology, politics, and society."
+    },
     "t": {
         "footer": {
             "languageMenuLabel": "Site language"

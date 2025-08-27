@@ -4,15 +4,24 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        {% set home = false %}
         {% if lang === "en" and page.inputPath === "./src/en/index.md" %}
-            <title>{{ site.title }}</title>
+            {% set home = true %}
         {% elif lang === "fi" and page.inputPath === "./src/fi/index.md" %}
+            {% set home = true %}
+        {% endif %}
+
+        {% if home %}
             <title>{{ site.title }}</title>
         {% else %}
             <title>{{ title }} - {{ site.title }}</title>
         {% endif %}
 
-        {# TODO: Add description #}
+        {% if description %}
+            <meta name="description" content="{{ description }}" />
+        {% else %}
+            <meta name="description" content="{{ site.description }}" />
+        {% endif %}
         {% favicons %}
 
         <link href="{{ site.url }}{{ page.url }}" rel="canonical" />
@@ -30,6 +39,32 @@
                 {% endif %}
             {% endfor %}
         {% endif %}
+
+        <link href="/sitemap.xml" rel="sitemap" />
+
+        {% if home -%}
+            <meta property="og:title" content="{{ site.title }}" />
+        {%- else -%}
+            <meta property="og:title" content="{{ title }} - {{ site.title }}" />
+        {%- endif -%}
+        {% if description %}
+            <meta property="og:description" content="{{ description }}" />
+        {% else %}
+            <meta property="og:description" content="{{ site.description }}" />
+        {% endif %}
+        {% openGraphImage "opengraph-image.png" %}
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+        <meta property="og:type" content="website" />
+        {% if page.fileSlug !== "404" -%}
+            <meta property="og:locale" content="{{ site.locales[lang] }}" />
+
+            {% for link in page.url | locale_links %}
+                {% if link.lang !== lang %}
+                    <meta property="og:locale:alternate" content="{{ site.locales[link.lang] }}" />
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <meta property="og:site_name" content="{{ site.title }}" />
 
         <link href="{{ '/main.css' | hash }}" rel="stylesheet" />
     </head>

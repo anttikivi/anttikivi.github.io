@@ -6,9 +6,14 @@ import { createFileHash } from "./util/hash.js";
 
 /** @import {UserConfig} from "@11ty/eleventy/src/UserConfig" */
 
-const locales = {
+const languages = {
     en: "en-GB",
     fi: "fi",
+};
+
+const locales = {
+    en: "en_GB",
+    fi: "fi_FI",
 };
 
 const paths = {
@@ -26,6 +31,7 @@ const siteData = {
     defaultLanguage: "en",
     disabledLanguages: [],
     isProduction: process.env.NODE_ENV === "production",
+    locales,
     title: "Antti Kivi",
     url: process.env.NODE_ENV === "production" ? "https://www.anttikivi.com" : "http://localhost:8080",
 };
@@ -61,7 +67,7 @@ export default async function (eleventyConfig) {
     });
 
     eleventyConfig.addFilter("lang", function (lang) {
-        return locales[lang];
+        return languages[lang];
     });
 
     eleventyConfig.addFilter("makePath", function (value, lang) {
@@ -107,6 +113,28 @@ export default async function (eleventyConfig) {
 <link href="/${process.env.NODE_ENV === "production" ? favicon192Hash : "favicon-192"}.png" rel="icon" sizes="192x192" type="image/png" />
 <link href="/${process.env.NODE_ENV === "production" ? favicon512Hash : "favicon-512"}.png" rel="icon" sizes="512x512" type="image/png" />
 <link href="/${process.env.NODE_ENV === "production" ? icoHash : "favicon"}.ico" rel="shortcut icon" />`;
+    });
+
+    eleventyConfig.addShortcode("openGraphImage", async function (src, lang) {
+        if (!src.endsWith(".png")) {
+            throw new TypeError(`The value for the OpenGraph image is not an PNG image: ${src}`);
+        }
+        const images = await Image(
+            lang ? `./src/assets/${src.split(".").slice(0, -1).join(".")}-${lang}.png` : `./src/assets/${src}`,
+            {
+                widths: [1200],
+                formats: ["png"],
+                urlPath: "/",
+                outputDir: "./_site",
+            },
+        );
+        const img = images.png[0];
+
+        return `<meta property="og:image" content="${siteData.url}${img.url}" />
+<meta property="og:image:secure_url" content="${siteData.url}${img.url}" />
+<meta property="og:image:type" content="${img.sourceType}" />
+<meta property="og:image:width" content="${img.width}" />
+<meta property="og:image:height" content="${img.height}" />`;
     });
 
     /*
