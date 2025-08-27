@@ -91,9 +91,11 @@
             </div>
             <ul class="nav primary" role="menu" aria-label="{{- t.primaryMenuLabel -}}">
                 {% for link in nav.primary -%}
-                    <li role="menuitem">
-                        <a href="{{- link.link | geturl -}}">{{- link.label[lang] -}}</a>
-                    </li>
+                    {% if not link.disabled -%}
+                        <li role="menuitem">
+                            <a href="{{- link.link | geturl -}}">{{- link.label[lang] -}}</a>
+                        </li>
+                    {% endif -%}
                 {% endfor -%}
             </ul>
         </header>

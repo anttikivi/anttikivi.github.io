@@ -36,6 +36,7 @@ const nav = {
     },
     primary: [
         {
+            disabled: true,
             link: "about",
             label: {
                 en: "About",
