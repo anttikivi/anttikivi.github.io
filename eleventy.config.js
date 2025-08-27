@@ -80,6 +80,17 @@ export default async function (eleventyConfig) {
         return `/${lang}${basename}`;
     });
 
+    eleventyConfig.addFilter("geturl", function (value, lang) {
+        const language = lang ? lang : this.page.lang;
+        if (value in paths[language]) {
+            return `${paths[language][value]}`;
+        }
+
+        throw new ReferenceError(
+            `Trying to get translated path "${value}" to ${language} but no valid translation was found.`,
+        );
+    });
+
     /*
      * Shortcodes
      */
