@@ -23,13 +23,11 @@ const paths = {
 };
 
 const siteData = {
+    defaultLanguage: "en",
     disabledLanguages: [],
     isProduction: process.env.NODE_ENV === "production",
     title: "Antti Kivi",
-    url:
-        process.env.NODE_ENV === "production"
-            ? "https://www.anttikivi.com"
-            : "http://localhost:8080",
+    url: process.env.NODE_ENV === "production" ? "https://www.anttikivi.com" : "http://localhost:8080",
 };
 
 /**
@@ -95,22 +93,12 @@ export default async function (eleventyConfig) {
         //     ...options,
         // });
 
-        const appleTouchIconHash = await createFileHash(
-            "./src/assets/apple-touch-icon.png",
-        );
+        const appleTouchIconHash = await createFileHash("./src/assets/apple-touch-icon.png");
         const icoHash = await createFileHash("./src/assets/favicon.ico");
-        const favicon16Hash = await createFileHash(
-            "./src/assets/favicon-16.png",
-        );
-        const favicon32Hash = await createFileHash(
-            "./src/assets/favicon-32.png",
-        );
-        const favicon192Hash = await createFileHash(
-            "./src/assets/favicon-192.png",
-        );
-        const favicon512Hash = await createFileHash(
-            "./src/assets/favicon-512.png",
-        );
+        const favicon16Hash = await createFileHash("./src/assets/favicon-16.png");
+        const favicon32Hash = await createFileHash("./src/assets/favicon-32.png");
+        const favicon192Hash = await createFileHash("./src/assets/favicon-192.png");
+        const favicon512Hash = await createFileHash("./src/assets/favicon-512.png");
 
         return `<link href="${svgIcons.svg[0].url}" rel="icon" type="image/svg+xml" />
 <link href="/${process.env.NODE_ENV === "production" ? favicon32Hash : "favicon-32"}.png" rel="icon" sizes="32x32" type="image/png" />
@@ -174,10 +162,7 @@ export default async function (eleventyConfig) {
         },
         compileOptions: {
             permalink: async function (_, inputPath) {
-                const filename = inputPath.substring(
-                    inputPath.lastIndexOf("/") + 1,
-                    inputPath.lastIndexOf("."),
-                );
+                const filename = inputPath.substring(inputPath.lastIndexOf("/") + 1, inputPath.lastIndexOf("."));
                 if (process.env.NODE_ENV === "development") {
                     return `${filename}.css`;
                 }

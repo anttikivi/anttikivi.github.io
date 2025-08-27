@@ -8,7 +8,7 @@ const config = {
     ],
     arrowParens: "always",
     bracketSpacing: true,
-    printWidth: 80,
+    printWidth: 120,
     semi: true,
     singleQuote: false,
     tabWidth: 4,
@@ -17,6 +17,12 @@ const config = {
     proseWrap: "always",
     tailwindStylesheet: "./src/main.css",
     overrides: [
+        {
+            files: ["*.md"],
+            options: {
+                printWidth: 80,
+            },
+        },
         {
             files: ["*.njk"],
             options: {

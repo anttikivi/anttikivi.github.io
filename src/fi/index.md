@@ -12,8 +12,7 @@ Verkkosivustollani (tämä tässä) jaan ajatuksiani ja projektejani.
 
 Kehitän verkkosovelluksia [Visiostossa](https://www.visiosto.fi) yrittäjänä,
 minkä lisäksi työskentelen pääosin avoimen lähdekoodin projektien parissa. Osa
-töistäni on [GitHubissa](https://github.com/anttikivi). Tällä hetkellä kehitän
-[Reginaldia](https://github.com/get-reginald/reginald) omiin tarpeisiini.
+töistäni on [GitHubissa](https://github.com/anttikivi).
 
 Päivätyökseni toimin [Suomen ylioppilaskuntien liiton](https://syl.fi)
 viestintäasiantuntijana.

@@ -15,6 +15,22 @@
         {# TODO: Add description #}
         {% favicons %}
 
+        <link href="{{ site.url }}{{ page.url }}" rel="canonical" />
+
+        <link href="{{ site.url }}{{ page.url }}" hreflang="{{ lang | lang }}" rel="alternate" />
+        {% for link in page.url | locale_links %}
+            <link href="{{ site.url }}{{ link.url }}" hreflang="{{ link.lang | lang }}" rel="alternate" />
+        {% endfor %}
+        {% if page.lang === site.defaultLanguage %}
+            <link href="{{ site.url }}{{ page.url }}" hreflang="x-default" rel="alternate" />
+        {% else %}
+            {% for link in page.url | locale_links %}
+                {% if link.lang === site.defaultLanguage %}
+                    <link href="{{ site.url }}{{ link.url }}" hreflang="x-default" rel="alternate" />
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
         <link href="{{ '/main.css' | hash }}" rel="stylesheet" />
     </head>
     <body>

@@ -19,9 +19,7 @@ async function processCssInternal(input, inputPath) {
     let result = input;
 
     if (process.env.NODE_ENV === "production") {
-        const targets = browserslistToTargets(
-            browserslist(">= 0.005% and not dead"),
-        );
+        const targets = browserslistToTargets(browserslist(">= 0.005% and not dead"));
         const { code } = transform({
             filename: inputPath,
             code: Buffer.from(input),
@@ -38,9 +36,7 @@ async function processCssInternal(input, inputPath) {
 }
 
 export const processCss =
-    process.env.NODE_ENV == "development"
-        ? processCssInternal
-        : memoize(processCssInternal);
+    process.env.NODE_ENV == "development" ? processCssInternal : memoize(processCssInternal);
 
 /**
  * @param {string} inputPath - Path to the CSS file to process.
