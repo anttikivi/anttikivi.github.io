@@ -52,6 +52,16 @@ svg {
     max-width: 100%;
 }
 
+h1 {
+    font-size: var(--prose-font-size);
+}
+
+h2 {
+    margin: 1rem auto;
+    font-size: var(--prose-font-size);
+    font-weight: 400;
+}
+
 a {
     color: var(--link-color);
 }
@@ -143,10 +153,6 @@ p {
     }
 }
 
-.page-header .title {
-    font-size: var(--prose-font-size);
-}
-
 .page-header .top {
     display: flex;
     justify-content: space-between;
@@ -154,6 +160,18 @@ p {
     overflow: hidden;
     width: 100%;
     margin: 1rem auto;
+}
+
+.page-header .title {
+    color: var(--font-color);
+    font-size: var(--prose-font-size);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.page-header a.title:hover,
+.page-header a.title:focus {
+    text-decoration: underline;
 }
 
 .page-footer {

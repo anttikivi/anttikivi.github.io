@@ -56,6 +56,7 @@ const siteData = {
     defaultLanguage: "en",
     disabledLanguages: [],
     isProduction: process.env.NODE_ENV === "production",
+    languages: Object.keys(languages),
     locales,
     title: "Antti Kivi",
     url: process.env.NODE_ENV === "production" ? "https://www.anttikivi.com" : "http://localhost:8080",

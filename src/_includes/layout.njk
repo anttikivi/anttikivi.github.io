@@ -69,10 +69,14 @@
         <link href="{{ '/main.css' | hash }}" rel="stylesheet" />
     </head>
     <body>
-        <a class="sr-only" href="#{{ t.mainID }}"> {{- t.skipToContent -}} </a>
+        <a class="sr-only" href="#{{ t.mainID }}">{{- t.skipToContent -}}</a>
         <header class="container page-header">
             <div class="top">
-                <h1 class="title">{{ site.title }}</h1>
+                {% if home %}
+                    <h1>{{ site.title }}</h1>
+                {% else %}
+                    <a class="title" href="{{ '/' | geturl }}">{{ site.title }}</a>
+                {% endif %}
                 {% if page.fileSlug !== "404" -%}
                     <ul class="nav" role="menu" aria-label="{{- t.languageMenuLabel -}}">
                         {% for link in page.url | locale_links %}
@@ -97,6 +101,8 @@
         <footer class="container page-footer">
             {% if home %}
                 <div class="logo">{%- include "logo.njk" -%}</div>
+            {% elif page.fileSlug === "404" %}
+                <a class="logo" href="{{ '/' | geturl }}">{%- include "logo-404.njk" -%}</a>
             {% else %}
                 <a class="logo" href="{{ '/' | geturl }}">{%- include "logo.njk" -%}</a>
             {% endif %}
