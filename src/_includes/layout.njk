@@ -4,6 +4,15 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        {% if lang === "en" and page.inputPath === "./src/en/index.md" %}
+            <title>{{ site.title }}</title>
+        {% elif lang === "fi" and page.inputPath === "./src/fi/index.md" %}
+            <title>{{ site.title }}</title>
+        {% else %}
+            <title>{{ title }} - {{ site.title }}</title>
+        {% endif %}
+
+        {# TODO: Add description #}
         {% favicons %}
 
         <link href="{{ '/main.css' | hash }}" rel="stylesheet" />

@@ -22,10 +22,25 @@ const paths = {
     },
 };
 
+const siteData = {
+    disabledLanguages: [],
+    isProduction: process.env.NODE_ENV === "production",
+    title: "Antti Kivi",
+    url:
+        process.env.NODE_ENV === "production"
+            ? "https://www.anttikivi.com"
+            : "http://localhost:8080",
+};
+
 /**
  * @param {UserConfig} eleventyConfig
  */
 export default async function (eleventyConfig) {
+    /*
+     * Global data
+     */
+    eleventyConfig.addGlobalData("site", siteData);
+
     /*
      * Filters
      */
