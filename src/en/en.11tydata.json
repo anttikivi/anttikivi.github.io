@@ -5,16 +5,10 @@
         "description": "I’m Antti Kivi, a Finnish software developer and entrepreneur. On this site I share my open‑source projects, writings, and thoughts on technology, politics, and society."
     },
     "t": {
-        "footer": {
-            "languageMenuLabel": "Site language"
-        },
+        "languageMenuLabel": "Site language",
         "logoAlt": "The letters A and K as eyes of a smiling face.",
         "mainID": "main",
-        "skipToContent": "Skip to main content",
-        "socialMedia": {
-            "githubLogoAlt": "GitHub logo",
-            "instagramLogoAlt": "Instagram logo",
-            "threadsLogoAlt": "Instagram Threads logo"
-        }
+        "primaryMenuLabel": "Primary navigation",
+        "skipToContent": "Skip to main content"
     }
 }

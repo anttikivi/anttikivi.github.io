@@ -20,11 +20,36 @@ const paths = {
     en: {
         "/": "/",
         about: "/about/",
+        blog: "/writings/",
     },
     fi: {
         "/": "/",
         about: "/minusta/",
+        blog: "/kirjoituksia/",
     },
+};
+
+const nav = {
+    langs: {
+        en: "in English",
+        fi: "suomeksi",
+    },
+    primary: [
+        {
+            link: "about",
+            label: {
+                en: "About",
+                fi: "Minusta",
+            },
+        },
+        {
+            link: "blog",
+            label: {
+                en: "Writings",
+                fi: "Kirjoituksia",
+            },
+        },
+    ],
 };
 
 const siteData = {
@@ -44,6 +69,7 @@ export default async function (eleventyConfig) {
      * Global data
      */
     eleventyConfig.addGlobalData("site", siteData);
+    eleventyConfig.addGlobalData("nav", nav);
 
     /*
      * Filters
@@ -83,7 +109,11 @@ export default async function (eleventyConfig) {
     eleventyConfig.addFilter("geturl", function (value, lang) {
         const language = lang ? lang : this.page.lang;
         if (value in paths[language]) {
-            return `${paths[language][value]}`;
+            if (language === siteData.defaultLanguage) {
+                return `${paths[language][value]}`;
+            }
+
+            return `/${language}${paths[language][value]}`;
         }
 
         throw new ReferenceError(

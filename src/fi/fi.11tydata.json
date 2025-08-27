@@ -5,16 +5,10 @@
         "description": "Olen Antti Kivi, ohjelmistokehittäjä ja yrittäjä. Tällä sivustolla jaan projektejani, kirjoituksiani ja ajatuksiani teknologiasta, yhteiskunnasta ja politiikasta."
     },
     "t": {
-        "footer": {
-            "languageMenuLabel": "Sivuston kieli"
-        },
+        "languageMenuLabel": "Sivuston kieli",
         "logoAlt": "Kirjaimet A ja K hymyilevien kasvojen silminä.",
         "mainID": "sisalto",
-        "skipToContent": "Siirry sisältöön",
-        "socialMedia": {
-            "githubLogoAlt": "Githubin logo",
-            "instagramLogoAlt": "Instagramin logo",
-            "threadsLogoAlt": "Instagram Threadsin logo"
-        }
+        "primaryMenuLabel": "Päävalikko",
+        "skipToContent": "Siirry sisältöön"
     }
 }
