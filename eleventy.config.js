@@ -219,6 +219,8 @@ export default async function (eleventyConfig) {
             "src/assets/favicon-512.png": `/${await createFileHash("./src/assets/favicon-512.png")}.png`,
             "src/assets/favicon.ico": `/${await createFileHash("./src/assets/favicon.ico")}.ico`,
         });
+
+        eleventyConfig.addPassthroughCopy("src/.well-known/openpgpkey");
     } else {
         eleventyConfig.addPassthroughCopy({
             "src/assets/apple-touch-icon.png": "/apple-touch-icon.png",
