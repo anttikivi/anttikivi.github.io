@@ -34,7 +34,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4.0.0
+      uses: actions/checkout@v4.2.2
 
     - name: Set up Node.js environment
       uses: actions/setup-node@v4.4.0
@@ -48,12 +48,12 @@ jobs:
       run: npm ci
 
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3.0.0
+      uses: github/codeql-action/init@v3.29.2
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3.0.0
+      uses: github/codeql-action/analyze@v3.29.2
       with:
         category: "/language:${{matrix.language}}"
