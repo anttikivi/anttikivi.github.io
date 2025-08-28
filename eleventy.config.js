@@ -22,11 +22,13 @@ const paths = {
         "/": "/",
         about: "/about/",
         blog: "/writings/",
+        contact: "/contact/",
     },
     fi: {
         "/": "/",
         about: "/minusta/",
         blog: "/kirjoituksia/",
+        contact: "/yhteys/",
     },
 };
 
@@ -51,10 +53,22 @@ const nav = {
                 fi: "Kirjoituksia",
             },
         },
+        {
+            link: "contact",
+            label: {
+                en: "Contact",
+                fi: "Yhteys",
+            },
+        },
     ],
 };
 
 const siteData = {
+    contact: {
+        email: "antti@anttikivi.com",
+        github: "https://github.com/anttikivi",
+        pgpFingerprint: "EC77&nbsp;BAFB&nbsp;FA43&nbsp;861F&nbsp;CA40 76D4&nbsp;A2F1&nbsp;E9B3&nbsp;1C85&nbsp;5BA3",
+    },
     defaultLanguage: "en",
     disabledLanguages: [],
     isProduction: process.env.NODE_ENV === "production",
@@ -62,6 +76,10 @@ const siteData = {
     locales,
     title: "Antti Kivi",
     url: process.env.NODE_ENV === "production" ? "https://www.anttikivi.com" : "http://localhost:8080",
+};
+
+const t = {
+    github: "GitHub",
 };
 
 /**
@@ -73,6 +91,7 @@ export default async function (eleventyConfig) {
      */
     eleventyConfig.addGlobalData("site", siteData);
     eleventyConfig.addGlobalData("nav", nav);
+    eleventyConfig.addGlobalData("t", t);
 
     /*
      * Plugins
@@ -232,6 +251,19 @@ export default async function (eleventyConfig) {
             "src/assets/favicon-512.png": "/favicon-512.png",
         });
     }
+
+    /*
+     * Bundles
+     */
+    eleventyConfig.addBundle("css", {
+        transforms: [
+            async function (content) {
+                let { page } = this;
+                return (await processCss(content, page.inputPath)).code;
+            },
+        ],
+        bundleHtmlContentFromSelector: "style",
+    });
 
     /*
      * Template Formats
