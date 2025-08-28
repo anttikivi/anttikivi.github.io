@@ -8,7 +8,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '28 12 * * 3'
+    - cron: "28 12 * * 3"
 
 jobs:
   analyze:
@@ -25,34 +25,34 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - language: actions
-          build-mode: none
-        - language: javascript-typescript
-          build-mode: none
-          node: 24
+          - language: actions
+            build-mode: none
+          - language: javascript-typescript
+            build-mode: none
+            node: 24
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4.2.2
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
 
-    - name: Set up Node.js environment
-      uses: actions/setup-node@v4.4.0
-      if: ${{ matrix.node }}
-      with:
-        node-version: ${{ matrix.node }}
-        cache: "npm"
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v4.4.0
+        if: ${{ matrix.node }}
+        with:
+          node-version: ${{ matrix.node }}
+          cache: "npm"
 
-    - name: Install dependencies
-      if: ${{ matrix.node }}
-      run: npm ci
+      - name: Install dependencies
+        if: ${{ matrix.node }}
+        run: npm ci
 
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3.29.2
-      with:
-        languages: ${{ matrix.language }}
-        build-mode: ${{ matrix.build-mode }}
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3.29.2
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
 
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3.29.2
-      with:
-        category: "/language:${{matrix.language}}"
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3.29.2
+        with:
+          category: "/language:${{matrix.language}}"
