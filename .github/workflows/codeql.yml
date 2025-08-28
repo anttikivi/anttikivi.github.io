@@ -27,7 +27,6 @@ jobs:
         include:
         - language: actions
           build-mode: none
-          node: none
         - language: javascript-typescript
           build-mode: none
           node: 24
