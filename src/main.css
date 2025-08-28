@@ -9,6 +9,7 @@
     --font-sans:
         ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
         "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --prose-font-size: 1.125rem;
 }
 
@@ -82,6 +83,10 @@ a:focus {
 p {
     margin: 1rem auto;
     font-size: var(--prose-font-size);
+}
+
+code {
+    font-family: var(--font-mono);
 }
 
 .sr-only {
