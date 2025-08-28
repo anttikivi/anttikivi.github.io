@@ -38,7 +38,7 @@ jobs:
               run: npm run build
 
             - name: Upload artifact
-              uses: anttikivi/upload-pages-artifact@36b2f271d849d4001c9b9adc4805dfc098c88f50
+              uses: anttikivi/upload-pages-artifact@0fb2d886267e40ac0b345e66a9c0a4ad23450683
 
     deploy:
         environment:
