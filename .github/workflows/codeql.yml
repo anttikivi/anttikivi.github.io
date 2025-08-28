@@ -1,0 +1,59 @@
+name: CodeQL
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '28 12 * * 3'
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+
+    permissions:
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - language: actions
+          build-mode: none
+          node: none
+        - language: javascript-typescript
+          build-mode: none
+          node: 24
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4.0.0
+
+    - name: Set up Node.js environment
+      uses: actions/setup-node@v4.4.0
+      if: ${{ matrix.node }}
+      with:
+        node-version: ${{ matrix.node }}
+        cache: "npm"
+
+    - name: Install dependencies
+      if: ${{ matrix.node }}
+      run: npm ci
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3.0.0
+      with:
+        languages: ${{ matrix.language }}
+        build-mode: ${{ matrix.build-mode }}
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3.0.0
+      with:
+        category: "/language:${{matrix.language}}"
