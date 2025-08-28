@@ -210,6 +210,8 @@ export default async function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({
         "src/assets/favicon.ico": "/favicon.ico",
     });
+    eleventyConfig.addPassthroughCopy({ public: "/" });
+
     if (process.env.NODE_ENV === "production") {
         eleventyConfig.addPassthroughCopy({
             "src/assets/apple-touch-icon.png": `/${await createFileHash("./src/assets/apple-touch-icon.png")}.png`,
