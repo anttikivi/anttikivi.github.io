@@ -1,5 +1,6 @@
 import { I18nPlugin, RenderPlugin } from "@11ty/eleventy";
 import Image, { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { minify } from "html-minifier-terser";
 import path from "node:path";
 import { processCss } from "./util/css.js";
 import { createFileHash } from "./util/hash.js";
@@ -254,6 +255,24 @@ export default async function (eleventyConfig) {
                 return `${filename}.${hash}.css`;
             },
         },
+    });
+
+    /*
+     * Transforms
+     */
+    eleventyConfig.addTransform("htmlmin", function (content) {
+        if (process.env.NODE_ENV === "production" && (this.page.outputPath || "").endsWith(".html")) {
+            const minified = minify(content, {
+                collapseWhitespace: true,
+                // minifyCSS: true,
+                removeComments: true,
+                sortAttributes: true,
+                useShortDoctype: true,
+            });
+            return minified;
+        }
+
+        return content;
     });
 
     /**
