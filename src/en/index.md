@@ -12,9 +12,9 @@ my website (this one), I share my thoughts and projects.
 
 As an entrepreneur at [Visiosto](https://www.visiosto.fi/en), I build web
 applications. Besides that, I mostly work on open-source projects, and you can
-find some of my work on [GitHub](https://github.com/anttikivi). Right now, I’m
-creating [Reginald](https://github.com/anttikivi/reginald), the personal
-workstation valet.
+find some of my work on [GitHub](https://github.com/anttikivi).
+
+<!-- Right now, I’m creating [Reginald](https://github.com/anttikivi/reginald), the personal workstation valet. -->
 
 My day job revolves around politics and social issues as the communications
 adviser of
