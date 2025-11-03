@@ -1,0 +1,22 @@
+---
+import { useTranslations } from "@/i18n";
+import { languageCodes, type Locale } from "@/locales";
+import "@/styles/global.css";
+
+interface Props {
+    error?: boolean;
+}
+const { error } = Astro.props;
+const locale = error ? "fi" : (Astro.currentLocale as Locale);
+
+const t = useTranslations("layout", locale);
+---
+
+<!doctype html>
+<html class="scheme-light dark:scheme-dark" lang={languageCodes[locale]}>
+    <head></head>
+    <body class="bg-stone-50 font-sans text-shadow-stone-950 dark:bg-stone-950 dark:text-stone-50">
+        <a class="sr-only focus:not-sr-only" href={`#${t("mainID")}`}>{t("skipToContent")}</a>
+        <slot /></body
+    >
+</html>

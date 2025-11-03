@@ -1,0 +1,27 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import locales, { defaultLocale, type Locale } from "@/locales";
+import type { GetStaticPathsResult } from "astro";
+
+export function getStaticPaths(): GetStaticPathsResult {
+    let paths = [];
+
+    for (const locale of locales as Locale[]) {
+        if (locale === defaultLocale) {
+            paths.push({
+                params: { locale: undefined },
+            });
+        } else {
+            paths.push({
+                params: { locale },
+            });
+        }
+    }
+
+    return paths;
+}
+---
+
+<MainLayout>
+    <h1>Astro</h1>
+</MainLayout>
