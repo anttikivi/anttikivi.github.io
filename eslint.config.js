@@ -1,4 +1,3 @@
-import css from "@eslint/css";
 import js from "@eslint/js";
 import json from "@eslint/json";
 import markdown from "@eslint/markdown";
@@ -25,5 +24,4 @@ export default defineConfig([
     },
     { files: ["**/*.json"], plugins: { json }, language: "json/json", extends: ["json/recommended"] },
     { files: ["**/*.md"], plugins: { markdown }, language: "markdown/gfm", extends: ["markdown/recommended"] },
-    { files: ["**/*.css"], plugins: { css }, language: "css/css", extends: ["css/recommended"] },
 ]);
