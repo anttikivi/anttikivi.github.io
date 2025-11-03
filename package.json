@@ -1,14 +1,44 @@
 {
-  "name": "anttikivi.github.io",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "5.15.3"
-  }
+    "name": "anttikivi.github.io",
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "astro": "astro",
+        "build": "astro build",
+        "dev": "astro dev",
+        "format": "prettier --write .",
+        "lint": "astro check && eslint . && stylelint \"**/*.css\" && prettier --check .",
+        "preview": "astro preview"
+    },
+    "dependencies": {
+        "astro": "5.15.3"
+    },
+    "devDependencies": {
+        "@astrojs/check": "0.9.5",
+        "@astrojs/sitemap": "3.6.0",
+        "@astrojs/ts-plugin": "1.10.5",
+        "@eslint/css": "0.14.0",
+        "@eslint/js": "9.39.0",
+        "@eslint/json": "0.13.2",
+        "@eslint/markdown": "7.5.0",
+        "@prettier/plugin-xml": "3.4.2",
+        "@tailwindcss/vite": "4.1.16",
+        "browserslist": "4.27.0",
+        "eslint": "9.39.0",
+        "eslint-plugin-astro": "1.4.0",
+        "eslint-plugin-jsx-a11y": "6.10.2",
+        "globals": "16.5.0",
+        "lightningcss": "1.30.2",
+        "prettier": "3.6.2",
+        "prettier-plugin-astro": "0.14.1",
+        "prettier-plugin-astro-organize-imports": "0.4.11",
+        "prettier-plugin-organize-imports": "4.3.0",
+        "prettier-plugin-packagejson": "2.5.19",
+        "prettier-plugin-tailwindcss": "0.7.1",
+        "stylelint": "16.25.0",
+        "stylelint-config-standard": "39.0.1",
+        "tailwindcss": "4.1.16",
+        "typescript": "5.9.3",
+        "typescript-eslint": "8.46.2"
+    }
 }
