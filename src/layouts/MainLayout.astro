@@ -1,13 +1,15 @@
 ---
+import BaseHead from "@/components/BaseHead.astro";
 import { useTranslations } from "@/i18n";
-import { languageCodes, type Locale } from "@/locales";
+import { defaultLocale, languageCodes, type Locale } from "@/locales";
 import "@/styles/global.css";
 
 interface Props {
-    error?: boolean;
+    errorPage?: boolean;
+    title: string;
 }
-const { error } = Astro.props;
-const locale = error ? "fi" : (Astro.currentLocale as Locale);
+const { errorPage, title } = Astro.props;
+const locale = errorPage ? defaultLocale : (Astro.currentLocale as Locale);
 
 const t = useTranslations("layout", locale);
 ---
@@ -15,8 +17,7 @@ const t = useTranslations("layout", locale);
 <!doctype html>
 <html class="scheme-light dark:scheme-dark" lang={languageCodes[locale]}>
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <BaseHead errorPage={errorPage} title={title} />
     </head>
     <body class="bg-stone-50 font-sans text-shadow-stone-950 dark:bg-stone-950 dark:text-stone-50">
         <a class="sr-only focus:not-sr-only" href={`#${t("mainID")}`}>{t("skipToContent")}</a>

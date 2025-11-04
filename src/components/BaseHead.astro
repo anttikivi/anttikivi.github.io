@@ -1,0 +1,26 @@
+---
+import { useTranslations } from "@/i18n";
+import { defaultLocale, type Locale } from "@/locales";
+
+interface Props {
+    errorPage?: boolean | undefined;
+    title: string;
+}
+
+const { errorPage, title } = Astro.props;
+const locale = errorPage ? defaultLocale : (Astro.currentLocale as Locale);
+const isIndex =
+    (locale === defaultLocale && Astro.url.pathname === "/") ||
+    (locale !== defaultLocale && Astro.url.pathname === `/${locale}/`);
+
+const t = useTranslations("site", locale);
+
+const titleSeparator = "-";
+const pageTitle = isIndex ? t("title") : `${title} ${titleSeparator} ${t("title")}`;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>{pageTitle}</title>
+<meta name="description" content={t("description")} />

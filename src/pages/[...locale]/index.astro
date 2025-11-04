@@ -31,7 +31,7 @@ if (!page) {
 const { Content } = await render(page);
 ---
 
-<MainLayout>
+<MainLayout title={page.data.title}>
     <h1>Astro</h1>
     <Content />
 </MainLayout>
