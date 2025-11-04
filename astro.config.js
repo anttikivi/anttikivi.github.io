@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import browserslist from "browserslist";
 import { browserslistToTargets } from "lightningcss";
-import locales, { defaultLocale } from "./src/locales";
+import locales, { defaultLocale, getLang } from "./src/locales";
 
 // https://astro.build/config
 export default defineConfig({
@@ -31,8 +31,8 @@ export default defineConfig({
         assets: "_assets",
     },
     i18n: {
-        locales: locales,
-        defaultLocale: defaultLocale as never,
+        locales: locales.map((locale) => getLang(locale)),
+        defaultLocale: getLang(defaultLocale),
         routing: {
             prefixDefaultLocale: false,
         },

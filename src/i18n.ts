@@ -1,12 +1,12 @@
 import type { Locale } from "@/locales";
-import en from "@/messages/en";
+import enGB from "@/messages/en-GB";
 import fi from "@/messages/fi";
 
-type Translations = typeof en;
+type Translations = typeof enGB;
 type Namespace = keyof Translations;
 
 const translations: Record<Locale, Translations> = {
-    en,
+    "en-GB": enGB,
     fi,
 };
 
@@ -29,8 +29,8 @@ function getNestedValue(obj: (typeof translations)[Locale][Namespace], key: stri
     return undefined;
 }
 
-export function useTranslations<N extends Namespace>(ns: N, lang: Locale) {
-    const msgs = translations[lang][ns];
+export function useTranslations<N extends Namespace>(ns: N, locale: Locale) {
+    const msgs = translations[locale][ns];
 
     type NS = typeof msgs;
     type PathsToKeys<T> = T extends string

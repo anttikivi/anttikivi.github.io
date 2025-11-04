@@ -1,4 +1,4 @@
-import type en from "@/messages/en";
+import type enGB from "@/messages/en-GB";
 
 export default {
     layout: {
@@ -7,6 +7,7 @@ export default {
     },
     site: {
         description: "Olen Antti Kivi, ohjelmistokehittäjä. Tällä sivustolla jaan projektejani ja kirjoituksiani.",
-        title: "Antti Kivi",
+        name: "Antti Kivi",
+        ogImageAlt: "Antti Kivi",
     },
-} satisfies typeof en;
+} satisfies typeof enGB;

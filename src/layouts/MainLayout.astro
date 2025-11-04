@@ -1,25 +1,22 @@
 ---
-import BaseHead from "@/components/BaseHead.astro";
+import BaseHead, { type Props as HeadProps } from "@/components/BaseHead.astro";
 import { useTranslations } from "@/i18n";
-import { defaultLocale, languageCodes, type Locale } from "@/locales";
+import { routeLocale } from "@/routes";
 import "@/styles/global.css";
 
-interface Props {
-    errorPage?: boolean;
-    title: string;
-}
-const { errorPage, title } = Astro.props;
-const locale = errorPage ? defaultLocale : (Astro.currentLocale as Locale);
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface Props extends HeadProps {}
 
+const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
 const t = useTranslations("layout", locale);
 ---
 
 <!doctype html>
-<html class="scheme-light dark:scheme-dark" lang={languageCodes[locale]}>
+<html class="scheme-light dark:scheme-dark" lang={locale}>
     <head>
-        <BaseHead errorPage={errorPage} title={title} />
+        <BaseHead {...Astro.props} />
     </head>
-    <body class="bg-stone-50 font-sans text-shadow-stone-950 dark:bg-stone-900 dark:text-stone-50">
+    <body class="bg-gray-50 font-sans text-gray-950 dark:bg-gray-900 dark:text-gray-50">
         <a class="sr-only focus:not-sr-only" href={`#${t("mainID")}`}>{t("skipToContent")}</a>
         <slot />
     </body>

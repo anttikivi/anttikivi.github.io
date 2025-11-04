@@ -1,26 +1,28 @@
-import type { Locales } from "astro";
+const locales = ["en-GB", "fi"] as const;
 
-const shortLocales = ["en", "fi"] as const;
-const locales = shortLocales as unknown as Locales;
+export const langs = ["en", "fi"] as const;
 
-export type Locale = (typeof shortLocales)[number];
+export type Lang = (typeof langs)[number];
+export type Locale = (typeof locales)[number];
 
-export const defaultLocale: Locale = "en";
+export const defaultLocale: Locale = "en-GB";
 
-export const languageCodes: Record<Locale, string> = {
-    en: "en-GB",
-    fi: "fi",
-};
+export function getLang(locale: Locale): Lang {
+    return (
+        {
+            "en-GB": "en",
+            fi: "fi",
+        } as Record<Locale, Lang>
+    )[locale];
+}
 
-export const languages: { locale: Locale; menuLabel: string }[] = [
-    {
-        locale: "en",
-        menuLabel: "In English",
-    },
-    {
-        locale: "fi",
-        menuLabel: "Suomeksi",
-    },
-];
+export function getLocale(lang: Lang): Locale {
+    return (
+        {
+            en: "en-GB",
+            fi: "fi",
+        } as Record<Lang, Locale>
+    )[lang];
+}
 
 export default locales;

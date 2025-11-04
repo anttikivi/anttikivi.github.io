@@ -1,20 +1,20 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import locales, { defaultLocale, type Locale } from "@/locales";
+import locales, { defaultLocale, getLang } from "@/locales";
 import type { GetStaticPathsResult } from "astro";
 import { getEntry, render } from "astro:content";
 
 export function getStaticPaths(): GetStaticPathsResult {
     let paths = [];
 
-    for (const locale of locales as Locale[]) {
+    for (const locale of locales) {
         if (locale === defaultLocale) {
             paths.push({
                 params: { locale: undefined },
             });
         } else {
             paths.push({
-                params: { locale },
+                params: { locale: getLang(locale) },
             });
         }
     }
@@ -22,7 +22,7 @@ export function getStaticPaths(): GetStaticPathsResult {
     return paths;
 }
 
-const page = await getEntry("home", Astro.currentLocale as string);
+const page = await getEntry("home", Astro.currentLocale!);
 
 if (!page) {
     throw new Error(`could not load content for entry home/preface-${Astro.currentLocale}`);
@@ -31,7 +31,7 @@ if (!page) {
 const { Content } = await render(page);
 ---
 
-<MainLayout title={page.data.title}>
+<MainLayout>
     <h1>Astro</h1>
     <Content />
 </MainLayout>
