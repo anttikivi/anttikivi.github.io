@@ -19,10 +19,18 @@
     /* Text color on light background */
     --color-gray-950: oklch(14.1% 0.005 285.823deg);
 
+    /* Link hover color on dark background */
+    --color-blue-100: oklch(93.2% 0.032 255.585);
+    /* Visited link color on dark background */
+    --color-blue-200: oklch(88.2% 0.059 254.128);
     /* Link color on dark background */
     --color-blue-300: oklch(80.9% 0.105 251.813);
     /* Link color on light background */
     --color-blue-800: oklch(42.4% 0.199 265.638);
+    /* Visited link color on light background */
+    --color-blue-900: oklch(37.9% 0.146 265.522);
+    /* Link hover color on light background */
+    --color-blue-950: oklch(28.2% 0.091 267.935);
 
     --spacing: 0.25rem;
 
@@ -43,4 +51,42 @@
         max-width: 40rem;
     }
 }
+
+@layer components {
+    .prose {
+        & > p {
+            margin: --spacing(4) 0;
+        }
+
+        & a {
+            color: var(--color-blue-800);
+            text-decoration: underline;
+
+            @media (prefers-color-scheme: dark) {
+                color: var(--color-blue-300);
+            }
+
+            &:hover {
+                @media (hover: hover) {
+                    color: var(--color-blue-950);
+
+                    @media (prefers-color-scheme: dark) {
+                        color: var(--color-blue-100);
+                    }
+                }
+            }
+
+            &:visited {
+                color: var(--color-blue-900);
+
+                @media (prefers-color-scheme: dark) {
+                    color: var(--color-blue-200);
+                }
+            }
+        }
+
+        & em {
+            font-style: italic;
+        }
+    }
 }
