@@ -1,0 +1,19 @@
+---
+import type { Locale } from "@/locales";
+import { getRoute, routeLocale } from "@/routes";
+import type { JSX } from "astro/jsx-runtime";
+
+interface Props {
+    href: string;
+    locale?: Locale;
+    role?: JSX.AriaRole;
+}
+
+const { href, locale = routeLocale(Astro.routePattern, Astro.currentLocale), role } = Astro.props;
+---
+
+<a
+    class="text-gray-600 underline hover:text-blue-800 dark:text-gray-300 dark:hover:text-blue-300"
+    href={getRoute(locale, href)}
+    role={role}><slot /></a
+>

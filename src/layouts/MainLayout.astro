@@ -1,6 +1,8 @@
 ---
 import BaseHead, { type Props as HeadProps } from "@/components/BaseHead.astro";
+import Header from "@/components/Header.astro";
 import SkipLink from "@/components/SkipLink.astro";
+import { useTranslations } from "@/i18n";
 import { routeLocale } from "@/routes";
 import "@/styles/global.css";
 
@@ -8,6 +10,7 @@ import "@/styles/global.css";
 interface Props extends HeadProps {}
 
 const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
+const t = useTranslations("layout", locale);
 ---
 
 <!doctype html>
@@ -17,6 +20,9 @@ const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
     </head>
     <body class="bg-gray-50 font-sans text-gray-950 dark:bg-gray-900 dark:text-gray-50">
         <SkipLink />
-        <slot />
+        <Header />
+        <main id={t("mainID")}>
+            <slot />
+        </main>
     </body>
 </html>

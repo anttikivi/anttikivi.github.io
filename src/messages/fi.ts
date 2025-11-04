@@ -7,6 +7,7 @@ export default {
     },
     site: {
         description: "Olen Antti Kivi, ohjelmistokehittäjä. Tällä sivustolla jaan projektejani ja kirjoituksiani.",
+        languageMenu: "Sivuston kieli",
         name: "Antti Kivi",
         ogImageAlt: "Antti Kivi",
     },
