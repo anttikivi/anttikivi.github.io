@@ -1,0 +1,9 @@
+---
+import { useTranslations } from "@/i18n";
+import { routeLocale } from "@/routes";
+
+const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
+const t = useTranslations("layout", locale);
+---
+
+<a class="sr-only focus:not-sr-only" href={`#${t("mainID")}`}>{t("skipToContent")}</a>
