@@ -2,6 +2,7 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import locales, { defaultLocale, type Locale } from "@/locales";
 import type { GetStaticPathsResult } from "astro";
+import { getEntry, render } from "astro:content";
 
 export function getStaticPaths(): GetStaticPathsResult {
     let paths = [];
@@ -20,8 +21,17 @@ export function getStaticPaths(): GetStaticPathsResult {
 
     return paths;
 }
+
+const page = await getEntry("home", Astro.currentLocale as string);
+
+if (!page) {
+    throw new Error(`could not load content for entry home/preface-${Astro.currentLocale}`);
+}
+
+const { Content } = await render(page);
 ---
 
 <MainLayout>
     <h1>Astro</h1>
+    <Content />
 </MainLayout>

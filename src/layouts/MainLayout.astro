@@ -14,9 +14,12 @@ const t = useTranslations("layout", locale);
 
 <!doctype html>
 <html class="scheme-light dark:scheme-dark" lang={languageCodes[locale]}>
-    <head></head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
     <body class="bg-stone-50 font-sans text-shadow-stone-950 dark:bg-stone-950 dark:text-stone-50">
         <a class="sr-only focus:not-sr-only" href={`#${t("mainID")}`}>{t("skipToContent")}</a>
-        <slot /></body
-    >
+        <slot />
+    </body>
 </html>
