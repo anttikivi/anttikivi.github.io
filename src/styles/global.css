@@ -9,5 +9,6 @@
         "Noto Color Emoji";
 
     --color-stone-50: oklch(98.5% 0.001 106.423deg);
+    --color-stone-900: oklch(21.6% 0.006 56.043deg);
     --color-stone-950: oklch(14.7% 0.004 49.25deg);
 }
