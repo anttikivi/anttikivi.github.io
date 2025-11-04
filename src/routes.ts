@@ -14,6 +14,10 @@ const fi: RouteDefs = {
 const routes: Record<Locale, RouteDefs> = { "en-GB": enGB, fi };
 
 export function getRouteKey(url: URL) {
+    if (url.pathname === "/404/") {
+        return "404";
+    }
+
     let path = url.pathname;
     const original = path;
 
@@ -48,6 +52,10 @@ export function getRouteKey(url: URL) {
         if (value === route) {
             return key;
         }
+    }
+
+    if (import.meta.env.DEV) {
+        return "404";
     }
 
     throw new Error(`no route key found for path "${original}"`);

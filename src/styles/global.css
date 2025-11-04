@@ -8,6 +8,8 @@
         ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
 
+    --color-current: currentColor;
+
     /* Light background color, text color on dark background */
     --color-gray-50: oklch(98.5% 0 0deg);
 
