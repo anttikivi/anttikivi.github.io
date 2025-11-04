@@ -28,6 +28,7 @@ const config = {
             files: ["*.md"],
             options: {
                 proseWrap: "always",
+                printWidth: 80,
             },
         },
         {
