@@ -18,7 +18,6 @@ export default defineConfig({
         css: {
             transformer: "lightningcss",
             lightningcss: {
-                // include: Features.Colors | Features.Nesting,
                 targets: browserslistToTargets(browserslist(">= 0.01%, last 2 versions, Firefox ESR, not dead")),
             },
         },

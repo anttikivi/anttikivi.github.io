@@ -2,7 +2,7 @@
 import ogImage from "@/assets/opengraph-image.png";
 import { useTranslations } from "@/i18n";
 import locales, { defaultLocale } from "@/locales";
-import { getRoute, getRouteKey, routeLocale } from "@/routes";
+import { getRoute, getRouteKey, isErrorPage, routeLocale } from "@/routes";
 import type { ImageMetadata } from "astro";
 import { getImage } from "astro:assets";
 import Favicon from "./Favicon.astro";
@@ -28,7 +28,7 @@ const {
     description = t("description"),
     image = { data: await getImage({ src: ogImage }), alt: t("ogImageAlt") },
     pageType = "website",
-    title = getRouteKey(Astro.url) ? name : `${Astro.props.title} ${titleSeparator} ${name}`,
+    title = getRouteKey(Astro.url) === "index" ? name : `${Astro.props.title} ${titleSeparator} ${name}`,
 } = Astro.props;
 
 const resolvedImage = {
@@ -47,10 +47,12 @@ const resolvedImage = {
 <Favicon />
 
 <SEO
-    alternateURLs={locales.map((l) => ({
-        locale: l,
-        url: new URL(getRoute(l, getRouteKey(Astro.url)), Astro.site),
-    }))}
+    alternateURLs={!isErrorPage(Astro.routePattern)
+        ? locales.map((l) => ({
+              locale: l,
+              url: new URL(getRoute(l, getRouteKey(Astro.url)), Astro.site),
+          }))
+        : []}
     canonicalURL={canonicalURL}
     defaultLocale={defaultLocale}
     description={description}

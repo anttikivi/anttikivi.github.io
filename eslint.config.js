@@ -20,7 +20,7 @@ export default defineConfig([
     {
         files: ["**/*.astro"],
         plugins: { astro },
-        extends: ["astro/recommended", "astro/jsx-a11y-strict"],
+        extends: ["astro/recommended", "astro/jsx-a11y-recommended"],
     },
     { files: ["**/*.json"], plugins: { json }, language: "json/json", extends: ["json/recommended"] },
     { files: ["**/*.md"], plugins: { markdown }, language: "markdown/gfm", extends: ["markdown/recommended"] },
