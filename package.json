@@ -5,6 +5,7 @@
     "scripts": {
         "astro": "astro",
         "build": "astro build",
+        "clean": "rm -rf dist",
         "dev": "astro dev",
         "format": "prettier --write .",
         "lint": "astro check && eslint . && stylelint \"**/*.css\" && prettier --check .",
