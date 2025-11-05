@@ -1,5 +1,5 @@
 import type { Locale } from "@/locales";
-import type { RouteKey } from "@/routes";
+import type { RouteKey } from "@/types/routes";
 
 type NavLink = {
     disabled?: boolean;
@@ -8,6 +8,14 @@ type NavLink = {
 };
 
 export default [
+    {
+        disabled: false,
+        href: "writings",
+        label: {
+            "en-GB": "writings",
+            fi: "kirjoituksia",
+        },
+    },
     {
         disabled: false,
         href: "contact",

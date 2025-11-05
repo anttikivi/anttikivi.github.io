@@ -1,22 +1,7 @@
+import routes, { type RouteDefs, type RouteKey } from "@/data/routes";
 import locales, { defaultLocale, getLang, getLocale, langs, type Lang, type Locale } from "@/locales";
 import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
-
-type RouteDefs = typeof enGB;
-
-const enGB = {
-    contact: "contact",
-    index: "/",
-};
-
-const fi: RouteDefs = {
-    contact: "yhteys",
-    index: "/",
-} satisfies typeof enGB;
-
-const routes: Record<Locale, RouteDefs> = { "en-GB": enGB, fi };
-
-export type RouteKey = keyof (typeof routes)[Locale];
 
 /**
  * Get the translation key for the current route, given as a URL.
@@ -155,5 +140,3 @@ export function routeLocale(routePattern: string, currentLocale?: string): Local
 
     return isErrorPage(routePattern) || !currentLocale ? defaultLocale : getLocale(currentLocale as Lang);
 }
-
-export default routes;

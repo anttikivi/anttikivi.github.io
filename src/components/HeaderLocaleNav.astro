@@ -1,9 +1,9 @@
 ---
 import HeaderLink from "@/components/HeaderLink.astro";
 import localeNav from "@/data/header-locale-nav";
+import type { RouteKey } from "@/data/routes";
 import { useTranslations } from "@/i18n";
 import locales, { type Locale } from "@/locales";
-import type { RouteKey } from "@/routes";
 import { getRouteKey, isErrorPage, isTranslated, routeLocale } from "@/routes";
 
 const locale = routeLocale(Astro.routePattern, Astro.currentLocale);

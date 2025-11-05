@@ -1,5 +1,5 @@
 ---
-import routes, { customPageIDs, customPageKeys, type RouteKey } from "@/data/routes";
+import routes from "@/data/routes";
 import MainLayout from "@/layouts/MainLayout.astro";
 import type { Locale } from "@/locales";
 import locales, { defaultLocale, getLang } from "@/locales";
@@ -7,10 +7,10 @@ import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 import { getCollection, render } from "astro:content";
 
 export const getStaticPaths = (async () => {
-    const pages = await getCollection(
-        "pages",
-        (page) => !customPageKeys.includes(page.data.key!) && !customPageIDs.includes(page.id),
-    );
+    const ids = locales.map((locale) => `${locale.toLowerCase()}/writings.md`);
+    const pages = await getCollection("pages", (page) => {
+        return page.data.key === "writings" || ids.includes(page.id.toLowerCase());
+    });
 
     return pages.map((page) => {
         const parts = page.id.split("/");
@@ -25,14 +25,11 @@ export const getStaticPaths = (async () => {
             throw new Error(`page id does not contain a valid locale: ${page.id}`);
         }
 
-        const entry = page.id.slice(`${locale}/`.length, page.id.length - ".md".length);
-        const routeKey = page.data.key ?? (entry as RouteKey);
-
         if (locale === defaultLocale) {
             return {
                 params: {
                     locale: undefined,
-                    slug: routes[locale][routeKey],
+                    writings: routes[locale]["writings"],
                 },
                 props: { page },
             };
@@ -40,7 +37,7 @@ export const getStaticPaths = (async () => {
             return {
                 params: {
                     locale: getLang(locale),
-                    slug: routes[locale][routeKey],
+                    writings: routes[locale]["writings"],
                 },
                 props: { page },
             };
@@ -54,7 +51,7 @@ const { page } = Astro.props as Props;
 const { Content } = await render(page);
 ---
 
-<MainLayout title={page.data.title}>
+<MainLayout title={page.data.title} notFoundLogo>
     <div class="container">
         <h1 class="my-8 font-bold">{page.data.title}</h1>
         <div class="prose">
