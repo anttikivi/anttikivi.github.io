@@ -15,6 +15,7 @@ export default defineConfig({
     integrations: [sitemap()],
     compressHTML: import.meta.env.PROD,
     vite: {
+        // @ts-expect-error 2322
         plugins: [tailwindcss()],
         css: {
             transformer: "lightningcss",
