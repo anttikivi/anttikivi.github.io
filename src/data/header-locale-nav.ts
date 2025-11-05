@@ -1,6 +1,6 @@
 import type { Locale } from "@/locales";
 
 export default {
-    "en-GB": "In English",
-    fi: "Suomeksi",
+    "en-GB": "in English",
+    fi: "suomeksi",
 } as Record<Locale, string>;
