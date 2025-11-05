@@ -7,7 +7,7 @@ import locales, { type Locale } from "@/locales";
 import { getRouteKey, isErrorPage, isTranslated, routeLocale } from "@/routes";
 
 const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
-const t = useTranslations("site", locale);
+const t = useTranslations("layout", locale);
 
 const translations = [] as {
     href: RouteKey;
