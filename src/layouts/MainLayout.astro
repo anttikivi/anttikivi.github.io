@@ -9,7 +9,7 @@ import "@/styles/global.css";
 
 interface Props extends FooterProps, HeadProps {}
 
-const { errorLogo = false, ...head } = Astro.props;
+const { notFoundLogo = false, ...head } = Astro.props;
 
 const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
 const t = useTranslations("layout", locale);
@@ -26,6 +26,6 @@ const t = useTranslations("layout", locale);
         <main id={t("mainID")}>
             <slot />
         </main>
-        <Footer errorLogo={errorLogo} />
+        <Footer notFoundLogo={notFoundLogo} />
     </body>
 </html>
