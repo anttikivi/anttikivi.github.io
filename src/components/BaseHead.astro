@@ -26,7 +26,10 @@ const titleSeparator = "-";
 const {
     canonicalURL = new URL(Astro.request.url, Astro.site),
     description = t("description"),
-    image = { data: await getImage({ src: ogImage }), alt: t("ogImageAlt") },
+    image = {
+        data: await getImage({ src: ogImage, format: "png", width: 1200, height: 630 }),
+        alt: t("ogImageAlt"),
+    },
     pageType = "website",
     title = getRouteKey(Astro.url) === "index" ? name : `${Astro.props.title} ${titleSeparator} ${name}`,
 } = Astro.props;
