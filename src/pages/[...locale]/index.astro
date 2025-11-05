@@ -1,33 +1,23 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import locales, { defaultLocale, getLang } from "@/locales";
-import type { GetStaticPathsResult } from "astro";
-import { getEntry, render } from "astro:content";
+import { defaultLocale, getLang, type Locale } from "@/locales";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import { getCollection, render } from "astro:content";
 
-export function getStaticPaths(): GetStaticPathsResult {
-    let paths = [];
+export const getStaticPaths = (async () => {
+    const pages = await getCollection("home");
 
-    for (const locale of locales) {
-        if (locale === defaultLocale) {
-            paths.push({
-                params: { locale: undefined },
-            });
-        } else {
-            paths.push({
-                params: { locale: getLang(locale) },
-            });
-        }
-    }
+    return pages.map((page) => ({
+        params: {
+            locale: page.id.toLowerCase() === defaultLocale.toLowerCase() ? undefined : getLang(page.id as Locale),
+        },
+        props: { page },
+    }));
+}) satisfies GetStaticPaths;
 
-    return paths;
-}
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const page = await getEntry("home", Astro.currentLocale!);
-
-if (!page) {
-    throw new Error(`could not load content for entry home/preface-${Astro.currentLocale}`);
-}
-
+const { page } = Astro.props as Props;
 const { Content } = await render(page);
 ---
 
