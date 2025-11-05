@@ -24,7 +24,7 @@
         "@prettier/plugin-xml": "3.4.2",
         "@tailwindcss/vite": "4.1.16",
         "browserslist": "4.27.0",
-        "eslint": "9.39.0",
+        "eslint": "9.39.1",
         "eslint-plugin-astro": "1.4.0",
         "eslint-plugin-jsx-a11y": "6.10.2",
         "globals": "16.5.0",
