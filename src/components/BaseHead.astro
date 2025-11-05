@@ -13,6 +13,7 @@ export interface Props {
     description?: string;
     image?: { data: ImageMetadata; alt: string };
     pageType?: "website" | "article";
+    rawTitle?: string;
     title?: string;
 }
 
@@ -21,7 +22,6 @@ const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
 const t = useTranslations("site", locale);
 
 const name = t("name");
-const titleSeparator = "-";
 
 const {
     canonicalURL = new URL(Astro.request.url, Astro.site),
@@ -31,8 +31,10 @@ const {
         alt: t("ogImageAlt"),
     },
     pageType = "website",
-    title = getRouteKey(Astro.url) === "index" ? name : `${Astro.props.title} ${titleSeparator} ${name}`,
+    rawTitle,
 } = Astro.props;
+
+const title = rawTitle ?? [Astro.props.title, name].filter(Boolean).join(" - ");
 
 const resolvedImage = {
     src: new URL(image.data.src, Astro.site).toString(),
