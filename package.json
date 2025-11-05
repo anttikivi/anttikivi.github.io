@@ -18,14 +18,14 @@
         "@astrojs/check": "0.9.5",
         "@astrojs/sitemap": "3.6.0",
         "@astrojs/ts-plugin": "1.10.5",
-        "@eslint/js": "9.39.0",
-        "@eslint/json": "0.13.2",
-        "@eslint/markdown": "7.5.0",
+        "@eslint/js": "9.39.1",
+        "@eslint/json": "0.14.0",
+        "@eslint/markdown": "7.5.1",
         "@prettier/plugin-xml": "3.4.2",
         "@tailwindcss/vite": "4.1.16",
         "browserslist": "4.27.0",
-        "eslint": "9.39.0",
-        "eslint-plugin-astro": "1.4.0",
+        "eslint": "9.39.1",
+        "eslint-plugin-astro": "1.5.0",
         "eslint-plugin-jsx-a11y": "6.10.2",
         "globals": "16.5.0",
         "lightningcss": "1.30.2",
@@ -40,6 +40,6 @@
         "stylelint-config-standard": "39.0.1",
         "tailwindcss": "4.1.16",
         "typescript": "5.9.3",
-        "typescript-eslint": "8.46.2"
+        "typescript-eslint": "8.46.3"
     }
 }
