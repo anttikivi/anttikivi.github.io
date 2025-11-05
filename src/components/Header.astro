@@ -1,8 +1,6 @@
 ---
-import HeaderLink from "@/components/HeaderLink.astro";
-import localeNavigation from "@/data/locale-navigation";
+import HeaderLocaleNav from "@/components/HeaderLocaleNav.astro";
 import { useTranslations } from "@/i18n";
-import locales from "@/locales";
 import { getRoute, getRouteKey, isErrorPage, routeLocale } from "@/routes";
 
 const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
@@ -23,20 +21,6 @@ const t = useTranslations("site", locale);
                 </a>
             )
         }
-        {
-            !isErrorPage(Astro.routePattern) && (
-                <ul role="menu" aria-label={t("languageMenu")}>
-                    {locales
-                        .filter((l) => l !== locale)
-                        .map((l) => (
-                            <li lang={l} role="presentation">
-                                <HeaderLink href={getRouteKey(Astro.url)} locale={l} role="menuitem">
-                                    {localeNavigation[l]}
-                                </HeaderLink>
-                            </li>
-                        ))}
-                </ul>
-            )
-        }
+        <HeaderLocaleNav />
     </div>
 </header>

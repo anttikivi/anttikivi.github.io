@@ -1,0 +1,49 @@
+---
+import HeaderLink from "@/components/HeaderLink.astro";
+import localeNavigation from "@/data/locale-navigation";
+import { useTranslations } from "@/i18n";
+import locales, { type Locale } from "@/locales";
+import type { RouteKey } from "@/routes";
+import { getRouteKey, isErrorPage, isTranslated, routeLocale } from "@/routes";
+
+const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
+const t = useTranslations("site", locale);
+
+const translations = [] as {
+    href: RouteKey;
+    label: string;
+    locale: Locale;
+}[];
+
+if (!isErrorPage(Astro.routePattern)) {
+    for (const l of locales) {
+        if (l === locale) {
+            continue;
+        }
+
+        if (!(await isTranslated(Astro.url, l))) {
+            continue;
+        }
+
+        translations.push({
+            href: getRouteKey(Astro.url),
+            label: localeNavigation[l],
+            locale: l,
+        });
+    }
+}
+---
+
+{
+    translations.length > 0 && (
+        <ul role="menu" aria-label={t("languageMenu")}>
+            {translations.map((t) => (
+                <li lang={t.locale} role="presentation">
+                    <HeaderLink href={t.href} locale={t.locale} role="menuitem">
+                        {t.label}
+                    </HeaderLink>
+                </li>
+            ))}
+        </ul>
+    )
+}

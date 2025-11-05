@@ -1,19 +1,27 @@
 import { defaultLocale, getLang, getLocale, langs, type Lang, type Locale } from "@/locales";
+import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 type RouteDefs = typeof enGB;
 
 const enGB = {
+    contact: "contact",
     index: "/",
 };
 
 const fi: RouteDefs = {
+    contact: "yhteys",
     index: "/",
 } satisfies typeof enGB;
 
 const routes: Record<Locale, RouteDefs> = { "en-GB": enGB, fi };
 
-export function getRouteKey(url: URL) {
+export type RouteKey = keyof (typeof routes)[Locale] | "404";
+
+/**
+ * Get the translation key for the current route, given as a URL.
+ */
+export function getRouteKey(url: URL): RouteKey {
     if (url.pathname === "/404/") {
         return "404";
     }
@@ -50,7 +58,7 @@ export function getRouteKey(url: URL) {
 
     for (const [key, value] of Object.entries(routes[getLocale(pathLang)])) {
         if (value === route) {
-            return key;
+            return key as RouteKey;
         }
     }
 
@@ -61,6 +69,9 @@ export function getRouteKey(url: URL) {
     throw new Error(`no route key found for path "${original}"`);
 }
 
+/**
+ * Get the translated route in a page rendering contex.
+ */
 export function getRoute(locale: Locale, key: string) {
     const lang = getLang(locale);
     const original = key;
@@ -78,6 +89,27 @@ export function getRoute(locale: Locale, key: string) {
     }
 
     throw new Error(`no route found for key ${original}`);
+}
+
+/**
+ * Reports whether the given page has a translation in the locale.
+ */
+export async function isTranslated(url: URL, locale: Locale): Promise<boolean> {
+    const routeKey = getRouteKey(url);
+
+    if (routeKey === "index") {
+        const pages = await getCollection("home");
+
+        for (const page of pages) {
+            if (page.id.toLowerCase() === locale.toLowerCase()) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    return false;
 }
 
 /**
