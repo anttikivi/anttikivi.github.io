@@ -1,14 +1,15 @@
 ---
 import BaseHead, { type Props as HeadProps } from "@/components/BaseHead.astro";
-import Footer from "@/components/Footer.astro";
+import Footer, { type Props as FooterProps } from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import SkipLink from "@/components/SkipLink.astro";
 import { useTranslations } from "@/i18n";
 import { routeLocale } from "@/routes";
 import "@/styles/global.css";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface Props extends HeadProps {}
+interface Props extends FooterProps, HeadProps {}
+
+const { errorLogo = false, ...head } = Astro.props;
 
 const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
 const t = useTranslations("layout", locale);
@@ -17,7 +18,7 @@ const t = useTranslations("layout", locale);
 <!doctype html>
 <html class="scheme-light dark:scheme-dark" lang={locale}>
     <head>
-        <BaseHead {...Astro.props} />
+        <BaseHead {...head} />
     </head>
     <body class="bg-gray-50 font-sans text-gray-950 dark:bg-gray-900 dark:text-gray-50">
         <SkipLink />
@@ -25,6 +26,6 @@ const t = useTranslations("layout", locale);
         <main id={t("mainID")}>
             <slot />
         </main>
-        <Footer />
+        <Footer errorLogo={errorLogo} />
     </body>
 </html>

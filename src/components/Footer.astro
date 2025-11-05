@@ -1,6 +1,13 @@
 ---
 import Logo from "@/components/Logo.astro";
+import LogoNotFound from "@/components/LogoNotFound.astro";
 import { getRoute, getRouteKey, routeLocale } from "@/routes";
+
+export interface Props {
+    errorLogo?: boolean;
+}
+
+const { errorLogo } = Astro.props;
 
 const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
 ---
@@ -11,7 +18,7 @@ const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
             <Logo class="size-16 fill-current" />
         ) : (
             <a class="hover:text-blue-800 dark:hover:text-blue-300" href={getRoute(locale, "index")}>
-                <Logo class="size-16 fill-current" />
+                {errorLogo ? <LogoNotFound class="size-16 fill-current" /> : <Logo class="size-16 fill-current" />}
             </a>
         )
     }
