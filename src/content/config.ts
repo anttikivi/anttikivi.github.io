@@ -10,6 +10,7 @@ function typedObjectKeys<T extends object>(object: T) {
 const [firstRouteKey, ...restRouteKeys] = typedObjectKeys(routes[defaultLocale]);
 
 export const collections = {
+    errors: defineCollection({}),
     home: defineCollection({
         loader: glob({ pattern: "**/*.md", base: "src/content/home" }),
         schema: z.object({

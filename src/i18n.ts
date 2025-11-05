@@ -50,6 +50,10 @@ export function useTranslations<N extends Namespace>(ns: N, locale: Locale) {
             value = msgs[key as keyof typeof msgs] as string;
         }
 
+        if (!value) {
+            console.warn("Translation MISSING for", `${ns}.${String(key)}`);
+        }
+
         return value ? value : `MISSING: ${key as string}`;
     };
 }
