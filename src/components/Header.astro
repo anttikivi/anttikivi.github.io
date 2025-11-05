@@ -8,7 +8,7 @@ const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
 const t = useTranslations("site", locale);
 ---
 
-<header class="container mt-4 mb-8">
+<header class="container my-8">
     <div class="flex justify-between">
         {
             !isErrorPage(Astro.routePattern) && getRouteKey(Astro.url) === "index" ? (
