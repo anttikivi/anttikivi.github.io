@@ -1,7 +1,7 @@
 # anttikivi.github.io
 
 My personal website, available at [anttikivi.com](https://www.anttikivi.com). It
-uses [Astro](https://www.11ty.dev/) for generating static pages.
+uses [Astro](https://astro.build) for generating static pages.
 
 The site can be built be running `npm run build`, and development server is run
 with `npm run dev`.
