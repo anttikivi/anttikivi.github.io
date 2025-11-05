@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import browserslist from "browserslist";
 import { browserslistToTargets } from "lightningcss";
+import rehypeExternalLinks from "rehype-external-links";
 import locales, { defaultLocale, getLang } from "./src/locales";
 
 // https://astro.build/config
@@ -28,6 +29,16 @@ export default defineConfig({
     build: {
         format: "directory",
         assets: "_assets",
+    },
+    markdown: {
+        rehypePlugins: [
+            [
+                rehypeExternalLinks,
+                {
+                    rel: ["nofollow"],
+                },
+            ],
+        ],
     },
     i18n: {
         locales: locales.map((locale) => getLang(locale)),
