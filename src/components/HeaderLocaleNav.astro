@@ -26,7 +26,7 @@ if (!isErrorPage(Astro.routePattern)) {
         }
 
         translations.push({
-            href: getRouteKey(Astro.url),
+            href: getRouteKey(Astro.url) as Exclude<RouteKey, "404">,
             label: localeNavigation[l],
             locale: l,
         });

@@ -1,4 +1,4 @@
-import { defaultLocale, getLang, getLocale, langs, type Lang, type Locale } from "@/locales";
+import locales, { defaultLocale, getLang, getLocale, langs, type Lang, type Locale } from "@/locales";
 import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
@@ -16,12 +16,12 @@ const fi: RouteDefs = {
 
 const routes: Record<Locale, RouteDefs> = { "en-GB": enGB, fi };
 
-export type RouteKey = keyof (typeof routes)[Locale] | "404";
+export type RouteKey = keyof (typeof routes)[Locale];
 
 /**
  * Get the translation key for the current route, given as a URL.
  */
-export function getRouteKey(url: URL): RouteKey {
+export function getRouteKey(url: URL): RouteKey | "404" {
     if (url.pathname === "/404/") {
         return "404";
     }
@@ -107,6 +107,28 @@ export async function isTranslated(url: URL, locale: Locale): Promise<boolean> {
         }
 
         return false;
+    }
+
+    const pages = await getCollection("pages");
+    for (const page of pages) {
+        const parts = page.id.split("/");
+
+        if (parts.length < 2) {
+            throw new Error(`invalid page id: ${page.id}`);
+        }
+
+        const pageLocale = parts[0] as Locale;
+
+        if (!locales.includes(pageLocale)) {
+            throw new Error(`page id does not contain a valid locale: ${page.id}`);
+        }
+
+        const entry = page.id.slice(`${pageLocale}/`.length, page.id.length - ".md".length);
+        const pageKey = page.data.key ?? (entry as RouteKey);
+
+        if (pageLocale === locale && pageKey === routeKey) {
+            return true;
+        }
     }
 
     return false;
