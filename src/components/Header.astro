@@ -1,5 +1,6 @@
 ---
 import HeaderLocaleNav from "@/components/HeaderLocaleNav.astro";
+import HeaderNav from "@/components/HeaderNav.astro";
 import { useTranslations } from "@/i18n";
 import { getRoute, getRouteKey, isErrorPage, routeLocale } from "@/routes";
 
@@ -7,7 +8,7 @@ const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
 const t = useTranslations("site", locale);
 ---
 
-<header class="container mt-4">
+<header class="container mt-4 mb-8">
     <div class="flex justify-between">
         {
             !isErrorPage(Astro.routePattern) && getRouteKey(Astro.url) === "index" ? (
@@ -23,4 +24,5 @@ const t = useTranslations("site", locale);
         }
         <HeaderLocaleNav />
     </div>
+    <HeaderNav />
 </header>

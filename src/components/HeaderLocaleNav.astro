@@ -1,6 +1,6 @@
 ---
 import HeaderLink from "@/components/HeaderLink.astro";
-import localeNavigation from "@/data/locale-navigation";
+import localeNav from "@/data/header-locale-nav";
 import { useTranslations } from "@/i18n";
 import locales, { type Locale } from "@/locales";
 import type { RouteKey } from "@/routes";
@@ -27,7 +27,7 @@ if (!isErrorPage(Astro.routePattern)) {
 
         translations.push({
             href: getRouteKey(Astro.url) as Exclude<RouteKey, "404">,
-            label: localeNavigation[l],
+            label: localeNav[l],
             locale: l,
         });
     }
@@ -36,10 +36,10 @@ if (!isErrorPage(Astro.routePattern)) {
 
 {
     translations.length > 0 && (
-        <ul role="menu" aria-label={t("languageMenu")}>
+        <ul aria-label={t("languageMenu")}>
             {translations.map((t) => (
-                <li lang={t.locale} role="presentation">
-                    <HeaderLink href={t.href} locale={t.locale} role="menuitem">
+                <li lang={t.locale}>
+                    <HeaderLink href={t.href} locale={t.locale}>
                         {t.label}
                     </HeaderLink>
                 </li>

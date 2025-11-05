@@ -2,6 +2,7 @@ import type enGB from "@/messages/en-GB";
 
 export default {
     layout: {
+        headerNav: "Päävalikko",
         mainID: "sisalto",
         skipToContent: "Siirry sisältöön",
     },

@@ -1,5 +1,6 @@
 export default {
     layout: {
+        headerNav: "Main menu",
         mainID: "main",
         skipToContent: "Skip to content",
     },
