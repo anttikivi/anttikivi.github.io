@@ -36,6 +36,13 @@ jobs:
                     --exclude-vcs \
                     .
                   echo ::endgroup::
+            - id: upload-artifact
+              uses: actions/upload-artifact@v4.6.2
+              with:
+                  name: github-pages
+                  path: ${{ runner.temp }}/artifact.tar
+                  retention-days: 1
+                  if-no-files-found: error
 
     deploy:
         needs: build
