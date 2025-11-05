@@ -1,5 +1,5 @@
 import type { Locale } from "@/locales";
-import type { RouteKey } from "@/types/routes";
+import type { RouteKey } from "./routes";
 
 type NavLink = {
     disabled?: boolean;
