@@ -7,7 +7,11 @@ export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "en-GB";
 
-export function getLang(locale: Locale): Lang {
+export function getLang(locale?: Locale): Lang {
+    if (!locale) {
+        throw new Error('converting "undefined" locale to a lang');
+    }
+
     return (
         {
             "en-GB": "en",

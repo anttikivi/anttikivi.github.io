@@ -1,15 +1,14 @@
 ---
 import routes from "@/data/routes";
 import MainLayout from "@/layouts/MainLayout.astro";
-import type { Locale } from "@/locales";
 import locales, { defaultLocale, getLang } from "@/locales";
 import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 import { getCollection, render } from "astro:content";
 
 export const getStaticPaths = (async () => {
-    const ids = locales.map((locale) => `${locale.toLowerCase()}/writings.md`);
+    const ids = locales.map((locale) => `${locale.toLowerCase()}/writings`);
     const pages = await getCollection("pages", (page) => {
-        return page.data.key === "writings" || ids.includes(page.id.toLowerCase());
+        return page.data.key === "writings" || ids.includes(page.id);
     });
 
     return pages.map((page) => {
@@ -19,9 +18,10 @@ export const getStaticPaths = (async () => {
             throw new Error(`invalid page id: ${page.id}`);
         }
 
-        const locale = parts[0] as Locale;
+        const idLocale = parts[0];
+        const locale = locales.find((l) => l.toLowerCase() === idLocale);
 
-        if (!locales.includes(locale)) {
+        if (!locale) {
             throw new Error(`page id does not contain a valid locale: ${page.id}`);
         }
 

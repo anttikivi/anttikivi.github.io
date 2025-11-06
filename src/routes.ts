@@ -86,7 +86,7 @@ export async function isTranslated(url: URL, locale: Locale): Promise<boolean> {
         const pages = await getCollection("home");
 
         for (const page of pages) {
-            if (page.id.toLowerCase() === locale.toLowerCase()) {
+            if (page.id === locale.toLowerCase()) {
                 return true;
             }
         }
@@ -102,13 +102,14 @@ export async function isTranslated(url: URL, locale: Locale): Promise<boolean> {
             throw new Error(`invalid page id: ${page.id}`);
         }
 
-        const pageLocale = parts[0] as Locale;
+        const idLocale = parts[0];
+        const pageLocale = locales.find((l) => l.toLowerCase() === idLocale);
 
-        if (!locales.includes(pageLocale)) {
+        if (!locale) {
             throw new Error(`page id does not contain a valid locale: ${page.id}`);
         }
 
-        const entry = page.id.slice(`${pageLocale}/`.length, page.id.length - ".md".length);
+        const entry = page.id.slice(`${pageLocale}/`.length);
         const pageKey = page.data.key ?? (entry as RouteKey);
 
         if (pageLocale === locale && pageKey === routeKey) {

@@ -1,6 +1,6 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import { defaultLocale, getLang, type Locale } from "@/locales";
+import locales, { defaultLocale, getLang } from "@/locales";
 import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 import { getCollection, render } from "astro:content";
 
@@ -9,7 +9,10 @@ export const getStaticPaths = (async () => {
 
     return pages.map((page) => ({
         params: {
-            locale: page.id.toLowerCase() === defaultLocale.toLowerCase() ? undefined : getLang(page.id as Locale),
+            locale:
+                page.id === defaultLocale.toLowerCase()
+                    ? undefined
+                    : getLang(locales.find((l) => page.id === l.toLowerCase())),
         },
         props: { page },
     }));
