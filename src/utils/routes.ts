@@ -1,7 +1,8 @@
+import locales, { defaultLocale, langs, type Lang, type Locale } from "@/data/locales";
 import routes, { type RouteDefs, type RouteKey } from "@/data/routes";
-import locales, { defaultLocale, getLang, getLocale, langs, type Lang, type Locale } from "@/locales";
 import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLang, getLocale } from "./locales";
 
 /**
  * Get the translation key for the current route, given as a URL.

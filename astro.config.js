@@ -5,7 +5,7 @@ import { defineConfig } from "astro/config";
 import browserslist from "browserslist";
 import { browserslistToTargets } from "lightningcss";
 import rehypeExternalLinks from "rehype-external-links";
-import locales, { defaultLocale, getLang } from "./src/locales";
+import locales, { defaultLocale } from "./src/data/locales";
 
 // https://astro.build/config
 export default defineConfig({
@@ -42,8 +42,10 @@ export default defineConfig({
         ],
     },
     i18n: {
-        locales: locales.map((locale) => getLang(locale)),
-        defaultLocale: getLang(defaultLocale),
+        locales: locales.map((locale) => (locale.includes("-") ? locale.substring(0, locale.indexOf("-")) : locale)),
+        defaultLocale: defaultLocale.includes("-")
+            ? defaultLocale.substring(0, defaultLocale.indexOf("-"))
+            : defaultLocale,
         routing: {
             prefixDefaultLocale: false,
         },

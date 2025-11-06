@@ -1,5 +1,5 @@
+import { defaultLocale } from "@/data/locales";
 import routes from "@/data/routes";
-import { defaultLocale } from "@/locales";
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 

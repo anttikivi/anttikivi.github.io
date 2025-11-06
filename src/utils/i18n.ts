@@ -1,4 +1,4 @@
-import type { Locale } from "@/locales";
+import type { Locale } from "@/data/locales";
 import enGB from "@/messages/en-GB";
 import fi from "@/messages/fi";
 

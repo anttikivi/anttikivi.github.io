@@ -1,4 +1,4 @@
-import locales, { type Locale } from "@/locales";
+import locales, { type Locale } from "@/data/locales";
 
 const enGB = {
     contact: "contact",

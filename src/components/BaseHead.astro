@@ -1,8 +1,8 @@
 ---
 import ogImage from "@/assets/opengraph-image.png";
-import { useTranslations } from "@/i18n";
-import locales, { defaultLocale } from "@/locales";
-import { getRoute, getRouteKey, isErrorPage, routeLocale } from "@/routes";
+import locales, { defaultLocale } from "@/data/locales";
+import { useTranslations } from "@/utils/i18n";
+import { getRoute, getRouteKey, isErrorPage, routeLocale } from "@/utils/routes";
 import type { ImageMetadata } from "astro";
 import { getImage } from "astro:assets";
 import Favicon from "./Favicon.astro";

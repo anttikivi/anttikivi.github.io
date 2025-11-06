@@ -1,4 +1,5 @@
-import locales, { getLang } from "@/locales";
+import locales from "@/data/locales";
+import { getLang } from "@/utils/locales";
 import type { APIRoute } from "astro";
 
 export const GET: APIRoute = (context) =>

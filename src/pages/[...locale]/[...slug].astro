@@ -1,7 +1,8 @@
 ---
+import locales, { defaultLocale } from "@/data/locales";
 import routes, { customPageIDs, customPageKeys, type RouteKey } from "@/data/routes";
 import MainLayout from "@/layouts/MainLayout.astro";
-import locales, { defaultLocale, getLang } from "@/locales";
+import { getLang } from "@/utils/locales";
 import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 import { getCollection, render } from "astro:content";
 

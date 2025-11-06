@@ -3,9 +3,9 @@ import BaseHead, { type Props as HeadProps } from "@/components/BaseHead.astro";
 import Footer, { type Props as FooterProps } from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import SkipLink from "@/components/SkipLink.astro";
-import { useTranslations } from "@/i18n";
-import { routeLocale } from "@/routes";
 import "@/styles/global.css";
+import { useTranslations } from "@/utils/i18n";
+import { routeLocale } from "@/utils/routes";
 
 interface Props extends FooterProps, HeadProps {}
 
