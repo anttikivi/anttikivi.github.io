@@ -9,6 +9,6 @@ export default {
         description:
             "I’m Antti Kivi, a Finnish software developer. On this site, I’ll share my open‑source projects and writings.",
         name: "Antti Kivi",
-        ogImageAlt: "Antti Kivi",
+        ogImageAlt: "Big text saying 'Antti Kivi' and a smiling face with the letters A and K as its eyes",
     },
 };

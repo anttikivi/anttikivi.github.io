@@ -10,6 +10,6 @@ export default {
     site: {
         description: "Olen Antti Kivi, ohjelmistokehittäjä. Tällä sivustolla jaan projektejani ja kirjoituksiani.",
         name: "Antti Kivi",
-        ogImageAlt: "Antti Kivi",
+        ogImageAlt: 'Suuri teksti, jossa lukee "Antti Kivi", ja hymyilevät kasvot, jonka silminä on A- ja K-kirjaimet',
     },
 } satisfies typeof enGB;

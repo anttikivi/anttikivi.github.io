@@ -3,13 +3,13 @@ import locales, { type Locale } from "@/data/locales";
 const enGB = {
     contact: "contact",
     index: "/",
-    writings: "writings",
+    blog: "writings",
 };
 
 const fi = {
     contact: "yhteys",
     index: "/",
-    writings: "kirjoituksia",
+    blog: "kirjoituksia",
 } satisfies typeof enGB;
 
 export type RouteDefs = typeof enGB;
@@ -19,7 +19,7 @@ export type RouteKey = keyof typeof enGB;
  * The route keys of the pages that use their own template instead of
  * the general page template.
  */
-export const customPageKeys = ["writings"];
+export const customPageKeys = ["blog"];
 
 /**
  * The page IDs of the pages that use their own template instead of the general

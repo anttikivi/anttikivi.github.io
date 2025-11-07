@@ -7,9 +7,9 @@ import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 import { getCollection, render } from "astro:content";
 
 export const getStaticPaths = (async () => {
-    const ids = locales.map((locale) => `${locale.toLowerCase()}/writings`);
+    const ids = locales.map((locale) => `${locale.toLowerCase()}/blog`);
     const pages = await getCollection("pages", (page) => {
-        return page.data.key === "writings" || ids.includes(page.id);
+        return page.data.key === "blog" || ids.includes(page.id);
     });
 
     return pages.map((page) => {
@@ -30,7 +30,7 @@ export const getStaticPaths = (async () => {
             return {
                 params: {
                     locale: undefined,
-                    writings: routes[locale]["writings"],
+                    blog: routes[locale]["blog"],
                 },
                 props: { page },
             };
@@ -38,7 +38,7 @@ export const getStaticPaths = (async () => {
             return {
                 params: {
                     locale: getLang(locale),
-                    writings: routes[locale]["writings"],
+                    blog: routes[locale]["blog"],
                 },
                 props: { page },
             };

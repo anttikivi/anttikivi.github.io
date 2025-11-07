@@ -10,7 +10,7 @@ type NavLink = {
 export default [
     {
         disabled: true,
-        href: "writings",
+        href: "blog",
         label: {
             "en-GB": "writings",
             fi: "kirjoituksia",
