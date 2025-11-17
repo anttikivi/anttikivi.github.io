@@ -28,7 +28,7 @@ jobs:
                       build-mode: none
                       node: 24
         steps:
-            - uses: actions/checkout@v5.0.0
+            - uses: actions/checkout@v5.0.1
 
             - uses: actions/setup-node@v6.0.0
               if: ${{ matrix.node }}
