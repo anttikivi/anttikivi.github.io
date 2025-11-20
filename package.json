@@ -12,7 +12,7 @@
         "preview": "astro preview"
     },
     "dependencies": {
-        "astro": "5.15.4"
+        "astro": "5.16.0"
     },
     "devDependencies": {
         "@astrojs/check": "0.9.5",
