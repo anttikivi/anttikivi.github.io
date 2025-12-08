@@ -9,20 +9,21 @@ const t = useTranslations("site", locale);
 ---
 
 <header class="container my-8">
-    <div class="flex justify-between">
+    <div class="flex justify-start gap-x-8">
         {
             !isErrorPage(Astro.routePattern) && getRouteKey(Astro.url) === "index" ? (
-                <h1 class="font-bold">{t("name")}</h1>
+                <h1 class="font-bold md:mt-0.5">{t("name")}</h1>
             ) : (
                 <a
-                    class="font-bold hover:text-blue-800 hover:underline dark:hover:text-blue-300"
+                    class="font-bold hover:text-blue-800 hover:underline md:mt-0.5 dark:hover:text-blue-300"
                     href={getRoute(locale, "/")}
                 >
                     {t("name")}
                 </a>
             )
         }
-        <HeaderLocaleNav />
+        <HeaderNav class="hidden md:block" />
+        <HeaderLocaleNav class="ml-auto" />
     </div>
-    <HeaderNav />
+    <HeaderNav class="my-4 md:hidden" />
 </header>

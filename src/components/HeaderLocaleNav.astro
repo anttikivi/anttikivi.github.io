@@ -6,6 +6,12 @@ import type { RouteKey } from "@/data/routes";
 import { useTranslations } from "@/utils/i18n";
 import { getRouteKey, isErrorPage, isTranslated, routeLocale } from "@/utils/routes";
 
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
+
 const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
 const t = useTranslations("layout", locale);
 
@@ -36,7 +42,7 @@ if (!isErrorPage(Astro.routePattern)) {
 
 {
     translations.length > 0 && (
-        <ul aria-label={t("languageMenu")}>
+        <ul class={className} aria-label={t("languageMenu")}>
             {translations.map((t) => (
                 <li lang={t.locale}>
                     <HeaderLink href={t.href} locale={t.locale}>
