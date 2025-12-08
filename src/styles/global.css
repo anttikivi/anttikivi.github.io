@@ -4,47 +4,20 @@
     /* https://tailwindcss.com/docs/theme */
     --*: initial;
 
-    --font-sans:
-        ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
-
-    /* stylelint-disable-next-line value-keyword-case */
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-
+    --font-sans: sans-serif;
+    --font-mono: monospace;
     --color-current: currentcolor;
-
-    /* Light background color, text color on dark background */
-    --color-gray-50: oklch(98.5% 0 0deg);
-
-    /* Weak color on dark background */
-    --color-gray-300: oklch(87.1% 0.006 286.286deg);
-
-    /* Weak color on light background */
-    --color-gray-600: oklch(44.2% 0.017 285.786deg);
-
-    /* Dark background color */
-    --color-gray-900: oklch(21% 0.006 285.885deg);
-
-    /* Text color on light background */
-    --color-gray-950: oklch(14.1% 0.005 285.823deg);
-
-    /* Link hover color on dark background */
-    --color-blue-100: oklch(93.2% 0.032 255.585deg);
-
-    /* Visited link color on dark background */
-    --color-blue-200: oklch(88.2% 0.059 254.128deg);
-
-    /* Link color on dark background */
-    --color-blue-300: oklch(80.9% 0.105 251.813deg);
-
-    /* Link color on light background */
-    --color-blue-800: oklch(42.4% 0.199 265.638deg);
-
-    /* Visited link color on light background */
-    --color-blue-900: oklch(37.9% 0.146 265.522deg);
-
-    /* Link hover color on light background */
-    --color-blue-950: oklch(28.2% 0.091 267.935deg);
+    --color-white: white; /* light background color, text color on dark background */
+    --color-black: black; /* text color on light background */
+    --color-gray-300: #d1d5db; /* weak color on dark background */
+    --color-gray-600: #525252; /* weak color on light background */
+    --color-gray-900: #171717; /* dark background color */
+    --color-blue-100: #f8b5ff; /* link hover color on dark background */
+    --color-blue-200: #f690ff; /* visited link color on dark background */
+    --color-blue-300: #89a6ff; /* link color on dark background */
+    --color-blue-800: #0000ee; /* link color on light background */
+    --color-blue-900: #551a8b; /* visited link color on light background */
+    --color-blue-950: #451473; /* link hover color on light background */
 
     --spacing: 0.25rem;
 
