@@ -8,22 +8,46 @@ const locale = routeLocale(Astro.routePattern, Astro.currentLocale);
 const t = useTranslations("site", locale);
 ---
 
-<header class="container my-8">
-    <div class="flex justify-start gap-x-8">
+<header class="container">
+    <div class="banner">
         {
             !isErrorPage(Astro.routePattern) && getRouteKey(Astro.url) === "index" ? (
-                <h1 class="font-bold md:mt-0.5">{t("name")}</h1>
+                <h1 class="title">{t("name")}</h1>
             ) : (
-                <a
-                    class="font-bold hover:text-blue-800 hover:underline md:mt-0.5 dark:hover:text-blue-300"
-                    href={getRoute(locale, "/")}
-                >
+                <a class="title" href={getRoute(locale, "/")}>
                     {t("name")}
                 </a>
             )
         }
-        <HeaderNav class="hidden md:block" />
-        <HeaderLocaleNav class="ml-auto" />
+        <HeaderNav class="not-mobile-only" />
+        <div class="right">
+            <HeaderLocaleNav />
+        </div>
     </div>
-    <HeaderNav class="my-4 md:hidden" />
+    <HeaderNav class="mobile-only" />
 </header>
+
+<style>
+    header {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .banner {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 4rem;
+    }
+
+    .title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .right {
+        margin-left: auto;
+    }
+</style>

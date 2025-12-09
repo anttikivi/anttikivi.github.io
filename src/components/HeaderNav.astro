@@ -18,7 +18,7 @@ const links = headerNav.length > 0 ? headerNav.filter((link) => !link.disabled) 
 {
     links.length > 0 && (
         <nav class={className} aria-label={t("headerNav")}>
-            <ul class="flex gap-x-4">
+            <ul>
                 {links.map((link) => (
                     <li>
                         <HeaderLink href={link.href}>{link.label[locale]}</HeaderLink>
@@ -28,3 +28,13 @@ const links = headerNav.length > 0 ? headerNav.filter((link) => !link.disabled) 
         </nav>
     )
 }
+
+<style>
+    ul {
+        display: flex;
+        column-gap: 1rem;
+        list-style: none;
+        padding-inline-start: 0;
+        margin: 0;
+    }
+</style>

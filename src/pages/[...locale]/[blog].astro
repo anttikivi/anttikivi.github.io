@@ -54,8 +54,8 @@ const { Content } = await render(page);
 
 <MainLayout title={page.data.title} notFoundLogo>
     <div class="container">
-        <h1 class="my-8 font-bold">{page.data.title}</h1>
-        <div class="prose">
+        <h1>{page.data.title}</h1>
+        <div>
             <Content />
         </div>
     </div>

@@ -1,33 +1,61 @@
 :root {
-    --color-white: white; /* light background color, text color on dark background */
-    --color-black: black; /* text color on light background */
-    --color-gray-300: #d1d5db; /* weak color on dark background */
-    --color-gray-600: #525252; /* weak color on light background */
-    --color-gray-900: #171717; /* dark background color */
-    --color-blue-100: #f8b5ff; /* link hover color on dark background */
-    --color-blue-200: #f690ff; /* visited link color on dark background */
-    --color-blue-300: #89a6ff; /* link color on dark background */
-    --color-blue-800: #0000ee; /* link color on light background */
-    --color-blue-900: #551a8b; /* visited link color on light background */
-    --color-blue-950: #451473; /* link hover color on light background */
-}
+    color-scheme: light dark;
 
-html {
-    color-scheme: light;
+    --bg: white;
+    --text: black;
+    --link: #0000ee;
+    --link-hover: #451473;
+    --link-visited: #551a8b;
+    --gray: #525252;
 
     @media (prefers-color-scheme: dark) {
-        color-scheme: dark;
+        --bg: #171717;
+        --text: white;
+        --link: #89a6ff;
+        --link-hover: #f8b5ff;
+        --link-visited: #f690ff;
+        --gray: #d1d5db;
     }
 }
 
-body {
-    background-color: var(--color-white);
-    color: var(--color-black);
-    font-family: sans-serif;
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    border: 0 solid;
+}
 
-    @media (prefers-color-scheme: dark) {
-        background-color: var(--color-gray-900);
-        color: var(--color-white);
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+}
+
+a {
+    color: var(--link);
+
+    &:hover {
+        @media (hover: hover) {
+            color: var(--link-hover);
+        }
+    }
+
+    &:visited {
+        color: var(--link-visited);
+    }
+}
+
+.mobile-only {
+    @media (width >= 768px) {
+        display: none;
+    }
+}
+
+.not-mobile-only {
+    display: none;
+
+    @media (width >= 768px) {
+        display: block;
     }
 }
 
@@ -36,11 +64,17 @@ body {
     max-width: 100%;
     padding: 0 1rem;
 
-    @media (min-width: 640px) {
+    @media (width >= 640px) {
         max-width: 40rem;
     }
 
-    @media (min-width: 768px) {
+    @media (width >= 768px) {
         max-width: 44rem;
     }
+}
+
+.footer-logo {
+    width: 2rem;
+    height: 2rem;
+    fill: currentcolor;
 }

@@ -2,7 +2,9 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import { getCollection, render } from "astro:content";
 
-const entries = await getCollection("errors", (entry) => entry.id.split("/")[1] === "404.md");
+console.log(await getCollection("errors"));
+const entries = await getCollection("errors", (entry) => entry.id.split("/")[1] === "404");
+console.log(entries);
 entries.sort((a, b) => {
     const x = a.id.split("/")[0]!;
     const y = b.id.split("/")[0]!;
@@ -22,12 +24,12 @@ const title = "404 Not Found";
 
 <MainLayout canonicalURL={null} title={title} notFoundLogo>
     <div class="container">
-        <h1 class="font-mono">{title}</h1>
+        <h1>{title}</h1>
         {
             entries.map(async (entry) => {
                 const { Content } = await render(entry);
                 return (
-                    <div class="prose" lang={entry.id.split("/")[0]}>
+                    <div lang={entry.id.split("/")[0]}>
                         <Content />
                     </div>
                 );
@@ -35,3 +37,11 @@ const title = "404 Not Found";
         }
     </div>
 </MainLayout>
+
+<style>
+    h1 {
+        font-family: monospace;
+        font-weight: normal;
+        font-size: 1rem;
+    }
+</style>
