@@ -5,7 +5,6 @@ const config = {
         "prettier-plugin-astro",
         "prettier-plugin-packagejson",
         "prettier-plugin-organize-imports",
-        "prettier-plugin-tailwindcss",
         "prettier-plugin-astro-organize-imports",
     ],
     arrowParens: "always",
@@ -16,7 +15,6 @@ const config = {
     tabWidth: 4,
     trailingComma: "all",
     useTabs: false,
-    tailwindStylesheet: "./src/styles/global.css",
     overrides: [
         {
             files: ["*.astro"],

@@ -1,12 +1,4 @@
-@import "tailwindcss";
-
-@theme {
-    /* https://tailwindcss.com/docs/theme */
-    --*: initial;
-
-    --font-sans: sans-serif;
-    --font-mono: monospace;
-    --color-current: currentcolor;
+:root {
     --color-white: white; /* light background color, text color on dark background */
     --color-black: black; /* text color on light background */
     --color-gray-300: #d1d5db; /* weak color on dark background */
@@ -18,67 +10,37 @@
     --color-blue-800: #0000ee; /* link color on light background */
     --color-blue-900: #551a8b; /* visited link color on light background */
     --color-blue-950: #451473; /* link hover color on light background */
-
-    --spacing: 0.25rem;
-
-    --breakpoint-md: 48rem;
-    --breakpoint-lg: 64rem;
-
-    --font-weight-bold: 700;
 }
 
-@utility container {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: --spacing(4);
-    padding-left: --spacing(4);
+html {
+    color-scheme: light;
 
-    @media (width >= 48rem) {
-        /* stylelint-disable-next-line no-invalid-position-declaration */
-        max-width: 40rem;
+    @media (prefers-color-scheme: dark) {
+        color-scheme: dark;
     }
 }
 
-@layer components {
-    .prose {
-        & > p {
-            margin: --spacing(4) 0;
-        }
+body {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-family: sans-serif;
 
-        & a {
-            color: var(--color-blue-800);
-            text-decoration: underline;
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--color-gray-900);
+        color: var(--color-white);
+    }
+}
 
-            @media (prefers-color-scheme: dark) {
-                color: var(--color-blue-300);
-            }
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 1rem;
 
-            &:hover {
-                @media (hover: hover) {
-                    color: var(--color-blue-950);
+    @media (min-width: 640px) {
+        max-width: 40rem;
+    }
 
-                    @media (prefers-color-scheme: dark) {
-                        color: var(--color-blue-100);
-                    }
-                }
-            }
-
-            &:visited {
-                color: var(--color-blue-900);
-
-                @media (prefers-color-scheme: dark) {
-                    color: var(--color-blue-200);
-                }
-            }
-        }
-
-        & em {
-            font-style: italic;
-        }
-
-        & code {
-            font-family: var(--font-mono);
-        }
+    @media (min-width: 768px) {
+        max-width: 44rem;
     }
 }

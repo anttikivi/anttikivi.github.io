@@ -16,11 +16,11 @@ const t = useTranslations("layout", locale);
 ---
 
 <!doctype html>
-<html class="scheme-light dark:scheme-dark" lang={locale}>
+<html lang={locale}>
     <head>
         <BaseHead {...head} />
     </head>
-    <body class="bg-white font-sans text-black dark:bg-gray-900 dark:text-white">
+    <body>
         <SkipLink />
         <Header />
         <main id={t("mainID")}>
