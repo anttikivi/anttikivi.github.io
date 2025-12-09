@@ -45,6 +45,18 @@ const t = useTranslations("site", locale);
         margin-bottom: 1rem;
         font-size: 1rem;
         font-weight: bold;
+
+        a& {
+            color: var(--text);
+            text-decoration: none;
+
+            @media (hover: hover) {
+                &:hover {
+                    color: var(--link);
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 
     .right {

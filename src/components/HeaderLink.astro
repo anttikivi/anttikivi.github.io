@@ -13,3 +13,19 @@ const { href, locale = routeLocale(Astro.routePattern, Astro.currentLocale), rol
 ---
 
 <a href={getRoute(locale, href)} role={role}><slot /></a>
+
+<style>
+    a {
+        color: var(--gray);
+
+        &:visited {
+            color: var(--gray);
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                color: var(--link);
+            }
+        }
+    }
+</style>

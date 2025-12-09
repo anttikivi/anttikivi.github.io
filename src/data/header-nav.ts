@@ -17,7 +17,7 @@ export default [
         },
     },
     {
-        disabled: false,
+        disabled: true,
         href: "contact",
         label: {
             "en-GB": "contact",

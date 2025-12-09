@@ -16,6 +16,16 @@
         --link-visited: #f690ff;
         --gray: #d1d5db;
     }
+
+    @media print {
+        color-scheme: light;
+        --bg: white;
+        --text: black;
+        --link: #0000ee;
+        --link-hover: var(--link);
+        --link-visited: var(--link);
+        --gray: #525252;
+    }
 }
 
 *,
@@ -34,8 +44,8 @@ body {
 a {
     color: var(--link);
 
-    &:hover {
-        @media (hover: hover) {
+    @media (hover: hover) {
+        &:hover {
             color: var(--link-hover);
         }
     }
@@ -68,9 +78,9 @@ a {
         max-width: 40rem;
     }
 
-    @media (width >= 768px) {
-        max-width: 44rem;
-    }
+    /* @media (width >= 768px) { */
+    /*     max-width: 44rem; */
+    /* } */
 }
 
 .footer-logo {

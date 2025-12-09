@@ -2,7 +2,7 @@
 import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 import browserslist from "browserslist";
-import { browserslistToTargets, Features } from "lightningcss";
+import { browserslistToTargets } from "lightningcss";
 import rehypeExternalLinks from "rehype-external-links";
 import locales, { defaultLocale } from "./src/data/locales";
 
@@ -17,7 +17,6 @@ export default defineConfig({
         css: {
             transformer: "lightningcss",
             lightningcss: {
-                include: Features.Nesting,
                 targets: browserslistToTargets(browserslist(">= 0.01%, last 2 versions, Firefox ESR, not dead")),
             },
         },

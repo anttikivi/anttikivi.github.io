@@ -2,9 +2,7 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import { getCollection, render } from "astro:content";
 
-console.log(await getCollection("errors"));
 const entries = await getCollection("errors", (entry) => entry.id.split("/")[1] === "404");
-console.log(entries);
 entries.sort((a, b) => {
     const x = a.id.split("/")[0]!;
     const y = b.id.split("/")[0]!;
