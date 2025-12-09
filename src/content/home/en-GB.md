@@ -2,7 +2,7 @@
 title: Home Page
 ---
 
-Hello, I’m _Antti Kivi_. I’m a software developer.
+Hello, I’m _Antti Kivi_, a software developer.
 
 I build accessible interfaces and inclusive digital services as one of the
 proprietors of [Visiosto](https://www.visiosto.fi/en/). In my spare time, I work
