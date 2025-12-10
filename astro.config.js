@@ -1,4 +1,5 @@
 // @ts-check
+import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 import browserslist from "browserslist";
@@ -11,7 +12,7 @@ export default defineConfig({
     site: import.meta.env.PROD ? "https://www.anttikivi.com" : "http://localhost:4321",
     trailingSlash: "always",
     output: "static",
-    integrations: [sitemap()],
+    integrations: [sitemap(), mdx()],
     compressHTML: import.meta.env.PROD,
     vite: {
         css: {
