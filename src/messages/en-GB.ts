@@ -1,4 +1,14 @@
 export default {
+    contactDetails: {
+        codeberg: "Codeberg",
+        codebergLink: "anttikivi",
+        email: "Email",
+        github: "GitHub",
+        githubLink: "anttikivi",
+        head: "Contact",
+        linkedin: "LinkedIn",
+        linkedinLink: "anttikivi",
+    },
     layout: {
         headerNav: "Main menu",
         languageMenu: "Site language",

@@ -1,12 +1,14 @@
 import locales, { type Locale } from "@/data/locales";
 
 const enGB = {
+    about: "about",
     contact: "contact",
     index: "/",
     blog: "writings",
 };
 
 const fi = {
+    about: "minusta",
     contact: "yhteys",
     index: "/",
     blog: "kirjoituksia",

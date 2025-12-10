@@ -21,7 +21,7 @@ const home = defineCollection({
 });
 
 const pages = defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "src/content/pages" }),
+    loader: glob({ pattern: "**/*.md?(x)", base: "src/content/pages" }),
     schema: z.object({
         key: z.enum([firstRouteKey!, ...restRouteKeys]).optional(),
         title: z.string(),

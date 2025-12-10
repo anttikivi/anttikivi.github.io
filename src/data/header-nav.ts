@@ -17,6 +17,14 @@ export default [
         },
     },
     {
+        disabled: false,
+        href: "about",
+        label: {
+            "en-GB": "about",
+            fi: "minusta",
+        },
+    },
+    {
         disabled: true,
         href: "contact",
         label: {

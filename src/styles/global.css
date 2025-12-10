@@ -7,6 +7,7 @@
     --link-hover: #451473;
     --link-visited: #551a8b;
     --gray: #525252;
+    --light-gray: #d1d5db;
 
     @media (prefers-color-scheme: dark) {
         --bg: #171717;
@@ -15,6 +16,7 @@
         --link-hover: #f8b5ff;
         --link-visited: #f690ff;
         --gray: #d1d5db;
+        --light-gray: #525252;
     }
 
     @media print {
