@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+DIST_DIR=dist
+BIN=./node_modules/.bin/html-minifier-terser
+
+if [ ! -x "${BIN}" ]; then
+    echo "error: ${BIN} not found or not executable" >&2
+    exit 1
+fi
+
+find "${DIST_DIR}" -type f -name '*.html' | while IFS= read -r file; do
+    echo "minifying: ${file}"
+    tmpfile="${file}.tmp"
+    "${BIN}" \
+        --collapse-whitespace \
+        --minify-css true \
+        --remove-attribute-quotes \
+        --remove-comments \
+        --remove-redundant-attributes \
+        --remove-optional-tags \
+        -o "${tmpfile}" "${file}"
+
+    mv "${tmpfile}" "${file}"
+done
+
+echo "all HTML files minified"
