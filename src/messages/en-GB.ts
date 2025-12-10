@@ -2,6 +2,8 @@ export default {
     layout: {
         headerNav: "Main menu",
         languageMenu: "Site language",
+        logoAlt: "Smiling face with the letters A and K as its eyes",
+        logoNotFoundAlt: "Sad face with the letters A and K as its eyes",
         mainID: "main",
         skipToContent: "Skip to content",
     },
