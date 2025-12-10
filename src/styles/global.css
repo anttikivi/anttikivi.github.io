@@ -19,6 +19,7 @@
 
     @media print {
         color-scheme: light;
+
         --bg: white;
         --text: black;
         --link: #0000ee;
@@ -78,9 +79,13 @@ a {
         max-width: 40rem;
     }
 
-    /* @media (width >= 768px) { */
-    /*     max-width: 44rem; */
-    /* } */
+    @media (width >= 768px) {
+        /*
+         * TODO: This is the same width as in the query above. I'll keep this
+         * here for now though if we need to adjust it later.
+         */
+        max-width: 40rem;
+    }
 }
 
 .footer-logo {
