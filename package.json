@@ -4,7 +4,7 @@
     "type": "module",
     "scripts": {
         "astro": "astro",
-        "build": "astro build && ./scripts/minify",
+        "build": "astro build",
         "clean": "rm -rf dist",
         "dev": "astro dev",
         "format": "prettier --write .",
@@ -23,6 +23,7 @@
         "@eslint/json": "0.14.0",
         "@eslint/markdown": "7.5.1",
         "@prettier/plugin-xml": "3.4.2",
+        "@types/html-minifier-terser": "7.0.2",
         "browserslist": "4.27.0",
         "eslint": "9.39.1",
         "eslint-plugin-astro": "1.5.0",
