@@ -14,4 +14,5 @@ The code in this repository is licensed under the MIT License. See the
 
 The **contents** of the website, including text, writings, images, and other
 similar assets, are not covered by the MIT License and may not be used, copied,
-or redistributed without the author’s permission.
+or redistributed without the author’s permission. The third-party logos included
+on the site belong to those third parties.
