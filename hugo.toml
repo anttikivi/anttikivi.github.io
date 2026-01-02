@@ -1,5 +1,6 @@
 baseURL = "https://www.anttikivi.com/"
 defaultContentLanguage = "en"
+disableKinds = ["taxonomy", "term"]
 languageCode = "en-GB"
 title = "Antti Kivi"
 

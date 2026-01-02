@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+    {{- if .IsHome }}
+        {{ .Site.Title }}
+    {{ else }}
+        {{ .Title }} -
+        {{ .Site.Title }}
+    {{ end -}}
+</title>
+
+{{/* https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs */}}
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+{{ with $img := resources.Get "images/icon.svg" }}
+    {{ $newFilename := printf "%s.%s.%s" (path.BaseName .Name) (hash.XxHash .Content) (.MediaType.FirstSuffix.Suffix) }}
+    {{ $img = resources.Copy $newFilename . }}
+    <link rel="icon" href="{{- $img.RelPermalink -}}" type="image/svg+xml">
+{{ end }}
+
+{{ with $img := resources.Get "images/apple-touch-icon.png" }}
+    {{ $newFilename := printf "%s.%s.%s" (path.BaseName .Name) (hash.XxHash .Content) (.MediaType.FirstSuffix.Suffix) }}
+    {{ $img = resources.Copy $newFilename . }}
+    <link rel="apple-touch-icon" href="{{- $img.RelPermalink -}}">
+{{ end }}
