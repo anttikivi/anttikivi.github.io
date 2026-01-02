@@ -1,3 +1,14 @@
-baseURL = "https://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://www.anttikivi.com/"
+defaultContentLanguage = "en"
+languageCode = "en-GB"
+title = "Antti Kivi"
+
+[languages]
+  [languages.en]
+    languageCode = "en-GB"
+    languageName = "English"
+    weight = 1
+  [languages.fi]
+    languageCode = "fi"
+    languageName = "Suomi"
+    weight = 2
