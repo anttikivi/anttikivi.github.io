@@ -1,14 +1,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>
-    {{- if .IsHome }}
-        {{ .Site.Title }}
-    {{ else }}
-        {{ .Title }} -
-        {{ .Site.Title }}
-    {{ end -}}
-</title>
+{{ $pageTitle := .Site.Title }}
+{{ if not .IsHome }}
+    {{ $pageTitle = printf "%s - %s" .Title .Site.Title }}
+{{ end }}
+
+
+<title>{{- $pageTitle -}}</title>
+
+<link rel="sitemap" href="/sitemap.xml">
 
 {{/* https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs */}}
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -25,4 +26,13 @@
 {{ end }}
 
 
-<link rel="sitemap" href="/sitemap.xml">
+<link rel="canonical" href="{{- .Permalink -}}">
+{{ with .AllTranslations }}
+    {{ range . }}
+        <link rel="alternate" hreflang="{{- .Language.LanguageCode -}}" href="{{- .Permalink -}}">
+    {{ end }}
+{{ end }}
+{{ $defaultPage := index (where .AllTranslations "Language.LanguageCode" "eq" "en-GB") 0 }}
+<link rel="alternate" hreflang="x-default" href="{{- $defaultPage.Permalink -}}">
+
+<meta property="og:title" content="{{- $pageTitle -}}">
