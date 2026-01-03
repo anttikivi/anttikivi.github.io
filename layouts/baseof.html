@@ -5,6 +5,7 @@
     </head>
     <body>
         <a class="skip-link" href="#{{ T "main-id" }}">{{ T "skip-to-content" }}</a>
+        {{ partial "header.html" . }}
         <main id="{{ T "main-id" }}">
             {{ block "main" . }}{{ end }}
         </main>

@@ -1,0 +1,66 @@
+{{ $site := .Site }}
+{{ $page := . }}
+
+
+<header class="page-header container">
+    <div class="banner">
+        {{ if .IsHome }}
+            <h1 class="title">{{ .Site.Title }}</h1>
+        {{ else }}
+            <a class="title" href="{{ relLangURL "" }}">{{ .Site.Title }}</a>
+        {{ end }}
+        {{ with .Site.Menus.main }}
+            <nav class="main-menu not-mobile-only" aria-label="{{ T "main-menu" }}">
+                <ul class="menu">
+                    {{ partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+                </ul>
+            </nav>
+        {{ end }}
+        {{ with .Translations }}
+            <div style="margin-left: auto;">
+                <ul class="menu">
+                    {{ range . }}
+                        <li lang="{{ .Language.LanguageCode }}">
+                            <a href="{{ .RelPermalink }}">
+                                {{- index $site.Params.languageMenu .Language.LanguageCode -}}
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+    </div>
+    {{ with .Site.Menus.main }}
+        <nav class="main-menu mobile-only" aria-label="{{ T "main-menu" }}">
+            <ul class="menu">
+                {{ partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+            </ul>
+        </nav>
+    {{ end }}
+</header>
+
+{{ define "_partials/inline/menu/walk.html" }}
+    {{ $page := .page }}
+    {{ range .menuEntries }}
+        {{ $attrs := dict "href" .URL }}
+        {{ if $page.IsMenuCurrent .Menu . }}
+            {{ $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+        {{ end }}
+        {{ $name := .Name }}
+        {{ with .Identifier }}
+            {{ with T . }}
+                {{ $name = . }}
+            {{ end }}
+        {{ end }}
+        <li>
+            <a
+                {{- range $k, $v := $attrs }}
+                    {{- with $v }}
+                        {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+                    {{- end }}
+                {{- end -}}
+                >{{ $name }}</a
+            >
+        </li>
+    {{ end }}
+{{ end }}
