@@ -3,7 +3,7 @@
 
 <title>{{- with .Title }}{{ . }} -{{ " " }}{{ end }}{{ .Site.Title -}}</title>
 
-<meta name="description" content="{{- with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end -}}">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
 <link rel="sitemap" href="/sitemap.xml">
 
@@ -12,43 +12,43 @@
 {{ with $img := resources.Get "images/icon.svg" }}
     {{ $newFilename := printf "%s.%s.%s" (path.BaseName .Name) (hash.XxHash .Content) (.MediaType.FirstSuffix.Suffix) }}
     {{ $img = resources.Copy $newFilename . }}
-    <link rel="icon" href="{{- $img.RelPermalink -}}" type="image/svg+xml">
+    <link rel="icon" href="{{ $img.RelPermalink }}" type="image/svg+xml">
 {{ end }}
 
 {{ with $img := resources.Get "images/apple-touch-icon.png" }}
     {{ $newFilename := printf "%s.%s.%s" (path.BaseName .Name) (hash.XxHash .Content) (.MediaType.FirstSuffix.Suffix) }}
     {{ $img = resources.Copy $newFilename . }}
-    <link rel="apple-touch-icon" href="{{- $img.RelPermalink -}}">
+    <link rel="apple-touch-icon" href="{{ $img.RelPermalink }}">
 {{ end }}
 
 
-<link rel="canonical" href="{{- .Permalink -}}">
+<link rel="canonical" href="{{ .Permalink }}">
 {{ with .AllTranslations }}
     {{ range . }}
-        <link rel="alternate" hreflang="{{- .Language.LanguageCode -}}" href="{{- .Permalink -}}">
+        <link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
     {{ end }}
 {{ end }}
 {{ $defaultPage := index (where .AllTranslations "Language.LanguageCode" "eq" "en-GB") 0 }}
-<link rel="alternate" hreflang="x-default" href="{{- $defaultPage.Permalink -}}">
+<link rel="alternate" hreflang="x-default" href="{{ $defaultPage.Permalink }}">
 
-<meta property="og:title" content="{{- with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end -}}">
+<meta property="og:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
 {{/* TODO: Change the type depending on the page. */}}
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{- .Permalink -}}">
+<meta property="og:url" content="{{ .Permalink }}">
 {{ with .Language.LanguageCode }}
     {{ if strings.Contains . "-" }}
-        <meta property="og:locale" content="{{- replace . "-" "_" -}}">
+        <meta property="og:locale" content="{{ replace . "-" "_" }}">
     {{ else }}
-        <meta property="og:locale" content="{{- . -}}_{{- . | upper -}}">
+        <meta property="og:locale" content="{{ . }}_{{ . | upper }}">
     {{ end }}
 {{ end }}
 {{ with .Translations }}
     {{ range . }}
         {{ with .Language.LanguageCode }}
             {{ if strings.Contains . "-" }}
-                <meta property="og:locale:alternate" content="{{- replace . "-" "_" -}}">
+                <meta property="og:locale:alternate" content="{{ replace . "-" "_" }}">
             {{ else }}
-                <meta property="og:locale:alternate" content="{{- . -}}_{{- . | upper -}}">
+                <meta property="og:locale:alternate" content="{{ . }}_{{ . | upper }}">
             {{ end }}
         {{ end }}
     {{ end }}
@@ -71,4 +71,21 @@
     {{ $img = $img.Resize "1200x630" }}
     <meta property="og:image" content="{{ $img.Permalink }}">
     <meta property="og:image:alt" content="{{ $imgAlt }}">
+{{ end }}
+
+{{ with $css := resources.Get "css/styles.css" }}
+    {{ if hugo.IsDevelopment }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ else }}
+        {{ with $css | minify | fingerprint }}
+            {{ $name := printf "%s.%s.%s" (path.BaseName .Name) (hash.XxHash .Content) (.MediaType.FirstSuffix.Suffix) }}
+            {{ with  resources.Copy $name . }}
+                <link
+                    rel="stylesheet"
+                    href="{{ .RelPermalink }}"
+                    integrity="{{ .Data.Integrity }}"
+                    crossorigin="anonymous">
+            {{ end }}
+        {{ end }}
+    {{ end }}
 {{ end }}

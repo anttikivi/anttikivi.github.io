@@ -1,0 +1,39 @@
+:root {
+    color-scheme: light dark;
+
+    --bg: white;
+    --text: black;
+    --link: #0000ee;
+    --link-hover: #451473;
+    --link-visited: #551a8b;
+    --gray: #525252;
+    --light-gray: #d1d5db;
+
+    @media (prefers-color-scheme: dark) {
+        --bg: #171717;
+        --text: white;
+        --link: #89a6ff;
+        --link-hover: #f8b5ff;
+        --link-visited: #f690ff;
+        --gray: #d1d5db;
+        --light-gray: #525252;
+    }
+
+    @media print {
+        color-scheme: light;
+
+        --bg: white;
+        --text: black;
+        --link: #0000ee;
+        --link-hover: var(--link);
+        --link-visited: var(--link);
+        --gray: #525252;
+    }
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    border: 0 solid;
+}
