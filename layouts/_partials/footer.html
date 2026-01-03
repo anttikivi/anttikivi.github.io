@@ -1,0 +1,10 @@
+<footer class="site-footer container">
+    <small>&copy; 2026 Antti Kivi</small>
+    {{ if .IsHome }}
+        {{ partial "logo.html" (dict "class" "footer-logo") }}
+    {{ else }}
+        <a class="logo-link" href="{{ relLangURL "" }}">
+            {{ partial "logo.html" (dict "class" "footer-logo") }}
+        </a>
+    {{ end }}
+</footer>
