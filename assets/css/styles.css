@@ -43,3 +43,32 @@ body {
     color: var(--text);
     font-family: sans-serif;
 }
+
+a {
+    color: var(--link);
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--link-hover);
+        }
+    }
+
+    &:visited {
+        color: var(--link-visited);
+    }
+}
+
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+}

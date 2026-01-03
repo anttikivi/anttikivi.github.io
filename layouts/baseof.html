@@ -4,6 +4,9 @@
         {{ partial "head.html" . }}
     </head>
     <body>
-        {{ block "main" . }}{{ end }}
+        <a class="skip-link" href="#{{ T "main-id" }}">{{ T "skip-to-content" }}</a>
+        <main id="{{ T "main-id" }}">
+            {{ block "main" . }}{{ end }}
+        </main>
     </body>
 </html>
