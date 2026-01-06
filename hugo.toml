@@ -21,10 +21,10 @@ title = "Antti Kivi"
       description = "Antti Kivi, Finnish software developer. On this site, I’ll share my open‑source projects and writings."
       opengraphImageAlt = "Big text saying 'Antti Kivi' and a smiling face with the letters A and K as its eyes"
     [languages.en.menus]
-      [[languages.en.menus.main]]
-        name = "about"
-        pageRef = "/about"
-        weight = 1
+      # [[languages.en.menus.main]]
+      #   name = "about"
+      #   pageRef = "/about"
+      #   weight = 1
 
   [languages.fi]
     languageCode = "fi"
@@ -34,7 +34,7 @@ title = "Antti Kivi"
       description = "Antti Kivi, ohjelmistokehittäjä. Tällä sivustolla jaan projektejani ja kirjoituksiani."
       opengraphImageAlt = 'Suuri teksti, jossa lukee "Antti Kivi", ja hymyilevät kasvot, jonka silminä on A- ja K-kirjaimet'
     [languages.fi.menus]
-      [[languages.fi.menus.main]]
-        name = "minusta"
-        pageRef = "/about"
-        weight = 1
+      # [[languages.fi.menus.main]]
+      #   name = "minusta"
+      #   pageRef = "/about"
+      #   weight = 1

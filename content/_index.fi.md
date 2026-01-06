@@ -1,12 +1,15 @@
 +++
 +++
 
-Hei, olen _Antti Kivi_, ohjelmistokehittäjä.
+Olen Antti Kivi, ohjelmistokehittäjä.
 
-Luon saavutettavia käyttöliittymiä ja digitaalisia palveluita yrittäjänä
-[Visiostossa](https://www.visiosto.fi). Vapaa-ajallani työskentelen monien
-muiden projektien parissa. Näihin voit tutustua
-[Githubissa](https://github.com/anttikivi).
+Kirjoitan [vapaita](https://www.gnu.org/philosophy/free-sw.html.en),
+[avoimen lähdekoodin](https://opensource.org/osd) tietokoneohjelmia omaan
+käyttööni. Lähdekoodini on [Githubissa](https://github.com/anttikivi) ja
+[Codebergissä](https://codeberg.org/anttikivi).
 
-Päivätyökseni toimin [Suomen ylioppilaskuntien liiton](https://syl.fi)
-viestintäasiantuntijana.
+Olen yrittäjä [Visiostossa](https://www.visiosto.fi). Rakennamme saavutettavia
+verkkosivustoja ja käyttöliittymiä sekä inklusiivisia digitaalisia palveluita.
+
+Päivätyökseni toimin viestintäasiantuntijana
+[Suomen ylioppilaskuntien liitossa](https://syl.fi).

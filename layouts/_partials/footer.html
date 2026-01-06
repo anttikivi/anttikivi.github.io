@@ -4,7 +4,11 @@
         {{ partial "logo.html" (dict "class" "footer-logo" "title" (T "logo-alt")) }}
     {{ else }}
         <a class="logo-link" href="{{ relLangURL "" }}">
-            {{ partial "logo.html" (dict "class" "footer-logo" "title" (T "logo-alt")) }}
+            {{ if eq .Path "/404" }}
+                {{ partial "logo-not-found.html" (dict "class" "footer-logo" "title" (T "logo-not-found-alt")) }}
+            {{ else }}
+                {{ partial "logo.html" (dict "class" "footer-logo" "title" (T "logo-alt")) }}
+            {{ end }}
         </a>
     {{ end }}
 </footer>

@@ -16,18 +16,20 @@
                 </ul>
             </nav>
         {{ end }}
-        {{ with .Translations }}
-            <div style="margin-left: auto;">
-                <ul class="menu">
-                    {{ range . }}
-                        <li lang="{{ .Language.LanguageCode }}">
-                            <a href="{{ .RelPermalink }}">
-                                {{- index $site.Params.languageMenu .Language.LanguageCode -}}
-                            </a>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
+        {{ if ne .Path "/404" }}
+            {{ with .Translations }}
+                <div style="margin-left: auto;">
+                    <ul class="menu">
+                        {{ range . }}
+                            <li lang="{{ .Language.LanguageCode }}">
+                                <a href="{{ .RelPermalink }}">
+                                    {{- index $site.Params.languageMenu .Language.LanguageCode -}}
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            {{ end }}
         {{ end }}
     </div>
     {{ with .Site.Menus.main }}
