@@ -43,7 +43,19 @@ jobs:
                   rm "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
                   echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
             - run: npm ci
-            - run: hugo
+            - run: git config core.quotepath false
+            - id: cache-restore
+              uses: actions/cache/restore@v5.0.1
+              with:
+                  path: ${{ runner.temp }}/hugo_cache
+                  key: hugo-${{ github.run_id }}
+                  restore-keys: hugo-
+            - run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/" --cacheDir "${{ runner.temp }}/hugo_cache"
+            - id: cache-save
+              uses: actions/cache/save@v5.0.1
+              with:
+                  path: ${{ runner.temp }}/hugo_cache
+                  key: ${{ steps.cache-restore.outputs.cache-primary-key }}
             - run: |
                   echo ::group::Archive artifact
                   tar \
