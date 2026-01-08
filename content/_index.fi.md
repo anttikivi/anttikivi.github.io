@@ -3,9 +3,7 @@
 
 Olen Antti Kivi, ohjelmistokehittäjä.
 
-Kirjoitan [vapaita](https://www.gnu.org/philosophy/free-sw.html.en),
-[avoimen lähdekoodin](https://opensource.org/osd) tietokoneohjelmia omaan
-käyttööni. Lähdekoodini on [Githubissa](https://github.com/anttikivi) ja
+Kirjoitan tietokoneohjelmia omaan käyttööni. Lähdekoodini on [Githubissa](https://github.com/anttikivi) ja
 [Codebergissä](https://codeberg.org/anttikivi).
 
 Olen yrittäjä [Visiostossa](https://www.visiosto.fi). Rakennamme saavutettavia
