@@ -1,4 +1,0 @@
-+++
-title = "Minusta"
-slug = "minusta"
-+++
