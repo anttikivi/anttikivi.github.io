@@ -45,14 +45,14 @@ jobs:
             - run: npm ci
             - run: git config core.quotepath false
             - id: cache-restore
-              uses: actions/cache/restore@v5.0.1
+              uses: actions/cache/restore@v5.0.2
               with:
                   path: ${{ runner.temp }}/hugo_cache
                   key: hugo-${{ github.run_id }}
                   restore-keys: hugo-
             - run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/" --cacheDir "${{ runner.temp }}/hugo_cache"
             - id: cache-save
-              uses: actions/cache/save@v5.0.1
+              uses: actions/cache/save@v5.0.2
               with:
                   path: ${{ runner.temp }}/hugo_cache
                   key: ${{ steps.cache-restore.outputs.cache-primary-key }}
