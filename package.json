@@ -1,7 +1,7 @@
 {
     "devDependencies": {
         "@awmottaz/prettier-plugin-void-html": "2.0.0",
-        "prettier": "3.7.4",
+        "prettier": "3.8.1",
         "prettier-plugin-go-template": "0.0.15",
         "prettier-plugin-packagejson": "2.5.20"
     }
