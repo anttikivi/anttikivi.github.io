@@ -8,6 +8,21 @@
 		<ctx description="$page.description.len().gt(0).then($page.description, $i18n.get('site_description'))">
 			<meta name="description" content="$ctx.description">
 		</ctx>
+
+		<!-- TODO: Sitemap? -->
+
+		<link rel="icon" href="/favicon.ico" sizes="32x32">
+		<link rel="icon" href="$site.asset('icon.svg').link()" type="image/svg+xml">
+		<link rel="apple-touch-icon" href="$site.asset('apple-touch-icon.png').link()">
+
+		<link rel="canonical" href="$site.host_url.addPath($page.link())">
+		<ctx :loop="$page.locales()">
+			<ctx :if="$loop.it.link().eql($page.link()).not()">
+				<link rel="alternate" hreflang="$loop.it.site().localeCode()" href="$loop.it.site().host_url.addPath($loop.it.link())">
+			</ctx>
+		</ctx>
+		<link rel="alternate" hreflang="x-default" href="$site.locale('en-GB').host_url.addPath($page.locale('en-GB').link())">
+
 		<link type="text/css" rel="stylesheet" href="$site.asset('style.css').link()">
 		<super>
 	</head>

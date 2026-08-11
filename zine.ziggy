@@ -5,6 +5,9 @@
     .i18n_dir_path = "i18n",
     .layouts_dir_path = "layouts",
     .static_assets = [
+        ".well-known",
+        "favicon.ico",
+        "publickey.asc",
     ],
     .locales = [
         {
