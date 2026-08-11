@@ -1,0 +1,10 @@
+---
+.title = "Homepage",
+.layout = "index.shtml",
+.date = .date("2026-08-11:00:00:00"),
+.custom = {
+    "home": true,
+},
+---
+
+This is a page.
