@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="$site.localeCode()">
 	<head id="head">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,9 +36,9 @@
 				<meta property="og:locale" content="$i18n.get('opengraph_locale_format').fmt($ctx.first, $ctx.second)">
 			</ctx>
 		</ctx>
-		<ctx :if="$page.site().localeCode().contains('-').not()">
-			<ctx first="$page.site().localeCode()" second="$page.site().localeCode().upper()">
-				<meta property="og:locale" content="$i18n.get('opengraph_locale_format').fmt($ctx.first, $ctx.second)">
+		<ctx :if="$page.site().localeCode().eql('fi')">
+			<ctx first="$page.site().localeCode()">
+				<meta property="og:locale" content="$i18n.get('opengraph_locale_format').fmt($ctx.first, 'FI')">
 			</ctx>
 		</ctx>
 		<ctx :loop="$page.locales()">
@@ -48,9 +48,9 @@
 						<meta property="og:locale:alternate" content="$i18n.get('opengraph_locale_format').fmt($ctx.first, $ctx.second)">
 					</ctx>
 				</ctx>
-				<ctx :if="$loop.it.site().localeCode().contains('-').not()">
-					<ctx first="$loop.it.site().localeCode()" second="$loop.it.site().localeCode().upper()">
-						<meta property="og:locale:alternate" content="$i18n.get('opengraph_locale_format').fmt($ctx.first, $ctx.second)">
+				<ctx :if="$loop.it.site().localeCode().eql('fi')">
+					<ctx first="$loop.it.site().localeCode()">
+						<meta property="og:locale:alternate" content="$i18n.get('opengraph_locale_format').fmt($ctx.first, 'FI')">
 					</ctx>
 				</ctx>
 			</ctx>

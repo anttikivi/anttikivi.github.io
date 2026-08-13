@@ -18,10 +18,10 @@
             "output_prefix_override": "",
         },
         {
-            "code": "fi-FI",
+            "code": "fi",
             "name": "Suomi",
             "site_title": "Antti Kivi",
-            "content_dir_path": "content/fi-FI",
+            "content_dir_path": "content/fi",
             "output_prefix_override": "fi",
         },
     ],
