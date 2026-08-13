@@ -13,7 +13,7 @@
 
 		<link rel="icon" href="/favicon.ico" sizes="32x32">
 		<link rel="icon" href="$site.asset('icon-bffcd0c82958e83e6cf0983e26fda24b666d47a0a5e6c5317cfe8ecd5746afff.svg').link()" type="image/svg+xml">
-		<link rel="apple-touch-icon" href="$site.asset('apple-touch-icon.png').link()">
+		<link rel="apple-touch-icon" href="$site.asset('apple-touch-icon-8f167af04a4d22a841be0ba16265ee3710eda3dead4febdc1d38f1bcdc1d80ec.png').link()">
 
 		<link rel="canonical" href="$site.host_url.addPath($page.link())">
 		<ctx :loop="$page.locales()">
@@ -59,8 +59,8 @@
 			<meta property="og:description" content="$ctx.description">
 		</ctx>
 		<meta property="og:site_name" content="$site.title">
-
-		<!-- TODO: OG Image -->
+		<meta property="og:image" content="$site.asset('opengraph-image-89ce175510d1d4b7bf0d760baae59bc88be3b5dc287694a582e4df0e52b1c7b2.png').link()">
+		<meta property="og:image:alt" content="$i18n.get('opengraph_image_alt')">
 
 		<link type="text/css" rel="stylesheet" href="$site.asset('style-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css').link()">
 		<super>

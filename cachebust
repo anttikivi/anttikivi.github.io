@@ -70,6 +70,6 @@ bust_file() {
     done
 }
 
-for target in assets/icon.svg assets/style.css; do
+for target in assets/apple-touch-icon.png assets/icon.svg assets/opengraph-image.png assets/style.css; do
     bust_file "${target}" layouts/* layouts/**/* zine.ziggy
 done

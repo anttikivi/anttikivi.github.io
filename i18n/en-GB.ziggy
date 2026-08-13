@@ -1,2 +1,3 @@
+.opengraph_image_alt = "Big text saying 'Antti Kivi' and a smiling face with the letters A and K as its eyes",
 .opengraph_locale_format = "{}_{}",
 .site_description = "Antti Kivi, Finnish software developer. On this site, I’ll share my open‑source projects and writings."
