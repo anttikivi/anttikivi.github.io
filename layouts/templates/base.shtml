@@ -59,14 +59,31 @@
 			<meta property="og:description" content="$ctx.description">
 		</ctx>
 		<meta property="og:site_name" content="$site.title">
-		<meta property="og:image" content="$site.asset('opengraph-image-89ce175510d1d4b7bf0d760baae59bc88be3b5dc287694a582e4df0e52b1c7b2.png').link()">
+		<ctx :if="$build.development">
+			<meta property="og:image" content="$site.asset('opengraph-image.png').link()">
+		</ctx>
+		<ctx :if="$build.development.not()">
+			<meta property="og:image" content="$site.asset('opengraph-image-89ce175510d1d4b7bf0d760baae59bc88be3b5dc287694a582e4df0e52b1c7b2.png').link()">
+		</ctx>
 		<meta property="og:image:alt" content="$i18n.get('opengraph_image_alt')">
 
-		<link type="text/css" rel="stylesheet" href="$site.asset('style-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css').link()">
+		<ctx :if="$build.development">
+			<link type="text/css" rel="stylesheet" href="$site.asset('style.css').link()">
+		</ctx>
+		<ctx :if="$build.development.not()">
+			<link type="text/css" rel="stylesheet" href="$site.asset('style-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css').link()">
+		</ctx>
 		<super>
 	</head>
 	<body id="body">
-		<h1 class="site-title" :text="$site.title"></h1>
+		<header id="header">
+			<ctx :if="$page.custom.has('home').not()">
+				<a href="$site.link()" :text="$site.title"></a>
+			</ctx>
+			<ctx :if="$page.custom.has('home')">
+				<h1 :text="$site.title"></h1>
+			</ctx>
+		</header>
 		<super>
 	</body>
 </html>
