@@ -34,23 +34,23 @@ bust_file() {
         exit 1
     fi
 
-    new_base="${name}-${hash}${ext}"
+    new_base="${name}.${hash}${ext}"
     new_file="${dir}/${new_base}"
 
     if [ ! -f "${new_file}" ]; then
         cp "${target}" "${new_file}"
     fi
 
-    for old in "${dir}/${name}"-[0-9a-fA-F][0-9a-fA-F]*"${ext}"; do
+    for old in "${dir}/${name}".[0-9a-fA-F][0-9a-fA-F]*"${ext}"; do
         if [ -f "${old}" ] && [ "${old}" != "${new_file}" ]; then
             rm -f "${old}"
         fi
     done
 
     if [ -n "${ext}" ]; then
-        pattern="${name}-[0-9a-fA-F]\\{64\\}\\${ext}"
+        pattern="${name}\\.[0-9a-fA-F]\\{64\\}\\${ext}"
     else
-        pattern="${name}-[0-9a-fA-F]\\{64\\}"
+        pattern="${name}\\.[0-9a-fA-F]\\{64\\}"
     fi
     for src in "$@"; do
         if [ ! -f "${src}" ]; then
