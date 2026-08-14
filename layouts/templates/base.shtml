@@ -82,13 +82,24 @@
 		<super>
 	</head>
 	<body id="body">
-		<header id="header">
-			<ctx :if="$page.custom.has('home').not()">
-				<a href="$site.link()" :text="$site.title"></a>
-			</ctx>
-			<ctx :if="$page.custom.has('home')">
-				<h1 :text="$site.title"></h1>
-			</ctx>
+		<header class="site-header container" id="header">
+			<div class="banner">
+				<ctx :if="$page.custom.has('home').not()">
+					<a class="title" href="$site.link()" :text="$site.title"></a>
+				</ctx>
+				<ctx :if="$page.custom.has('home')">
+					<h1 class="title" :text="$site.title"></h1>
+				</ctx>
+				<ctx :if="$page.locales().empty.not()">
+					<ul class="menu locale-menu" :loop="$page.locales()">
+						<ctx :if="$loop.it.site().localeCode().eql($site.localeCode()).not()">
+							<li lang="$loop.it.site().localeCode()">
+								<a href="$loop.it.link()" :text="$loop.it.site().localeName()"></a>
+							</li>
+						</ctx>
+					</ul>
+				</ctx>
+			</div>
 		</header>
 		<super>
 	</body>

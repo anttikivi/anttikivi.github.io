@@ -43,5 +43,97 @@
 }
 
 body {
+    background: var(--bg);
+    color: var(--text);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+    color: var(--link);
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+@media (hover: hover) {
+    a:hover {
+        color: var(--link-hover);
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 40rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        /*
+         * TODO: This is the same width as in the query above. I'll keep this
+         * here for now though if we need to adjust it later.
+         */
+        max-width: 40rem;
+    }
+}
+
+header.site-header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+header.site-header .title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+header.site-header a.title {
+    color: var(--text);
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+    header.site-header a.title:hover {
+        color: var(--link);
+        text-decoration: underline;
+    }
+}
+
+header.site-header .banner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 4rem;
+}
+
+header.site-header .menu {
+    padding-left: 0;
+    list-style: none;
+}
+
+header.site-header .menu a {
+    color: var(--gray);
+}
+
+header.site-header .menu a:visited {
+    color: var(--gray);
+}
+
+@media (hover: hover) {
+    header.site-header .menu a:hover {
+        color: var(--link);
+    }
+}
+
+header.site-header .locale-menu {
+    margin-left: auto;
 }

@@ -12,14 +12,14 @@
     .locales = [
         {
             "code": "en-GB",
-            "name": "English",
+            "name": "in English",
             "site_title": "Antti Kivi",
             "content_dir_path": "content/en-GB",
             "output_prefix_override": "",
         },
         {
             "code": "fi",
-            "name": "Suomi",
+            "name": "suomeksi",
             "site_title": "Antti Kivi",
             "content_dir_path": "content/fi",
             "output_prefix_override": "fi",
