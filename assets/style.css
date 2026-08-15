@@ -84,6 +84,21 @@ a:visited {
     }
 }
 
+a.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+a.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
 header.site-header {
     margin-top: 2rem;
     margin-bottom: 2rem;

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="$site.localeCode()">
-	<head id="head">
+	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- TODO: This looks horrible but works! -->
@@ -79,9 +79,9 @@
 		<ctx :if="$build.development.not()">
 			<link type="text/css" rel="stylesheet" href="$site.asset('style.f260d6567d92f93b561df50eaa7dd5faddec058dbe9749e1b99864eb4298e28b.css').link()">
 		</ctx>
-		<super>
 	</head>
 	<body id="body">
+		<a class="skip-link" href="$i18n.get('main_id')" :text="$i18n.get('skip_link')"></a>
 		<header class="site-header container" id="header">
 			<div class="banner">
 				<ctx :if="$page.custom.has('home').not()">
