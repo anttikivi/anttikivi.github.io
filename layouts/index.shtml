@@ -1,4 +1,4 @@
 <extend template="base.shtml">
 <body id="body">
-	<main class="container" id="$i18n.get('main_id')" :html="$page.content()"></main>
+	<main class="container content" id="$i18n.get('main_id')" :html="$page.content()"></main>
 </body>

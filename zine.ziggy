@@ -1,4 +1,7 @@
 .zine_version = "0.13.0",
+.supermd = .{
+    .headings_h2 = true,
+},
 .site = .multilingual(.{
     .host_url = "https://www.anttikivi.com",
     .assets_dir_path = "assets",
@@ -7,7 +10,6 @@
     .static_assets = [
         ".well-known",
         "favicon.ico",
-        "publickey.asc",
     ],
     .locales = [
         {

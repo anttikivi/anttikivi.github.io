@@ -1,10 +1,16 @@
 ---
 .title = "Homepage",
 .layout = "index.shtml",
-.date = .date("2026-08-11:00:00:00"),
+.date = .date("2026-08-15"),
 .custom = {
     "home": true,
 },
 ---
 
-This is a page.
+Hello! I'm Antti Kivi, a software engineer, and I write here about my projects, free and open-source software, and politics. I'm a co-proprietor of [Visiosto](https://www.visiosto.fi/en/) where we build accessible websites and interfaces and inclusive digital services. For my day job, I work as the communications adviser at the [National Union of University Students in Finland](https://syl.fi/en/).
+
+# Find me online
+
+- Codeberg: [anttikivi](https://codeberg.org/anttikivi)
+- GitHub: [anttikivi](https://github.com/anttikivi)
+- Email: [antti@anttikivi.com](mailto:antti@anttikivi.com) ([PGP key]($link.siteAsset('publickey.txt')))

@@ -153,3 +153,13 @@ header.site-header .menu a:visited {
 header.site-header .locale-menu {
     margin-left: auto;
 }
+
+.content h2 {
+    font-size: 1rem;
+}
+
+.content ul {
+    margin-block-start: 0;
+    margin-left: 1rem;
+    padding-inline-start: 0;
+}

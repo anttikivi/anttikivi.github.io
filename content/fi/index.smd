@@ -1,10 +1,16 @@
 ---
 .title = "Etusivu",
 .layout = "index.shtml",
-.date = .date("2026-08-11:00:00:00"),
+.date = .date("2026-08-15"),
 .custom = {
     "home": true,
 },
 ---
 
-Tämä on sivu.
+Hei! Olen Antti Kivi, ohjelmistokehittäjä, ja kirjoitan tällä sivustolla projekteistani, avoimen lähdekoodin ohjelmistoista ja politiikasta. Olen yrittäjänä [Visiostossa](https://www.visiosto.fi), jossa rakennamme saavutettavia verkkosivustoja ja käyttöliittymiä sekä ja inklusiivisia digitaalisia palveluita. Päivätyökseni toimin viestintäasiantuntijana [Suomen ylioppilaskuntien liitossa](https://syl.fi).
+
+# Verkossa
+
+- Codeberg: [anttikivi](https://codeberg.org/anttikivi)
+- Github: [anttikivi](https://github.com/anttikivi)
+- Sähköposti: [antti@anttikivi.fi](mailto:antti@anttikivi.fi) ([PGP-avain]($link.siteAsset('publickey.txt')))
