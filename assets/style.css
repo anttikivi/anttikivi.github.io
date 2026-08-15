@@ -154,6 +154,27 @@ header.site-header .locale-menu {
     margin-left: auto;
 }
 
+footer.site-footer {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+footer.site-footer small {
+    display: block;
+    max-width: 24rem;
+}
+
+footer.site-footer a.logo-link {
+    color: currentcolor;
+}
+
+footer.site-footer svg.logo {
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem 0;
+    fill: currentcolor;
+}
+
 .content h2 {
     font-size: 1rem;
 }

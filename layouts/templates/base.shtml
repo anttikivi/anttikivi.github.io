@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- TODO: This looks horrible but works! -->
 		<title><ctx :if="$page.custom.has('home').not()"><ctx :text="$page.title"></ctx><ctx> - </ctx></ctx><ctx :text="$site.title"></ctx></title>
 		<ctx description="$page.description.len().gt(0).then($page.description, $i18n.get('site_description'))">
 			<meta name="description" content="$ctx.description">
@@ -102,5 +101,15 @@
 			</div>
 		</header>
 		<super>
+		<footer class="site-footer container">
+			<small :html="$i18n.get('footer_copyright')"></small>
+			<ctx :if="$site.custom.get('display_license')">
+				<small :html="$i18n.get('footer_license').fmt('https://github.com/anttikivi/anttikivi.github.io', 'https://www.gnu.org/licenses/agpl-3.0.en.html')"></small>
+			</ctx>
+			<ctx :if="$page.custom.has('home').not()">
+				<a class="logo-link" href="$site.link()" :html="$site.asset($site.custom.get('footer_logo_fmt').fmt($site.localeCode())).bytes()"></a>
+			</ctx>
+			<ctx :if="$page.custom.has('home')" :html="$site.asset($site.custom.get('footer_logo_fmt').fmt($site.localeCode())).bytes()"></ctx>
+		</footer>
 	</body>
 </html>

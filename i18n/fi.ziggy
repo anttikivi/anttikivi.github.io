@@ -1,3 +1,5 @@
+.footer_copyright = "&copy; 2026 Antti Kivi",
+.footer_license = "Sivuston <a href=\"{}\">lähdekoodi</a> on julkaistu <a href=\"{}\">GNU Affero General Public License -lisenssin 3. version</a> alaisena.",
 .main_id = "sisalto",
 .opengraph_image_alt = "Suuri teksti, jossa lukee \"Antti Kivi\", ja hymyilevät kasvot, jonka silminä on A- ja K-kirjaimet",
 .opengraph_locale_format = "{}_{}",

@@ -1,4 +1,8 @@
 .zine_version = "0.13.0",
+.custom = {
+    "display_license": false,
+    "footer_logo_fmt": "logo-{}.svg",
+},
 .supermd = .{
     .headings_h2 = true,
 },
