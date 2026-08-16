@@ -80,7 +80,7 @@
 		</ctx>
 	</head>
 	<body id="body">
-		<a class="skip-link" href="$i18n.get('main_id')" :text="$i18n.get('skip_link')"></a>
+		<a class="skip-link" href="$site.custom.get('skip_link_fmt').fmt($i18n.get('main_id'))" :text="$i18n.get('skip_link')"></a>
 		<header class="site-header container" id="header">
 			<div class="banner">
 				<ctx :if="$page.custom.has('home').not()">
