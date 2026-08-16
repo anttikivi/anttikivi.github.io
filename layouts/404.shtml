@@ -1,0 +1,8 @@
+<extend template="base.shtml">
+<body id="body">
+	<main class="container content" id="$i18n.get('main_id')">
+		<h1 style="font-family: monospace; font-size: 1rem; font-weight: normal;">404 Page not found</h1>
+		<section lang="en-GB" :html="$page.contentSection('en-GB')"></section>
+		<section lang="fi" :html="$page.contentSection('fi')"></section>
+	</main>
+</body>

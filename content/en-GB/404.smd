@@ -1,0 +1,17 @@
+---
+.title = "404 Not Found",
+.layout = "404.shtml",
+.date = .date("2026-08-16"),
+.aliases = ["/404.html"],
+.custom = {
+    "not_found": true,
+},
+---
+
+[]($section.id('en-GB'))
+This page doesn't exist. Try returning to the [home page](/).
+
+[]($section.id('fi'))
+```=html
+<p>Tätä sivua ei löydy palvelimelta. Koeta palata <a href="/fi/">etusivulle</a>.</p>
+```
