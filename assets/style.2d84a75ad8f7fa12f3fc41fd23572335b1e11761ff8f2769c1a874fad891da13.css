@@ -1,0 +1,186 @@
+:root {
+    color-scheme: light dark;
+
+    --bg: white;
+    --text: black;
+    --link: #0000ee;
+    --link-hover: #451473;
+    --link-visited: #551a8b;
+    --gray: #525252;
+    --light-gray: #d1d5db;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #171717;
+        --text: white;
+        --link: #89a6ff;
+        --link-hover: #f8b5ff;
+        --link-visited: #f690ff;
+        --gray: #d1d5db;
+        --light-gray: #525252;
+    }
+}
+
+@media print {
+    :root {
+        color-scheme: light;
+
+        --bg: white;
+        --text: black;
+        --link: #0000ee;
+        --link-hover: var(--link);
+        --link-visited: var(--link);
+        --gray: #525252;
+    }
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    border: 0 solid;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+    color: var(--link);
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+@media (hover: hover) {
+    a:hover {
+        color: var(--link-hover);
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 40rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        /*
+         * TODO: This is the same width as in the query above. I'll keep this
+         * here for now though if we need to adjust it later.
+         */
+        max-width: 40rem;
+    }
+}
+
+a.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+a.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+header.site-header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+header.site-header .title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+header.site-header a.title {
+    color: var(--text);
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+    header.site-header a.title:hover {
+        color: var(--link);
+        text-decoration: underline;
+    }
+}
+
+header.site-header .banner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 4rem;
+}
+
+header.site-header .menu {
+    padding-left: 0;
+    list-style: none;
+}
+
+header.site-header .menu a {
+    color: var(--gray);
+}
+
+header.site-header .menu a:visited {
+    color: var(--gray);
+}
+
+@media (hover: hover) {
+    header.site-header .menu a:hover {
+        color: var(--link);
+    }
+}
+
+header.site-header .locale-menu {
+    margin-left: auto;
+}
+
+footer.site-footer {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+footer.site-footer small {
+    display: block;
+    max-width: 24rem;
+}
+
+footer.site-footer a.logo-link {
+    color: currentcolor;
+}
+
+footer.site-footer svg.logo {
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem 0;
+    fill: currentcolor;
+}
+
+.content h2 {
+    font-size: 1rem;
+}
+
+.content ul {
+    margin-block-start: 0;
+    margin-left: 1rem;
+    padding-inline-start: 0;
+}

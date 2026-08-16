@@ -76,7 +76,7 @@
 			<link type="text/css" rel="stylesheet" href="$site.asset('style.css').link()">
 		</ctx>
 		<ctx :if="$build.development.not()">
-			<link type="text/css" rel="stylesheet" href="$site.asset('style.f260d6567d92f93b561df50eaa7dd5faddec058dbe9749e1b99864eb4298e28b.css').link()">
+			<link type="text/css" rel="stylesheet" href="$site.asset('style.2d84a75ad8f7fa12f3fc41fd23572335b1e11761ff8f2769c1a874fad891da13.css').link()">
 		</ctx>
 	</head>
 	<body id="body">
