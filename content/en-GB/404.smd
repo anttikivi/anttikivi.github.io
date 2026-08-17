@@ -4,6 +4,7 @@
 .date = .date("2026-08-16"),
 .aliases = ["/404.html"],
 .custom = {
+    "exclude_from_sitemap": true,
     "not_found": true,
 },
 ---
