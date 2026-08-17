@@ -1,5 +1,6 @@
 .footer_copyright = "&copy; 2026 Antti Kivi",
 .footer_license = "The <a href=\"{}\">source code</a> of this website is licensed under the <a href=\"{}\">GNU Affero General Public License, version 3</a>.",
+.footer_logo_link_label = "To home page",
 .main_id = "main",
 .opengraph_image_alt = "Big text saying 'Antti Kivi' and a smiling face with the letters A and K as its eyes",
 .opengraph_locale_format = "{}_{}",

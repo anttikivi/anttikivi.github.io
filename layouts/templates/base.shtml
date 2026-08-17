@@ -112,10 +112,10 @@
 			</ctx>
 			<ctx :if="$page.custom.has('home').not()">
 				<ctx :if="$page.custom.has('not_found')">
-					<a class="logo-link" href="$site.link()" :html="$site.asset($site.custom.get('footer_logo_not_found_fmt').fmt($site.localeCode())).bytes()"></a>
+					<a class="logo-link" href="$site.link()" aria-label="$i18n.get('footer_logo_link_label')" :html="$site.asset($site.custom.get('footer_logo_not_found_fmt').fmt($site.localeCode())).bytes()"></a>
 				</ctx>
 				<ctx :if="$page.custom.has('not_found').not()">
-					<a class="logo-link" href="$site.link()" :html="$site.asset($site.custom.get('footer_logo_fmt').fmt($site.localeCode())).bytes()"></a>
+					<a class="logo-link" href="$site.link()" aria-label="$i18n.get('footer_logo_link_label')" :html="$site.asset($site.custom.get('footer_logo_fmt').fmt($site.localeCode())).bytes()"></a>
 				</ctx>
 			</ctx>
 			<ctx :if="$page.custom.has('home')" :html="$site.asset($site.custom.get('footer_logo_fmt').fmt($site.localeCode())).bytes()"></ctx>
