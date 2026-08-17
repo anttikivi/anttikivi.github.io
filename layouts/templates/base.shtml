@@ -8,7 +8,7 @@
 			<meta name="description" content="$ctx.description">
 		</ctx>
 
-		<!-- TODO: Sitemap? -->
+		<link rel="sitemap" href="/sitemap.xml">
 
 		<ctx :if="$page.custom.has('not_found').or($site.custom.get('robots_disallow_all'))">
 			<meta name="robots" content="noindex">
