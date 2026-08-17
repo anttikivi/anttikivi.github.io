@@ -3,6 +3,7 @@
     "display_license": false,
     "footer_logo_fmt": "logo-{}.svg",
     "footer_logo_not_found_fmt": "logo-not-found-{}.svg",
+    "robots_disallow_all": false,
     "skip_link_fmt": "#{}",
 },
 .supermd = .{
