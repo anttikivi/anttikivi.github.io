@@ -2,12 +2,20 @@
 .title = "Homepage",
 .layout = "index.shtml",
 .date = .date("2026-08-15"),
-.alternatives = [{
-    "name": "sitemap",
-    "layout": "sitemap.xml",
-    "output": "/sitemap.xml",
-    "type": "application/xml",
-}],
+.alternatives = [
+    {
+        "name": "robots",
+        "layout": "robots.txt.shtml",
+        "output": "/robots.txt",
+        "type": "text/plain",
+    },
+    {
+        "name": "sitemap",
+        "layout": "sitemap.xml",
+        "output": "/sitemap.xml",
+        "type": "application/xml",
+    },
+],
 .custom = {
     "home": true,
 },
