@@ -3,7 +3,9 @@
     <ctx :loop="$page.locales()">
         <ctx :loop="$loop.it.site().pages()">
             <ctx :if="$loop.it.custom.has('exclude_from_sitemap').not()">
-                <loc :text="$loop.it.site().host_url.addPath($loop.it.link())"></loc>
+                <url>
+                    <loc :text="$loop.it.site().host_url.addPath($loop.it.link())"></loc>
+                </url>
             </ctx>
         </ctx>
     </ctx>
