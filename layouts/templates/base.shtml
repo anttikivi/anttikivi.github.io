@@ -10,7 +10,7 @@
 
 		<link rel="sitemap" href="/sitemap.xml">
 
-		<ctx :if="$page.custom.has('not_found').or($site.custom.get('robots_disallow_all'))">
+		<ctx :if="$page.custom.has('not_found').or($site.custom.get('noindex_all'))">
 			<meta name="robots" content="noindex">
 		</ctx>
 
