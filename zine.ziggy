@@ -16,7 +16,6 @@
     .static_assets = [
         ".well-known",
         "favicon.ico",
-        "robots.txt",
     ],
     .locales = [
         {
