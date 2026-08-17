@@ -8,7 +8,7 @@
 			<meta name="description" content="$ctx.description">
 		</ctx>
 
-		<ctx :if="$page.custom.get('noindex_all').not()">
+		<ctx :if="$site.custom.get('noindex_all').not()">
 			<link rel="sitemap" href="/sitemap.xml">
 		</ctx>
 

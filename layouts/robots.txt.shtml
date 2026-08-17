@@ -1,5 +1,5 @@
 <ctx>User-agent: *
-Disallow:<ctx :if="$site.custom.get('noindex_all')"> /</ctx>
+Disallow:
 <ctx :if="$site.custom.get('noindex_all').not()">
 Sitemap: <ctx :text="$site.host_url.addPath('sitemap.xml')"></ctx>
 </ctx>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <ctx :if="$page.custom.get('noindex_all').not()" :loop="$page.locales()">
+    <ctx :if="$site.custom.get('noindex_all').not()" :loop="$page.locales()">
         <ctx :loop="$loop.it.site().pages()">
             <ctx :if="$loop.it.custom.has('exclude_from_sitemap').not()">
                 <url>
