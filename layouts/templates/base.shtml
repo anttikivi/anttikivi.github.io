@@ -91,7 +91,7 @@
 				<ctx :if="$page.custom.has('home')">
 					<h1 class="title" :text="$site.title"></h1>
 				</ctx>
-				<ctx :if="$page.locales().empty.not()">
+				<ctx :if="$page.locales().len.gt(1)">
 					<ul class="menu locale-menu" :loop="$page.locales()">
 						<ctx :if="$loop.it.site().localeCode().eql($site.localeCode()).not()">
 							<li lang="$loop.it.site().localeCode()">
