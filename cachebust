@@ -37,7 +37,7 @@ bust_file() {
     new_base="${name}.${hash}${ext}"
     new_file="${dir}/${new_base}"
 
-    if [ ! -f "${new_file}" ]; then
+    if ! cmp -s "${target}" "${new_file}"; then
         cp "${target}" "${new_file}"
     fi
 
