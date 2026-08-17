@@ -1,7 +1,7 @@
 ---
 .title = "404 Not Found",
 .layout = "404.shtml",
-.date = .date("2026-08-16"),
+.date = .date("2026-08-17"),
 .aliases = ["/404.html"],
 .custom = {
     "exclude_from_sitemap": true,
@@ -10,9 +10,9 @@
 ---
 
 []($section.id('en-GB'))
-This page doesn't exist. Try returning to the [home page](/).
+The requested resource could not be found on the server. Return to the [home page](/).
 
 []($section.id('fi'))
 ```=html
-<p>Tätä sivua ei löydy palvelimelta. Koeta palata <a href="/fi/">etusivulle</a>.</p>
+<p>Pyydettyä sivua ei löytynyt palvelimelta. Palaa <a href="/fi/">etusivulle</a>.</p>
 ```
