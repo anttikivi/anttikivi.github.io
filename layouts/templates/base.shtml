@@ -8,7 +8,9 @@
 			<meta name="description" content="$ctx.description">
 		</ctx>
 
-		<link rel="sitemap" href="/sitemap.xml">
+		<ctx :if="$page.custom.get('noindex_all').not()">
+			<link rel="sitemap" href="/sitemap.xml">
+		</ctx>
 
 		<ctx :if="$page.custom.has('not_found').or($site.custom.get('noindex_all'))">
 			<meta name="robots" content="noindex">
