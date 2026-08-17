@@ -3,5 +3,5 @@
 .main_id = "sisalto",
 .opengraph_image_alt = "Suuri teksti, jossa lukee \"Antti Kivi\", ja hymyilevät kasvot, joiden silminä on A- ja K-kirjaimet",
 .opengraph_locale_format = "{}_{}",
-.site_description = "Antti Kivi, ohjelmistokehittäjä. Tällä sivustolla jaan projektejani ja kirjoituksiani."
+.site_description = "Antti Kivi, ohjelmistokehittäjä. Tällä sivustolla jaan projektejani ja kirjoituksiani.",
 .skip_link = "Siirry sisältöön",
