@@ -16,22 +16,43 @@ permissions:
   id-token: write
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+      - uses: kristoff-it/setup-zine@ecfe04402bfa943fb0dc59e097e81c858a8ad9d9
+      - run: |
+          ./cachebust
+          if ! git diff --exit-code >/dev/null 2>&1; then
+            printf 'run cachebust before committing\n' >&2
+            exit 1
+          fi
+      - run: zine release
+      - run: |
+          echo ::group::Archive artifact
+          tar \
+            --dereference --hard-dereference \
+            --directory "public/" \
+            -cvf "${RUNNER_TEMP}/artifact.tar" \
+            --exclude-vcs \
+            .
+          echo ::endgroup::
+      - id: upload-artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
+
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6.0.1
-        with:
-          fetch-depth: 0
-      - uses: kristoff-it/setup-zine@v1
-        with:
-          version: v0.13.0
-      - run: zine release
-      - uses: actions/configure-pages@v5.0.0
-      - uses: actions/upload-pages-artifact@v5.0.0
-        with:
-          path: public
       - id: deployment
-        uses: actions/deploy-pages@v4.0.5
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128

@@ -16,13 +16,12 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6.0.1
-      - uses: kristoff-it/setup-zine@v1
-        with:
-          version: v0.13.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: kristoff-it/setup-zine@ecfe04402bfa943fb0dc59e097e81c858a8ad9d9
       - run: |
           ./cachebust
           if ! git diff --exit-code >/dev/null 2>&1; then
             printf 'run cachebust before committing\n' >&2
             exit 1
           fi
+      - run: zine release
